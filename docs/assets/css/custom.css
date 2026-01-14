@@ -1,0 +1,12 @@
+.site-header .site-title {
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 50rem) {
+  .site-header .site-title {
+    font-size: 0.95rem;
+  }
+}

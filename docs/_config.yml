@@ -1,0 +1,38 @@
+title: "NIH Common Forms (SciENcv) Playbook"
+description: "Practical workflows, templates, and troubleshooting for NIH Common Forms (effective Jan 25, 2026)."
+remote_theme: just-the-docs/just-the-docs
+
+# Site URL for GitHub Pages
+url: "https://fritschelab.github.io"
+baseurl: "/nih-sciencv-playbook"
+
+# GitHub Pages / Jekyll
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+search_enabled: true
+color_scheme: light
+custom_css:
+  - custom
+
+# Footer
+footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. <a href="/nih-sciencv-playbook/disclaimer">Disclaimer</a>.'
+
+# Top-right links
+aux_links:
+  "NIH Common Forms hub":
+    - "https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch"
+  "NOT-OD-26-018":
+    - "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html"
+  "SciENcv":
+    - "https://www.ncbi.nlm.nih.gov/sciencv/"
+
+# Optional: enable "Edit this page on GitHub" (set these after you create your repo)
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/fritschelab/nih-sciencv-playbook"
+gh_edit_branch: "main"
+gh_edit_source: "docs"
+gh_edit_view_mode: "tree"
