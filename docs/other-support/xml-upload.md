@@ -20,5 +20,6 @@ Next:
 - [XML Upload overview]({{ site.baseurl }}{% link other-support/xml-upload/overview.md %})
 - [AI-assisted CPOS XML generator prompt]({{ site.baseurl }}{% link other-support/xml-upload/ai-prompt.md %})
 - [Quality control + validation checklist]({{ site.baseurl }}{% link other-support/xml-upload/quality-control.md %})
+- [Browser XML validator]({{ site.baseurl }}{% link other-support/xml-upload/validator.md %})
 - [Examples + edge cases]({{ site.baseurl }}{% link other-support/xml-upload/examples.md %})
 - [Institutional workflow patterns]({{ site.baseurl }}{% link other-support/xml-upload/institutional-workflows.md %})

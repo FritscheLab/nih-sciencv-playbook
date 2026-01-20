@@ -9,13 +9,20 @@ nav_order: 2
 This is a copy/paste prompt you can use with Gemini, ChatGPT, or other LLMs to generate a **SciENcv CPOS XML upload file** from messy source material.
 
 {: .warning }
-> Treat LLM output as draft data entry. Always review for accuracy and institutional policy compliance.
+> This prompt is for drafting only. Use only institution-approved external AI tools, avoid sensitive or personal data, and assume inputs may be retained by the vendor. Always validate the output with a human and your institutional policies before upload.
 
 ---
 
 ## Copy/paste prompt
 
-```markdown
+<div class="prompt-actions">
+  <button class="prompt-copy-btn" type="button" data-copy-target="ai-prompt-code">Copy prompt</button>
+  <span class="prompt-copy-status" aria-live="polite"></span>
+</div>
+
+<div class="prompt-block" id="ai-prompt-code" markdown="1">
+
+````markdown
 # SYSTEM INSTRUCTIONS
 You are an expert NIH research administrator and XML data engineer. Your task is to generate a **valid SciENcv CPOS XML file** for **SciENcv Data Ingest (XML upload)**.
 
@@ -151,11 +158,13 @@ Generate XML that follows this exact element order and nesting. You may repeat <
 # INPUTS
 
 PART 1: SOURCE DATA
-[PASTE HERE]
+[PASTE HERE OR SEE ATTACHMENT]
 
 PART 2: REQUESTED UPDATES
-[PASTE HERE]
-```
+[PASTE HERE OR SEE ATTACHMENT]
+````
+
+</div>
 
 ---
 
@@ -164,3 +173,52 @@ PART 2: REQUESTED UPDATES
 - If your team maintains support in a spreadsheet, consider exporting it to a consistent text format and using that as PART 1.
 - If SciENcv flags missing required fields after upload, fill them in the UI before certifying.
 
+<script>
+(function() {
+  const buttons = document.querySelectorAll(".prompt-copy-btn");
+  if (!buttons.length) return;
+
+  const copyText = async (text) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.setAttribute("readonly", "");
+    textArea.style.position = "absolute";
+    textArea.style.left = "-9999px";
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const targetId = button.getAttribute("data-copy-target");
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      const code = target.querySelector("pre, code");
+      const text = (code ? code.textContent : target.textContent).trim();
+      const status = button.parentElement.querySelector(".prompt-copy-status");
+      try {
+        await copyText(text);
+        if (status) {
+          status.textContent = "Copied!";
+          setTimeout(() => {
+            status.textContent = "";
+          }, 2000);
+        }
+      } catch (err) {
+        if (status) {
+          status.textContent = "Copy failed.";
+          setTimeout(() => {
+            status.textContent = "";
+          }, 2000);
+        }
+      }
+    });
+  });
+})();
+</script>

@@ -34,13 +34,16 @@ After uploading:
 
 ## Optional: run the lightweight validator in this repo
 
-This repo includes a simple script to catch common formatting issues:
+This repo includes a browser-based tool and a CLI script to catch common formatting issues:
+
+- Browser tool: [Open the validator]({{ site.baseurl }}/tools/) and drag/drop your XML.
+- CLI script:
 
 ```bash
 python tools/validate_cpos_xml.py path/to/your_cpos.xml
 ```
 
-This script checks:
+Both checks cover:
 - XML well-formedness
 - missing/invalid `<contributiontype>`
 - date formats

@@ -1,7 +1,7 @@
 ---
 title: Institutional workflow patterns
 parent: XML Upload & Automation
-nav_order: 5
+nav_order: 6
 ---
 
 # Institutional workflow patterns

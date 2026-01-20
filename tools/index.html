@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciENcv CPOS XML Validator</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --container-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #dee2e6;
+            --primary-color: #0056b3;
+            --error-color: #dc3545;
+            --error-bg: #f8d7da;
+            --warn-color: #fd7e14; /* Orange */
+            --warn-bg: #fff3cd;
+            --success-color: #28a745;
+            --success-bg: #d4edda;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 { margin-top: 0; color: var(--primary-color); }
+        h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
+        
+        .upload-area {
+            border: 2px dashed var(--border-color);
+            padding: 40px;
+            text-align: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+            margin-bottom: 20px;
+        }
+        .upload-area:hover, .upload-area.dragover {
+            border-color: var(--primary-color);
+            background-color: #e9ecef;
+        }
+        
+        input[type="file"] { display: none; }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover { background-color: #004494; }
+
+        #results { margin-top: 20px; }
+
+        .log-entry {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            border-left: 5px solid transparent;
+            font-size: 0.95rem;
+        }
+        
+        .log-error {
+            background-color: var(--error-bg);
+            border-left-color: var(--error-color);
+            color: #721c24;
+        }
+        
+        .log-warn {
+            background-color: var(--warn-bg);
+            border-left-color: var(--warn-color);
+            color: #856404;
+        }
+        
+        .log-success {
+            background-color: var(--success-bg);
+            border-left-color: var(--success-color);
+            color: #155724;
+        }
+
+        .tag {
+            font-family: var(--mono-font);
+            background: rgba(0,0,0,0.05);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .summary {
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SciENcv CPOS XML Validator</h1>
+    <p>
+        This tool performs a lightweight structural validation of SciENcv Current & Pending (Other) Support XML files.
+        It checks for common issues that cause upload failures or errors in the SciENcv system.
+    </p>
+    <p><em>Your data is processed entirely in your browser. No files are uploaded to any server.</em></p>
+
+    <div class="upload-area" id="drop-zone">
+        <p>Drag & Drop XML file here or click to select</p>
+        <button class="btn" onclick="document.getElementById('file-input').click()">Select File</button>
+        <input type="file" id="file-input" accept=".xml">
+    </div>
+
+    <div id="results"></div>
+</div>
+
+<script>
+    // --- Constants & Regex (Matching Python Script) ---
+    const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+    const YEAR_RE = /^\d{4}$/;
+    const INT_RE = /^\d+$/;
+
+    // --- Helper Functions to mimic Python ElementTree logic ---
+    
+    // Mimic Python's _find: search direct children by localName (ignoring namespace)
+    function findChild(parent, localName) {
+        if (!parent) return null;
+        for (let i = 0; i < parent.children.length; i++) {
+            if (parent.children[i].localName === localName) {
+                return parent.children[i];
+            }
+        }
+        return null;
+    }
+
+    // Mimic Python's _findall: return all direct children with localName
+    function findChildren(parent, localName) {
+        if (!parent) return [];
+        const result = [];
+        for (let i = 0; i < parent.children.length; i++) {
+            if (parent.children[i].localName === localName) {
+                result.push(parent.children[i]);
+            }
+        }
+        return result;
+    }
+
+    // Get text content stripped
+    function getText(el) {
+        return el ? (el.textContent || "").trim() : "";
+    }
+
+    // --- Validation Logic ---
+
+    function validateXml(xmlText) {
+        const errors = [];
+        const warns = [];
+        
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+        // check for parsing errors
+        const parserError = xmlDoc.getElementsByTagName("parsererror");
+        if (parserError.length > 0) {
+            errors.push("XML is not well-formed or could not be parsed.");
+            return { errors, warns };
+        }
+
+        const root = xmlDoc.documentElement;
+        
+        // Root check
+        if (root.localName !== "profile") {
+            errors.push(`Root element should be <profile>, found <${root.localName}>.`);
+        }
+
+        // Basic structure checks
+        const identification = findChild(root, "identification");
+        if (!identification) {
+            warns.push("Missing <identification> block (allowed for upload, but usually present).");
+        } else {
+            const name = findChild(identification, "name");
+            if (!name) {
+                warns.push("Missing <name> under <identification>.");
+            }
+        }
+
+        const employment = findChild(root, "employment");
+        if (!employment) {
+            warns.push("Missing <employment> block (allowed for upload, but usually present).");
+        }
+
+        const funding = findChild(root, "funding");
+        if (!funding) {
+            errors.push("Missing <funding> block.");
+            return { errors, warns }; // Critical failure, stop here
+        }
+
+        const supports = findChildren(funding, "support");
+        if (supports.length === 0) {
+            warns.push("No <support> entries found under <funding>.");
+            return { errors, warns };
+        }
+
+        // Iterate supports
+        supports.forEach((sup, index) => {
+            const idx = index + 1; // 1-based index for display
+            
+            // 1. Contribution Type (Required)
+            const ctEl = findChild(sup, "contributiontype");
+            const ct = getText(ctEl);
+            
+            if (!ct) {
+                errors.push(`support[${idx}]: <contributiontype> is empty or missing. Must be 'award' or 'inkind'.`);
+            } else if (!["award", "inkind"].includes(ct)) {
+                warns.push(`support[${idx}]: <contributiontype> has unexpected value '${ct}'. Expected 'award' or 'inkind'.`);
+            }
+
+            // 2. Support Type
+            const stEl = findChild(sup, "supporttype");
+            const st = getText(stEl);
+            if (st && !["current", "pending", "completed"].includes(st)) {
+                warns.push(`support[${idx}]: <supporttype> value '${st}' is not one of current|pending|completed.`);
+            }
+
+            // 3. Dates
+            ["startdate", "enddate"].forEach(dateTag => {
+                const dEl = findChild(sup, dateTag);
+                if (!dEl) return;
+                const d = getText(dEl);
+                if (d && !DATE_RE.test(d)) {
+                    warns.push(`support[${idx}]: <${dateTag}> value '${d}' is not YYYY-MM-DD.`);
+                }
+            });
+
+            // 4. Award Amount
+            const aaEl = findChild(sup, "awardamount");
+            const aa = getText(aaEl);
+            if (aa && !INT_RE.test(aa)) {
+                warns.push(`support[${idx}]: <awardamount> should be digits only (no $ or commas). Found '${aa}'.`);
+            }
+
+            // 5. Commitment
+            const commitment = findChild(sup, "commitment");
+            if (!commitment) {
+                warns.push(`support[${idx}]: Missing <commitment> block.`);
+                return; // Continue to next support
+            }
+
+            const pms = findChildren(commitment, "personmonth");
+            if (pms.length === 0) {
+                warns.push(`support[${idx}]: No <personmonth> entries under <commitment>.`);
+                return;
+            }
+
+            pms.forEach(pm => {
+                const year = (pm.getAttribute("year") || "").trim();
+                
+                if (!YEAR_RE.test(year)) {
+                    warns.push(`support[${idx}]: <personmonth> has invalid year attribute '${year}'.`);
+                }
+
+                const val = getText(pm);
+                if (!val) {
+                    warns.push(`support[${idx}] year ${year}: <personmonth> is blank.`);
+                    return;
+                }
+
+                const fval = parseFloat(val);
+                if (isNaN(fval)) {
+                    warns.push(`support[${idx}] year ${year}: person-months '${val}' is not numeric.`);
+                } else {
+                    if (fval < 0) {
+                        warns.push(`support[${idx}] year ${year}: person-months is negative (${val}).`);
+                    }
+                    if (fval > 12.0) {
+                        warns.push(`support[${idx}] year ${year}: person-months > 12 (${val}). Double-check.`);
+                    }
+                }
+            });
+        });
+
+        return { errors, warns };
+    }
+
+    // --- UI Handling ---
+
+    const fileInput = document.getElementById('file-input');
+    const dropZone = document.getElementById('drop-zone');
+    const resultsDiv = document.getElementById('results');
+
+    function handleFile(file) {
+        resultsDiv.innerHTML = '<p>Processing...</p>';
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const xmlContent = e.target.result;
+            const { errors, warns } = validateXml(xmlContent);
+            displayResults(errors, warns, file.name);
+        };
+        reader.onerror = function() {
+            resultsDiv.innerHTML = '<div class="log-entry log-error">Error reading file.</div>';
+        };
+        reader.readAsText(file);
+    }
+
+    function displayResults(errors, warns, filename) {
+        resultsDiv.innerHTML = '';
+
+        const summaryDiv = document.createElement('div');
+        summaryDiv.className = 'summary';
+        
+        if (errors.length > 0) {
+            summaryDiv.classList.add('log-error');
+            summaryDiv.textContent = `FAIL: ${errors.length} error(s), ${warns.length} warning(s) in ${filename}`;
+        } else if (warns.length > 0) {
+            summaryDiv.classList.add('log-warn');
+            summaryDiv.textContent = `PASS (with Warnings): 0 errors, ${warns.length} warning(s) in ${filename}`;
+        } else {
+            summaryDiv.classList.add('log-success');
+            summaryDiv.textContent = `OK: File ${filename} looks good!`;
+        }
+        resultsDiv.appendChild(summaryDiv);
+
+        errors.forEach(msg => {
+            const div = document.createElement('div');
+            div.className = 'log-entry log-error';
+            div.innerHTML = `<strong>ERROR:</strong> ${highlightTags(msg)}`;
+            resultsDiv.appendChild(div);
+        });
+
+        warns.forEach(msg => {
+            const div = document.createElement('div');
+            div.className = 'log-entry log-warn';
+            div.innerHTML = `<strong>WARN:</strong> ${highlightTags(msg)}`;
+            resultsDiv.appendChild(div);
+        });
+    }
+
+    // Utility to wrap <tag> in code style for display
+    function highlightTags(str) {
+        return str.replace(/<([a-z0-9]+)>/gi, '<span class="tag">&lt;$1&gt;</span>');
+    }
+
+    // Event Listeners
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            handleFile(e.target.files[0]);
+        }
+    });
+
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('dragover');
+    });
+
+    dropZone.addEventListener('dragleave', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('dragover');
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('dragover');
+        if (e.dataTransfer.files.length > 0) {
+            handleFile(e.dataTransfer.files[0]);
+        }
+    });
+
+</script>
+
+</body>
+</html>
