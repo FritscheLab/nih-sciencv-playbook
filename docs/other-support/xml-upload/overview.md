@@ -11,6 +11,12 @@ SciENcv supports **Data Ingest (XML file upload)** to help users pre-populate CP
 {: .warning }
 > XML upload is a data-entry accelerator, not a submission bypass. NIH still requires a **SciENcv-generated, digitally certified PDF**, and the individual (not a delegate) must certify.
 
+## Where to find XML upload in SciENcv
+
+![SciENcv menu showing Create New Document with the Current and Pending (Other) Support (CPOS) Common Form and XML upload option.]({{ site.baseurl }}/assets/images/sciencv-cpos-xml-upload-menu.png)
+
+Use **Create New Document → Current and Pending (Other) Support (CPOS) Common Form** to access the XML upload flow.
+
 ## Two upload rules that commonly break files
 
 - `<contributiontype>` must be present and non-empty. Use `award` for proposals/active projects and `inkind` for in-kind contributions.
