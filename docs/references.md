@@ -19,8 +19,15 @@ nav_order: 11
 - [Biosketch landing page](https://grants.nih.gov/grants-process/write-application/forms-directory/biosketch)
 
 ## SciENcv / NCBI
-
 - [SciENcv (NCBI)](https://www.ncbi.nlm.nih.gov/sciencv/)
+
+- [NLM Support: CPOS XML file upload structure (KA-05499)](https://support.nlm.nih.gov/kbArticle/?pn=KA-05499)
+- [SciENcv Data Schemas](https://www.ncbi.nlm.nih.gov/sciencv/data-schemas/)
+
+
+## NSPM-33 / research security references
+
+- [NSF NSPM-33 definitions](https://www.nsf.gov/policies/nspm-33/definitions)
 
 ## Examples of institutional guides
 

@@ -1,0 +1,50 @@
+---
+title: Quality control + validation checklist
+parent: XML Upload & Automation
+nav_order: 3
+---
+
+# Quality control + validation checklist
+
+Use this checklist before uploading to SciENcv, and again before PI certification.
+
+## 1) Content checks (policy-driven)
+
+- **No personal information**: do not include home address, personal phone numbers, personal email, etc.
+- Ensure each award or in-kind resource reflects **actual commitments and resources**.
+- For *consulting*, confirm whether it meets the Common Form disclosure triggers and (if so) treat it as an `award` entry under proposals/active projects.
+- For *in-kind contributions*, confirm the in-kind item meets the reporting threshold and includes a time commitment.
+
+## 2) Structure checks (upload-driven)
+
+- Root element is exactly `<profile>`.
+- Exactly one `<funding>` block.
+- Every `<support>` entry includes a non-empty `<contributiontype>` set to `award` or `inkind`.
+- Dates are in `YYYY-MM-DD` (use day `01` if you only have month/year).
+- Award amounts are digits only (no `$`, no commas).
+- Each `<personmonth>` has a 4-digit `year` attribute.
+
+## 3) Post-upload checks (SciENcv UI)
+
+After uploading:
+
+- Open each entry in the SciENcv CPOS UI.
+- Resolve any red exclamation icons for missing required fields.
+- Confirm that effort and overlap text display as expected.
+
+## Optional: run the lightweight validator in this repo
+
+This repo includes a simple script to catch common formatting issues:
+
+```bash
+python tools/validate_cpos_xml.py path/to/your_cpos.xml
+```
+
+This script checks:
+- XML well-formedness
+- missing/invalid `<contributiontype>`
+- date formats
+- award amount formatting
+- person-month years and numeric values
+
+It does not perform full XSD validation (SciENcv is the source of truth).

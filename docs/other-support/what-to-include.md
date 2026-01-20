@@ -16,3 +16,5 @@ Common categories teams struggle with:
 Admin intake template:
 - [Other Support (CPOS) intake form (admin worksheet)]({{ site.baseurl }}{% link templates/other-support-intake.md %})
 
+If you are converting legacy Other Support documents at scale, see: 
+- [XML Upload & Automation]({{ site.baseurl }}{% link other-support/xml-upload.md %})
