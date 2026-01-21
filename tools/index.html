@@ -507,7 +507,7 @@
                     <button class="btn secondary" type="button" id="format-btn">Format XML (clean)</button>
                     <button class="btn secondary" type="button" id="strip-btn">Strip &lt;profile&gt; Attributes</button>
                     <button class="btn secondary" type="button" id="truncate-btn">Auto-Shorten to Limits</button>
-                    <button class="btn" type="button" id="download-btn">Download XML</button>
+                    <button class="btn" type="button" id="download-btn">Save XML…</button>
                     <button class="btn danger" type="button" id="clear-btn">Clear</button>
                 </div>
             </section>
@@ -1174,6 +1174,56 @@
         const resultsDiv = document.getElementById("results");
         const xmlInput = document.getElementById("xml-input");
 
+        let lastLoadedFileName = null;
+
+        function suggestedOutputFileName() {
+            const fallback = "sciencv_cpos_upload.xml";
+            const source = (lastLoadedFileName || fallback).trim() || fallback;
+            const base = source.replace(/\.xml$/i, "").replace(/-validated$/i, "");
+            return `${base}-validated.xml`;
+        }
+
+        async function saveXmlToFile(xmlText, suggestedName) {
+            const blob = new Blob([xmlText], { type: "application/xml" });
+
+            // Preferred: native "Save As…" dialog (Chromium-based browsers)
+            if (typeof window.showSaveFilePicker === "function") {
+                try {
+                    const handle = await window.showSaveFilePicker({
+                        suggestedName,
+                        types: [
+                            {
+                                description: "XML",
+                                accept: {
+                                    "application/xml": [".xml"],
+                                    "text/xml": [".xml"],
+                                },
+                            },
+                        ],
+                    });
+                    const writable = await handle.createWritable();
+                    await writable.write(blob);
+                    await writable.close();
+                    return { method: "picker", name: handle.name || suggestedName };
+                } catch (err) {
+                    // AbortError: user canceled the dialog.
+                    // Other errors (NotAllowedError/SecurityError/etc.): fall back to download.
+                    if (err && err.name === "AbortError") throw err;
+                }
+            }
+
+            // Fallback: classic download (browser controls destination; often Downloads)
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = suggestedName;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+            return { method: "download", name: suggestedName };
+        }
+
         function displayResults(issues, contextLabel) {
             resultsDiv.innerHTML = "";
 
@@ -1221,6 +1271,7 @@
         }
 
         function handleFile(file) {
+            lastLoadedFileName = file?.name || null;
             const reader = new FileReader();
             reader.onload = function (e) {
                 setXml(e.target.result || "");
@@ -1282,28 +1333,36 @@
             displayResults(issues, "Auto-shortened");
         });
 
-        document.getElementById("download-btn").addEventListener("click", () => {
+        document.getElementById("download-btn").addEventListener("click", async () => {
             const xmlText = currentXml();
             if (!xmlText.trim()) {
-                displayResults([{ level: "warn", msg: "Nothing to download. Paste or load XML first." }], "Download");
+                displayResults([{ level: "warn", msg: "Nothing to save. Paste or load XML first." }], "Save");
                 return;
             }
             // Ensure formatted before download (to avoid hidden characters)
             const res = formatXml(xmlText);
             const out = res.ok ? res.text : xmlText;
 
-            const blob = new Blob([out], { type: "application/xml" });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = "sciencv_cpos_upload.xml";
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            URL.revokeObjectURL(url);
-
-            const issues = validateXmlAgainstUploadTemplate(out);
-            displayResults(issues, "Downloaded output (validated)");
+            const suggestedName = suggestedOutputFileName();
+            try {
+                const saved = await saveXmlToFile(out, suggestedName);
+                const issues = validateXmlAgainstUploadTemplate(out);
+                const methodLabel = saved.method === "picker" ? "Save As dialog" : "download";
+                const extraHint = saved.method === "picker"
+                    ? ""
+                    : "Tip: For folder selection, use Chrome/Edge (File System Access API).";
+                displayResults(
+                    issues,
+                    `Saved output (validated): ${saved.name} — ${methodLabel}${extraHint ? " — " + extraHint : ""}`
+                );
+            } catch (err) {
+                // User canceled the dialog or the browser blocked it
+                if (err && err.name === "AbortError") {
+                    displayResults([{ level: "warn", msg: "Save canceled." }], "Save");
+                    return;
+                }
+                displayResults([{ level: "error", msg: `Save failed: ${err?.message || String(err)}` }], "Save");
+            }
         });
 
         document.getElementById("clear-btn").addEventListener("click", () => {
