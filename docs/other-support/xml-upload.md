@@ -15,11 +15,3 @@ SciENcv includes **Data Ingest (XML file upload)** for the **Current and Pending
 - Admin-collected intake notes
 
 **Important:** XML upload is a *data-entry accelerator*, not a submission bypass. NIH still requires a **SciENcv-generated, digitally certified PDF**, and certification is done by the individual (not a delegate).
-
-Next:
-- [XML Upload overview]({{ site.baseurl }}{% link other-support/xml-upload/overview.md %})
-- [AI-assisted CPOS XML generator prompt]({{ site.baseurl }}{% link other-support/xml-upload/ai-prompt.md %})
-- [Quality control + validation checklist]({{ site.baseurl }}{% link other-support/xml-upload/quality-control.md %})
-- [Browser XML validator]({{ site.baseurl }}{% link other-support/xml-upload/validator.md %})
-- [Examples + edge cases]({{ site.baseurl }}{% link other-support/xml-upload/examples.md %})
-- [Institutional workflow patterns]({{ site.baseurl }}{% link other-support/xml-upload/institutional-workflows.md %})
