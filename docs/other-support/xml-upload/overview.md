@@ -22,6 +22,43 @@ Use **Create New Document → Current and Pending (Other) Support (CPOS) Common 
 - `<contributiontype>` must be present and non-empty. Use `award` for proposals/active projects and `inkind` for in-kind contributions.
 - In `<commitment>`, each `<personmonth>` must include a `year="YYYY"` attribute even if the value is blank.
 
+## Element reference (simple upload template)
+
+Use this quick reference for the CPOS upload fields and limits.
+
+| Element | Description | Type / limits |
+| --- | --- | --- |
+| firstname | User first name (in `<name>`) | String (no max limit) |
+| middlename | User middle name (in `<name>`) | String (no max limit) |
+| lastname | User family name (in `<name>`) | String (no max limit) |
+| positiontitle | Position title | String (no max limit) |
+| orgname | Organization name | String (no max limit) |
+| city | City of organization | String (no max limit) |
+| stateorprovince | State or province | String (no max limit) |
+| country | Country | String (no max limit) |
+| startdate/year | Employment start year in `<startdate><year>YYYY</year></startdate>` | YYYY |
+| enddate/year | Employment end year in `<enddate><year>YYYY</year></enddate>` | YYYY |
+| projecttitle | Proposals and active projects title | String, 300 chars max |
+| awardnumber | Proposals and active award number | String, 50 chars max |
+| supportsource | Source of support | String, 60 chars max |
+| location | Primary place of performance | String, 60 chars max |
+| contributiontype | Used to route to award vs in-kind | `award` or `inkind` (required) |
+| awardamount | US Dollar value of award amount | Integer, 13 digits max |
+| inkinddescription | Summary of in-kind contribution | String, 500 chars max |
+| overallobjectives | Overall objectives | String, 1500 chars max |
+| potentialoverlap | Statement of potential overlap | String, 5000 chars max |
+| startdate | Project start date | YYYY-MM-DD |
+| enddate | Project end date | YYYY-MM-DD |
+| supporttype | Status of support | `current` or `pending` |
+| personmonth | Person-months per year in `<commitment>` | `<personmonth year="YYYY">value</personmonth>` |
+
+## Character restrictions
+
+Escape reserved XML characters in element text:
+- `&` -> `&amp;`
+- `<` -> `&lt;`
+- `>` -> `&gt;`
+
 Next:
 - [AI-assisted CPOS XML generator prompt]({{ site.baseurl }}{% link other-support/xml-upload/ai-prompt.md %})
 - [Quality control + validation checklist]({{ site.baseurl }}{% link other-support/xml-upload/quality-control.md %})

@@ -58,3 +58,54 @@ SciENcv can accept a file where effort values are blank, but **the year must sti
   <personmonth year="2027"></personmonth>
 </commitment>
 ```
+
+## Example 6: Full XML file (dummy data)
+
+This is a complete, valid file using the simple upload template with one award entry.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <identification>
+    <id idtype="orcid">0000-0002-1825-0097</id>
+    <account accounttype="eRA-Commons">JDOE1</account>
+    <name current="yes">
+      <firstname>Jane</firstname>
+      <middlename>Marie</middlename>
+      <lastname>Doe</lastname>
+    </name>
+  </identification>
+  <employment>
+    <position featured="true" current="yes">
+      <positiontitle>Senior Researcher</positiontitle>
+      <organization>
+        <orgname>Science &amp; Technology Inst</orgname>
+        <city>Ann Arbor</city>
+        <stateorprovince>MI</stateorprovince>
+        <country>USA</country>
+      </organization>
+      <startdate><year>2015</year></startdate>
+    </position>
+  </employment>
+  <funding>
+    <support>
+      <projecttitle>Advanced Study of Polymer Dynamics</projecttitle>
+      <awardnumber>NSF-2024-5589</awardnumber>
+      <supportsource>National Science Foundation</supportsource>
+      <location>University of Michigan</location>
+      <contributiontype>award</contributiontype>
+      <awardamount>150000</awardamount>
+      <inkinddescription>None</inkinddescription>
+      <overallobjectives>To investigate the long-term stability of biodegradable plastics.</overallobjectives>
+      <potentialoverlap>None.</potentialoverlap>
+      <startdate>2024-01-01</startdate>
+      <enddate>2025-12-31</enddate>
+      <supporttype>current</supporttype>
+      <commitment>
+        <personmonth year="2024">3.5</personmonth>
+        <personmonth year="2025">3.5</personmonth>
+      </commitment>
+    </support>
+  </funding>
+</profile>
+```

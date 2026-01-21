@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SciENcv CPOS XML Validator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SciENcv CPOS XML Validator + Normalizer (Upload Template)</title>
     <style>
         :root {
             --bg-color: #f8f9fa;
@@ -13,7 +14,7 @@
             --primary-color: #0056b3;
             --error-color: #dc3545;
             --error-bg: #f8d7da;
-            --warn-color: #fd7e14; /* Orange */
+            --warn-color: #fd7e14;
             --warn-bg: #fff3cd;
             --success-color: #28a745;
             --success-bg: #d4edda;
@@ -31,77 +32,116 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 980px;
             margin: 0 auto;
             background: var(--container-bg);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1 { margin-top: 0; color: var(--primary-color); }
-        h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
-        
+        h1 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
         .upload-area {
             border: 2px dashed var(--border-color);
-            padding: 40px;
+            padding: 24px;
             text-align: center;
             border-radius: 6px;
             cursor: pointer;
             transition: border-color 0.2s, background-color 0.2s;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
-        .upload-area:hover, .upload-area.dragover {
+
+        .upload-area:hover,
+        .upload-area.dragover {
             border-color: var(--primary-color);
             background-color: #e9ecef;
         }
-        
-        input[type="file"] { display: none; }
-        
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0 0;
+        }
+
         .btn {
             background-color: var(--primary-color);
             color: white;
-            padding: 10px 20px;
+            padding: 10px 14px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1rem;
-        }
-        .btn:hover { background-color: #004494; }
-
-        #results { margin-top: 20px; }
-
-        .log-entry {
-            padding: 10px 15px;
-            margin-bottom: 8px;
-            border-radius: 4px;
-            border-left: 5px solid transparent;
             font-size: 0.95rem;
         }
-        
-        .log-error {
-            background-color: var(--error-bg);
-            border-left-color: var(--error-color);
-            color: #721c24;
-        }
-        
-        .log-warn {
-            background-color: var(--warn-bg);
-            border-left-color: var(--warn-color);
-            color: #856404;
-        }
-        
-        .log-success {
-            background-color: var(--success-bg);
-            border-left-color: var(--success-color);
-            color: #155724;
+
+        .btn:hover {
+            background-color: #004494;
         }
 
-        .tag {
+        .btn.secondary {
+            background-color: #6c757d;
+        }
+
+        .btn.secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .btn.danger {
+            background-color: var(--error-color);
+        }
+
+        .btn.danger:hover {
+            background-color: #b02a37;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            margin: 8px 0 0;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: #fafafa;
+        }
+
+        .controls label {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 260px;
             font-family: var(--mono-font);
-            background: rgba(0,0,0,0.05);
-            padding: 2px 4px;
-            border-radius: 3px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        #results {
+            margin-top: 20px;
         }
 
         .summary {
@@ -110,280 +150,932 @@
             padding: 10px;
             border-radius: 4px;
         }
+
+        .log-entry {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            border-left: 5px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .log-error {
+            background-color: var(--error-bg);
+            border-left-color: var(--error-color);
+            color: #721c24;
+        }
+
+        .log-warn {
+            background-color: var(--warn-bg);
+            border-left-color: var(--warn-color);
+            color: #856404;
+        }
+
+        .log-success {
+            background-color: var(--success-bg);
+            border-left-color: var(--success-color);
+            color: #155724;
+        }
+
+        .tag {
+            font-family: var(--mono-font);
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .muted {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .small {
+            font-size: 0.9rem;
+        }
+
+        .pill {
+            font-family: var(--mono-font);
+            font-size: 0.85rem;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: #fff;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        @media (min-width: 900px) {
+            .two-col {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            textarea {
+                min-height: 340px;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f3f5;
+        }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <h1>SciENcv CPOS XML Validator + Normalizer <span class="pill">Upload Template</span></h1>
+        <p>
+            This tool validates and optionally normalizes SciENcv CPOS XML files using the <strong>simple upload
+                template</strong> (bare <span class="tag">&lt;profile&gt;</span>, no namespaces).
+            It runs checks that commonly explain why XML that "looks fine" still fails SciENcv upload: element order,
+            missing required fields, invalid dates/years, invalid integers, and <strong>character-length
+                limits</strong>.
+        </p>
+        <p class="muted"><em>Your data is processed entirely in your browser. No files are uploaded to any server.</em>
+        </p>
 
-<div class="container">
-    <h1>SciENcv CPOS XML Validator</h1>
-    <p>
-        This tool performs a lightweight structural validation of SciENcv Current & Pending (Other) Support XML files.
-        It checks for common issues that cause upload failures or errors in the SciENcv system.
-    </p>
-    <p><em>Your data is processed entirely in your browser. No files are uploaded to any server.</em></p>
+        <h2>1) Load XML</h2>
+        <div class="upload-area" id="drop-zone">
+            <p>Drag & Drop an XML file here or click to select</p>
+            <button class="btn" type="button" id="select-file-btn">Select File</button>
+            <input type="file" id="file-input" accept=".xml" />
+        </div>
 
-    <div class="upload-area" id="drop-zone">
-        <p>Drag & Drop XML file here or click to select</p>
-        <button class="btn" onclick="document.getElementById('file-input').click()">Select File</button>
-        <input type="file" id="file-input" accept=".xml">
+        <div class="two-col">
+            <div>
+                <h2>2) Paste or edit XML</h2>
+                <textarea id="xml-input" spellcheck="false" placeholder="Paste SciENcv CPOS XML here..."></textarea>
+                <div class="controls">
+                    <label><input type="checkbox" id="upload-mode" checked /> Upload mode: strip any <span
+                            class="tag">&lt;profile ...&gt;</span> attributes (no xmlns/doctype/accession)</label>
+                    <label><input type="checkbox" id="strict-length" checked /> Enforce max-length limits as
+                        <strong>ERROR</strong> (recommended)</label>
+                </div>
+
+                <div class="btn-row">
+                    <button class="btn" type="button" id="validate-btn">Validate</button>
+                    <button class="btn secondary" type="button" id="normalize-btn">Normalize Special Characters</button>
+                    <button class="btn secondary" type="button" id="format-btn">Format XML (clean)</button>
+                    <button class="btn secondary" type="button" id="strip-btn">Strip <profile> Attributes</button>
+                    <button class="btn secondary" type="button" id="truncate-btn">Auto-Shorten to Limits</button>
+                    <button class="btn" type="button" id="download-btn">Download XML</button>
+                    <button class="btn danger" type="button" id="clear-btn">Clear</button>
+                </div>
+            </div>
+
+            <div>
+                <h2>3) Length limits reference</h2>
+                <p class="muted small">These are the limits this validator enforces for CPOS upload fields.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Element</th>
+                            <th>Max length</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="tag">awardamount</span></td>
+                            <td>13 digits</td>
+                            <td>Digits only (integer). Blank allowed.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">awardnumber</span></td>
+                            <td>50 chars</td>
+                            <td>If too long and not safely reducible, leave blank.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">supportsource</span></td>
+                            <td>60 chars</td>
+                            <td>Often fails; abbreviate and remove filler.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">location</span></td>
+                            <td>60 chars</td>
+                            <td>Primary place of performance.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">projecttitle</span></td>
+                            <td>300 chars</td>
+                            <td>Awards only; in-kind typically blank.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">inkinddescription</span></td>
+                            <td>500 chars</td>
+                            <td>Required narrative home for in-kind details.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">overallobjectives</span></td>
+                            <td>1500 chars</td>
+                            <td>Truncate if needed.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag">potentialoverlap</span></td>
+                            <td>5000 chars</td>
+                            <td>Usually not binding.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2>4) Validation results</h2>
+        <div id="results"></div>
     </div>
 
-    <div id="results"></div>
-</div>
+    <script>
+        // ---------- Constants ----------
+        const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+        const YEAR_RE = /^\d{4}$/;
+        const INT_RE = /^\d+$/;
 
-<script>
-    // --- Constants & Regex (Matching Python Script) ---
-    const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-    const YEAR_RE = /^\d{4}$/;
-    const INT_RE = /^\d+$/;
+        const LIMITS = {
+            awardamount_digits: 13,
+            awardnumber: 50,
+            supportsource: 60,
+            location: 60,
+            projecttitle: 300,
+            inkinddescription: 500,
+            overallobjectives: 1500,
+            potentialoverlap: 5000
+        };
 
-    // --- Helper Functions to mimic Python ElementTree logic ---
-    
-    // Mimic Python's _find: search direct children by localName (ignoring namespace)
-    function findChild(parent, localName) {
-        if (!parent) return null;
-        for (let i = 0; i < parent.children.length; i++) {
-            if (parent.children[i].localName === localName) {
-                return parent.children[i];
+        const SUPPORT_ORDER = [
+            "projecttitle",
+            "awardnumber",
+            "supportsource",
+            "location",
+            "contributiontype",
+            "awardamount",
+            "inkinddescription",
+            "overallobjectives",
+            "potentialoverlap",
+            "startdate",
+            "enddate",
+            "supporttype",
+            "commitment"
+        ];
+
+        // ---------- Helper functions ----------
+        function findChild(parent, localName) {
+            if (!parent) return null;
+            for (let i = 0; i < parent.children.length; i++) {
+                if (parent.children[i].localName === localName) return parent.children[i];
             }
+            return null;
         }
-        return null;
-    }
 
-    // Mimic Python's _findall: return all direct children with localName
-    function findChildren(parent, localName) {
-        if (!parent) return [];
-        const result = [];
-        for (let i = 0; i < parent.children.length; i++) {
-            if (parent.children[i].localName === localName) {
-                result.push(parent.children[i]);
+        function findChildren(parent, localName) {
+            if (!parent) return [];
+            const out = [];
+            for (let i = 0; i < parent.children.length; i++) {
+                if (parent.children[i].localName === localName) out.push(parent.children[i]);
             }
-        }
-        return result;
-    }
-
-    // Get text content stripped
-    function getText(el) {
-        return el ? (el.textContent || "").trim() : "";
-    }
-
-    // --- Validation Logic ---
-
-    function validateXml(xmlText) {
-        const errors = [];
-        const warns = [];
-        
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
-
-        // check for parsing errors
-        const parserError = xmlDoc.getElementsByTagName("parsererror");
-        if (parserError.length > 0) {
-            errors.push("XML is not well-formed or could not be parsed.");
-            return { errors, warns };
+            return out;
         }
 
-        const root = xmlDoc.documentElement;
-        
-        // Root check
-        if (root.localName !== "profile") {
-            errors.push(`Root element should be <profile>, found <${root.localName}>.`);
+        function getText(el) {
+            if (!el) return "";
+            return (el.textContent || "").trim();
         }
 
-        // Basic structure checks
-        const identification = findChild(root, "identification");
-        if (!identification) {
-            warns.push("Missing <identification> block (allowed for upload, but usually present).");
-        } else {
-            const name = findChild(identification, "name");
-            if (!name) {
-                warns.push("Missing <name> under <identification>.");
+        function highlightTags(str) {
+            return str.replace(/<([a-z0-9]+)>/gi, '<span class="tag">&lt;$1&gt;</span>');
+        }
+
+        function addIssue(list, level, msg) {
+            list.push({ level, msg });
+        }
+
+        function parseXml(xmlText) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+            const parserError = xmlDoc.getElementsByTagName("parsererror");
+            if (parserError.length > 0) {
+                return { xmlDoc: null, error: "XML is not well-formed or could not be parsed." };
             }
+            return { xmlDoc, error: null };
         }
 
-        const employment = findChild(root, "employment");
-        if (!employment) {
-            warns.push("Missing <employment> block (allowed for upload, but usually present).");
+        // Replace common problematic characters without changing structure.
+        function normalizeSpecialChars(text) {
+            return text
+                .replace(/\u00A0/g, " ")                // NBSP
+                .replace(/[\u201C\u201D]/g, '"')        // smart double quotes
+                .replace(/[\u2018\u2019]/g, "'")        // smart single quotes
+                .replace(/[\u2013\u2014]/g, "-")        // en/em dash
+                .replace(/\u2022/g, "-")                // bullet
+                .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, ""); // control chars (keep \t\n\r)
         }
 
-        const funding = findChild(root, "funding");
-        if (!funding) {
-            errors.push("Missing <funding> block.");
-            return { errors, warns }; // Critical failure, stop here
+        function smartShorten(text, maxLen) {
+            let s = (text || "").trim();
+            if (s.length <= maxLen) return s;
+
+            // 1) remove trailing filler words
+            s = s.replace(/\s+(research|program|project|award|grant)\s*$/i, "");
+            if (s.length <= maxLen) return s;
+
+            // 2) remove parenthetical suffixes
+            s = s.replace(/\s*\([^)]*\)\s*$/g, "");
+            if (s.length <= maxLen) return s;
+
+            // 3) abbreviations
+            const repl = [
+                [/\bUniversity\b/gi, "Univ"],
+                [/\bDepartment\b/gi, "Dept"],
+                [/\bInstitute\b/gi, "Inst"],
+                [/\bFoundation\b/gi, "Found"],
+                [/\bLaboratory\b/gi, "Lab"],
+                [/\bResearch\b/gi, "Res"],
+                [/\bCenter\b/gi, "Ctr"],
+                [/\bCollege\b/gi, "Coll"],
+            ];
+            repl.forEach(([a, b]) => { s = s.replace(a, b); });
+            s = s.replace(/\s+/g, " ").trim();
+            if (s.length <= maxLen) return s;
+
+            // 4) hard truncate
+            return s.slice(0, maxLen);
         }
 
-        const supports = findChildren(funding, "support");
-        if (supports.length === 0) {
-            warns.push("No <support> entries found under <funding>.");
-            return { errors, warns };
-        }
+        // ---------- Validation ----------
+        function validateXmlAgainstUploadTemplate(xmlText) {
+            const issues = [];
 
-        // Iterate supports
-        supports.forEach((sup, index) => {
-            const idx = index + 1; // 1-based index for display
-            
-            // 1. Contribution Type (Required)
-            const ctEl = findChild(sup, "contributiontype");
-            const ct = getText(ctEl);
-            
-            if (!ct) {
-                errors.push(`support[${idx}]: <contributiontype> is empty or missing. Must be 'award' or 'inkind'.`);
-            } else if (!["award", "inkind"].includes(ct)) {
-                warns.push(`support[${idx}]: <contributiontype> has unexpected value '${ct}'. Expected 'award' or 'inkind'.`);
-            }
-
-            // 2. Support Type
-            const stEl = findChild(sup, "supporttype");
-            const st = getText(stEl);
-            if (st && !["current", "pending", "completed"].includes(st)) {
-                warns.push(`support[${idx}]: <supporttype> value '${st}' is not one of current|pending|completed.`);
+            // Prolog presence (warning only)
+            if (!xmlText.trimStart().startsWith("<?xml")) {
+                addIssue(issues, "warn", "Missing XML declaration (<?xml version=\"1.0\" encoding=\"utf-8\"?>). Fix: add it at the top (recommended).");
             }
 
-            // 3. Dates
-            ["startdate", "enddate"].forEach(dateTag => {
-                const dEl = findChild(sup, dateTag);
-                if (!dEl) return;
-                const d = getText(dEl);
-                if (d && !DATE_RE.test(d)) {
-                    warns.push(`support[${idx}]: <${dateTag}> value '${d}' is not YYYY-MM-DD.`);
+            const { xmlDoc, error } = parseXml(xmlText);
+            if (error) {
+                addIssue(issues, "error", error + " Fix: ensure tags are properly closed and reserved characters are escaped (e.g., & => &amp;).");
+                return issues;
+            }
+
+            const root = xmlDoc.documentElement;
+
+            // Root name
+            if (root.localName !== "profile") {
+                addIssue(issues, "error", `Root element must be <profile>. Found <${root.localName}>. Fix: rename the root element to <profile>.`);
+                return issues;
+            }
+
+            // Root attributes / namespaces (UPLOAD template expects none)
+            if (root.attributes && root.attributes.length > 0) {
+                const attrs = Array.from(root.attributes).map(a => a.name).join(", ");
+                addIssue(issues, "error", `Root <profile> must NOT have any attributes in upload mode (no xmlns, doctype, schemaLocation, accession). Found attributes: ${attrs}. Fix: use a bare <profile> tag with no attributes.`);
+            }
+
+            // Basic child order under profile
+            const childNames = Array.from(root.children).map(c => c.localName);
+            const allowedTop = ["identification", "employment", "funding"];
+
+            childNames.forEach(n => {
+                if (!allowedTop.includes(n)) {
+                    addIssue(issues, "warn", `Unexpected top-level element <${n}> under <profile>. Fix: remove it or ensure SciENcv upload supports it.`);
                 }
             });
 
-            // 4. Award Amount
-            const aaEl = findChild(sup, "awardamount");
-            const aa = getText(aaEl);
-            if (aa && !INT_RE.test(aa)) {
-                warns.push(`support[${idx}]: <awardamount> should be digits only (no $ or commas). Found '${aa}'.`);
+            const idxId = childNames.indexOf("identification");
+            const idxEmp = childNames.indexOf("employment");
+            const idxFund = childNames.indexOf("funding");
+
+            if (idxFund === -1) {
+                addIssue(issues, "error", "Missing <funding> block. Fix: add <funding> with one or more <support> entries.");
+                return issues;
             }
 
-            // 5. Commitment
-            const commitment = findChild(sup, "commitment");
-            if (!commitment) {
-                warns.push(`support[${idx}]: Missing <commitment> block.`);
-                return; // Continue to next support
+            if (idxId === -1) {
+                addIssue(issues, "warn", "Missing <identification> block. Fix: include <identification> with <id>, <account>, and <name current=\"yes\">.");
             }
 
-            const pms = findChildren(commitment, "personmonth");
-            if (pms.length === 0) {
-                warns.push(`support[${idx}]: No <personmonth> entries under <commitment>.`);
+            if (idxEmp === -1) {
+                addIssue(issues, "warn", "Missing <employment> block. Fix: include <employment> with at least one <position>.");
+            }
+
+            // If multiple exist, ensure order is id -> employment -> funding
+            function isInOrder(a, b) {
+                if (a === -1 || b === -1) return true;
+                return a < b;
+            }
+
+            if (!isInOrder(idxId, idxEmp) || !isInOrder(idxEmp, idxFund) || !isInOrder(idxId, idxFund)) {
+                addIssue(issues, "error", "Incorrect element order under <profile>. Fix: order must be <identification>, then <employment>, then <funding>.");
+            }
+
+            // Identification checks (recommended but common failure cause)
+            const identification = findChild(root, "identification");
+            if (identification) {
+                const idEl = findChild(identification, "id");
+                const acctEl = findChild(identification, "account");
+                const nameEl = findChild(identification, "name");
+
+                if (!idEl) addIssue(issues, "warn", "Missing <id> in <identification>. Fix: add <id idtype=\"orcid\">0000-0000-0000-0000</id> (value may be blank).");
+                else {
+                    const idtype = (idEl.getAttribute("idtype") || "").trim();
+                    if (!idtype) addIssue(issues, "warn", "<id> is missing idtype attribute. Fix: <id idtype=\"orcid\">...</id>.");
+                }
+
+                if (!acctEl) addIssue(issues, "warn", "Missing <account> in <identification>. Fix: add <account accounttype=\"eRA-Commons\">...</account> (value may be blank).");
+                else {
+                    const acctType = (acctEl.getAttribute("accounttype") || "").trim();
+                    if (!acctType) addIssue(issues, "warn", "<account> is missing accounttype attribute. Fix: <account accounttype=\"eRA-Commons\">...</account>.");
+                }
+
+                if (!nameEl) {
+                    addIssue(issues, "error", "Missing <name> in <identification>. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>.");
+                } else {
+                    const cur = (nameEl.getAttribute("current") || "").trim();
+                    if (cur !== "yes") {
+                        addIssue(issues, "warn", "<name> should include current=\"yes\" (recommended). Fix: <name current=\"yes\">...");
+                    }
+                    const fn = findChild(nameEl, "firstname");
+                    const ln = findChild(nameEl, "lastname");
+                    if (!fn || !getText(fn)) addIssue(issues, "warn", "<firstname> is missing or blank. Fix: provide a first name (or leave blank if intentionally omitted).");
+                    if (!ln || !getText(ln)) addIssue(issues, "warn", "<lastname> is missing or blank. Fix: provide a last name (or leave blank if intentionally omitted).");
+                }
+            }
+
+            // Employment checks (years must not be empty)
+            const employment = findChild(root, "employment");
+            if (employment) {
+                const positions = findChildren(employment, "position");
+                if (positions.length === 0) {
+                    addIssue(issues, "warn", "No <position> found under <employment>. Fix: add <position featured=\"true\" current=\"no\">...");
+                } else {
+                    positions.forEach((pos, pIdx) => {
+                        const pNum = pIdx + 1;
+                        const sd = findChild(pos, "startdate");
+                        const ed = findChild(pos, "enddate");
+                        [["startdate", sd], ["enddate", ed]].forEach(([tag, el]) => {
+                            if (!el) return;
+                            const yearEl = findChild(el, "year");
+                            if (!yearEl) {
+                                addIssue(issues, "error", `employment position[${pNum}]: <${tag}> is missing <year>. Fix: use <${tag}><year>YYYY</year></${tag}> or omit <${tag}> entirely.`);
+                                return;
+                            }
+                            const y = getText(yearEl);
+                            if (!YEAR_RE.test(y)) {
+                                addIssue(issues, "error", `employment position[${pNum}]: <${tag}><year> must be YYYY and not blank. Found '${y}'. Fix: provide a 4-digit year or omit the entire <${tag}> block.`);
+                            }
+                        });
+                    });
+                }
+            }
+
+            // Funding/support checks
+            const funding = findChild(root, "funding");
+            if (!funding) {
+                addIssue(issues, "error", "Missing <funding> block. Fix: add <funding> with one or more <support> entries.");
+                return issues;
+            }
+
+            const supports = findChildren(funding, "support");
+            if (supports.length === 0) {
+                addIssue(issues, "warn", "No <support> entries found under <funding>. Fix: add at least one <support> block.");
+                return issues;
+            }
+
+            const strictLength = document.getElementById("strict-length")?.checked ?? true;
+
+            function lengthIssue(level, idx, tag, text, max) {
+                addIssue(issues, level, `support[${idx}]: <${tag}> is ${text.length} chars (max ${max}). Fix: shorten <${tag}> to <= ${max} characters.`);
+            }
+
+            supports.forEach((sup, i) => {
+                const idx = i + 1;
+
+                // Validate support child order
+                let lastPos = -1;
+                Array.from(sup.children).forEach((child) => {
+                    const nm = child.localName;
+                    const p = SUPPORT_ORDER.indexOf(nm);
+                    if (p === -1) {
+                        addIssue(issues, "warn", `support[${idx}]: Unexpected element <${nm}> inside <support>. Fix: remove it or ensure SciENcv upload supports it.`);
+                        return;
+                    }
+                    if (p < lastPos) {
+                        addIssue(issues, "error", `support[${idx}]: Incorrect element order. Fix: child elements must follow: ${SUPPORT_ORDER.join(", ")}.`);
+                    }
+                    lastPos = Math.max(lastPos, p);
+                });
+
+                // contributiontype required
+                const ctEl = findChild(sup, "contributiontype");
+                const ct = getText(ctEl);
+                if (!ctEl || !ct) {
+                    addIssue(issues, "error", `support[${idx}]: Missing or empty <contributiontype>. Fix: set to 'award' or 'inkind'.`);
+                } else if (!["award", "inkind"].includes(ct)) {
+                    addIssue(issues, "error", `support[${idx}]: <contributiontype> must be 'award' or 'inkind'. Found '${ct}'. Fix: change it to 'award' or 'inkind'.`);
+                }
+
+                // supporttype allowed values
+                const stEl = findChild(sup, "supporttype");
+                const st = getText(stEl);
+                if (stEl && st && !["current", "pending"].includes(st)) {
+                    addIssue(issues, "error", `support[${idx}]: <supporttype> must be 'current' or 'pending'. Found '${st}'. Fix: change to 'current' or 'pending'.`);
+                }
+
+                // Dates: startdate/enddate format
+                ["startdate", "enddate"].forEach((tag) => {
+                    const dEl = findChild(sup, tag);
+                    if (!dEl) return;
+                    const d = getText(dEl);
+                    if (d && !DATE_RE.test(d)) {
+                        addIssue(issues, "error", `support[${idx}]: <${tag}> must be YYYY-MM-DD. Found '${d}'. Fix: convert to YYYY-MM-DD or omit <${tag}> if unknown.`);
+                    }
+                });
+
+                // awardamount digits-only + <=13 digits
+                const aaEl = findChild(sup, "awardamount");
+                const aa = getText(aaEl);
+                if (aa) {
+                    if (!INT_RE.test(aa)) {
+                        addIssue(issues, "error", `support[${idx}]: <awardamount> must be an integer (digits only). Found '${aa}'. Fix: remove $ signs, commas, decimals.`);
+                    } else if (aa.length > LIMITS.awardamount_digits) {
+                        addIssue(issues, "error", `support[${idx}]: <awardamount> has ${aa.length} digits (max ${LIMITS.awardamount_digits}). Fix: shorten to <=13 digits or leave blank if unknown.`);
+                    }
+                }
+
+                // Length limits
+                const checks = [
+                    ["awardnumber", LIMITS.awardnumber],
+                    ["supportsource", LIMITS.supportsource],
+                    ["location", LIMITS.location],
+                    ["projecttitle", LIMITS.projecttitle],
+                    ["inkinddescription", LIMITS.inkinddescription],
+                    ["overallobjectives", LIMITS.overallobjectives],
+                    ["potentialoverlap", LIMITS.potentialoverlap]
+                ];
+
+                checks.forEach(([tag, max]) => {
+                    const el = findChild(sup, tag);
+                    if (!el) return;
+                    const txt = getText(el);
+                    if (!txt) return;
+                    if (txt.length > max) {
+                        const level = strictLength ? "error" : "warn";
+                        lengthIssue(level, idx, tag, txt, max);
+                    }
+                });
+
+                // In-kind special rules
+                if (ct === "inkind") {
+                    const ptEl = findChild(sup, "projecttitle");
+                    const locEl = findChild(sup, "location");
+                    const endEl = findChild(sup, "enddate");
+
+                    if (ptEl && getText(ptEl)) {
+                        addIssue(issues, "error", `support[${idx}]: In-kind <projecttitle> must be empty. Fix: move this text to <inkinddescription> and make <projecttitle/> empty.`);
+                    }
+                    if (locEl && getText(locEl)) {
+                        addIssue(issues, "error", `support[${idx}]: In-kind <location> must be empty. Fix: move this text to <inkinddescription> and make <location/> empty.`);
+                    }
+                    if (endEl) {
+                        addIssue(issues, "warn", `support[${idx}]: In-kind entry includes <enddate>. Many working templates omit in-kind end dates. Fix: remove <enddate> for in-kind if SciENcv upload fails.`);
+                    }
+                }
+
+                // commitment required
+                const commitment = findChild(sup, "commitment");
+                if (!commitment) {
+                    addIssue(issues, "error", `support[${idx}]: Missing <commitment>. Fix: add <commitment> with one or more <personmonth year="YYYY">...</personmonth>.`);
+                } else {
+                    const pms = findChildren(commitment, "personmonth");
+                    if (pms.length === 0) {
+                        addIssue(issues, "error", `support[${idx}]: <commitment> has no <personmonth> entries. Fix: add at least one <personmonth year="YYYY">...</personmonth>.`);
+                    }
+                    pms.forEach((pm) => {
+                        const year = (pm.getAttribute("year") || "").trim();
+                        if (!YEAR_RE.test(year)) {
+                            addIssue(issues, "error", `support[${idx}]: <personmonth> has invalid year='${year}'. Fix: year must be a 4-digit YYYY.`);
+                        }
+                        const val = getText(pm);
+                        if (val) {
+                            const f = parseFloat(val);
+                            if (Number.isNaN(f)) {
+                                addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth value '${val}' is not numeric. Fix: use a number (e.g., 0.5, 1, 12).`);
+                            } else {
+                                if (f < 0) addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth is negative (${val}). Fix: use 0 or a positive value.`);
+                                if (f > 12) addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth > 12 (${val}). Fix: verify (calendar months/year is usually <= 12).`);
+                            }
+                        }
+                    });
+                }
+            });
+
+            // Scan for characters we commonly normalize
+            const suspicious = /[\u201C\u201D\u2018\u2019\u2013\u2014\u2022\u00A0]/;
+            if (suspicious.test(xmlText)) {
+                addIssue(issues, "warn", "Found smart quotes, en/em dashes, bullets, or non-breaking spaces. Fix: click 'Normalize Special Characters' and re-validate.");
+            }
+
+            return issues;
+        }
+
+        // ---------- Transformations ----------
+
+        // Remove all attributes from <profile> and drop any namespace-ish attributes across the doc.
+        function stripProfileAttributes(xmlText) {
+            const { xmlDoc, error } = parseXml(xmlText);
+            if (error) return { ok: false, text: xmlText, msg: error };
+
+            const root = xmlDoc.documentElement;
+            // Remove ALL attributes from profile
+            Array.from(root.attributes).forEach(a => root.removeAttribute(a.name));
+
+            // Remove colon-namespaced attributes anywhere (e.g., xsi:schemaLocation) to keep output clean
+            const walker = xmlDoc.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, null);
+            let node = root;
+            while (node) {
+                Array.from(node.attributes || []).forEach(attr => {
+                    if (attr.name.includes(":")) node.removeAttribute(attr.name);
+                    if (attr.name === "xmlns" || attr.name.startsWith("xmlns:")) node.removeAttribute(attr.name);
+                });
+                node = walker.nextNode();
+            }
+
+            const formatted = formatXmlFromDom(xmlDoc, { forceXmlDecl: true });
+            return { ok: true, text: formatted, msg: "Stripped <profile> attributes." };
+        }
+
+        function autoShortenToLimits(xmlText) {
+            const { xmlDoc, error } = parseXml(xmlText);
+            if (error) return { ok: false, text: xmlText, msg: error };
+
+            const root = xmlDoc.documentElement;
+
+            // Shorten within supports
+            const funding = findChild(root, "funding");
+            if (funding) {
+                const supports = findChildren(funding, "support");
+                supports.forEach((sup) => {
+                    const ct = getText(findChild(sup, "contributiontype"));
+
+                    // Fields we safely shorten by heuristics
+                    const ssEl = findChild(sup, "supportsource");
+                    if (ssEl && getText(ssEl).length > LIMITS.supportsource) {
+                        ssEl.textContent = smartShorten(getText(ssEl), LIMITS.supportsource);
+                    }
+
+                    const locEl = findChild(sup, "location");
+                    if (locEl && getText(locEl).length > LIMITS.location) {
+                        locEl.textContent = smartShorten(getText(locEl), LIMITS.location);
+                    }
+
+                    // Fields we hard-truncate (keep first N)
+                    const trunc = [
+                        ["projecttitle", LIMITS.projecttitle],
+                        ["inkinddescription", LIMITS.inkinddescription],
+                        ["overallobjectives", LIMITS.overallobjectives],
+                        ["potentialoverlap", LIMITS.potentialoverlap]
+                    ];
+                    trunc.forEach(([tag, max]) => {
+                        const el = findChild(sup, tag);
+                        if (!el) return;
+                        const t = getText(el);
+                        if (t && t.length > max) {
+                            el.textContent = t.slice(0, max);
+                        }
+                    });
+
+                    // Do NOT auto-truncate awardnumber (risk corrupt ID). Leave to user.
+                    // awardamount digits length is validated; we do not attempt to change numeric values.
+
+                    // In-kind: enforce empty projecttitle/location if they have text by moving into inkinddescription (optional)
+                    if (ct === "inkind") {
+                        const ptEl = findChild(sup, "projecttitle");
+                        const locEl2 = findChild(sup, "location");
+                        const ikEl = findChild(sup, "inkinddescription");
+
+                        let moved = [];
+                        if (ptEl && getText(ptEl)) {
+                            moved.push("Title: " + getText(ptEl));
+                            ptEl.textContent = "";
+                        }
+                        if (locEl2 && getText(locEl2)) {
+                            moved.push("Location: " + getText(locEl2));
+                            locEl2.textContent = "";
+                        }
+                        if (moved.length > 0) {
+                            const prior = ikEl ? getText(ikEl) : "";
+                            const joined = (prior ? (prior + " ") : "") + moved.join("; ");
+                            if (ikEl) ikEl.textContent = joined.slice(0, LIMITS.inkinddescription);
+                        }
+                    }
+                });
+            }
+
+            // If upload-mode checked, strip profile attrs too
+            const uploadMode = document.getElementById("upload-mode")?.checked ?? true;
+            if (uploadMode) {
+                Array.from(root.attributes).forEach(a => root.removeAttribute(a.name));
+            }
+
+            const formatted = formatXmlFromDom(xmlDoc, { forceXmlDecl: true, stripProfileAttrs: uploadMode });
+            return { ok: true, text: formatted, msg: "Auto-shortened fields to fit limits (where safe)." };
+        }
+
+        // Custom formatter that preserves simple header and produces self-closing tags for empty elements.
+        function formatXmlFromDom(xmlDoc, opts) {
+            const options = Object.assign({ forceXmlDecl: true, stripProfileAttrs: false }, opts || {});
+
+            const root = xmlDoc.documentElement;
+
+            function escText(s) {
+                return (s || "")
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
+            }
+
+            function escAttr(s) {
+                return escText(s).replace(/\"/g, "&quot;");
+            }
+
+            function renderEl(el, depth) {
+                const indent = "  ".repeat(depth);
+                const tag = el.localName;
+
+                // attributes (skip xmlns / namespaced attrs)
+                let attrs = [];
+                Array.from(el.attributes || []).forEach(a => {
+                    if (tag === "profile" && options.stripProfileAttrs) return;
+                    if (a.name === "xmlns" || a.name.startsWith("xmlns:")) return;
+                    if (a.name.includes(":")) return;
+                    attrs.push(`${a.name}="${escAttr(a.value)}"`);
+                });
+                const attrStr = attrs.length ? " " + attrs.join(" ") : "";
+
+                // child elements
+                const childEls = Array.from(el.children || []);
+
+                // text-only content (trim internal indentation)
+                const text = (el.childNodes && el.childNodes.length === 1 && el.childNodes[0].nodeType === Node.TEXT_NODE)
+                    ? (el.textContent || "")
+                    : null;
+
+                const trimmed = text !== null ? text.trim() : "";
+
+                if (childEls.length === 0) {
+                    if (!trimmed) {
+                        return `${indent}<${tag}${attrStr}/>`;
+                    }
+                    return `${indent}<${tag}${attrStr}>${escText(trimmed)}</${tag}>`;
+                }
+
+                // Has children
+                const lines = [];
+                lines.push(`${indent}<${tag}${attrStr}>`);
+                childEls.forEach(ch => {
+                    lines.push(renderEl(ch, depth + 1));
+                });
+                lines.push(`${indent}</${tag}>`);
+                return lines.join("\n");
+            }
+
+            const body = renderEl(root, 0);
+            if (options.forceXmlDecl) {
+                return `<?xml version="1.0" encoding="utf-8"?>\n${body}\n`;
+            }
+            return body + "\n";
+        }
+
+        function formatXml(xmlText) {
+            const { xmlDoc, error } = parseXml(xmlText);
+            if (error) return { ok: false, text: xmlText, msg: error };
+
+            const uploadMode = document.getElementById("upload-mode")?.checked ?? true;
+            const formatted = formatXmlFromDom(xmlDoc, { forceXmlDecl: true, stripProfileAttrs: uploadMode });
+            return { ok: true, text: formatted, msg: "Formatted XML." };
+        }
+
+        // ---------- UI wiring ----------
+        const fileInput = document.getElementById("file-input");
+        const dropZone = document.getElementById("drop-zone");
+        const resultsDiv = document.getElementById("results");
+        const xmlInput = document.getElementById("xml-input");
+
+        function displayResults(issues, contextLabel) {
+            resultsDiv.innerHTML = "";
+
+            const errors = issues.filter(i => i.level === "error");
+            const warns = issues.filter(i => i.level === "warn");
+
+            const summaryDiv = document.createElement("div");
+            summaryDiv.className = "summary";
+
+            if (errors.length > 0) {
+                summaryDiv.classList.add("log-error");
+                summaryDiv.textContent = `FAIL: ${errors.length} error(s), ${warns.length} warning(s) — ${contextLabel}`;
+            } else if (warns.length > 0) {
+                summaryDiv.classList.add("log-warn");
+                summaryDiv.textContent = `PASS (with warnings): 0 errors, ${warns.length} warning(s) — ${contextLabel}`;
+            } else {
+                summaryDiv.classList.add("log-success");
+                summaryDiv.textContent = `OK: No issues found — ${contextLabel}`;
+            }
+
+            resultsDiv.appendChild(summaryDiv);
+
+            issues.forEach((it) => {
+                const div = document.createElement("div");
+                div.className = "log-entry " + (it.level === "error" ? "log-error" : "log-warn");
+                const prefix = it.level === "error" ? "ERROR" : "WARN";
+                div.innerHTML = `<strong>${prefix}:</strong> ${highlightTags(it.msg)}`;
+                resultsDiv.appendChild(div);
+            });
+
+            if (issues.length === 0) {
+                const div = document.createElement("div");
+                div.className = "log-entry log-success";
+                div.innerHTML = "<strong>SUCCESS:</strong> Ready for SciENcv upload checks (based on this validator).";
+                resultsDiv.appendChild(div);
+            }
+        }
+
+        function currentXml() {
+            return xmlInput.value || "";
+        }
+
+        function setXml(text) {
+            xmlInput.value = text;
+        }
+
+        function handleFile(file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                setXml(e.target.result || "");
+                const issues = validateXmlAgainstUploadTemplate(currentXml());
+                displayResults(issues, file.name);
+            };
+            reader.onerror = function () {
+                displayResults([{ level: "error", msg: "Error reading file." }], file.name);
+            };
+            reader.readAsText(file);
+        }
+
+        // Buttons
+        document.getElementById("select-file-btn").addEventListener("click", () => fileInput.click());
+
+        document.getElementById("validate-btn").addEventListener("click", () => {
+            const issues = validateXmlAgainstUploadTemplate(currentXml());
+            displayResults(issues, "Current editor content");
+        });
+
+        document.getElementById("normalize-btn").addEventListener("click", () => {
+            const before = currentXml();
+            const after = normalizeSpecialChars(before);
+            setXml(after);
+            const issues = validateXmlAgainstUploadTemplate(after);
+            displayResults(issues, "Normalized (special chars)");
+        });
+
+        document.getElementById("format-btn").addEventListener("click", () => {
+            const res = formatXml(currentXml());
+            if (!res.ok) {
+                displayResults([{ level: "error", msg: res.msg + " Fix: correct XML syntax before formatting." }], "Format");
                 return;
             }
-
-            pms.forEach(pm => {
-                const year = (pm.getAttribute("year") || "").trim();
-                
-                if (!YEAR_RE.test(year)) {
-                    warns.push(`support[${idx}]: <personmonth> has invalid year attribute '${year}'.`);
-                }
-
-                const val = getText(pm);
-                if (!val) {
-                    warns.push(`support[${idx}] year ${year}: <personmonth> is blank.`);
-                    return;
-                }
-
-                const fval = parseFloat(val);
-                if (isNaN(fval)) {
-                    warns.push(`support[${idx}] year ${year}: person-months '${val}' is not numeric.`);
-                } else {
-                    if (fval < 0) {
-                        warns.push(`support[${idx}] year ${year}: person-months is negative (${val}).`);
-                    }
-                    if (fval > 12.0) {
-                        warns.push(`support[${idx}] year ${year}: person-months > 12 (${val}). Double-check.`);
-                    }
-                }
-            });
+            setXml(res.text);
+            const issues = validateXmlAgainstUploadTemplate(res.text);
+            displayResults(issues, "Formatted");
         });
 
-        return { errors, warns };
-    }
-
-    // --- UI Handling ---
-
-    const fileInput = document.getElementById('file-input');
-    const dropZone = document.getElementById('drop-zone');
-    const resultsDiv = document.getElementById('results');
-
-    function handleFile(file) {
-        resultsDiv.innerHTML = '<p>Processing...</p>';
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const xmlContent = e.target.result;
-            const { errors, warns } = validateXml(xmlContent);
-            displayResults(errors, warns, file.name);
-        };
-        reader.onerror = function() {
-            resultsDiv.innerHTML = '<div class="log-entry log-error">Error reading file.</div>';
-        };
-        reader.readAsText(file);
-    }
-
-    function displayResults(errors, warns, filename) {
-        resultsDiv.innerHTML = '';
-
-        const summaryDiv = document.createElement('div');
-        summaryDiv.className = 'summary';
-        
-        if (errors.length > 0) {
-            summaryDiv.classList.add('log-error');
-            summaryDiv.textContent = `FAIL: ${errors.length} error(s), ${warns.length} warning(s) in ${filename}`;
-        } else if (warns.length > 0) {
-            summaryDiv.classList.add('log-warn');
-            summaryDiv.textContent = `PASS (with Warnings): 0 errors, ${warns.length} warning(s) in ${filename}`;
-        } else {
-            summaryDiv.classList.add('log-success');
-            summaryDiv.textContent = `OK: File ${filename} looks good!`;
-        }
-        resultsDiv.appendChild(summaryDiv);
-
-        errors.forEach(msg => {
-            const div = document.createElement('div');
-            div.className = 'log-entry log-error';
-            div.innerHTML = `<strong>ERROR:</strong> ${highlightTags(msg)}`;
-            resultsDiv.appendChild(div);
+        document.getElementById("strip-btn").addEventListener("click", () => {
+            const res = stripProfileAttributes(currentXml());
+            if (!res.ok) {
+                displayResults([{ level: "error", msg: res.msg }], "Strip <profile> Attributes");
+                return;
+            }
+            setXml(res.text);
+            const issues = validateXmlAgainstUploadTemplate(res.text);
+            displayResults(issues, "Stripped <profile> attributes");
         });
 
-        warns.forEach(msg => {
-            const div = document.createElement('div');
-            div.className = 'log-entry log-warn';
-            div.innerHTML = `<strong>WARN:</strong> ${highlightTags(msg)}`;
-            resultsDiv.appendChild(div);
+        document.getElementById("truncate-btn").addEventListener("click", () => {
+            const res = autoShortenToLimits(currentXml());
+            if (!res.ok) {
+                displayResults([{ level: "error", msg: res.msg }], "Auto-Shorten");
+                return;
+            }
+            setXml(res.text);
+            const issues = validateXmlAgainstUploadTemplate(res.text);
+            displayResults(issues, "Auto-shortened");
         });
-    }
 
-    // Utility to wrap <tag> in code style for display
-    function highlightTags(str) {
-        return str.replace(/<([a-z0-9]+)>/gi, '<span class="tag">&lt;$1&gt;</span>');
-    }
+        document.getElementById("download-btn").addEventListener("click", () => {
+            const xmlText = currentXml();
+            if (!xmlText.trim()) {
+                displayResults([{ level: "warn", msg: "Nothing to download. Paste or load XML first." }], "Download");
+                return;
+            }
+            // Ensure formatted before download (to avoid hidden characters)
+            const res = formatXml(xmlText);
+            const out = res.ok ? res.text : xmlText;
 
-    // Event Listeners
-    fileInput.addEventListener('change', (e) => {
-        if (e.target.files.length > 0) {
-            handleFile(e.target.files[0]);
-        }
-    });
+            const blob = new Blob([out], { type: "application/xml" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "sciencv_cpos_upload.xml";
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
 
-    dropZone.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        dropZone.classList.add('dragover');
-    });
+            const issues = validateXmlAgainstUploadTemplate(out);
+            displayResults(issues, "Downloaded output (validated)");
+        });
 
-    dropZone.addEventListener('dragleave', (e) => {
-        e.preventDefault();
-        dropZone.classList.remove('dragover');
-    });
+        document.getElementById("clear-btn").addEventListener("click", () => {
+            setXml("");
+            resultsDiv.innerHTML = "";
+        });
 
-    dropZone.addEventListener('drop', (e) => {
-        e.preventDefault();
-        dropZone.classList.remove('dragover');
-        if (e.dataTransfer.files.length > 0) {
-            handleFile(e.dataTransfer.files[0]);
-        }
-    });
+        // Drag/drop
+        dropZone.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZone.classList.add("dragover");
+        });
 
-</script>
+        dropZone.addEventListener("dragleave", (e) => {
+            e.preventDefault();
+            dropZone.classList.remove("dragover");
+        });
 
+        dropZone.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropZone.classList.remove("dragover");
+            if (e.dataTransfer.files.length > 0) handleFile(e.dataTransfer.files[0]);
+        });
+
+        fileInput.addEventListener("change", (e) => {
+            if (e.target.files.length > 0) handleFile(e.target.files[0]);
+        });
+
+    </script>
 </body>
+
 </html>
