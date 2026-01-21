@@ -10,16 +10,29 @@
             --bg-color: #f8f9fa;
             --container-bg: #ffffff;
             --text-color: #333;
+            --muted-color: #5c636a;
             --border-color: #dee2e6;
             --primary-color: #0056b3;
+            --primary-hover: #004494;
+
             --error-color: #dc3545;
             --error-bg: #f8d7da;
             --warn-color: #fd7e14;
             --warn-bg: #fff3cd;
             --success-color: #28a745;
             --success-bg: #d4edda;
+
+            --surface-2: #fafafa;
+            --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            --radius: 10px;
+            --gap: 16px;
+
             --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             --mono-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -27,39 +40,112 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
-            padding: 20px;
+            padding: 16px;
             line-height: 1.5;
         }
 
+        @media (min-width: 900px) {
+            body {
+                padding: 24px;
+            }
+        }
+
         .container {
-            max-width: 980px;
+            max-width: 1440px;
             margin: 0 auto;
             background: var(--container-bg);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: clamp(18px, 2.4vw, 32px);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .app-header {
+            margin-bottom: 18px;
+        }
+
+        .header-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         h1 {
-            margin-top: 0;
+            margin: 0;
             color: var(--primary-color);
+            font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+            line-height: 1.2;
         }
 
-        h2 {
-            font-size: 1.15rem;
-            margin-top: 2rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.5rem;
+        p {
+            margin: 10px 0;
         }
 
+        .muted {
+            color: var(--muted-color);
+        }
+
+        .small {
+            font-size: 0.92rem;
+        }
+
+        .tag {
+            font-family: var(--mono-font);
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .pill {
+            font-family: var(--mono-font);
+            font-size: 0.82rem;
+            padding: 3px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: #fff;
+            color: #111;
+            white-space: nowrap;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 14px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.2;
+        }
+
+        .hint {
+            color: var(--muted-color);
+            font-size: 0.92rem;
+        }
+
+        /* Upload area */
         .upload-area {
             border: 2px dashed var(--border-color);
-            padding: 24px;
-            text-align: center;
-            border-radius: 6px;
+            padding: 16px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: border-color 0.2s, background-color 0.2s;
-            margin-bottom: 14px;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
         }
 
         .upload-area:hover,
@@ -68,29 +154,128 @@
             background-color: #e9ecef;
         }
 
+        .upload-text {
+            flex: 1 1 360px;
+            min-width: 260px;
+        }
+
+        .upload-text p {
+            margin: 0;
+        }
+
+        .upload-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
         input[type="file"] {
             display: none;
         }
 
-        .btn-row {
-            display: flex;
-            flex-wrap: wrap;
+        /* Main layout */
+        .app-main {
+            margin-top: var(--gap);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--gap);
+            align-items: start;
+        }
+
+        @media (min-width: 1100px) {
+            .app-main {
+                grid-template-columns: minmax(560px, 2.25fr) minmax(320px, 1fr);
+            }
+
+            .sidebar {
+                position: sticky;
+                top: 20px;
+            }
+        }
+
+        /* Editor */
+        textarea {
+            width: 100%;
+            height: min(60vh, 560px);
+            min-height: 340px;
+            font-family: var(--mono-font);
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            resize: vertical;
+            background: #fff;
+            scrollbar-gutter: stable;
+        }
+
+        textarea:focus-visible {
+            outline: 3px solid rgba(0, 86, 179, 0.25);
+            outline-offset: 2px;
+        }
+
+        .controls {
+            display: grid;
             gap: 10px;
-            margin: 10px 0 0;
+            align-items: start;
+            margin-top: 12px;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--surface-2);
+        }
+
+        .controls label {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .controls input[type="checkbox"] {
+            margin-top: 3px;
+            transform: translateY(1px);
+        }
+
+        /* Buttons */
+        .btn-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 520px) {
+            .btn-row {
+                grid-template-columns: 1fr;
+            }
         }
 
         .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
             background-color: var(--primary-color);
             color: white;
             padding: 10px 14px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 0.95rem;
+            line-height: 1.1;
+            transition: background-color 0.2s ease, transform 0.05s ease;
+            user-select: none;
         }
 
         .btn:hover {
-            background-color: #004494;
+            background-color: var(--primary-hover);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
         }
 
         .btn.secondary {
@@ -109,54 +294,46 @@
             background-color: #b02a37;
         }
 
-        .controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-            margin: 8px 0 0;
-            padding: 10px 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            background: #fafafa;
+        .btn:focus-visible {
+            outline: 3px solid rgba(0, 86, 179, 0.35);
+            outline-offset: 2px;
         }
 
-        .controls label {
-            display: inline-flex;
-            gap: 8px;
-            align-items: center;
-            font-size: 0.95rem;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 260px;
-            font-family: var(--mono-font);
-            font-size: 0.9rem;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 12px;
-            resize: vertical;
-            box-sizing: border-box;
+        /* Results */
+        .results-wrap {
+            max-height: min(72vh, 740px);
+            overflow: auto;
+            padding-right: 6px;
         }
 
         #results {
-            margin-top: 20px;
+            margin-top: 0;
+        }
+
+        .placeholder {
+            padding: 10px 12px;
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            background: #fcfcfd;
         }
 
         .summary {
-            font-weight: bold;
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 4px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            border-radius: 6px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
         }
 
         .log-entry {
-            padding: 10px 15px;
+            padding: 10px 12px;
             margin-bottom: 8px;
-            border-radius: 4px;
+            border-radius: 6px;
             border-left: 5px solid transparent;
             font-size: 0.95rem;
+            background: #fff;
         }
 
         .log-error {
@@ -177,169 +354,249 @@
             color: #155724;
         }
 
-        .tag {
-            font-family: var(--mono-font);
-            background: rgba(0, 0, 0, 0.05);
-            padding: 2px 4px;
-            border-radius: 3px;
+        /* Details / limits table */
+        details {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            background: #fff;
+            padding: 12px 14px;
         }
 
-        .muted {
-            color: #666;
-            font-size: 0.95rem;
+        details[open] {
+            padding-bottom: 14px;
         }
 
-        .small {
-            font-size: 0.9rem;
+        details summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            font-weight: 700;
+            margin: 0;
+            outline: none;
         }
 
-        .pill {
-            font-family: var(--mono-font);
-            font-size: 0.85rem;
-            padding: 2px 8px;
-            border-radius: 999px;
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details summary:focus-visible {
+            outline: 3px solid rgba(0, 86, 179, 0.25);
+            outline-offset: 3px;
+            border-radius: 8px;
+        }
+
+        .details-title {
+            font-size: 1.05rem;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
             background: #fff;
-        }
-
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-
-        @media (min-width: 900px) {
-            .two-col {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            textarea {
-                min-height: 340px;
-            }
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 0.95rem;
+            font-size: 0.94rem;
+            margin: 0;
         }
 
         th,
         td {
-            border: 1px solid var(--border-color);
-            padding: 8px;
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 10px;
             text-align: left;
             vertical-align: top;
         }
 
         th {
             background: #f1f3f5;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+
+            .btn,
+            .upload-area {
+                transition: none !important;
+            }
+
+            .btn:active {
+                transform: none;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>SciENcv CPOS XML Validator + Normalizer <span class="pill">Upload Template</span></h1>
-        <p>
-            This tool validates and optionally normalizes SciENcv CPOS XML files using the <strong>simple upload
-                template</strong> (bare <span class="tag">&lt;profile&gt;</span>, no namespaces).
-            It runs checks that commonly explain why XML that "looks fine" still fails SciENcv upload: element order,
-            missing required fields, invalid dates/years, invalid integers, and <strong>character-length
-                limits</strong>.
-        </p>
-        <p class="muted"><em>Your data is processed entirely in your browser. No files are uploaded to any server.</em>
-        </p>
+        <header class="app-header">
+            <div class="header-row">
+                <h1>SciENcv CPOS XML Validator + Normalizer <span class="pill">Upload Template</span></h1>
+            </div>
+            <p>
+                This tool validates and optionally normalizes SciENcv CPOS XML files using the <strong>simple upload
+                    template</strong>
+                (bare <span class="tag">&lt;profile&gt;</span>, no namespaces). It runs checks that commonly explain why
+                XML that "looks fine"
+                still fails SciENcv upload: element order, missing required fields, invalid dates/years, invalid
+                integers, and
+                <strong>character-length limits</strong>.
+            </p>
+            <p class="muted"><em>Your data is processed entirely in your browser. No files are uploaded to any
+                    server.</em></p>
+        </header>
 
-        <h2>1) Load XML</h2>
-        <div class="upload-area" id="drop-zone">
-            <p>Drag & Drop an XML file here or click to select</p>
-            <button class="btn" type="button" id="select-file-btn">Select File</button>
-            <input type="file" id="file-input" accept=".xml" />
-        </div>
+        <section class="card" aria-labelledby="load-heading">
+            <div class="section-heading">
+                <h2 id="load-heading">1) Load XML</h2>
+                <span class="hint">Drag &amp; drop or select a local file</span>
+            </div>
 
-        <div class="two-col">
-            <div>
-                <h2>2) Paste or edit XML</h2>
-                <textarea id="xml-input" spellcheck="false" placeholder="Paste SciENcv CPOS XML here..."></textarea>
-                <div class="controls">
-                    <label><input type="checkbox" id="upload-mode" checked /> Upload mode: strip any <span
-                            class="tag">&lt;profile ...&gt;</span> attributes (no xmlns/doctype/accession)</label>
-                    <label><input type="checkbox" id="strict-length" checked /> Enforce max-length limits as
-                        <strong>ERROR</strong> (recommended)</label>
+            <div class="upload-area" id="drop-zone" role="region" aria-label="Drag and drop XML file area">
+                <div class="upload-text">
+                    <p><strong>Drag &amp; drop</strong> an XML file here, or click <strong>Select File</strong>.</p>
+                    <p class="muted small">Accepted: <span class="tag">.xml</span>. Processed locally in your browser.
+                    </p>
+                </div>
+                <div class="upload-actions">
+                    <button class="btn" type="button" id="select-file-btn">Select File</button>
+                    <input type="file" id="file-input" accept=".xml" />
+                </div>
+            </div>
+        </section>
+
+        <div class="app-main">
+            <section class="card" aria-labelledby="edit-heading">
+                <div class="section-heading">
+                    <h2 id="edit-heading">2) Paste or edit XML</h2>
+                    <span class="hint">Validate while you edit; results update on demand.</span>
                 </div>
 
-                <div class="btn-row">
+                <textarea id="xml-input" spellcheck="false" placeholder="Paste SciENcv CPOS XML here..."></textarea>
+
+                <div class="controls" aria-label="Validation options">
+                    <label>
+                        <input type="checkbox" id="upload-mode" checked />
+                        Upload mode: strip any <span class="tag">&lt;profile ...&gt;</span> attributes (no
+                        xmlns/doctype/accession)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="strict-length" checked />
+                        Enforce max-length limits as <strong>ERROR</strong> (recommended)
+                    </label>
+                </div>
+
+                <div class="btn-row" aria-label="Tool actions">
                     <button class="btn" type="button" id="validate-btn">Validate</button>
                     <button class="btn secondary" type="button" id="normalize-btn">Normalize Special Characters</button>
                     <button class="btn secondary" type="button" id="format-btn">Format XML (clean)</button>
-                    <button class="btn secondary" type="button" id="strip-btn">Strip <profile> Attributes</button>
+                    <button class="btn secondary" type="button" id="strip-btn">Strip &lt;profile&gt; Attributes</button>
                     <button class="btn secondary" type="button" id="truncate-btn">Auto-Shorten to Limits</button>
                     <button class="btn" type="button" id="download-btn">Download XML</button>
                     <button class="btn danger" type="button" id="clear-btn">Clear</button>
                 </div>
-            </div>
+            </section>
 
-            <div>
-                <h2>3) Length limits reference</h2>
-                <p class="muted small">These are the limits this validator enforces for CPOS upload fields.</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Element</th>
-                            <th>Max length</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="tag">awardamount</span></td>
-                            <td>13 digits</td>
-                            <td>Digits only (integer). Blank allowed.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">awardnumber</span></td>
-                            <td>50 chars</td>
-                            <td>If too long and not safely reducible, leave blank.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">supportsource</span></td>
-                            <td>60 chars</td>
-                            <td>Often fails; abbreviate and remove filler.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">location</span></td>
-                            <td>60 chars</td>
-                            <td>Primary place of performance.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">projecttitle</span></td>
-                            <td>300 chars</td>
-                            <td>Awards only; in-kind typically blank.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">inkinddescription</span></td>
-                            <td>500 chars</td>
-                            <td>Required narrative home for in-kind details.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">overallobjectives</span></td>
-                            <td>1500 chars</td>
-                            <td>Truncate if needed.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag">potentialoverlap</span></td>
-                            <td>5000 chars</td>
-                            <td>Usually not binding.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <aside class="sidebar" aria-label="Validation output and reference">
+                <section class="card" aria-labelledby="results-heading">
+                    <div class="section-heading">
+                        <h2 id="results-heading">3) Validation results</h2>
+                        <span class="hint">Scrollable panel</span>
+                    </div>
+
+                    <div class="results-wrap">
+                        <div id="results">
+                            <div class="placeholder">
+                                <p class="muted small">
+                                    Validation results will appear here. Load or paste XML, then click
+                                    <strong>Validate</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <details open>
+                    <summary>
+                        <span class="details-title">4) Length limits reference</span>
+                        <span class="muted small">CPOS upload limits</span>
+                    </summary>
+
+                    <p class="muted small" style="margin: 10px 0 10px;">
+                        These are the limits this validator enforces for CPOS upload fields.
+                    </p>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Max length</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="tag">awardamount</span></td>
+                                    <td>13 digits</td>
+                                    <td>Digits only (integer). Blank allowed.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">awardnumber</span></td>
+                                    <td>50 chars</td>
+                                    <td>If too long and not safely reducible, leave blank.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">supportsource</span></td>
+                                    <td>60 chars</td>
+                                    <td>Often fails; abbreviate and remove filler.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">location</span></td>
+                                    <td>60 chars</td>
+                                    <td>Primary place of performance.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">projecttitle</span></td>
+                                    <td>300 chars</td>
+                                    <td>Awards only; in-kind typically blank.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">inkinddescription</span></td>
+                                    <td>500 chars</td>
+                                    <td>Required narrative home for in-kind details.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">overallobjectives</span></td>
+                                    <td>1500 chars</td>
+                                    <td>Truncate if needed.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tag">potentialoverlap</span></td>
+                                    <td>5000 chars</td>
+                                    <td>Usually not binding.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </aside>
         </div>
-
-        <h2>4) Validation results</h2>
-        <div id="results"></div>
     </div>
 
     <script>
