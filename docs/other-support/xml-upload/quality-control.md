@@ -36,7 +36,7 @@ After uploading:
 
 This repo includes a browser-based tool and a CLI script to catch common formatting issues:
 
-- Browser tool: [Open the validator]({{ site.baseurl }}/tools/) and drag/drop your XML.
+- Browser tool: open `tools/index.html` from this repo and drag/drop your XML.
 - CLI script:
 
 ```bash
