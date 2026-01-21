@@ -33,9 +33,9 @@ bundle exec jekyll serve
 - Update content in `docs/` (Markdown).
 - Add new links to `docs/references.md`.
 - Track important changes in `docs/changelog.md`.
+- If you update `tools/index.html`, run `tools/sync_docs_tools.sh` to publish it to `docs/tools/index.html` for GitHub Pages.
 
 ## Source material
 
 This site is reorganized and expanded from a long-form internal guide:
 - See **Appendix → Original long-form guide**.
-
