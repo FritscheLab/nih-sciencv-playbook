@@ -9,6 +9,6 @@ nav_order: 4
 Use this tool to check for the most common CPOS XML upload issues before SciENcv.
 It runs entirely in your browser; files are not uploaded anywhere.
 
-Open the browser-based validator by opening `tools/index.html` from this repo in a browser.
+[Open the browser-based validator]({{ site.baseurl }}/tools/)
 
 If you prefer a command-line check, see the script in `tools/validate_cpos_xml.py`.
