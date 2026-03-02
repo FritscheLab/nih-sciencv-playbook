@@ -35,12 +35,15 @@ Two buckets:
 2. **Other Significant Products** (up to 5)  
    *Use these to support what you say in Contributions to Science.*
 
-Acceptable products are broader than papers. Depending on what is citable and accessible, products can include:
+Acceptable products are broader than papers. Depending on what is **citable and accessible**, products can include:
 - Journal articles, books/chapters, conference papers, and presentations
 - Websites, software, code, models, and technologies/techniques
 - Patents, patent applications, and licenses
 - Data sets, databases, physical collections, research materials, and interventions
 - Instruments/equipment, educational aids/curricula, and new business creation
+
+{: .note }
+> NIH says each product should follow the **NIH hypertext policy** and include the available citation details: **authors, title, publication/release date, URL, persistent identifier (if available), and other relevant citation information**. If one of those data elements truly does not apply, enter **N/A**.
 
 {: .note }
 > **Character limits matter more than pages**: the new format is driven by character limits in narrative fields, not a strict page cap.

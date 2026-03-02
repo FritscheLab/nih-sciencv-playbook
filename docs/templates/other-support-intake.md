@@ -48,7 +48,10 @@ Use this to collect info before building CPOS in SciENcv.
 - Paid or unpaid:
 - Start/end dates:
 - Time commitment:
-- Related agreements or documentation retained:
+- Contract specific to that foreign appointment/employment available? (Y/N)
+- If not in English, translation needed? (Y/N)
+- If this is reported in CPOS, separate supporting-document attachment prepared for the relevant eRA module? (Y/N)
+- Note if this is a personal service contract or fellow employment contract that may not require supporting documentation:
 
 ## D. Exclusions check (so you don't over-report)
 

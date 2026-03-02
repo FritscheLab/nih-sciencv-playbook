@@ -7,7 +7,7 @@ nav_order: 2
 # Contribution to Science template (copy/paste)
 
 {: .note }
-> No formal citation list, figures, tables, or graphics. Refer informally to supporting products from **Other Significant Products**.
+> No formal citation list, figures, tables, or graphics. NIH does **not** require a special reference format here; mention supporting products from **Other Significant Products** by **title**, **author**, **source**, and/or **year**.
 
 ## Structure (recommended)
 
@@ -23,4 +23,4 @@ nav_order: 2
 [2–4 sentences on why it mattered; downstream adoption, clinical impact, etc.]
 
 **Products that evidence this contribution:**  
-“See Other Significant Products #__ (and #__ if needed).”
+“See *[Product title]* ([Author], [Year]) [and second product if needed].”

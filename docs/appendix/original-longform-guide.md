@@ -9,7 +9,7 @@ nav_order: 1
 This page contains the original long-form source document that this site reorganizes.
 
 {: .warning }
-> **Archival note:** This appendix preserves an earlier long-form draft. Its enforcement-timeline language predates **NOT-OD-26-033** and should **not** be used as the source of truth for current NIH warning/error timing. Use the main site pages and official references instead.
+> **Archival note:** This appendix preserves an earlier long-form draft and should be treated as **historical reference only**. It contains superseded enforcement language (including references to a **Feb. 6, 2026** hard-stop date). Use the main site pages and official references for current NIH guidance.
 
 ---
 
@@ -21,7 +21,7 @@ The United States federal research enterprise is undergoing its most significant
 
 For the research administrator, the principal investigator (PI), and the compliance officer, this mandate forces a migration from static, manually edited Word documents to a dynamic, database-driven ecosystem centered on the Science Experts Network Curriculum Vitae (SciENcv).2 The "Common Form" architecture bifurcates the traditional biosketch into two distinct components: a standardized federal profile (The Biographical Sketch Common Form) and an agency-specific qualitative supplement (The NIH Biographical Sketch Supplement).2 This report serves as an exhaustive, expert-level guide to navigating this transition. It dissects the technical requirements of the digital identity infrastructure, details the granular mechanics of form creation within SciENcv, and analyzes the strategic implications of the new content constraints.
 
-The stakes of this transition are high. The NIH has signaled a strict enforcement regime: initial warnings for non-compliance will rapidly escalate to hard stops (errors) by February 6, 2026, preventing the submission of applications that fail to utilize the certified SciENcv output.6 Furthermore, the requirement for personal digital certification by the PI—explicitly prohibiting delegation of the final signature—introduces a new critical path in the proposal submission timeline that institutions must account for immediately.2
+The stakes of this transition are high. **Historical note:** the following sentence reflects the draft understanding at the time this appendix was written and is now superseded by NIH’s later leniency notice. The requirement for personal digital certification by the PI, which explicitly prohibits delegation of the final signature, still introduces a critical path in the proposal submission timeline that institutions must account for.2
 
 ---
 
@@ -59,8 +59,7 @@ It is critical to note the implication for ongoing awards. A grant awarded in 20
 
 The enforcement mechanism is automated within the eRA Commons validation layer.
 
-* **Phase 1 (Jan 25 – Feb 5, 2026):** Submissions using incorrect forms or lacking proper ORCID links will generate a **Warning**. The application will proceed to review, but the warning serves as a final notice.6  
-* **Phase 2 (Feb 6, 2026 onwards):** The warning elevates to an **Error**. eRA systems will reject the application package entirely if the XML validation fails to detect the specific metadata tags present in a certified SciENcv PDF.6
+* **Historical draft language (superseded):** This appendix originally described a two-phase warning/error rollout ending on **Feb. 6, 2026**. NIH later changed that timeline and extended warning-level leniency through **May 2026**. See the current **Policy & Timeline** pages and official NIH notices for the operative dates.
 
 ---
 

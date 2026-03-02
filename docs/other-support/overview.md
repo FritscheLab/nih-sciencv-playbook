@@ -8,6 +8,9 @@ nav_order: 1
 
 NIH requires a SciENcv-generated **Current and Pending (Other) Support (CPOS) Common Form** for the roles and submission types where NIH requests Common Forms / Other Support.
 
+{: .note }
+> Do **not** assume CPOS is always attached at application submission. For many NIH applications, current and pending support is requested later in the process (often during **JIT**) or in **RPPR/Prior Approval** workflows. At application stage, follow the **NOFO** and the **NIH Application Guide**. One important application-stage exception: **mentored career development** applications require CPOS for **mentor/co-mentor(s)**, not for the candidate.
+
 Key points:
 
 - Prepare CPOS in **SciENcv** and submit the **certified SciENcv PDF**

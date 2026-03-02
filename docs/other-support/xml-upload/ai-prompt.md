@@ -11,6 +11,9 @@ This is a copy/paste prompt you can use with Gemini, ChatGPT, or other LLMs to g
 {: .warning }
 > This prompt is for drafting only. Use only institution-approved external AI tools, avoid sensitive or personal data, and assume inputs may be retained by the vendor. Always validate the output with a human and your institutional policies before upload.
 
+{: .note }
+> Re-verify this prompt against the current **NLM Support Center** XML upload guidance, the latest **simple upload template / sample XML**, and the published **SciENcv data schemas** before treating any “hard rule” below as authoritative. Some constraints on this page are practical repo guidance for producing stable uploads, not NIH policy text.
+
 ---
 
 ## Copy/paste prompt

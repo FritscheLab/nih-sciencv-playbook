@@ -14,7 +14,7 @@ If you are being included as **senior/key personnel**, you will generally need a
 ## Quick steps
 
 1. ORCID iD: create (if needed)
-2. Link ORCID to **eRA Commons** and **MyNCBI/SciENcv**
+2. Link ORCID to **eRA Commons** (**required**). Link ORCID in **MyNCBI/SciENcv** too if you plan to use ORCID-linked import workflows
 3. Ensure your **My Bibliography** is correct
 4. Create the SciENcv documents (or work with your delegate)
 5. **Certify + download PDFs**

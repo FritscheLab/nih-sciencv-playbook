@@ -10,7 +10,8 @@ nav_order: 2
 
 1. Ensure each PI/key person has:
    - eRA Commons ID
-   - ORCID iD linked to eRA Commons and MyNCBI/SciENcv
+   - ORCID iD linked to **eRA Commons** (**required**)
+   - MyNCBI/SciENcv access working; ORCID linked there too if you plan to use ORCID-linked import workflows
 2. Ask each PI to **add you as a delegate** in MyNCBI.
 3. Confirm you have access to:
    - **SciENcv** delegation
@@ -30,4 +31,3 @@ nav_order: 2
 - PI logs in, **certifies**, downloads PDFs (or lets you download after)
 
 Next: [Delegates (how to collaborate)]({{ site.baseurl }}{% link getting-ready/delegates.md %})
-

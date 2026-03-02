@@ -14,3 +14,9 @@ Same pattern as the biosketch:
 
 {: .warning }
 > Don’t print/flatten the PDF after download—submit the certified file as generated.
+
+{: .note }
+> You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.
+
+{: .note }
+> If NIH requires **supporting documentation** for foreign appointments/employment reported in CPOS, attach those contract copies **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module. Do **not** append them to the SciENcv CPOS PDF.

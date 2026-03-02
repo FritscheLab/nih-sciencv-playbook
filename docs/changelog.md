@@ -5,6 +5,10 @@ nav_order: 13
 
 # Changelog
 
+## Unreleased
+
+- Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
+
 ## v1.0 (Jan 2026)
 
 - Initial GitHub Pages structure using Just the Docs

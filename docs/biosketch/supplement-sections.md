@@ -19,12 +19,15 @@ nav_order: 4
 
 ## Contributions to Science
 
+- **All senior/key persons should complete this section**; if you truly have nothing to include, enter **N/A**
 - Up to **5 contributions**
 - **2,000 characters each**
 - **No formal citations/reference list inside the text**
 - **No figures, tables, or graphics**
+- Graduate students and postdocs may decide to emphasize **2–3** contributions rather than forcing all 5
 - A good contribution entry usually covers: historical background/problem, central finding(s), influence on the field, and your specific role
-- Each contribution can reference one or more items from **Other Significant Products** using informal product references
+- Each contribution can reference **up to 5** relevant items from **Other Significant Products**
+- NIH does **not** require a special reference format here; the safest pattern is to mention the **title**, **author’s last name**, **publication/source**, and/or **year** of the product you are pointing to
 - You may mention relevant work that is still under development and not yet published
 
 ## Honors

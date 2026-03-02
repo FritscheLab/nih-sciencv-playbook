@@ -14,7 +14,7 @@ nav_order: 1
 ## “Missing persistent identifier”
 
 - Cause: ORCID not linked correctly
-- Fix: link ORCID in eRA Commons *and* MyNCBI/SciENcv
+- Fix: link ORCID in **eRA Commons** first; if SciENcv import is still not working, also confirm the ORCID linked account in **MyNCBI**
 
 ## “Certification required”
 

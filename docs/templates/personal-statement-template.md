@@ -7,7 +7,7 @@ nav_order: 1
 # Personal Statement template (copy/paste)
 
 {: .note }
-> **No formal citation list in the text.** You may still refer informally to the relevant products (for example: "see Closely Related Product #1" or mention a product by title / author / year).
+> **No formal citation list in the text.** You may still refer to relevant products in plain language. NIH does **not** require a special format; mentioning the **title**, **author’s last name**, **publication/source**, and/or **year** is usually safest.
 
 ## Fill-in template
 
@@ -19,8 +19,8 @@ nav_order: 1
 - Leadership/management capability: [1–2 sentences]  
 
 **Evidence via products (no formal citations):**  
-- “My work developing [method/result] is reflected in Closely Related Product #1–#2.”  
-- “My preliminary findings relevant to Aim 2 appear in Closely Related Product #3.”
+- “My work developing [method/result] is reflected in *[Product title]* ([Author], [Year]).”  
+- “My preliminary findings relevant to Aim 2 appear in *[Product title]* ([Author], [Year]).”
 
 **Team/environment fit (optional):** [1–2 sentences]
 

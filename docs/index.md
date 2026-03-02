@@ -24,7 +24,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 ## The two biggest success factors
 
-1. **Identity + data plumbing is correct** (ORCID ↔ eRA Commons ↔ MyNCBI/SciENcv; My Bibliography clean).
+1. **Identity + data plumbing is correct** (ORCID linked to eRA Commons; MyNCBI/SciENcv account access working; My Bibliography clean).
 2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify).
 
 ## What’s inside

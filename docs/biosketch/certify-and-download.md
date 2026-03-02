@@ -19,3 +19,6 @@ nav_order: 6
 
 {: .warning }
 > Do **not** Print to PDF / “Optimize” / flatten this file. Submit the SciENcv-generated PDF as-is.
+
+{: .note }
+> You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.

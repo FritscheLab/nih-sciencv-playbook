@@ -11,7 +11,8 @@ This page consolidates the end-to-end steps (PI + admin) for both documents.
 
 - Confirm **eRA Commons ID**
 - Create **ORCID iD**
-- Link ORCID in **eRA Commons** *and* **MyNCBI**
+- Link ORCID in **eRA Commons** (**required**)
+- Link ORCID in **MyNCBI** if you plan to use ORCID-linked import workflows
 - Clean **My Bibliography** (publications + non-traditional products)
 - Add **delegate** (optional)
 
@@ -41,13 +42,17 @@ This page consolidates the end-to-end steps (PI + admin) for both documents.
 - Honors (≤15)
 
 **How to refer to evidence without citations:**  
-Use language like “see Closely Related Product #1–#2” or “see Other Significant Product #3”.
+Use language that points to the product by **title / author / year**, for example: “see *Title of Product* (Smith, 2024)” or “see dataset released in 2023 by Jones et al.”
 
-## 2) Create CPOS in SciENcv
+## 2) Create CPOS in SciENcv (when NIH requests it)
 
-1. SciENcv → Create New Document
-2. Format: NIH CPOS Common Form
-3. Enter active + pending support and required in-kind resources
+1. Confirm that your **role**, **mechanism**, and **submission stage** actually require CPOS. For many NIH applications, CPOS is requested later (often during **JIT**) rather than attached at initial submission.
+2. SciENcv → Create New Document
+3. Format: NIH CPOS Common Form
+4. Enter active + pending support and required in-kind resources
+
+{: .note }
+> Important application-stage exception: **mentored career development** applications require CPOS for **mentor/co-mentor(s)**, not for the candidate.
 
 ## 3) Certification (individual-only)
 
