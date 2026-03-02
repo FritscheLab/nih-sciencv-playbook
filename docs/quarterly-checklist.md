@@ -21,7 +21,7 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 - ORCID setup + troubleshooting pages
 - PI quickstart + complete walkthrough
 - CPOS overview + what-to-include
-- Appendix archival warning
+- Appendix long-form guide status note
 
 ## 3) Update docs and templates
 

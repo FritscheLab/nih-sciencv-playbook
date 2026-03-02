@@ -38,4 +38,4 @@ bundle exec jekyll serve
 ## Source material
 
 This site is reorganized and expanded from a long-form internal guide:
-- See **Appendix → Original long-form guide**.
+- See **Appendix → Long-form guide (current reference)**.
