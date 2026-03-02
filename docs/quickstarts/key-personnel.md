@@ -6,10 +6,10 @@ nav_order: 3
 
 # Co-I / Key Personnel quickstart
 
-You’re on the proposal as senior/key personnel, so you must produce:
+If you are being included as **senior/key personnel**, you will generally need a SciENcv-generated **NIH Biosketch**. You will also need **CPOS / Other Support** when NIH requests it for your role and submission type.
 
-- SciENcv **NIH Biosketch (Common Form + Supplement)**
-- SciENcv **CPOS Common Form**
+{: .note }
+> Two common exceptions to remember: **CPOS is not required for Other Significant Contributors (OSCs)**, and NIH says CPOS is **not specifically requested** for Program Directors, training faculty, and other oversight individuals in training grants.
 
 ## Quick steps
 
@@ -20,4 +20,3 @@ You’re on the proposal as senior/key personnel, so you must produce:
 5. **Certify + download PDFs**
 
 Next: [Biosketch overview (what you’re producing)]({{ site.baseurl }}{% link biosketch/overview.md %})
-

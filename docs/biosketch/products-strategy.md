@@ -8,6 +8,9 @@ nav_order: 5
 
 Because you only get **10 total** products, selection is strategic:
 
+{: .note }
+> Products can include more than journal papers (for example: software, datasets, patents, technologies, and educational materials). Choose the strongest evidence for your specific claims.
+
 ## Bucket A (Closely Related): “evidence for your personal statement”
 
 Pick items that directly prove claims you make about:
@@ -22,4 +25,3 @@ A good default pattern:
 
 Worksheet:
 - [Product selection worksheet (10 slots)]({{ site.baseurl }}{% link templates/product-selection-worksheet.md %})
-

@@ -6,6 +6,9 @@ nav_order: 2
 
 # Contribution to Science template (copy/paste)
 
+{: .note }
+> No formal citation list, figures, tables, or graphics. Refer informally to supporting products from **Other Significant Products**.
+
 ## Structure (recommended)
 
 **Contribution title:** [short phrase]
@@ -21,4 +24,3 @@ nav_order: 2
 
 **Products that evidence this contribution:**  
 “See Other Significant Products #__ (and #__ if needed).”
-

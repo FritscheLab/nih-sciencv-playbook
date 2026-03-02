@@ -6,7 +6,7 @@ nav_order: 3
 
 # Quality control + validation checklist
 
-Use this checklist before uploading to SciENcv, and again before PI certification.
+Use this checklist before uploading to SciENcv, and again before final certification by the named individual.
 
 ## 1) Content checks (policy-driven)
 

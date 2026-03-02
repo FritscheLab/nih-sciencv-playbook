@@ -6,4 +6,4 @@ has_children: true
 
 # Templates & Worksheets
 
-Copy/paste-ready templates and admin worksheets to speed up drafting, product selection, intake, and PI certification reminders.
+Copy/paste-ready templates and admin worksheets to speed up drafting, product selection, intake, and certification reminders.

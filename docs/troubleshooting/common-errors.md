@@ -18,11 +18,10 @@ nav_order: 1
 
 ## “Certification required”
 
-- Cause: PI did not certify
-- Fix: PI must log in and certify (delegate cannot)
+- Cause: the named individual did not certify
+- Fix: the named individual must log in and certify (delegate cannot)
 
 ## Character limit exceeded
 
 - Cause: hidden formatting from Word
 - Fix: paste as plain text; re-check counts in SciENcv
-

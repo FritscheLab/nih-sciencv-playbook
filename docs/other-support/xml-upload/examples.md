@@ -36,11 +36,13 @@ nav_order: 5
 
 **Update instruction:**
 
-> Change award number R01 AA123456 title to "Revised Title" and mark as completed.
+> Change award number R01 AA123456 title to "Revised Title" and note that the project ended before the CPOS snapshot date.
 
 **Expected behavior:**
 - Find the entry with matching `<awardnumber>`
-- Overwrite the `projecttitle` and set `supporttype` to `completed`
+- Overwrite the `<projecttitle>`
+- Do **not** invent a `completed` status (valid values are only `current` or `pending`)
+- If the project is no longer current or pending as of the CPOS reporting date, **remove it from the CPOS upload** rather than changing `supporttype`
 
 ## Example 4: Duplicate entries from merged sources
 

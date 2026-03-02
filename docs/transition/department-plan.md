@@ -12,7 +12,7 @@ nav_order: 1
 **T-6 weeks:** Delegates added; My Bibliography cleanup begins  
 **T-4 weeks:** First draft narratives + product selection  
 **T-2 weeks:** SciENcv preview PDFs; compliance check  
-**T-3 days:** PI certification window  
+**T-3 days:** Individual certification window  
 **T-0:** Submit
 
 ## Trackers to keep
@@ -23,4 +23,3 @@ nav_order: 1
 - Products selected? (Y/N)
 - Biosketch certified? (Y/N)
 - CPOS certified? (Y/N)
-

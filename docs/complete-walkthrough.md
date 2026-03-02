@@ -49,9 +49,8 @@ Use language like “see Closely Related Product #1–#2” or “see Other Sign
 2. Format: NIH CPOS Common Form
 3. Enter active + pending support and required in-kind resources
 
-## 3) Certification (PI-only)
+## 3) Certification (individual-only)
 
-- Download PDF → Certify → Download
-- Repeat for CPOS
+- Each named individual: Download PDF → Certify → Download
+- Repeat for biosketch and CPOS
 - Do not edit the PDF after download (no printing/flattening)
-

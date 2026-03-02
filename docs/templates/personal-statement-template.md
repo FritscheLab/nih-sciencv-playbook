@@ -7,7 +7,7 @@ nav_order: 1
 # Personal Statement template (copy/paste)
 
 {: .note }
-> **No citations in the text.** Instead reference the relevant products in “Closely Related Products.”
+> **No formal citation list in the text.** You may still refer informally to the relevant products (for example: "see Closely Related Product #1" or mention a product by title / author / year).
 
 ## Fill-in template
 
@@ -25,4 +25,3 @@ nav_order: 1
 **Team/environment fit (optional):** [1–2 sentences]
 
 **Context statement (optional):** [career interruptions, name changes; brief]
-

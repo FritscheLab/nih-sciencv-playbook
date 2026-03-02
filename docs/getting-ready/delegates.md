@@ -6,7 +6,7 @@ nav_order: 5
 
 # Delegates (how to collaborate)
 
-## PI: add a delegate
+## Investigator: add a delegate
 
 MyNCBI → **Account Settings → Delegates → Add delegate** → enter admin email.
 
@@ -22,7 +22,6 @@ Delegates can:
 - Paste narratives, format entries, run previews
 
 Delegates cannot:
-- **Certify / sign** the final PDFs (PI must do this)
+- **Certify / sign** the final PDFs (the individual named on the form must do this from their own account)
 
-Next: [Certify + download (PI-only step)]({{ site.baseurl }}{% link biosketch/certify-and-download.md %})
-
+Next: [Certify + download (individual-only step)]({{ site.baseurl }}{% link biosketch/certify-and-download.md %})

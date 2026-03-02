@@ -8,6 +8,9 @@ nav_order: 1
 
 This page contains the original long-form source document that this site reorganizes.
 
+{: .warning }
+> **Archival note:** This appendix preserves an earlier long-form draft. Its enforcement-timeline language predates **NOT-OD-26-033** and should **not** be used as the source of truth for current NIH warning/error timing. Use the main site pages and official references instead.
+
 ---
 
 # **The Comprehensive Implementation Guide to the 2026 NIH Common Forms: SciENcv Workflows, Strategic Compliance, and Technical Architecture**

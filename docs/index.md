@@ -13,7 +13,8 @@ This site is a **PI + admin team** guide to preparing NIH’s required **Common 
 Independent guide, not official NIH/NCBI guidance. Verify details in [References]({{ site.baseurl }}{% link references.md %}).
 
 {: .warning }
-> **Effective date:** NIH requires Common Forms for **applications, JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**. NIH enforces this through eRA validations (warnings at first; elevated to submission-blocking errors by Feb 6, 2026). See **Policy & Timeline**.
+> **Effective date:** NIH requires Common Forms for **applications, JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
+> **Current enforcement status:** NIH is using **warnings** during a **leniency period through May 2026** and has said it will announce the later **submission-blocking error date** in a future Guide Notice. See **Policy & Timeline**.
 
 ## Start here (role-based)
 
@@ -24,7 +25,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 ## The two biggest success factors
 
 1. **Identity + data plumbing is correct** (ORCID ↔ eRA Commons ↔ MyNCBI/SciENcv; My Bibliography clean).
-2. **Workflow timing** accounts for **PI-only certification** in SciENcv (delegates cannot certify).
+2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify).
 
 ## What’s inside
 
@@ -33,4 +34,3 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 - Templates (Personal Statement, Contributions, intake forms, email nudges)
 - Troubleshooting and common eRA validation failures
 - Curated references (NIH + institutional guides)
-

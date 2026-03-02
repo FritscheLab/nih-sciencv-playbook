@@ -8,27 +8,58 @@ nav_order: 6
 
 Use this to collect info before building CPOS in SciENcv.
 
-## For each ACTIVE project/support
+## Person / document context
+
+- Individual name:
+- Department/unit:
+- eRA Commons username:
+- ORCID iD:
+- Document date (MM/DD/YYYY):
+
+## A. For each CURRENT or PENDING proposal / active project
 
 - Project title:
 - Sponsor/funder:
-- Role:
-- Award period:
-- Total award amount (if required by your institution):
-- Effort (calendar months / %):
-- Overlap statement (if needed):
-- In-kind resources (equipment, staff, space, materials):
+- Role on project:
+- Status (`current` or `pending`):
+- Start date (YYYY-MM-DD):
+- End date (YYYY-MM-DD):
+- Total award amount (include indirect costs where required):
+- Effort by year (person-months):
+- Overall objectives summary:
+- Overlap statement (use `None` when there is no overlap):
+- Award number (if available):
+- Primary place of performance:
 
-## For each PENDING project/support
+## B. For each IN-KIND contribution
 
-- Sponsor/funder:
-- Submission status/date:
-- Proposed effort:
-- In-kind contributions:
+- In-kind contribution description:
+- Source/provider:
+- Estimated dollar value:
+- Start date (YYYY-MM-DD):
+- End date (YYYY-MM-DD, if known):
+- Associated commitment of individual's time (person-months):
+- Why reportable under NIH criteria:
 
-## Affiliations/appointments implying commitment
+## C. Foreign appointments / employment / supporting documentation
 
-- Domestic:
-- Foreign:
-- Unpaid/courtesy:
+- Any foreign appointment or employment? (Y/N)
+- If yes, organization / country / title:
+- Paid or unpaid:
+- Start/end dates:
+- Time commitment:
+- Related agreements or documentation retained:
 
+## D. Exclusions check (so you don't over-report)
+
+- Broadly available institutional core facilities/shared equipment excluded? (Y/N)
+- Training awards excluded? (Y/N)
+- Prizes/gifts excluded? (Y/N)
+- Personal/non-research details excluded? (Y/N)
+
+## E. Final admin QC
+
+- Status values only `current` or `pending` for proposal/active project entries
+- Separate entries prepared for each proposal/active project and each reportable in-kind contribution
+- Dollar values and dates use consistent formatting
+- Overlap statements present (`None` when appropriate)

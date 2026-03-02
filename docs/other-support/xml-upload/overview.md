@@ -11,6 +11,12 @@ SciENcv supports **Data Ingest (XML file upload)** to help users pre-populate CP
 {: .warning }
 > XML upload is a data-entry accelerator, not a submission bypass. NIH still requires a **SciENcv-generated, digitally certified PDF**, and the individual (not a delegate) must certify.
 
+{: .note }
+> A file can still be a *valid upload file* even when some fields are blank. After upload, SciENcv will flag missing required values in the UI with red exclamation icons that must be resolved before certification/download.
+
+{: .note }
+> The CPOS form displays dates in a human-facing month/year style, but the XML upload template uses machine-readable `YYYY-MM-DD`. If you only know month/year, use day `01` consistently and confirm the rendered entry in SciENcv after upload.
+
 ## Where to find XML upload in SciENcv
 
 ![SciENcv menu showing Create New Document with the Current and Pending (Other) Support (CPOS) Common Form and XML upload option.]({{ site.baseurl }}/assets/images/sciencv-cpos-xml-upload-menu.png)

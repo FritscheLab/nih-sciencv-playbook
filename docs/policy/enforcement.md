@@ -1,18 +1,19 @@
 ---
-title: Enforcement (warnings → errors)
+title: Enforcement (current leniency period)
 parent: Policy & Timeline
 nav_order: 2
 ---
 
-# Enforcement (warnings → errors)
+# Enforcement (current leniency period)
 
-NIH enforces Common Forms via **eRA system validations**:
+NIH currently enforces Common Forms via **eRA system validations**:
 
-- Initially: **warning** if the wrong/uncertified forms are used
-- By **Feb 6, 2026**: warnings escalate to **errors** that prevent submission
+- **Common Forms are required** for applications, JIT, RPPR, and Prior Approval submissions on/after **Jan 25, 2026**.
+- NIH is currently in a **leniency period through May 2026**.
+- During this period, NIH says noncompliant submissions may receive **warnings**, but the agency is **not yet withdrawing applications for this issue**.
+- NIH has said it will announce the later **submission-blocking error date** in a future Guide Notice.
 
-This enforcement language is shown on NIH’s form directory pages (Biosketch Supplement, Biographical Sketch Common Form, and CPOS Common Form).
+See NIH notices [NOT-OD-26-018](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html) and [NOT-OD-26-033](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-033.html).
 
 {: .warning }
-> **Operational implication:** you need a dedicated **PI certification step** in your internal submission timeline. Delegates cannot certify for the PI.
-
+> **Operational implication:** you need dedicated **individual certification steps** in your internal submission timeline. Delegates cannot certify for the named individual.
