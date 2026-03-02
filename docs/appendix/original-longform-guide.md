@@ -1,329 +1,445 @@
 ---
-title: Original long-form guide (source)
+title: Long-form guide (current reference)
 parent: Appendix
 nav_order: 1
 ---
 
-# Original long-form guide (source)
+# Long-form guide (current reference)
 
-This page contains the original long-form source document that this site reorganizes.
+This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-03-02**.
+
+{: .note }
+> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-03-02.
 
 {: .warning }
-> **Archival note:** This appendix preserves an earlier long-form draft and should be treated as **historical reference only**. It contains superseded enforcement language (including references to a **Feb. 6, 2026** hard-stop date). Use the main site pages and official references for current NIH guidance.
+> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. However, NIH is still in a **leniency period through May 2026**. During this period, NIH encourages use of the Common Forms and SciENcv, but system validations remain at the **warning** level and NIH continues to accept the legacy NIH biosketch and other support format pages. NIH has said a later Guide Notice will announce when warnings become errors.
+
+# The Comprehensive Implementation Guide to the 2026 NIH Common Forms
+
+## Executive summary
+
+The NIH Common Forms transition is now a live operational requirement, but the practical reality in early 2026 is more nuanced than the original rollout language suggested.
+
+The current NIH model has three core pieces:
+
+1. the **Biographical Sketch Common Form**;
+2. the **NIH Biographical Sketch Supplement**; and
+3. the **Current and Pending (Other) Support (CPOS) Common Form**.
+
+For NIH, the Common Forms and the NIH supplement must be prepared in **SciENcv** to generate digitally certified PDF files for submission. The biosketch is no longer a single manually edited narrative document. Instead, NIH now separates:
+
+- the standardized, portable disclosure data in the **Biographical Sketch Common Form**; and
+- the NIH-specific qualitative narrative in the **NIH Biographical Sketch Supplement**.
+
+The most important operational points are:
+
+- The **ORCID iD linked to the eRA Commons Personal Profile** is the documented NIH persistent identifier requirement.
+- The **NIH Biographical Sketch Supplement** is completed in the **second section of the same SciENcv interface** used for the Common Form.
+- The **Biographical Sketch Common Form** has **no NIH page limit**; the meaningful constraints are field-level instructions and character limits inside the supplement.
+- The **Personal Statement** is limited to **3,500 characters**.
+- The **Honors** section is limited to **15 entries**.
+- The **Contributions to Science** section allows **up to 5 contributions**, each limited to **2,000 characters**.
+- **Current and Pending (Other) Support is not automatically part of every initial application package.** For many NIH applications, it is requested later in the lifecycle, often during **Just-in-Time (JIT)**.
+- Each individual must **personally certify** their own Common Form output in SciENcv. Delegates can prepare records, but they cannot certify them.
+- The downloaded PDF may be **renamed**, but it must **not** be edited, printed-to-PDF, flattened, or otherwise altered. The signature date must be **within 12 months** of submission.
 
 ---
 
-# **The Comprehensive Implementation Guide to the 2026 NIH Common Forms: SciENcv Workflows, Strategic Compliance, and Technical Architecture**
+## Part I: Policy landscape and implementation status
 
-## **Executive Summary: The Structural Transformation of Federal Research Disclosure**
+NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. NIH's implementation details are collected on the NIH Common Forms hub and in **NOT-OD-26-018**. The later timing adjustment is in **NOT-OD-26-033**.
 
-The United States federal research enterprise is undergoing its most significant administrative transformation in decades. Effective January 25, 2026, the National Institutes of Health (NIH) will mandate the use of "Common Forms" for Biographical Sketches and Current and Pending (Other) Support.1 This shift is not merely a cosmetic update to form templates; it represents the operationalization of the National Security Presidential Memorandum 33 (NSPM-33), a directive aimed at harmonizing disclosure requirements across federal funding agencies to strengthen research security and standardize data collection.1
+### 1.1 What changed structurally
 
-For the research administrator, the principal investigator (PI), and the compliance officer, this mandate forces a migration from static, manually edited Word documents to a dynamic, database-driven ecosystem centered on the Science Experts Network Curriculum Vitae (SciENcv).2 The "Common Form" architecture bifurcates the traditional biosketch into two distinct components: a standardized federal profile (The Biographical Sketch Common Form) and an agency-specific qualitative supplement (The NIH Biographical Sketch Supplement).2 This report serves as an exhaustive, expert-level guide to navigating this transition. It dissects the technical requirements of the digital identity infrastructure, details the granular mechanics of form creation within SciENcv, and analyzes the strategic implications of the new content constraints.
+The old NIH biosketch model blended structured profile data and NIH-specific narrative in one document. The new model splits those functions:
 
-The stakes of this transition are high. **Historical note:** the following sentence reflects the draft understanding at the time this appendix was written and is now superseded by NIH’s later leniency notice. The requirement for personal digital certification by the PI, which explicitly prohibits delegation of the final signature, still introduces a critical path in the proposal submission timeline that institutions must account for.2
+- **Biographical Sketch Common Form** = structured disclosure data
+- **NIH Biographical Sketch Supplement** = NIH-specific narrative assessment
+- **CPOS Common Form** = structured support disclosure used when NIH requests current and pending support
 
----
+This matters because NIH now expects the documents to be produced through a systems workflow rather than by freehand editing a Word or PDF template.
 
-**Part I: The Policy Landscape and the Architecture of Harmonization**
+### 1.2 Effective dates and current operational reality
 
-To effectively manage the transition to the Common Forms, one must understand the underlying logic of the "Common Disclosure" initiative. The previous system, characterized by agency-specific formats (NIH, NSF, DoD), created administrative burden and ambiguity regarding disclosure overlaps. The OSTP’s guidance on the implementation of NSPM-33 sought to resolve this by creating a single, interoperable data standard.1
+The formal implementation date remains **January 25, 2026**.
 
-### **1.1 The Bifurcated Document Model**
+| Submission scenario | On or before Jan. 24, 2026 | On or after Jan. 25, 2026 | Current operational note |
+| --- | --- | --- | --- |
+| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | NIH is still accepting legacy pages during the leniency period through May 2026 |
+| JIT | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 2026 |
+| RPPR | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 2026 |
+| Prior Approval | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 2026 |
 
-The fundamental innovation of the 2026 mandate is the separation of "identity data" from "qualitative assessment." Under the legacy format (Form H and prior), a biosketch was a single document containing both the researcher's employment history and their narrative contributions to science. The new architecture splits these functions to allow for cross-agency portability of the data.
+The major correction to the earlier draft is the enforcement timeline. NIH no longer states that warnings became hard-stop errors on **February 6, 2026**. Instead, NIH extended the warning-only leniency period through **May 2026** and said a later Guide Notice will announce the date when warnings become errors.
 
-#### **1.1.1 The Biographical Sketch Common Form**
+### 1.3 Research Security Training and Common Forms timing
 
-The Common Form is the federal standard. It is designed to be "agency-agnostic" to a degree, holding the verifiable facts of a researcher's career. Its primary components—Professional Preparation (education), Appointments, and Products—are structured to allow data portability. If a researcher applies to the National Science Foundation (NSF) and later to the NIH, the core data residing in the Common Form remains consistent, reducing the need for re-entry.3 This document is heavily regulated by character limits and field definitions agreed upon by the National Science and Technology Council (NSTC).
-
-#### **1.1.2 The NIH Biographical Sketch Supplement**
-
-Recognizing that the generic Common Form could not capture the nuance required for biomedical peer review, the NIH introduced the "Supplement." This is a purely qualitative document that appends to the Common Form. It houses the "Personal Statement," "Contributions to Science," and "Honors".4 This separation is crucial for systems architecture: the Common Form handles the *data* (who you are, what you produced), while the Supplement handles the *argument* (why you are qualified, how you impacted the field).
-
-### **1.2 Timeline and Enforcement Mechanisms**
-
-The transition timeline is rigid and binary, centered on the implementation date of January 25, 2026\.
-
-| Submission Type | Due Date | Required Format |
-| :---- | :---- | :---- |
-| **Grant Application** | On or before Jan 24, 2026 | Legacy NIH Biosketch Format |
-| **Grant Application** | On or after Jan 25, 2026 | Common Form \+ NIH Supplement (via SciENcv) |
-| **RPPR (Progress Report)** | Submitted on or after Jan 25, 2026 | Common Form \+ NIH Supplement (via SciENcv) |
-| **Just-in-Time (JIT)** | Submitted on or after Jan 25, 2026 | Common Form \+ NIH Supplement (via SciENcv) |
-| **Prior Approval Request** | Submitted on or after Jan 25, 2026 | Common Form \+ NIH Supplement (via SciENcv) |
-
-2
-
-It is critical to note the implication for ongoing awards. A grant awarded in 2024 using the legacy biosketch format will require the conversion of all Key Personnel biosketches to the new Common Form format for its 2026 RPPR.3 This creates a massive "technical debt" for institutions, as hundreds or thousands of active biosketches must be migrated to SciENcv before the Spring 2026 progress report cycle begins.
-
-The enforcement mechanism is automated within the eRA Commons validation layer.
-
-* **Historical draft language (superseded):** This appendix originally described a two-phase warning/error rollout ending on **Feb. 6, 2026**. NIH later changed that timeline and extended warning-level leniency through **May 2026**. See the current **Policy & Timeline** pages and official NIH notices for the operative dates.
+NIH explained that the leniency-period extension allows better alignment between Common Form certifications and the separate **Research Security Training (RST)** requirement for covered individuals. NIH also explicitly notes that, based on NIH's **Just-in-Time** policy, NIH **does not collect Current and Pending (Other) Support at the time of application** in the ordinary case.
 
 ---
 
-**Part II: The Digital Identity Infrastructure**
+## Part II: Identity, system roles, and account setup
 
-The successful generation of a Common Form Biosketch is the final step in a data supply chain that begins outside of the NIH. The system relies on a "triad" of digital identity platforms: **ORCID** (the persistent identifier), **eRA Commons** (the agency portal), and **MyNCBI/SciENcv** (the generator). If the connections between these three nodes are not established and maintained, the SciENcv interface will fail to populate, forcing error-prone manual entry.
+### 2.1 The required identity element: ORCID linked to eRA Commons
 
-### **2.1 ORCID: The Backbone of Professional Preparation**
+For NIH, the persistent identifier (PID) used on the Common Forms must be an **ORCID iD**, and that ORCID iD must be linked to the individual's **eRA Commons Personal Profile**.
 
-The Open Researcher and Contributor ID (ORCID) has evolved from a recommended best practice to a mandatory compliance tool. For the Common Form, the ORCID iD is not just a label; it is a data source. The NIH explicitly requires that the ORCID iD be displayed in the "Persistent Identifier" section of the Common Form, and SciENcv is programmed to pull education and employment data directly from the ORCID registry.2
+That is the official NIH/eRA requirement that matters most for compliance. As a practical matter, institutions may also use other account-linking steps to streamline SciENcv workflows, but the requirement that NIH explicitly states is the **ORCID-to-eRA Commons** link.
 
-#### **2.1.1 Establishing and Curating the ORCID Record**
+### 2.2 What each system does
 
-Researchers must treat their ORCID profile as a legal document.
+The practical workflow spans three systems:
 
-1. **Registration:** The investigator must register for an ORCID iD at orcid.org. This is a one-time process yielding a unique 16-digit identifier.9  
-2. **Data Population (The "Works" Section):** To facilitate the "Products" section in the biosketch, investigators should populate their ORCID "Works" section. The most efficient method is the "Search & Link" wizard, which connects ORCID to trusted databases like Scopus, CrossRef, or Europe PMC. This allows for the bulk import of publication metadata (DOI, PMID, Journal Title) into the ORCID record.9  
-   * *Strategic Insight:* Populating ORCID prevents the need to manually type citation data into SciENcv later. It also ensures that the metadata is standardized, reducing the risk of citation errors in the grant application.  
-3. **Data Population (Employment and Education):** The "Professional Preparation" section of the Common Form draws heavily from ORCID. Users should ensure that their degree dates, institution names, and locations are accurate in ORCID to ensure a clean import.10
+- **eRA Commons** establishes NIH identity and stores the ORCID link used for the PID.
+- **SciENcv** is the required preparation system for NIH Common Forms and the NIH supplement.
+- **MyNCBI / NCBI account services** provide the account layer through which SciENcv is accessed.
 
-#### **2.1.2 The "Double Handshake" Requirement**
+In its implementation notice, NIH also reminds users to **associate their ORCID iD account and eRA Commons account with SciENcv**. For NIH documentation purposes, the most important compliance check is still that the investigator's ORCID appears correctly as the **Persistent Identifier** in the SciENcv-generated Common Form.
 
-A frequent point of failure in the setup process is the confusion between linking ORCID to eRA Commons versus linking it to SciENcv. **These are two separate technical actions, and both are required.**
+### 2.3 High-value setup checks
 
-* **Handshake 1: ORCID to eRA Commons:** This link validates the researcher's identity to the funding agency.  
-  * *Action:* The PI logs into eRA Commons \-\> Personal Profile \-\> ORCID ID section \-\> "Create or Connect your ORCID iD." This authorizes NIH to read the ORCID record.9  
-  * *Consequence:* Without this link, the application will trigger a validation error upon submission.7  
-* **Handshake 2: ORCID to SciENcv:** This link allows the SciENcv tool to "read" the data to build the form.  
-  * *Action:* The PI logs into MyNCBI \-\> Account Settings \-\> Linked Accounts \-\> "Add Account" \-\> Search for ORCID \-\> Authorize.11  
-  * *Consequence:* Without this link, the "External Source" feature in SciENcv will be disabled, forcing manual data entry.10
+Before drafting the biosketch or CPOS, verify:
 
-### **2.2 MyNCBI and My Bibliography: The Citation Engine**
+- the investigator has a working **eRA Commons** account;
+- the investigator has an **ORCID iD**;
+- the ORCID iD is linked in the **eRA Commons Personal Profile**;
+- SciENcv access is working;
+- the investigator or delegate can open the relevant Common Form interface.
 
-While ORCID handles bio-data well, **My Bibliography** (a tool within MyNCBI) remains the definitive source for managing NIH-compliant citations. This is particularly important for verifying compliance with the NIH Public Access Policy (the requirement that NIH-funded papers be deposited in PubMed Central).
+### 2.4 A common ORCID edge case
 
-#### **2.2.1 Configuring My Bibliography**
-
-The "Products" section of the Common Form allows for citations to be pulled from My Bibliography.
-
-* **Populating from PubMed:** Users should log into My Bibliography and use the "Add from PubMed" search feature. This retrieves the official NLM metadata, including the PMCID status.  
-* **Handling Non-Journal Products:** The Common Form encourages the listing of non-paper products (software, datasets, protocols). These must be added to My Bibliography manually using the "Add Citation \-\> Manual" or "Upload RIS" feature.  
-  * *Strategic Insight:* For PIs with extensive non-standard outputs (e.g., engineers or data scientists), leveraging the RIS upload from reference managers like EndNote is significantly faster than manual entry.9
+The eRA Commons help page notes that one reason ORCID linking may fail is that the investigator has **two Commons accounts** and the ORCID iD is already linked to the other one. The official remedy is to contact the **eRA Service Desk**.
 
 ---
 
-**Part III: The Biographical Sketch Common Form – Technical Execution**
+## Part III: The Biographical Sketch Common Form
 
-Once the digital infrastructure is linked, the creation of the document occurs within SciENcv. This section details the technical execution of the **Common Form** component, analyzing the specific constraints and strategies for each field.
+The Biographical Sketch Common Form is the structured federal form used to disclose the investigator's identity, professional preparation, appointments/positions, and products.
 
-### **3.1 Creating the Document Container**
+### 3.1 General characteristics
 
-1. **Access:** The user (or delegate) navigates to the "Manage SciENcv" dashboard.  
-2. **Initiation:** Click "Create New Document."  
-3. **Metadata:**  
-   * **Document Name:** Assign a recognizable title (e.g., "Jones\_R01\_Resub\_2026").  
-   * **Format Selection:** Select **"NIH Biosketch"** (or "Biographical Sketch Common Form" depending on the specific SciENcv interface update version).  
-   * **Data Source:** Select **"External source: ORCID"**. This triggers the system to pull the Professional Preparation and Appointments data immediately, populating the shell.10
+For NIH:
 
-### **3.2 Section 1: Professional Preparation (Formerly Education)**
+- there is **no page limit** for the Biographical Sketch Common Form;
+- the form must be prepared in **SciENcv**;
+- the individual must certify it;
+- the Common Form and NIH supplement are completed through **one user interface**.
 
-This section replaces the "Education/Training" block. It is a structured table of degrees and training.
+The Common Form instructions also remind users **not to include personal information** such as home address, personal phone numbers, driver's license number, marital status, or hobbies.
 
-* **Data Flow:** If the ORCID link was selected, this table populates automatically.  
-* **Manual Intervention:** The user must review the import. Common issues include duplicate entries for the same degree (e.g., "PhD" and "Ph.D.") or missing completion dates. These can be edited directly in the SciENcv interface using the "Edit" pencil icon.  
-* **Scope:** Unlike the old form, which focused primarily on degrees, "Professional Preparation" in the Common Form syntax is broad enough to include postdoctoral training, which should be listed here rather than in "Positions" if it was a training role.2
+### 3.2 Professional Preparation
 
-### **3.3 Section 2: Appointments and Positions**
+The Professional Preparation section is broader than many legacy biosketch users expect. NIH's Common Form instructions say to list professional preparation in reverse chronological order by start date and to include:
 
-This section is the primary audit log for Conflict of Commitment. The Common Form requirement is more rigorous than previous iterations.
+- education and training;
+- all postdoctoral and fellowship training, each listed separately; and
+- the baccalaureate degree or other initial professional education.
 
-* **Requirement:** Users must list **all** domestic and foreign professional appointments and positions. This includes:  
-  * Academic appointments.  
-  * Industry roles.  
-  * Non-profit board memberships (if professional).  
-  * Foreign honorary titles or adjunct positions.  
-* **Lookback Period:** The form requires positions held outside the primary organization for up to three years prior to the application.5  
-* **Technical Execution:** SciENcv pulls this from ORCID or existing profiles. The user must ensure *completeness*. Omitting a foreign affiliation here, even an unpaid one, can be grounds for an investigation into undisclosed foreign support.2
+For each entry, users must provide the organization, location, degree (if applicable), start date, completion or expected completion date, and field of study.
 
-### **3.4 Section 3: Products (The Strategic Pivot)**
+### 3.3 Appointments and Positions
 
-The "Products" section represents the most drastic change in grantsmanship strategy. The previous allowance (up to 4 citations per contribution \+ 4 in personal statement \= \~24 citations) has been slashed to a strict **10 products total**.
+This section is one of the most important compliance areas because it captures domestic and foreign appointments and positions.
 
-The section is divided into two rigid buckets:
+NIH's Common Form instructions define appointments and positions broadly enough to include titled academic, professional, or institutional positions whether or not remuneration is received, and whether the role is full-time, part-time, or voluntary. This explicitly includes **adjunct, visiting, and honorary** roles.
 
-#### **3.4.1 Bucket A: Products Most Closely Related to the Proposed Project**
+The current NIH Common Form instruction is more precise than some earlier summaries: senior/key persons must identify all domestic and foreign professional appointments and positions **outside of the primary organization** for a period of up to **three years** from the date the application is submitted to the agency for funding consideration.
 
-* **Limit:** Up to 5 citations.  
-* **Function:** These are the *only* citations that can be referenced in the Personal Statement (located in the Supplement).  
-* **Strategy:** Selection here is not just about "best papers"; it is about "evidentiary papers." If the Personal Statement claims the PI has expertise in *Technique X*, there must be a paper in this bucket demonstrating *Technique X*.  
-* **Technical Step:** In SciENcv, the user clicks "Select citations," which opens a window to My Bibliography. The user checks up to 5 boxes. These are then frozen into this section.5
+### 3.4 Products: the 5 + 5 model
 
-#### **3.4.2 Bucket B: Other Significant Products**
+The Products section allows two buckets of evidence:
 
-* **Limit:** Up to 5 citations.  
-* **Function:** These serve as the evidentiary basis for the "Contributions to Science" section in the Supplement.  
-* **Strategy:** This requires a "portfolio approach." Since the user can no longer list 4 papers for *each* contribution, these 5 papers must represent the breadth of the investigator's career. A common strategy is to select one "landmark" paper for each of the 5 Contributions described in the Supplement.1
+1. **up to 5 products closely related to the proposed project**; and
+2. **up to 5 other significant products** that highlight the individual's Contributions to Science.
 
----
+The Supplement then gives the individual a place to explain those contributions while pointing back to the products listed here.
 
-**Part IV: The NIH Biographical Sketch Supplement – Narrative Strategy**
+This is the single biggest strategic change from the legacy NIH biosketch model. Users should select products that function as **evidence for specific claims**, not just an undifferentiated list of favorite papers.
 
-While the Common Form is data-centric, the Supplement is narrative-centric. This document is appended to the Common Form in the final PDF output but is edited in a separate tab or section within the SciENcv interface.6
+### 3.5 What counts as a product
 
-### **4.1 The Personal Statement (No Citations Allowed)**
+NIH makes clear that acceptable products are broader than traditional journal articles. Products may include:
 
-* **Constraint:** Maximum **3,500 characters** (including spaces).15  
-* **The Citation Ban:** The text field in SciENcv does not support linking or footnotes. The instructions explicitly state **"No citations allowed"** in the text.2  
-* **Writing Strategy:** The narrative must use referential language. Instead of writing "Recent work shows X (Doe et al., 2024)," the investigator must write "As demonstrated in the products closely related to the proposed project..." or "My recent analysis of X (see Product 1\) established that..."  
-  * *Implication:* This forces the Personal Statement to be strictly tightly coupled with the "Closely Related Products" list. You cannot discuss a finding if the supporting paper isn't one of the 5 listed in the Common Form section.2  
-* **Content Focus:** The statement must address suitability for the *specific* project. With the character limit, generic biographical fluff must be excised. Focus on technical expertise, leadership of similar projects, and access to resources.16
+- publications, conference papers, and presentations;
+- websites or other Internet sites;
+- technologies or techniques;
+- inventions, patents, patent applications, and licenses; and
+- other products such as data, databases or datasets, physical collections, audio/video products, software, models, educational aids or curricula, instruments or equipment, research material, interventions, or new business creation.
 
-### **4.2 Contributions to Science**
+### 3.6 Product metadata expectations
 
-* **Constraint:** Maximum **5 contributions**. Each contribution is limited to **2,000 characters**.1  
-* **Structure:**  
-  1. **Header:** A short title (e.g., "Development of Novel Kinase Inhibitors").  
-  2. **Narrative:** A description of the problem, the finding, and the impact.  
-  3. **Reference:** A sentence linking the contribution to the "Other Significant Products" list. e.g., "This body of work is exemplified by the foundational study listed as Product \#3 in the Other Significant Products section.".5  
-* **Strategic Adjustment:** In the legacy format, PIs often used the "Contributions" section to list distinct bodies of work with separate citation lists. Now, with only 5 "Significant Products" allowed *total* (in the Common Form), the Contributions narrative must be written to highlight the impact of those specific 5 products. It reduces the ability to claim "breadth" via volume of citations; breadth must now be established via the narrative description of impact.1
+Each product must be **citable and accessible** and must comply with NIH's hypertext policy. NIH instructs users to include the available citation information, including:
 
-### **4.3 Honors**
+- author names;
+- product title;
+- publication or release date;
+- website URL;
+- another persistent identifier, if available; and
+- other relevant citation information.
 
-* **Constraint:** Maximum **15 entries**.8  
-* **Location:** Moved from the main biosketch to the Supplement.  
-* **Selection:** SciENcv may pull dozens of awards from ORCID. The user (or delegate) must curate this list down to the top 15 most relevant honors. Prioritize national/international awards over internal institutional grants or travel awards.
+If one of those elements truly does not apply, NIH instructs users to enter **N/A**.
 
 ---
 
-**Part V: The Delegate Workflow and Digital Certification**
+## Part IV: The NIH Biographical Sketch Supplement
 
-A massive operational shift in the 2026 mandate is the restriction on who can finalize the document. The workflow transforms from a solitary administrative task to a collaborative digital handshake.
+The NIH Biographical Sketch Supplement is the NIH-specific narrative companion to the Common Form. SciENcv collects it in the **second section of the Biographical Sketch Common Form interface**, so the user completes both pieces through one workflow.
 
-### **5.1 The Role of the Delegate (Administrator)**
+The supplement contains three required NIH-specific elements:
 
-NIH policy and federal law prohibit anyone other than the account holder from logging in with their credentials. Therefore, research administrators must be assigned as **Delegates** to legally access and edit a PI's SciENcv profile.
+- **Personal Statement**
+- **Honors**
+- **Contributions to Science**
 
-#### **5.1.1 Establishing Delegation**
+### 4.1 Personal Statement
 
-1. **PI Action:** The PI logs into their MyNCBI account \-\> Account Settings \-\> Delegates \-\> "Add a Delegate."  
-2. **Input:** The PI enters the administrator’s email address.  
-3. **Confirmation:** The administrator receives an email. They must click the link and log in to their *own* MyNCBI account to accept the delegation.18  
-   * *Best Practice:* PIs should grant delegation rights for both **SciENcv** (to build the form) and **My Bibliography** (to curate the citations). Without the latter, the delegate cannot fix missing PMCID problems or add new papers to the "Select Citations" window.19
+The Personal Statement asks the investigator to describe why they are well-suited for their role on the project. NIH gives examples of appropriate content:
 
-#### **5.1.2 What the Delegate Can Do**
+- relevant aspects of training;
+- previous experimental work on the specific or related topic;
+- technical expertise;
+- collaborators or scientific environment; and
+- past performance in this or related fields, including ongoing and completed research projects from the past three years that the investigator wants to highlight.
 
-* Create new documents.  
-* Import data from ORCID/eRA.  
-* Select citations for the "Products" sections.  
-* Copy/paste text into the Personal Statement and Contributions fields.  
-* Check for errors (e.g., character count overflows).
+Two rules matter especially here:
 
-#### **5.1.3 What the Delegate Cannot Do**
+- **Do not provide citations in the NIH Biographical Sketch Supplement.**
+- The Personal Statement is limited to **3,500 characters**.
 
-* **Certify the Document.** The "Certify" button is physically hidden or disabled when viewing a profile as a delegate.8  
-* **Sign the MFTRP Statement.** The certification includes a legal attestation regarding Malign Foreign Talent Recruitment Programs. This requires the principal's direct action.2
+NIH also explicitly allows users to:
 
-### **5.2 The Certification Workflow (The PI's Responsibility)**
+- explain factors that affected past productivity, such as family care responsibilities, illness, disability, or military service; and
+- indicate whether they published or created research products under another name.
 
-The workflow must be designed to accommodate the PI's intervention at the final stage.
+For certain subsets of applicants, NIH adds special guidance. For example, applicants for dissertation research awards such as **R36** should also describe career goals, intended career trajectory, and interest in the specific research areas designated in the NOFO.
 
-1. **Drafting:** The Delegate builds the biosketch in SciENcv.  
-2. **Notification:** The Delegate notifies the PI (via email/Slack) that "The Jones R01 Biosketch is ready for certification."  
-3. **PI Access:** The PI logs into SciENcv.  
-4. **Review:** The PI reviews the PDF preview.  
-5. **Certification:** The PI clicks the **"Certify"** button at the bottom of the screen.  
-   * *System Action:* This applies a digital signature, a timestamp, and locks the dataset.  
-6. **Download:** The PI (or the delegate, *after* certification) downloads the PDF.2
+### 4.2 Honors
 
-**Critical Warning \- The "Flattening" Error:** Administrators must never "print to PDF" or "flatten" the certified biosketch. The file generated by SciENcv contains invisible XML metadata that the eRA Commons machine-reading software uses to validate the form. If the PDF is flattened, the XML is stripped, and the application will be rejected with a "Form System Error".2
+The Honors section lists relevant academic and professional achievements and honors. NIH specifically notes that:
 
----
+- students, postdoctorates, and junior faculty should include scholarships, traineeships, fellowships, and development awards, as applicable; and
+- clinicians should include clinical licensure and specialty board certifications, as relevant.
 
-**Part VI: Migration and Transition Strategy**
+The Honors section is limited to **no more than 15 entries**.
 
-Institutions face a "bulk migration" challenge. Every active researcher will need a new biosketch for their first proposal or RPPR in 2026\.
+### 4.3 Contributions to Science
 
-### **6.1 Migrating from Legacy SciENcv Profiles**
+The current NIH instructions are more specific and more helpful than many older biosketch habits:
 
-If a PI already has a biosketch in SciENcv (old format):
+- **All senior/key persons should complete the section.**
+- If no contributions will be provided, enter **N/A**.
+- Users may describe **up to 5 contributions**.
+- Graduate students and postdoctorates may wish to highlight **2 or 3** contributions rather than forcing a full set of 5.
+- Figures, tables, and graphics are **not allowed**.
+- Each contribution is limited to **2,000 characters**.
 
-1. **Create New:** Select "Biographical Sketch Common Form."  
-2. **Source:** Select **"Start with existing document"** and choose the old biosketch.  
-3. **The Mapping Gap:**  
-   * *Education/Positions:* These map relatively well.  
-   * *Citations:* The old form likely had \~20 citations. The new form allows 10\. The system will not know which 10 to pick. The user must manually deselect citations to meet the 5+5 limit.  
-   * *Narratives:* The user must edit the Personal Statement and Contributions to remove any inline citations (e.g., "(1)") that were present in the old text, as these are now prohibited.1
+For each contribution, NIH says the user should indicate:
 
-### **6.2 Migrating from Word Documents**
+- the historical background that frames the scientific problem;
+- the central finding(s);
+- the influence of the finding(s) on the progress of science or the application of those findings to health or technology; and
+- the investigator's specific role in the described work.
 
-For PIs who have never used SciENcv:
+### 4.4 How to refer to products without formal citations
 
-1. **No Direct Import:** There is no way to upload a Word doc and have it parse.  
-2. **Step 1:** Populate ORCID first (as described in Part II). This handles the data entry for Education/Positions.  
-3. **Step 2:** Populate My Bibliography with the citations from the Word doc.  
-4. **Step 3:** Copy/Paste the narratives from Word into the SciENcv text boxes.  
-   * *Warning:* Word often hides special characters (smart quotes, em-dashes) that count strangely in web forms. Always check the character count *inside* SciENcv after pasting.15
+NIH allows the user to reference **up to 5 products** from the **Other Significant Products** section of the Common Form that are relevant to the contribution being described.
 
----
+NIH also says there is **no specific format** required for those references. NIH recommends referring to the **title**, using the **author's last name**, the **publication/source**, and/or the **year** for ease of reference.
 
-**Part VII: Troubleshooting and Edge Cases**
+That means a compliant and reviewer-friendly contribution can say something like:
 
-### **7.1 Common Validation Errors**
+> See *Title of Product* (Smith, 2024).
 
-| Error Message | Root Cause | Solution |
-| :---- | :---- | :---- |
-| **"Invalid Form Format"** | PDF was flattened or printed. | Download the original certified PDF from SciENcv again. Do not save as "Optimized PDF." 2 |
-| **"Missing Persistent Identifier"** | ORCID iD field is blank. | PI must link ORCID in their eRA Commons profile AND in the SciENcv profile settings. 6 |
-| **"Certification Required"** | Document submitted without PI signature. | PI must log in to SciENcv and click the "Certify" button; delegate cannot do this. 8 |
-| **"Character Limit Exceeded"** | Text includes hidden HTML or Word formatting. | Paste text into Notepad (plain text) first, then into SciENcv to strip formatting. 15 |
-
-### **7.2 The Consortium/Subaward Problem**
-
-In multi-site grants, the lead institution needs biosketches from sub-sites.
-
-* **The Challenge:** The lead institution's administrator cannot delegate into the sub-site PI's account.  
-* **The Workflow:** The sub-site PI must generate and certify their own biosketch in their own SciENcv account. They then email the certified PDF to the lead institution.  
-* **Verification:** The lead administrator should open the PDF and check for the digital certification timestamp before bundling it into the application.2
-
-### **7.3 Malign Foreign Talent Recruitment Programs (MFTRP)**
-
-The Common Form includes a specific checkbox or attestation regarding MFTRP.
-
-* **Definition:** These are foreign-state-sponsored programs designed to acquire US technologies.  
-* **Liability:** By certifying the biosketch, the PI is making a federal statement that they are not a party to such a program. This creates False Claims Act liability.  
-* **Institutional Review:** Many institutions are implementing internal "attestation forms" that PIs must sign *before* they certify in SciENcv, ensuring the institution has a record of the disclosure review.2
+What NIH does **not** want here is a formal references list or bibliography inside the supplement narrative boxes.
 
 ---
 
-**Part VIII: Strategic Recommendations for Grantsmanship**
+## Part V: Current and Pending (Other) Support (CPOS)
 
-The structural constraints of the Common Form necessitate a change in how researchers sell their expertise.
+### 5.1 The first rule: distinguish "required format" from "required now"
 
-1. **The "Anchor Paper" Strategy:** With only 5 "Other Significant Products" available to support 5 "Contributions to Science," researchers should select one definitive "anchor paper" for each contribution area. The narrative should explicitly name this product (e.g., "See Product 3") to create a verifiable link between the claim and the evidence.5  
-2. **Front-Loading Impact:** In the Personal Statement, since citations are banned, the first paragraph must immediately establish credibility using the "Closely Related Products" as a foundation. "My expertise in \[Field\] is evidenced by the foundational work listed in the Closely Related Products section..."  
-3. **Utilizing the "Product" Definition:** The Common Form allows for "Products," not just "Publications." If a software tool, patent, or dataset is highly relevant to the grant, it should replace a mid-tier journal article in the "Closely Related" section. This signals practical capability to the reviewers.1
+A common source of confusion is that two statements are true at the same time:
+
+1. **Whenever NIH requires current and pending support on or after January 25, 2026, the required format is the CPOS Common Form prepared in SciENcv.**
+2. **Many NIH applications do not include current and pending support at the initial application stage.**
+
+The NIH Application Guide states that applicants should **not** use the "Current and Pending Support" attachment upload for NIH or other PHS agency submissions **unless otherwise specified in the NOFO**. Instead, NIH may request that information later in the pre-award cycle, usually through **Just-in-Time (JIT)**.
+
+### 5.2 Important application-stage exception for mentored career development awards
+
+The NIH Application Guide includes an explicit exception for **mentored career development** applications:
+
+- the **mentor and co-mentor(s)** must provide Current and Pending (Other) Support pages; and
+- the **candidate does not** provide those pages.
+
+This is the most important application-stage exception to teach clearly because it reverses the assumption many users bring from R-series applications.
+
+### 5.3 What the CPOS Common Form is for
+
+NIH's CPOS instructions say current and pending support is used to assess:
+
+- the individual's capacity and possible **conflicts of commitment**;
+- potential **scientific overlap**; and
+- potential **budgetary overlap/duplication**.
+
+The CPOS Common Form instructions also state that a **separate submission** must be provided for:
+
+- each proposal;
+- each active project; and
+- each reportable in-kind contribution.
+
+There is **no page limitation** for the CPOS Common Form, although certain fields do have character limits.
+
+### 5.4 What must be reported
+
+The CPOS instructions and NIH Other Support page together establish that reportable support can include:
+
+- resources and/or financial support from domestic and foreign entities;
+- active and pending projects;
+- reportable consulting activities;
+- in-kind contributions; and
+- foreign appointments/employment and related foreign activities/resources that fall within NIH reporting rules.
+
+The NIH Other Support page also continues to state that broadly available **institutional core facilities or shared equipment** should not be included in Other Support; those belong in **Facilities and Other Resources** instead.
+
+The same page also states that Other Support does **not** include:
+
+- training awards;
+- prizes; or
+- true gifts where there is no expectation of time, services, specific research activities, money, or other return commitment.
+
+### 5.5 Consulting: the current NIH trigger list
+
+The newer CPOS instructions are more explicit than the older shorthand many institutions still use. NIH says consulting activities must be disclosed under the **proposals and active projects** section when **any** of the following are true:
+
+- the consulting activity requires the senior/key person to **perform research**;
+- the consulting activity does **not** involve performing research, but is related to the senior/key person's research portfolio and may affect funding, alter time or effort commitments, or otherwise affect scientific integrity; or
+- the consulting entity provided a contract that requires the senior/key person to conceal or withhold confidential financial or other ties between the senior/key person and the entity.
+
+### 5.6 In-kind contributions
+
+The CPOS instructions require disclosure of in-kind contributions when they:
+
+- have an estimated value of **$5,000 or more**; and
+- require a **commitment of the individual's time**.
+
+If there is **no associated time commitment**, the in-kind contribution does **not** need to be reported.
+
+Examples of potentially reportable in-kind support include laboratory space, equipment, data or data sets, supplies, goods and services, and employee or student resources.
+
+### 5.7 Supporting documentation for foreign appointments and employment
+
+NIH's CPOS Common Form instructions say institutions must submit copies of contracts specific to senior/key-personnel **foreign appointments and/or employment** with a foreign institution for foreign activities and resources that are reported in CPOS. If those materials are not in English, recipients must provide **translated copies**.
+
+The instructions also clarify an important exclusion: this requirement does **not** include **personal service contracts** or **employment contracts for fellows supported by foreign entities**.
+
+Operationally, the supporting documentation is submitted through the relevant NIH module (for example, JIT, RPPR, or Prior Approval) rather than appended inside the SciENcv-generated CPOS PDF.
+
+### 5.8 Who is generally excluded from Other Support reporting
+
+The NIH Other Support page states that Other Support information is requested for all senior/key personnel in an application **except**:
+
+- Program Directors, training faculty, and other individuals involved in the oversight of training grants; and
+- individuals categorized as **Other Significant Contributors**.
+
+In progress reports, NIH likewise excludes Program Directors, training faculty, and other individuals involved in the oversight of training grants from the listed Other Support reporting group.
+
+### 5.9 Advanced NIH-specific CPOS edge cases
+
+The current CPOS instructions also include several advanced cases that matter for some institutions:
+
+- **Joint University / VA appointments:** entries should be organized by appointment, and reporting should use person-months rather than equivalent total professional effort.
+- **Mentored Career Development Awards with subsumed effort:** the CPOS instructions provide specific wording for reporting complementary effort that is subsumed under the CDA.
+
+These are real NIH instruction-level requirements, not informal institutional conventions, so they should be checked directly against the CPOS instructions when they apply.
 
 ---
 
-**Part IX: Conclusion**
+## Part VI: Delegate workflow and certification
 
-The implementation of the NIH Common Forms represents a definitive shift toward a digital, interoperable, and secure research ecosystem. While the initial learning curve for SciENcv and the certification workflow is steep, the long-term benefit is a standardized data environment that reduces redundancy and enhances compliance.
+### 6.1 Delegates can prepare, but the individual must certify
 
-For the January 2026 deadline, the path to success lies in preparation: establishing ORCID links now, cleaning up My Bibliography data immediately, and socializing the "PI Certification" requirement well in advance of the first deadline. By treating the biosketch not as a document to be typed, but as a dataset to be managed, the research community can navigate this transition with minimal disruption to the scientific mission.
+The practical division of labor remains:
 
-#### **Works cited**
+- a delegate may prepare or update the record in SciENcv; but
+- the investigator must personally certify the form.
 
-1. NIH's Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support for Due Dates on or after January 25, 2026., accessed January 13, 2026, [https://osr.ucsf.edu/news/nihs-implementation-of-common-forms-for-biographical-sketch-and-current-and-pending-other-support](https://osr.ucsf.edu/news/nihs-implementation-of-common-forms-for-biographical-sketch-and-current-and-pending-other-support)  
-2. NOT-OD-26-018: NIHs Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support for Due Dates on or after January 25, 2026 \- NIH Grants and Funding, accessed January 13, 2026, [https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html)  
-3. Common Forms for Biographical Sketch and Current and Pending (Other) Support | Grants & Funding, accessed January 13, 2026, [https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch](https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch)  
-4. NOT-OD-24-163: NIHs Adoption of Common Forms for Biographical Sketch and Current and Pending (Other) Support by May 25, 2025, accessed January 13, 2026, [https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-163.html](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-163.html)  
-5. NIH Biographical Sketch Format \- Office of Sponsored Research \- UCSF, accessed January 13, 2026, [https://osr.ucsf.edu/nih-biographical-sketch-format](https://osr.ucsf.edu/nih-biographical-sketch-format)  
-6. Biographical Sketch Common Form | Grants & Funding, accessed January 13, 2026, [https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form](https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form)  
-7. NIH Announces January 25, 2026 Implementation Date for Common Forms (NOT-OD-26-018) \- National Training Grant Community of Practice, accessed January 13, 2026, [https://ntgcop.org/news/715957/NIH-Announces-January-25-2026-Implementation-Date-for-Common-Forms-NOT-OD-26-018.htm](https://ntgcop.org/news/715957/NIH-Announces-January-25-2026-Implementation-Date-for-Common-Forms-NOT-OD-26-018.htm)  
-8. NIH Implementation of the Common Forms for Biosketches and Current and Pending (Other) Support \- Effective January 25, 2026, accessed January 13, 2026, [https://ora.stanford.edu/resources/disclosure-resources/national-institutes-health-nih/nih-implementation-common-forms](https://ora.stanford.edu/resources/disclosure-resources/national-institutes-health-nih/nih-implementation-common-forms)  
-9. SCiENcv & Common Forms \- Research Support \- Yale University, accessed January 13, 2026, [https://research-support.yale.edu/sponsored-projects/office-of-sponsored-projects/policies-compliance/sciencv-common-forms](https://research-support.yale.edu/sponsored-projects/office-of-sponsored-projects/policies-compliance/sciencv-common-forms)  
-10. SciENcv: Integrating with ORCID \- YouTube, accessed January 13, 2026, [https://www.youtube.com/watch?v=G\_cKSRr7TJ4](https://www.youtube.com/watch?v=G_cKSRr7TJ4)  
-11. accessed January 13, 2026, [https://ora.stanford.edu/sciencv](https://ora.stanford.edu/sciencv)  
-12. Creating Biosketches using SciENcv, accessed January 13, 2026, [https://rcra.emory.edu/\_includes/documents/sections/research-security/sciencv-epc-flyer.pdf](https://rcra.emory.edu/_includes/documents/sections/research-security/sciencv-epc-flyer.pdf)  
-13. Using SciENcv and ORCID to Create Your Biosketch Common Form | NC State University Libraries, accessed January 13, 2026, [https://www.lib.ncsu.edu/sciencv-for-biosketches](https://www.lib.ncsu.edu/sciencv-for-biosketches)  
-14. Common Forms Overview & SciENcv Introduction \- Research Support, accessed January 13, 2026, [https://research-support.yale.edu/sites/default/files/2025-04/Common\_Forms\_Overview\_%26\_SciENcv\_Introduction\_Survey-February\_13\_2025.pdf](https://research-support.yale.edu/sites/default/files/2025-04/Common_Forms_Overview_%26_SciENcv_Introduction_Survey-February_13_2025.pdf)  
-15. NIH Common Form Biosketch & Biosketch Supplement | Office of Research Administration, accessed January 13, 2026, [https://ora.stanford.edu/resources/disclosure-resources/national-institutes-health-nih/nih-common-form-biosketch-biosketch](https://ora.stanford.edu/resources/disclosure-resources/national-institutes-health-nih/nih-common-form-biosketch-biosketch)  
-16. Create Biosketches | NIAID: National Institute of Allergy and Infectious Diseases, accessed January 13, 2026, [https://www.niaid.nih.gov/grants-contracts/create-biosketches](https://www.niaid.nih.gov/grants-contracts/create-biosketches)  
-17. NIH Biographical Sketch Supplement\_PREVIEW\_DO NOT USE, accessed January 13, 2026, [https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement\_PREVIEW.pdf](https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement_PREVIEW.pdf)  
-18. Using SciENcv Frequently Asked Questions \- National Science Foundation, accessed January 13, 2026, [https://nsf-gov-resources.nsf.gov/files/SciENcvFAQs.pdf](https://nsf-gov-resources.nsf.gov/files/SciENcvFAQs.pdf)  
-19. Adding Delegates to SciENcv \- Office of Sponsored Programs, accessed January 13, 2026, [https://osp.gatech.edu/sites/default/files/inline-files/Adding%20Delegates%20to%20SciENcv.pdf](https://osp.gatech.edu/sites/default/files/inline-files/Adding%20Delegates%20to%20SciENcv.pdf)  
-20. SciENcv: How to Prepare and Edit NSF and NIH Biosketches and NSF Current and Pending documents Part 1, Creating and Populati \- University of Colorado Boulder, accessed January 13, 2026, [https://www.colorado.edu/ocg/media/126](https://www.colorado.edu/ocg/media/126)  
-21. NIH's Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support | Research | WashU, accessed January 13, 2026, [https://research.washu.edu/announcements/nihs-implementation-of-common-forms-for-biographical-sketch-and-current-and-pending-other-support/](https://research.washu.edu/announcements/nihs-implementation-of-common-forms-for-biographical-sketch-and-current-and-pending-other-support/)
+That is true for the biosketch Common Form / NIH supplement workflow and for CPOS.
+
+### 6.2 What certification means operationally
+
+The certified PDF downloaded from SciENcv is the submission artifact NIH expects.
+
+For both the Biographical Sketch Common Form and the CPOS Common Form:
+
+- the PDF may be **renamed** after download;
+- the PDF content must **not** be altered;
+- users should **not** print to PDF, flatten, optimize, or otherwise regenerate the file **unless the Application Guide or NOFO explicitly instructs a special submission format**; and
+- the signature date must be within the past **12 months** when the document is submitted to NIH.
+
+If anything changes in the document, or if the certification becomes too old, the correct fix is to go back into SciENcv, update the data, and **re-certify**. One official example of a special submission format is the **Participating Faculty Biosketches** attachment in certain training grant application workflows, where NIH instructs applicants to combine individually certified forms into a single PDF and flatten that compiled attachment for submission.
+
+### 6.3 Why flattening is a real submission risk
+
+NIH's Common Forms workflow depends on machine-readable data created by SciENcv. Flattening or re-printing the PDF can strip or damage the metadata NIH systems rely on to recognize the file as a compliant SciENcv-generated Common Form. The safe default is therefore **do not flatten** unless NIH's application instructions for a specific attachment explicitly tell you to do so after individual certification.
+
+---
+
+## Part VII: Common mistakes and edge cases
+
+### 7.1 Treating the old February 6, 2026 date as current policy
+
+This is no longer correct. The current official status is the leniency period through **May 2026**, with a later Guide Notice promised for the warning-to-error date.
+
+### 7.2 Assuming CPOS always belongs in the initial application package
+
+This is one of the most common workflow mistakes. NIH's Application Guide says not to include current and pending support at the application stage unless the NOFO says otherwise. Many NIH users will first need CPOS during **JIT** rather than initial submission.
+
+### 7.3 Overstating the ORCID requirement
+
+The official NIH/eRA requirement that can be verified directly is:
+
+- obtain an **ORCID iD**; and
+- link it to the **eRA Commons Personal Profile** so it appears correctly as the PID.
+
+This appendix does not treat any additional account-linking step as an NIH validation requirement unless NIH or eRA explicitly states it.
+
+### 7.4 Writing formal citations inside the supplement narrative boxes
+
+The supplement instructions are explicit: **do not provide citations in the NIH Biographical Sketch Supplement**. Instead, use plain-language references to the products listed in the Common Form.
+
+### 7.5 Under-reporting foreign relationships or consulting arrangements
+
+The current NIH instructions are more detailed than older institutional summaries. Users should review the CPOS consulting trigger list and the foreign appointment/employment supporting-documentation rules directly when those situations apply.
+
+### 7.6 Consortium and subaward workflows
+
+In multi-site applications, the lead institution cannot rely on locally editing another institution's records. Each external senior/key person must ultimately provide their own compliant, certified SciENcv output for the lead site to assemble.
+
+---
+
+## Part VIII: Practical rollout recommendations for institutions
+
+1. **Build biosketches early, but do not put CPOS on the critical path unless the mechanism and submission stage actually require it.**
+2. **Verify ORCID-in-eRA first.** That is the documented NIH requirement that matters most for Common Forms identity.
+3. **Select products before polishing narratives.** The supplement works best when the Personal Statement and Contributions to Science are written against a settled product list.
+4. **Schedule certification windows close to submission.** Certification cannot be delegated.
+5. **Re-check the official NIH and eRA pages quarterly.** The implementation timeline already changed once, and NIH has not yet published the final warning-to-error date.
+
+---
+
+## Selected official references used for this refresh
+
+- NIH. *Common Forms for Biographical Sketch and Current and Pending (Other) Support*. Updated February 5, 2026. https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch
+- NIH. *NOT-OD-26-018: NIH's Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support for Due Dates on or after January 25, 2026*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html
+- NIH. *NOT-OD-26-033: Adjusted Timeline for NIH's Implementation of Common Forms*. Released February 4, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-033.html
+- NIH. *Biographical Sketch Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form
+- NIH. *NIH Biographical Sketch Supplement*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/nih-biographical-sketch-supplement
+- NIH. *Current and Pending (Other) Support (CPOS) Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form
+- NIH. *Advice on Application Sections*. Accessed 2026-03-02. https://grants.nih.gov/grants-process/write-application/advice-on-application-sections
+- NIH. *R&R Senior/Key Person Profile (Expanded) Form*. Accessed 2026-03-02. https://grants.nih.gov/grants/how-to-apply-application-guide/forms-i/general/g.240-r%26r-seniorkey-person-profile-%28expanded%29-form.htm
+- NIH. *Other Support*. Last updated July 30, 2025. https://grants.nih.gov/grants-process/write-application/forms-directory/other-support
+- eRA Commons. *The ORCID iD*. Revised February 17, 2026. https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm
+- NIH. *Common Form for Biographical Sketch* (PDF instructions). Accessed 2026-03-02. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Biographical%20Sketch_FINAL.pdf
+- NIH. *NIH Biographical Sketch Supplement* (PDF instructions). Accessed 2026-03-02. https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement_FINAL.pdf
+- NIH. *Common Form for Current and Pending (Other) Support* (PDF instructions). Accessed 2026-03-02. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Current%20and%20Pending%20%28Other%29%20Support_FINAL.pdf
