@@ -9,6 +9,10 @@ nav_order: 13
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
 
+## v1.4 (May 2026)
+
+- Fixed CPOS XML Validator + Normalizer false positives against NLM's blank upload template, hardened browser result rendering, tightened person-month numeric checks, and preserved moved in-kind text during auto-shortening.
+
 ## v1.3 (May 2026)
 
 - Updated references and policy pages for **NOT-OD-26-079**: NIH leniency period ends **May 7, 2026**; system warnings become submission-stopping errors on **May 8, 2026**.

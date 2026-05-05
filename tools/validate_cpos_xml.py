@@ -31,6 +31,7 @@ import xml.etree.ElementTree as ET
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 YEAR_RE = re.compile(r"^\d{4}$")
 INT_RE = re.compile(r"^\d+$")
+PERSONMONTH_RE = re.compile(r"^-?(?:\d+(?:\.\d+)?|\.\d+)$")
 SUSPICIOUS_RE = re.compile(r"[\u201C\u201D\u2018\u2019\u2013\u2014\u2022\u00A0]")
 
 LIMITS = {
@@ -197,7 +198,7 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
                 warns.append(Finding("WARN", "<account> is missing accounttype attribute. Fix: <account accounttype=\"eRA-Commons\">...</account>."))
 
         if name_el is None:
-            errors.append(Finding("ERROR", "Missing <name> in <identification>. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>."))
+            warns.append(Finding("WARN", "Missing <name> in <identification>. Upload may still succeed, but SciENcv will require name details before certification. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>."))
         else:
             cur = (name_el.attrib.get("current") or "").strip()
             if cur != "yes":
@@ -323,18 +324,17 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
         else:
             pms = list(_findall(commitment, ns, "personmonth"))
             if not pms:
-                errors.append(Finding("ERROR", f"support[{idx}]: <commitment> has no <personmonth> entries. Fix: add at least one <personmonth year=\"YYYY\">...</personmonth>."))
+                warns.append(Finding("WARN", f"support[{idx}]: <commitment> has no <personmonth> entries. Upload may still succeed, but SciENcv may require effort years before certification. Fix: add <personmonth year=\"YYYY\">...</personmonth> when effort years are known."))
             for pm in pms:
                 year = (pm.attrib.get("year") or "").strip()
                 if not YEAR_RE.match(year):
                     errors.append(Finding("ERROR", f"support[{idx}]: <personmonth> has invalid year='{year}'. Fix: year must be a 4-digit YYYY."))
                 val = (pm.text or "").strip()
                 if val:
-                    try:
-                        fval = float(val)
-                    except ValueError:
+                    if not PERSONMONTH_RE.match(val):
                         warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth value '{val}' is not numeric. Fix: use a number (e.g., 0.5, 1, 12)."))
                     else:
+                        fval = float(val)
                         if fval < 0:
                             warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth is negative ({val}). Fix: use 0 or a positive value."))
                         if fval > 12:

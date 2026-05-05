@@ -604,6 +604,7 @@
         const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
         const YEAR_RE = /^\d{4}$/;
         const INT_RE = /^\d+$/;
+        const PERSONMONTH_RE = /^-?(?:\d+(?:\.\d+)?|\.\d+)$/;
 
         const LIMITS = {
             awardamount_digits: 13,
@@ -655,8 +656,25 @@
             return (el.textContent || "").trim();
         }
 
-        function highlightTags(str) {
-            return str.replace(/<([a-z0-9]+)>/gi, '<span class="tag">&lt;$1&gt;</span>');
+        function appendHighlightedMessage(parent, msg) {
+            const tagRe = /<\/?[A-Za-z][A-Za-z0-9_-]*(?:\s+[^<>]*)?\/?>/g;
+            let lastIndex = 0;
+            let match;
+
+            while ((match = tagRe.exec(msg)) !== null) {
+                if (match.index > lastIndex) {
+                    parent.appendChild(document.createTextNode(msg.slice(lastIndex, match.index)));
+                }
+                const tag = document.createElement("span");
+                tag.className = "tag";
+                tag.textContent = match[0];
+                parent.appendChild(tag);
+                lastIndex = tagRe.lastIndex;
+            }
+
+            if (lastIndex < msg.length) {
+                parent.appendChild(document.createTextNode(msg.slice(lastIndex)));
+            }
         }
 
         function addIssue(list, level, msg) {
@@ -801,7 +819,7 @@
                 }
 
                 if (!nameEl) {
-                    addIssue(issues, "error", "Missing <name> in <identification>. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>.");
+                    addIssue(issues, "warn", "Missing <name> in <identification>. Upload may still succeed, but SciENcv will require name details before certification. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>.");
                 } else {
                     const cur = (nameEl.getAttribute("current") || "").trim();
                     if (cur !== "yes") {
@@ -961,7 +979,7 @@
                 } else {
                     const pms = findChildren(commitment, "personmonth");
                     if (pms.length === 0) {
-                        addIssue(issues, "error", `support[${idx}]: <commitment> has no <personmonth> entries. Fix: add at least one <personmonth year="YYYY">...</personmonth>.`);
+                        addIssue(issues, "warn", `support[${idx}]: <commitment> has no <personmonth> entries. Upload may still succeed, but SciENcv may require effort years before certification. Fix: add <personmonth year="YYYY">...</personmonth> when effort years are known.`);
                     }
                     pms.forEach((pm) => {
                         const year = (pm.getAttribute("year") || "").trim();
@@ -970,10 +988,10 @@
                         }
                         const val = getText(pm);
                         if (val) {
-                            const f = parseFloat(val);
-                            if (Number.isNaN(f)) {
+                            if (!PERSONMONTH_RE.test(val)) {
                                 addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth value '${val}' is not numeric. Fix: use a number (e.g., 0.5, 1, 12).`);
                             } else {
+                                const f = Number(val);
                                 if (f < 0) addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth is negative (${val}). Fix: use 0 or a positive value.`);
                                 if (f > 12) addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth > 12 (${val}). Fix: verify (calendar months/year is usually <= 12).`);
                             }
@@ -1023,6 +1041,20 @@
 
             const root = xmlDoc.documentElement;
 
+            function ensureSupportChild(sup, tagName) {
+                let existing = findChild(sup, tagName);
+                if (existing) return existing;
+
+                const newEl = xmlDoc.createElement(tagName);
+                const newPos = SUPPORT_ORDER.indexOf(tagName);
+                const before = Array.from(sup.children).find((child) => {
+                    const childPos = SUPPORT_ORDER.indexOf(child.localName);
+                    return childPos !== -1 && childPos > newPos;
+                });
+                sup.insertBefore(newEl, before || null);
+                return newEl;
+            }
+
             // Shorten within supports
             const funding = findChild(root, "funding");
             if (funding) {
@@ -1064,7 +1096,7 @@
                     if (ct === "inkind") {
                         const ptEl = findChild(sup, "projecttitle");
                         const locEl2 = findChild(sup, "location");
-                        const ikEl = findChild(sup, "inkinddescription");
+                        let ikEl = findChild(sup, "inkinddescription");
 
                         let moved = [];
                         if (ptEl && getText(ptEl)) {
@@ -1076,9 +1108,10 @@
                             locEl2.textContent = "";
                         }
                         if (moved.length > 0) {
+                            ikEl = ensureSupportChild(sup, "inkinddescription");
                             const prior = ikEl ? getText(ikEl) : "";
                             const joined = (prior ? (prior + " ") : "") + moved.join("; ");
-                            if (ikEl) ikEl.textContent = joined.slice(0, LIMITS.inkinddescription);
+                            ikEl.textContent = joined.slice(0, LIMITS.inkinddescription);
                         }
                     }
                 });
@@ -1250,14 +1283,21 @@
                 const div = document.createElement("div");
                 div.className = "log-entry " + (it.level === "error" ? "log-error" : "log-warn");
                 const prefix = it.level === "error" ? "ERROR" : "WARN";
-                div.innerHTML = `<strong>${prefix}:</strong> ${highlightTags(it.msg)}`;
+                const label = document.createElement("strong");
+                label.textContent = `${prefix}:`;
+                div.appendChild(label);
+                div.appendChild(document.createTextNode(" "));
+                appendHighlightedMessage(div, it.msg);
                 resultsDiv.appendChild(div);
             });
 
             if (issues.length === 0) {
                 const div = document.createElement("div");
                 div.className = "log-entry log-success";
-                div.innerHTML = "<strong>SUCCESS:</strong> Ready for SciENcv upload checks (based on this validator).";
+                const label = document.createElement("strong");
+                label.textContent = "SUCCESS:";
+                div.appendChild(label);
+                div.appendChild(document.createTextNode(" Ready for SciENcv upload checks (based on this validator)."));
                 resultsDiv.appendChild(div);
             }
         }
