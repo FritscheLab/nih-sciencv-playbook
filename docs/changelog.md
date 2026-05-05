@@ -15,6 +15,7 @@ nav_order: 13
 - Added **NOT-OD-26-017** / Research Security Training certification reminders for Common Forms certified before **April 22, 2026** and applications due on/after **May 25, 2026**.
 - Updated ORCID setup language to require both the **eRA Commons ORCID link** and a matching **SciENcv PID**.
 - Updated CPOS XML guidance to reflect NIH's April 22, 2026 zero person-month support for 2026-1 Common Forms.
+- Refreshed `docs/references.md` against official NIH/eRA/NCBI/NLM/NSF sources; added missing official GPS, FAQ, disclosure-training, XML troubleshooting, and NSPM-33 links; and clarified source hierarchy so NIH hub/newest Guide Notice timing controls over lagging form pages, eRA controls ORCID enforcement language, NLM controls XML upload details, and NSF/OSTP provide policy context rather than NIH-specific requirements.
 
 ## v1.2 (Mar 2026)
 
