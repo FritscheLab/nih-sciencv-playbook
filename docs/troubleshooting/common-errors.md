@@ -13,8 +13,8 @@ nav_order: 1
 
 ## “Missing persistent identifier”
 
-- Cause: ORCID not linked correctly
-- Fix: link ORCID in **eRA Commons** first; if SciENcv import is still not working, also confirm the ORCID linked account in **MyNCBI**
+- Cause: ORCID is not linked or the Common Form PID does not match eRA Commons
+- Fix: link ORCID in **eRA Commons**, then confirm the same ORCID appears as the **SciENcv PID**. Populate the PID by linking ORCID in MyNCBI/SciENcv, signing in with ORCID, or entering it manually in the Common Form.
 
 ## “Certification required”
 

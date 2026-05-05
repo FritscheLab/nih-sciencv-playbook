@@ -11,7 +11,7 @@ nav_order: 1
 1. **Create ORCID iD** (if you don’t have one).
 2. **Link ORCID to eRA Commons** (Personal Profile → ORCID section).
 3. **Confirm SciENcv access** (MyNCBI dashboard → SciENcv).
-4. **Link ORCID to MyNCBI/SciENcv** if you plan to use ORCID-linked import workflows (MyNCBI Account Settings → Linked Accounts).
+4. **Confirm ORCID appears as the SciENcv PID** and matches eRA Commons (link ORCID in MyNCBI/SciENcv, sign in with ORCID, or manually enter it in the PID field).
 5. **Add a delegate** (optional but recommended) (MyNCBI Account Settings → Delegates).
 6. **Clean up My Bibliography** (missing papers, wrong authorship, PMCID status).
 7. **Pick your 10 “Products”**:

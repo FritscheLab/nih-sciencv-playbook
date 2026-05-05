@@ -14,7 +14,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 {: .warning }
 > **Effective date:** NIH requires Common Forms for **applications, JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
-> **Current enforcement status:** NIH is using **warnings** during a **leniency period through May 2026** and has said it will announce the later **submission-blocking error date** in a future Guide Notice. See **Policy & Timeline**.
+> **Current enforcement status:** NIH's leniency period ends **May 7, 2026**. On **May 8, 2026**, system warnings change to **errors** that stop submissions not using compliant Common Forms. See **Policy & Timeline**.
 
 ## Start here (role-based)
 
@@ -24,7 +24,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 ## The two biggest success factors
 
-1. **Identity + data plumbing is correct** (ORCID linked to eRA Commons; MyNCBI/SciENcv account access working; My Bibliography clean).
+1. **Identity + data plumbing is correct** (ORCID linked to eRA Commons; ORCID appears as the SciENcv PID; My Bibliography clean).
 2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify).
 
 ## What’s inside

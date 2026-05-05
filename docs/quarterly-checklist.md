@@ -12,13 +12,15 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 
 - NIH Common Forms hub
 - NIH forms pages (Biosketch Common Form, NIH Supplement, CPOS Common Form)
-- Relevant NIH Guide Notices (including new updates after NOT-OD-26-018 / NOT-OD-26-033)
+- Relevant NIH Guide Notices (including new updates after NOT-OD-26-018 / NOT-OD-26-033 / NOT-OD-26-079)
+- Research Security Training notices and certification text timing
 - eRA Commons ORCID help
 - NLM CPOS XML upload + error guidance
 
 ## 2) Review high-impact playbook pages
 
 - ORCID setup + troubleshooting pages
+- Certification / RST reminder pages
 - PI quickstart + complete walkthrough
 - CPOS overview + what-to-include
 - Appendix long-form guide status note

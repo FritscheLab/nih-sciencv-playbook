@@ -23,6 +23,7 @@ Use this checklist before uploading to SciENcv, and again before final certifica
 - Dates are in `YYYY-MM-DD` (use day `01` if you only have month/year).
 - Award amounts are digits only (no `$`, no commas).
 - Each `<personmonth>` has a 4-digit `year` attribute.
+- Person-month values may be blank for upload triage, but if effort is truly zero, use `0` and confirm the value in the SciENcv UI.
 
 ## 3) Post-upload checks (SciENcv UI)
 

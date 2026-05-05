@@ -9,6 +9,13 @@ nav_order: 13
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
 
+## v1.3 (May 2026)
+
+- Updated references and policy pages for **NOT-OD-26-079**: NIH leniency period ends **May 7, 2026**; system warnings become submission-stopping errors on **May 8, 2026**.
+- Added **NOT-OD-26-017** / Research Security Training certification reminders for Common Forms certified before **April 22, 2026** and applications due on/after **May 25, 2026**.
+- Updated ORCID setup language to require both the **eRA Commons ORCID link** and a matching **SciENcv PID**.
+- Updated CPOS XML guidance to reflect NIH's April 22, 2026 zero person-month support for 2026-1 Common Forms.
+
 ## v1.2 (Mar 2026)
 
 - Updated policy/timeline language across the site to reflect NIH’s current **leniency period through May 2026**, with warning-level validations and a later Guide Notice expected for submission-blocking errors.

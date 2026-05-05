@@ -22,3 +22,6 @@ nav_order: 6
 
 {: .note }
 > You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.
+
+{: .warning }
+> NIH added Research Security Training (RST) certification text back into SciENcv Common Forms on **April 22, 2026**. For applications with due dates on/after **May 25, 2026**, if a Common Form was certified before April 22 and has not yet been submitted, regenerate and re-certify the PDF before submission.

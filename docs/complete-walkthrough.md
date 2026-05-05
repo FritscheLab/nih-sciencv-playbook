@@ -12,7 +12,7 @@ This page consolidates the end-to-end steps (PI + admin) for both documents.
 - Confirm **eRA Commons ID**
 - Create **ORCID iD**
 - Link ORCID in **eRA Commons** (**required**)
-- Link ORCID in **MyNCBI** if you plan to use ORCID-linked import workflows
+- Confirm the same ORCID appears as the **SciENcv PID** (link ORCID in MyNCBI/SciENcv, sign in with ORCID, or manually enter it)
 - Clean **My Bibliography** (publications + non-traditional products)
 - Add **delegate** (optional)
 

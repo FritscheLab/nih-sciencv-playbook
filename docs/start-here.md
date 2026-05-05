@@ -14,7 +14,7 @@ NIH’s 2026 implementation moves the biosketch + other support workflow from **
 1. Everyone who needs a biosketch gets:
    - **eRA Commons ID**
    - **ORCID iD**, linked to **eRA Commons** (**required**)
-   - **MyNCBI/SciENcv** access working; link ORCID there too if you want to use ORCID-linked import workflows
+   - **MyNCBI/SciENcv** access working; ORCID appears as the SciENcv **PID** and matches eRA Commons
 2. Publications are curated in **My Bibliography**
 3. A delegate (admin) is assigned where helpful
 4. PI logs in to **certify** the final PDFs

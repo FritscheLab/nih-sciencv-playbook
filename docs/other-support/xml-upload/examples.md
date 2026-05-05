@@ -52,10 +52,11 @@ If both the PI and admin provide the same support item in PART 1, de-duplication
 
 ## Example 5: Missing effort
 
-SciENcv can accept a file where effort values are blank, but **the year must still be present**. Use:
+SciENcv can accept a file where effort values are blank, but **the year must still be present**. If the effort is truly zero, use `0`; if it is unknown or not ready for upload, leave the value blank and resolve it in SciENcv.
 
 ```xml
 <commitment>
+  <personmonth year="2025">0</personmonth>
   <personmonth year="2026"></personmonth>
   <personmonth year="2027"></personmonth>
 </commitment>

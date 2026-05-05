@@ -11,7 +11,7 @@ nav_order: 2
 1. Ensure each PI/key person has:
    - eRA Commons ID
    - ORCID iD linked to **eRA Commons** (**required**)
-   - MyNCBI/SciENcv access working; ORCID linked there too if you plan to use ORCID-linked import workflows
+   - MyNCBI/SciENcv access working; ORCID appears as the SciENcv **PID** and matches eRA Commons
 2. Ask each PI to **add you as a delegate** in MyNCBI.
 3. Confirm you have access to:
    - **SciENcv** delegation

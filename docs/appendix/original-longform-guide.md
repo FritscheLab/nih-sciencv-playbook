@@ -6,19 +6,19 @@ nav_order: 1
 
 # Long-form guide (current reference)
 
-This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-03-02**.
+This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-05-05**.
 
 {: .note }
-> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-03-02.
+> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-05-05.
 
 {: .warning }
-> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. However, NIH is still in a **leniency period through May 2026**. During this period, NIH encourages use of the Common Forms and SciENcv, but system validations remain at the **warning** level and NIH continues to accept the legacy NIH biosketch and other support format pages. NIH has said a later Guide Notice will announce when warnings become errors.
+> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. NIH's leniency period ends **May 7, 2026**. On **May 8, 2026**, eRA system warnings become **errors** that stop submissions not using compliant Common Forms.
 
 # The Comprehensive Implementation Guide to the 2026 NIH Common Forms
 
 ## Executive summary
 
-The NIH Common Forms transition is now a live operational requirement, but the practical reality in early 2026 is more nuanced than the original rollout language suggested.
+The NIH Common Forms transition is now a live operational requirement, but the practical reality in spring 2026 is more nuanced than the original rollout language suggested.
 
 The current NIH model has three core pieces:
 
@@ -33,7 +33,7 @@ For NIH, the Common Forms and the NIH supplement must be prepared in **SciENcv**
 
 The most important operational points are:
 
-- The **ORCID iD linked to the eRA Commons Personal Profile** is the documented NIH persistent identifier requirement.
+- The **ORCID iD linked to the eRA Commons Personal Profile** is required, and the same ORCID must appear as the **Persistent Identifier (PID)** in the SciENcv Common Form.
 - The **NIH Biographical Sketch Supplement** is completed in the **second section of the same SciENcv interface** used for the Common Form.
 - The **Biographical Sketch Common Form** has **no NIH page limit**; the meaningful constraints are field-level instructions and character limits inside the supplement.
 - The **Personal Statement** is limited to **3,500 characters**.
@@ -47,7 +47,7 @@ The most important operational points are:
 
 ## Part I: Policy landscape and implementation status
 
-NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. NIH's implementation details are collected on the NIH Common Forms hub and in **NOT-OD-26-018**. The later timing adjustment is in **NOT-OD-26-033**.
+NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. NIH's implementation details are collected on the NIH Common Forms hub and in **NOT-OD-26-018**. The later timing adjustment is in **NOT-OD-26-033**, and NIH's current enforcement date is in **NOT-OD-26-079**.
 
 ### 1.1 What changed structurally
 
@@ -65,36 +65,38 @@ The formal implementation date remains **January 25, 2026**.
 
 | Submission scenario | On or before Jan. 24, 2026 | On or after Jan. 25, 2026 | Current operational note |
 | --- | --- | --- | --- |
-| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | NIH is still accepting legacy pages during the leniency period through May 2026 |
-| JIT | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 2026 |
-| RPPR | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 2026 |
-| Prior Approval | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 2026 |
+| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
+| JIT | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
+| RPPR | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
+| Prior Approval | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
 
-The major correction to the earlier draft is the enforcement timeline. NIH no longer states that warnings became hard-stop errors on **February 6, 2026**. Instead, NIH extended the warning-only leniency period through **May 2026** and said a later Guide Notice will announce the date when warnings become errors.
+The major correction to the earlier draft is the enforcement timeline. NIH no longer states that warnings became hard-stop errors on **February 6, 2026**. Instead, NIH extended the warning-only leniency period through **May 7, 2026**. Beginning **May 8, 2026**, warnings become errors that stop submissions not using compliant Common Forms.
 
 ### 1.3 Research Security Training and Common Forms timing
 
-NIH explained that the leniency-period extension allows better alignment between Common Form certifications and the separate **Research Security Training (RST)** requirement for covered individuals. NIH also explicitly notes that, based on NIH's **Just-in-Time** policy, NIH **does not collect Current and Pending (Other) Support at the time of application** in the ordinary case.
+NIH explained that the leniency-period extension allows better alignment between Common Form certifications and the separate **Research Security Training (RST)** requirement for covered individuals. NIH added RST certification text back into SciENcv Common Forms on **April 22, 2026**. For applications with due dates on or after **May 25, 2026**, Common Forms certified before April 22 and not yet submitted should be regenerated before submission so the updated certification text is included.
+
+NIH also explicitly notes that, based on NIH's **Just-in-Time** policy, NIH **does not collect Current and Pending (Other) Support at the time of application** in the ordinary case.
 
 ---
 
 ## Part II: Identity, system roles, and account setup
 
-### 2.1 The required identity element: ORCID linked to eRA Commons
+### 2.1 Required identity checks: eRA Commons link and SciENcv PID
 
 For NIH, the persistent identifier (PID) used on the Common Forms must be an **ORCID iD**, and that ORCID iD must be linked to the individual's **eRA Commons Personal Profile**.
 
-That is the official NIH/eRA requirement that matters most for compliance. As a practical matter, institutions may also use other account-linking steps to streamline SciENcv workflows, but the requirement that NIH explicitly states is the **ORCID-to-eRA Commons** link.
+NIH's April 2026 reminder also says to confirm that the ORCID iD displayed in the Common Form PID field matches the ORCID linked in the personal profile associated with the eRA Commons username entered in the application credential field. The PID can be populated by linking ORCID in MyNCBI/SciENcv, signing into SciENcv with ORCID, or manually entering the ORCID iD in the Common Form.
 
 ### 2.2 What each system does
 
 The practical workflow spans three systems:
 
-- **eRA Commons** establishes NIH identity and stores the ORCID link used for the PID.
+- **eRA Commons** establishes NIH identity and stores the ORCID link used for validation.
 - **SciENcv** is the required preparation system for NIH Common Forms and the NIH supplement.
 - **MyNCBI / NCBI account services** provide the account layer through which SciENcv is accessed.
 
-In its implementation notice, NIH also reminds users to **associate their ORCID iD account and eRA Commons account with SciENcv**. For NIH documentation purposes, the most important compliance check is still that the investigator's ORCID appears correctly as the **Persistent Identifier** in the SciENcv-generated Common Form.
+In its implementation notices, NIH also reminds users to associate ORCID and eRA Commons identity information with SciENcv. For NIH documentation purposes, the most important compliance check is that the investigator's ORCID appears correctly as the **Persistent Identifier** in the SciENcv-generated Common Form and matches the ORCID linked in eRA Commons.
 
 ### 2.3 High-value setup checks
 
@@ -103,6 +105,7 @@ Before drafting the biosketch or CPOS, verify:
 - the investigator has a working **eRA Commons** account;
 - the investigator has an **ORCID iD**;
 - the ORCID iD is linked in the **eRA Commons Personal Profile**;
+- the same ORCID iD appears as the **PID** in the SciENcv Common Form;
 - SciENcv access is working;
 - the investigator or delegate can open the relevant Common Form interface.
 
@@ -350,6 +353,7 @@ The current CPOS instructions also include several advanced cases that matter fo
 
 - **Joint University / VA appointments:** entries should be organized by appointment, and reporting should use person-months rather than equivalent total professional effort.
 - **Mentored Career Development Awards with subsumed effort:** the CPOS instructions provide specific wording for reporting complementary effort that is subsumed under the CDA.
+- **Zero effort:** NIH says SciENcv/eRA updates deployed on **April 22, 2026** allow entry of zero person months for Proposals/Active Projects and In-Kind Contributions when applicable.
 
 These are real NIH instruction-level requirements, not informal institutional conventions, so they should be checked directly against the CPOS instructions when they apply.
 
@@ -389,7 +393,7 @@ NIH's Common Forms workflow depends on machine-readable data created by SciENcv.
 
 ### 7.1 Treating the old February 6, 2026 date as current policy
 
-This is no longer correct. The current official status is the leniency period through **May 2026**, with a later Guide Notice promised for the warning-to-error date.
+This is no longer correct. The current official status is warning-level validation through **May 7, 2026**, with submission-stopping errors beginning **May 8, 2026**.
 
 ### 7.2 Assuming CPOS always belongs in the initial application package
 
@@ -397,12 +401,13 @@ This is one of the most common workflow mistakes. NIH's Application Guide says n
 
 ### 7.3 Overstating the ORCID requirement
 
-The official NIH/eRA requirement that can be verified directly is:
+The official NIH/eRA identity checks that can be verified directly are:
 
 - obtain an **ORCID iD**; and
-- link it to the **eRA Commons Personal Profile** so it appears correctly as the PID.
+- link it to the **eRA Commons Personal Profile**; and
+- confirm the same ORCID appears as the **PID** in the SciENcv Common Form.
 
-This appendix does not treat any additional account-linking step as an NIH validation requirement unless NIH or eRA explicitly states it.
+NIH says the SciENcv PID can be populated through MyNCBI/SciENcv account linking, signing in with ORCID, or manual entry in the Common Form PID field. The key validation risk is mismatch between the Common Form PID and the ORCID linked to the eRA Commons credential used in the submission.
 
 ### 7.4 Writing formal citations inside the supplement narrative boxes
 
@@ -421,25 +426,28 @@ In multi-site applications, the lead institution cannot rely on locally editing 
 ## Part VIII: Practical rollout recommendations for institutions
 
 1. **Build biosketches early, but do not put CPOS on the critical path unless the mechanism and submission stage actually require it.**
-2. **Verify ORCID-in-eRA first.** That is the documented NIH requirement that matters most for Common Forms identity.
+2. **Verify ORCID-in-eRA and the SciENcv PID early.** The Common Form PID should match the ORCID linked to the eRA Commons credential.
 3. **Select products before polishing narratives.** The supplement works best when the Personal Statement and Contributions to Science are written against a settled product list.
 4. **Schedule certification windows close to submission.** Certification cannot be delegated.
-5. **Re-check the official NIH and eRA pages quarterly.** The implementation timeline already changed once, and NIH has not yet published the final warning-to-error date.
+5. **Re-check the official NIH and eRA pages quarterly.** The implementation timeline has changed more than once, and form-directory pages may lag the central NIH hub.
 
 ---
 
 ## Selected official references used for this refresh
 
-- NIH. *Common Forms for Biographical Sketch and Current and Pending (Other) Support*. Updated February 5, 2026. https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch
+- NIH. *Common Forms for Biographical Sketch and Current and Pending (Other) Support*. Last updated April 22, 2026. https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch
+- NIH. *NOT-OD-26-079: Announcement of Upcoming System Enforcement of Common Forms and End of NIH's Leniency Period*. Released April 21, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html
+- NIH. *NOT-OD-26-017: Research Security Training Requirements for NIH*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html
 - NIH. *NOT-OD-26-018: NIH's Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support for Due Dates on or after January 25, 2026*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html
 - NIH. *NOT-OD-26-033: Adjusted Timeline for NIH's Implementation of Common Forms*. Released February 4, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-033.html
 - NIH. *Biographical Sketch Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form
 - NIH. *NIH Biographical Sketch Supplement*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/nih-biographical-sketch-supplement
 - NIH. *Current and Pending (Other) Support (CPOS) Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form
-- NIH. *Advice on Application Sections*. Accessed 2026-03-02. https://grants.nih.gov/grants-process/write-application/advice-on-application-sections
-- NIH. *R&R Senior/Key Person Profile (Expanded) Form*. Accessed 2026-03-02. https://grants.nih.gov/grants/how-to-apply-application-guide/forms-i/general/g.240-r%26r-seniorkey-person-profile-%28expanded%29-form.htm
+- NIH. *Advice on Application Sections*. Accessed 2026-05-05. https://grants.nih.gov/grants-process/write-application/advice-on-application-sections
+- NIH. *R&R Senior/Key Person Profile (Expanded) Form*. Accessed 2026-05-05. https://grants.nih.gov/grants/how-to-apply-application-guide/forms-i/general/g.240-r%26r-seniorkey-person-profile-%28expanded%29-form.htm
 - NIH. *Other Support*. Last updated July 30, 2025. https://grants.nih.gov/grants-process/write-application/forms-directory/other-support
-- eRA Commons. *The ORCID iD*. Revised February 17, 2026. https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm
-- NIH. *Common Form for Biographical Sketch* (PDF instructions). Accessed 2026-03-02. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Biographical%20Sketch_FINAL.pdf
-- NIH. *NIH Biographical Sketch Supplement* (PDF instructions). Accessed 2026-03-02. https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement_FINAL.pdf
-- NIH. *Common Form for Current and Pending (Other) Support* (PDF instructions). Accessed 2026-03-02. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Current%20and%20Pending%20%28Other%29%20Support_FINAL.pdf
+- eRA Commons. *The ORCID iD*. Revised April 29, 2026. https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm
+- eRA. *Changes to Prior Approval, Just-in-Time, and RPPR to Align with New Common Forms Requirements*. Last updated January 14, 2026. https://www.era.nih.gov/news/era-enhancements-changes-prior-approval-just-time-and-rppr-be-released-monday-january-26-align
+- NIH. *Common Form for Biographical Sketch* (PDF instructions). Accessed 2026-05-05. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Biographical%20Sketch_FINAL.pdf
+- NIH. *NIH Biographical Sketch Supplement* (PDF instructions). Accessed 2026-05-05. https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement_FINAL.pdf
+- NIH. *Common Form for Current and Pending (Other) Support* (PDF instructions). Accessed 2026-05-05. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Current%20and%20Pending%20%28Other%29%20Support_FINAL.pdf

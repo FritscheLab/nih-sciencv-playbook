@@ -8,7 +8,7 @@ nav_order: 1
 
 ## Recommended milestones (per deadline)
 
-**T-8 weeks:** ORCID + eRA + MyNCBI access audit  
+**T-8 weeks:** ORCID + eRA + SciENcv PID + MyNCBI access audit
 **T-6 weeks:** Delegates added; My Bibliography cleanup begins  
 **T-4 weeks:** First draft narratives + product selection  
 **T-2 weeks:** SciENcv preview PDFs; compliance check  
@@ -18,7 +18,7 @@ nav_order: 1
 ## Trackers to keep
 
 - ORCID linked in eRA Commons? (Y/N)
-- ORCID linked in MyNCBI? (Y/N)
+- ORCID appears as SciENcv PID and matches eRA Commons? (Y/N)
 - Delegate accepted? (Y/N)
 - Products selected? (Y/N)
 - Biosketch certified? (Y/N)

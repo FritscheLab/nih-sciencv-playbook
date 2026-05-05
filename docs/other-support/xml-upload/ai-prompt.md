@@ -300,8 +300,8 @@ If SORT_SUPPORTS is YES, sort supports:
   <startdate>2024-01-01</startdate>
   <supporttype>current</supporttype>
   <commitment>
-    <personmonth year="2024">0.01</personmonth>
-    <personmonth year="2025">0.01</personmonth>
+    <personmonth year="2024">0</personmonth>
+    <personmonth year="2025">0</personmonth>
   </commitment>
 </support>
 

@@ -15,6 +15,9 @@ SciENcv supports **Data Ingest (XML file upload)** to help users pre-populate CP
 > A file can still be a *valid upload file* even when some fields are blank. After upload, SciENcv will flag missing required values in the UI with red exclamation icons that must be resolved before certification/download.
 
 {: .note }
+> NIH says SciENcv/eRA updates deployed on **April 22, 2026** allow **zero person-month effort** for Proposals/Active Projects and In-Kind Contributions when applicable. Older 2025-1 SciENcv CPOS PDFs that do not support zero effort continue to function for eRA submission, but new or updated documents can use the 2026-1 behavior.
+
+{: .note }
 > The CPOS form displays dates in a human-facing month/year style, but the XML upload template uses machine-readable `YYYY-MM-DD`. If you only know month/year, use day `01` consistently and confirm the rendered entry in SciENcv after upload.
 
 ## Where to find XML upload in SciENcv
@@ -56,7 +59,7 @@ Use this quick reference for the CPOS upload fields and limits.
 | startdate | Project start date | YYYY-MM-DD |
 | enddate | Project end date | YYYY-MM-DD |
 | supporttype | Status of support | `current` or `pending` |
-| personmonth | Person-months per year in `<commitment>` | `<personmonth year="YYYY">value</personmonth>` |
+| personmonth | Person-months per year in `<commitment>` | `<personmonth year="YYYY">value</personmonth>`; `0` is allowed when applicable |
 
 ## Character restrictions
 
