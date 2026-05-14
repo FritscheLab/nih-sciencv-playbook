@@ -5,7 +5,7 @@ nav_order: 11
 
 # References
 
-Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-05-05**.
+Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-05-14**.
 
 {: .warning }
 > For enforcement timing, check the **NIH Common Forms hub** and the newest NIH Guide Notice first. Some form-directory pages may lag the hub after NIH issues a new notice; treat them as form/instruction pages unless their timing text matches the hub.

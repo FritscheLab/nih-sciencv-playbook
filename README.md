@@ -18,6 +18,8 @@ A docs-first, GitHub Pages–ready site to help **PIs, Co-Is, staff, and researc
 
 The site uses the **Just the Docs** Jekyll theme (remote theme), which is easy to host on GitHub Pages and includes built-in search.
 
+Mermaid diagrams are enabled through the Just the Docs `mermaid` configuration in `docs/_config.yml`, using a pinned Mermaid release loaded by the theme.
+
 ## Local preview (optional) 
 
 If you want to preview locally:

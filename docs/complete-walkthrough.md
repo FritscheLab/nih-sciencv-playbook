@@ -7,6 +7,21 @@ nav_order: 15
 
 This page consolidates the end-to-end steps (PI + admin) for both documents.
 
+```mermaid
+flowchart LR
+    accTitle: End-to-end Common Forms walkthrough
+    accDescr: The complete workflow starts with one-time preparation, creates the biosketch, creates CPOS when requested, and ends with individual certification.
+    A["Prep once per person"] --> B["Create NIH Biosketch"]
+    B --> C["Fill Common Form"]
+    C --> D["Fill NIH Supplement"]
+    D --> E{"CPOS requested?"}
+    E -- "Yes" --> F["Create CPOS"]
+    E -- "No" --> G["Track future CPOS stage"]
+    F --> H["Individual certification"]
+    G --> H
+    H --> I["Unmodified SciENcv PDFs"]
+```
+
 ## 0) Prep (do once per person)
 
 - Confirm **eRA Commons ID**

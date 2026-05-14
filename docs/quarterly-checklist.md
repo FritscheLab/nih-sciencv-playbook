@@ -36,3 +36,14 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 - Update `docs/changelog.md`
 - Rebuild/redeploy GitHub Pages
 - Spot-check key live pages for correctness and formatting
+
+```mermaid
+flowchart LR
+    accTitle: Quarterly maintenance loop
+    accDescr: Quarterly maintenance checks official sources, reviews high-impact pages, updates docs and templates, and spot-checks the published site.
+    A["Verify official sources"] --> B["Review high-impact pages"]
+    B --> C["Update docs and templates"]
+    C --> D["Update changelog"]
+    D --> E["Build and publish"]
+    E --> F["Spot-check live pages"]
+```

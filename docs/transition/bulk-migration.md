@@ -13,3 +13,16 @@ Tips:
 - Create reusable narrative templates
 - Standardize how you name SciENcv documents (PI_LASTNAME_MECH_YYYYMMDD)
 
+```mermaid
+flowchart TD
+    accTitle: Bulk migration triage
+    accDescr: Bulk migration prioritizes active NIH labs and near-term RPPR or JIT needs, then standardizes templates and document naming.
+    A["Department portfolio"] --> B{"Near-term NIH JIT or RPPR?"}
+    B -- "Yes" --> C["Prioritize lab for conversion"]
+    B -- "No" --> D{"Frequent NIH submitter?"}
+    D -- "Yes" --> C
+    D -- "No" --> E["Schedule later cohort"]
+    C --> F["Prepare reusable narratives and products"]
+    F --> G["Create SciENcv Common Forms"]
+    G --> H["Track certification status"]
+```

@@ -1,17 +1,29 @@
 ---
-title: Enforcement (current NIH timeline)
+title: Enforcement (active NIH timeline)
 parent: Policy & Timeline
 nav_order: 2
 ---
 
-# Enforcement (current NIH timeline)
+# Enforcement (active NIH timeline)
 
-NIH currently enforces Common Forms via **eRA system validations**:
+NIH enforces Common Forms via **eRA system validations**:
 
 - **Common Forms are required** for applications, JIT, RPPR, and Prior Approval submissions on/after **Jan 25, 2026**.
-- NIH's leniency period ends **May 7, 2026**.
-- Through **May 7, 2026**, NIH says submissions containing legacy NIH biosketch/other support pages or non-compliant Common Forms receive **warnings** and are not withdrawn for that issue.
-- On **May 8, 2026**, system warnings change to **errors** that stop submissions not using compliant Common Forms.
+- NIH's warning-only leniency period ended **May 7, 2026**.
+- As of **May 8, 2026**, system validations stop submissions not using compliant Common Forms.
+- Historical note: through **May 7, 2026**, NIH said submissions containing legacy NIH biosketch/other support pages or non-compliant Common Forms received warnings and were not withdrawn for that issue.
+
+```mermaid
+stateDiagram-v2
+    state "Warning-level leniency" as Warning
+    state "Submission-stopping errors" as Error
+    state "Compliant SciENcv Common Forms" as Compliant
+    [*] --> Warning: Jan 25, 2026
+    Warning --> Error: May 8, 2026
+    Warning --> Compliant: Replace legacy or non-compliant forms
+    Error --> Compliant: Replace before submission can proceed
+    Compliant --> [*]
+```
 
 See NIH notices [NOT-OD-26-018](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html), [NOT-OD-26-033](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-033.html), and [NOT-OD-26-079](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html).
 

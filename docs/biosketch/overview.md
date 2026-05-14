@@ -20,3 +20,13 @@ For NIH, the SciENcv output is effectively:
 {: .warning }
 > **No citations** are allowed inside the Personal Statement or Contributions text boxes.  
 > All references must be selected under **Products** (10 total).
+
+```mermaid
+flowchart LR
+    accTitle: Biosketch output components
+    accDescr: The NIH biosketch PDF combines the Biographical Sketch Common Form, the NIH Biosketch Supplement, and selected products inside SciENcv.
+    A["Biographical Sketch Common Form"] --> D["Combined NIH Biosketch PDF"]
+    B["NIH Biosketch Supplement"] --> D
+    C["10 selected Products"] --> D
+    D --> E["One SciENcv certification"]
+```

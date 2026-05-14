@@ -23,3 +23,18 @@ Same pattern as the biosketch:
 
 {: .note }
 > If NIH requires **supporting documentation** for foreign appointments/employment reported in CPOS, attach those contract copies **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module. Do **not** append them to the SciENcv CPOS PDF.
+
+```mermaid
+sequenceDiagram
+    actor Person as Named individual
+    participant SciENcv
+    participant eRA
+    Person->>SciENcv: Review complete CPOS
+    Person->>SciENcv: Certify
+    SciENcv-->>Person: Certified CPOS PDF
+    alt Foreign appointment documentation required
+        Person->>eRA: Attach contracts separately
+    else No separate documentation required
+        Person->>eRA: Submit CPOS PDF only
+    end
+```

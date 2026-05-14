@@ -19,6 +19,22 @@ NIH’s 2026 implementation moves the biosketch + other support workflow from **
 3. A delegate (admin) is assigned where helpful
 4. PI logs in to **certify** the final PDFs
 
+```mermaid
+flowchart TD
+    accTitle: Minimum viable compliance path
+    accDescr: The minimum path links ORCID and eRA Commons, checks the SciENcv PID, cleans My Bibliography, drafts documents, and ends with individual certification.
+    A["eRA Commons ID"] --> B["ORCID iD"]
+    B --> C["Link ORCID in eRA Commons"]
+    C --> D["Confirm matching SciENcv PID"]
+    D --> E["Clean My Bibliography"]
+    E --> F{"Delegate helping?"}
+    F -- "Yes" --> G["Delegate drafts and checks"]
+    F -- "No" --> H["Individual drafts"]
+    G --> I["Named individual certifies"]
+    H --> I
+    I --> J["Certified SciENcv PDFs"]
+```
+
 ## Where to go next
 
 - If you’re a PI: [PI / faculty quickstart]({{ site.baseurl }}{% link quickstarts/pi.md %})

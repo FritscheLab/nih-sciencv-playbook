@@ -33,3 +33,16 @@ Usually **no**. Broadly available institutional core facilities and shared equip
 ## Do I report an in-kind contribution if there is no associated time commitment?
 
 No. NIH says an in-kind contribution does **not** need to be reported when there is **no associated commitment of the individual’s time**.
+
+```mermaid
+flowchart TD
+    accTitle: FAQ decision shortcuts
+    accDescr: FAQ shortcuts distinguish certification authority, PDF handling, CPOS timing, product citations, reuse of PDFs, and in-kind reporting.
+    A["Question"] --> B{"Topic"}
+    B -- "Certification" --> C["Named individual only"]
+    B -- "Downloaded PDF" --> D["Do not edit or flatten"]
+    B -- "CPOS timing" --> E["Follow role, stage, NOFO, and guide"]
+    B -- "Narrative citations" --> F["Use Products, not formal reference lists"]
+    B -- "Reuse old PDF" --> G["Only if current and within 12 months"]
+    B -- "In-kind support" --> H["Report only when threshold and time commitment apply"]
+```

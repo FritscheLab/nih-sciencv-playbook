@@ -16,4 +16,18 @@ If an administrator can provide an XML file (for example, generated from a prior
 
 - See: [XML Upload & Automation]({{ site.baseurl }}{% link other-support/xml-upload.md %})
 
+```mermaid
+flowchart TD
+    accTitle: Create CPOS in SciENcv
+    accDescr: CPOS creation starts in SciENcv, optionally uses XML upload to seed entries, and always requires UI review before certification.
+    A["Create New Document"] --> B["NIH CPOS Common Form"]
+    B --> C{"Use XML upload?"}
+    C -- "Yes" --> D["Upload XML to pre-populate entries"]
+    C -- "No" --> E["Enter support manually"]
+    D --> F["Open each entry in SciENcv UI"]
+    E --> F
+    F --> G["Complete missing fields"]
+    G --> H["Ready for certification"]
+```
+
 Next: [What to include (practical guidance)]({{ site.baseurl }}{% link other-support/what-to-include.md %})

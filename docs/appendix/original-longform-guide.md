@@ -6,19 +6,19 @@ nav_order: 1
 
 # Long-form guide (current reference)
 
-This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-05-05**.
+This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-05-14**.
 
 {: .note }
-> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-05-05.
+> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-05-14.
 
 {: .warning }
-> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. NIH's leniency period ends **May 7, 2026**. On **May 8, 2026**, eRA system warnings become **errors** that stop submissions not using compliant Common Forms.
+> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. NIH's warning-only leniency period ended **May 7, 2026**. As of **May 8, 2026**, eRA system validations stop submissions not using compliant Common Forms.
 
 # The Comprehensive Implementation Guide to the 2026 NIH Common Forms
 
 ## Executive summary
 
-The NIH Common Forms transition is now a live operational requirement, but the practical reality in spring 2026 is more nuanced than the original rollout language suggested.
+The NIH Common Forms transition is now a live operational requirement. The practical reality in May 2026 is that the warning-only leniency period has ended and eRA system validations now stop submissions that do not use compliant Common Forms.
 
 The current NIH model has three core pieces:
 
@@ -65,12 +65,12 @@ The formal implementation date remains **January 25, 2026**.
 
 | Submission scenario | On or before Jan. 24, 2026 | On or after Jan. 25, 2026 | Current operational note |
 | --- | --- | --- | --- |
-| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
-| JIT | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
-| RPPR | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
-| Prior Approval | Legacy pages | Common Forms + NIH supplement | Warning-level validations through May 7, 2026; errors beginning May 8, 2026 |
+| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
+| JIT | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
+| RPPR | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
+| Prior Approval | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
 
-The major correction to the earlier draft is the enforcement timeline. NIH no longer states that warnings became hard-stop errors on **February 6, 2026**. Instead, NIH extended the warning-only leniency period through **May 7, 2026**. Beginning **May 8, 2026**, warnings become errors that stop submissions not using compliant Common Forms.
+The major correction to the earlier draft is the enforcement timeline. NIH no longer states that warnings became hard-stop errors on **February 6, 2026**. NIH extended the warning-only leniency period through **May 7, 2026**. Beginning **May 8, 2026**, warnings became errors that stop submissions not using compliant Common Forms.
 
 ### 1.3 Research Security Training and Common Forms timing
 
@@ -393,7 +393,7 @@ NIH's Common Forms workflow depends on machine-readable data created by SciENcv.
 
 ### 7.1 Treating the old February 6, 2026 date as current policy
 
-This is no longer correct. The current official status is warning-level validation through **May 7, 2026**, with submission-stopping errors beginning **May 8, 2026**.
+This is no longer correct. NIH's warning-level validation period ran through **May 7, 2026**; the current enforcement phase is submission-stopping errors for non-compliant forms on/after **May 8, 2026**.
 
 ### 7.2 Assuming CPOS always belongs in the initial application package
 

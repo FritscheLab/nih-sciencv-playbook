@@ -26,6 +26,19 @@ SciENcv supports **Data Ingest (XML file upload)** to help users pre-populate CP
 
 Use **Create New Document → Current and Pending (Other) Support (CPOS) Common Form** to access the XML upload flow.
 
+```mermaid
+flowchart LR
+    accTitle: CPOS XML upload review loop
+    accDescr: XML upload starts with a simple upload file, then SciENcv imports data, flags missing values, and requires UI review before certification.
+    A["CPOS XML upload file"] --> B["SciENcv Data Ingest"]
+    B --> C["Entries pre-populated"]
+    C --> D{"Red exclamation icons?"}
+    D -- "Yes" --> E["Complete missing values in UI"]
+    D -- "No" --> F["Review rendered entries"]
+    E --> F
+    F --> G["Ready for individual certification"]
+```
+
 ## Two upload rules that commonly break files
 
 - `<contributiontype>` must be present and non-empty. Use `award` for proposals/active projects and `inkind` for in-kind contributions.
@@ -34,6 +47,27 @@ Use **Create New Document → Current and Pending (Other) Support (CPOS) Common 
 ## Element reference (simple upload template)
 
 Use this quick reference for the CPOS upload fields and limits.
+
+```mermaid
+classDiagram
+    Profile *-- Identification
+    Profile *-- Employment
+    Profile *-- Funding
+    Identification *-- Name
+    Employment *-- Position
+    Funding *-- Support
+    Support *-- Commitment
+    Commitment *-- PersonMonth
+    class Profile
+    class Identification
+    class Name
+    class Employment
+    class Position
+    class Funding
+    class Support
+    class Commitment
+    class PersonMonth
+```
 
 | Element | Description | Type / limits |
 | --- | --- | --- |

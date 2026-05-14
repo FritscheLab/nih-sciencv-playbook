@@ -48,4 +48,17 @@ Acceptable products are broader than papers. Depending on what is **citable and 
 {: .note }
 > **Character limits matter more than pages**: the new format is driven by character limits in narrative fields, not a strict page cap.
 
+```mermaid
+flowchart LR
+    accTitle: Biosketch Common Form sections
+    accDescr: The Common Form moves from identity and preparation data to appointments and two product buckets that support the supplement narratives.
+    A["Identifying information<br/>PID check"] --> B["Professional Preparation"]
+    B --> C["Appointments and Positions"]
+    C --> D["Products"]
+    D --> E["Up to 5 Closely Related"]
+    D --> F["Up to 5 Other Significant"]
+    E --> G["Supports Personal Statement"]
+    F --> H["Supports Contributions"]
+```
+
 Next: [NIH Supplement sections (step-by-step)]({{ site.baseurl }}{% link biosketch/supplement-sections.md %})

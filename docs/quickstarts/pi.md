@@ -27,6 +27,21 @@ nav_order: 1
 {: .note }
 > For many NIH applications, CPOS is requested later (often during **JIT**) rather than attached at initial submission. Important exception: **mentored career development** applications require CPOS for **mentor/co-mentor(s)**, not for the candidate.
 
+```mermaid
+flowchart TD
+    accTitle: PI quickstart workflow
+    accDescr: The PI workflow starts with identity checks, moves through data cleanup and drafting, then ends with individual certification and unmodified PDF handling.
+    A["Identity checks<br/>eRA, ORCID, SciENcv PID"] --> B["My Bibliography cleanup"]
+    B --> C["Pick 10 Products"]
+    C --> D["Draft narratives and honors"]
+    D --> E{"CPOS requested now?"}
+    E -- "Yes" --> F["Build CPOS in SciENcv"]
+    E -- "No" --> G["Track for JIT, RPPR, or Prior Approval"]
+    F --> H["Certify and download required PDFs"]
+    G --> H
+    H --> I["Do not print or flatten"]
+```
+
 ## When an admin helps
 
 Your delegate can do almost everything **except certification**. Plan a “certify window” into the submission timeline.

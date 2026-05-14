@@ -20,4 +20,16 @@ nav_order: 1
 3. In **MyNCBI/SciENcv**: either link ORCID in **Account Settings → Linked Accounts**, sign in using ORCID, or manually enter the ORCID iD in the Common Form PID field
 4. In **SciENcv**, confirm the ORCID shown as the **Persistent Identifier (PID)** matches the ORCID linked in **eRA Commons**.
 
+```mermaid
+flowchart TD
+    accTitle: ORCID linking and PID check
+    accDescr: The ORCID path connects one ORCID iD to eRA Commons and then confirms the same identifier appears in the SciENcv Common Form PID field.
+    A["Create or use existing ORCID iD"] --> B["Connect ORCID in eRA Commons Personal Profile"]
+    B --> C["Open MyNCBI / SciENcv"]
+    C --> D{"ORCID appears as SciENcv PID?"}
+    D -- "Yes, and it matches eRA" --> E["Ready for Common Forms"]
+    D -- "No" --> F["Link ORCID in MyNCBI, sign in with ORCID, or enter PID manually"]
+    F --> D
+```
+
 ![ORCID linking placeholder]({{ "/assets/images/placeholder-orcid-linking.svg" | relative_url }})

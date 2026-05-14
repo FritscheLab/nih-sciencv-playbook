@@ -38,3 +38,16 @@ nav_order: 4
 Templates:
 - [Personal Statement template (3,500 chars)]({{ site.baseurl }}{% link templates/personal-statement-template.md %})
 - [Contribution to Science template (2,000 chars)]({{ site.baseurl }}{% link templates/contribution-template.md %})
+
+```mermaid
+flowchart LR
+    accTitle: NIH Supplement narrative structure
+    accDescr: The supplement contains a personal statement, up to five contributions, and honors, with evidence pointing back to selected products.
+    A["NIH Biosketch Supplement"] --> B["Personal Statement<br/>3500 characters"]
+    A --> C["Contributions to Science<br/>up to 5"]
+    A --> D["Honors<br/>up to 15"]
+    B --> E["Points to Closely Related Products"]
+    C --> F["Points to Other Significant Products"]
+    E --> G["No formal citations in narrative boxes"]
+    F --> G
+```

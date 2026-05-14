@@ -6,6 +6,23 @@ nav_order: 5
 
 # Examples + edge cases
 
+```mermaid
+flowchart TD
+    accTitle: CPOS XML edge case router
+    accDescr: Common CPOS XML edge cases route to specific handling patterns for dates, in-kind items, updates, duplicates, and effort.
+    A["Messy source item"] --> B{"Which edge case?"}
+    B -- "Multi-year award" --> C["Generate inclusive person-month years"]
+    B -- "In-kind resource" --> D["Use inkind contribution type"]
+    B -- "Existing award update" --> E["Match by award number"]
+    B -- "Duplicate sources" --> F["De-duplicate before upload"]
+    B -- "Missing effort" --> G["Keep year attribute; blank or zero value"]
+    C --> H["Validate before upload"]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+```
+
 ## Example 1: Multi-year award with a single annual effort value
 
 **Input (messy):**

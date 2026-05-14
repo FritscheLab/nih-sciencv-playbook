@@ -9,6 +9,16 @@ nav_order: 13
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
 
+## v1.6 (May 2026)
+
+- Refreshed enforcement wording after the **May 7, 2026** leniency period ended; current pages now lead with active **May 8, 2026** submission-stopping error behavior.
+- Updated official-source review dates to **2026-05-14**.
+
+## v1.5 (May 2026)
+
+- Enabled Mermaid rendering for the Just the Docs site with a pinned Mermaid version.
+- Added inline workflow diagrams across policy, getting-ready, biosketch, CPOS, XML upload, transition, quickstart, walkthrough, and troubleshooting pages.
+
 ## v1.4 (May 2026)
 
 - Fixed CPOS XML Validator + Normalizer false positives against NLM's blank upload template, hardened browser result rendering, tightened person-month numeric checks, and preserved moved in-kind text during auto-shortening.

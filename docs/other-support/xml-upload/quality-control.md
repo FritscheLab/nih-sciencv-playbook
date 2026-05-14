@@ -52,3 +52,20 @@ Both checks cover:
 - person-month years and numeric values
 
 It does not perform full XSD validation (SciENcv is the source of truth).
+
+```mermaid
+flowchart TD
+    accTitle: CPOS XML quality control stages
+    accDescr: XML quality control has policy-driven content checks, upload-driven structure checks, and post-upload SciENcv UI checks.
+    A["Source material"] --> B["Content checks"]
+    B --> C{"Reportable and appropriate?"}
+    C -- "No" --> D["Revise or remove item"]
+    C -- "Yes" --> E["Structure checks"]
+    D --> B
+    E --> F{"Upload-ready XML?"}
+    F -- "No" --> G["Fix XML or run validator"]
+    F -- "Yes" --> H["Upload to SciENcv"]
+    G --> E
+    H --> I["Post-upload UI checks"]
+    I --> J["Certification-ready CPOS"]
+```

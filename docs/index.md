@@ -14,7 +14,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 {: .warning }
 > **Effective date:** NIH requires Common Forms for **applications, JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
-> **Current enforcement status:** NIH's leniency period ends **May 7, 2026**. On **May 8, 2026**, system warnings change to **errors** that stop submissions not using compliant Common Forms. See **Policy & Timeline**.
+> **Current enforcement status:** NIH's leniency period ended **May 7, 2026**. As of **May 8, 2026**, system validations stop submissions that do not use compliant Common Forms. See **Policy & Timeline**.
 
 ## Start here (role-based)
 
@@ -26,6 +26,19 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 1. **Identity + data plumbing is correct** (ORCID linked to eRA Commons; ORCID appears as the SciENcv PID; My Bibliography clean).
 2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify).
+
+```mermaid
+flowchart LR
+    accTitle: Common Forms success path
+    accDescr: A high-level path from identity setup through SciENcv drafting, individual certification, and submission-ready PDFs.
+    A["Identity setup"] --> B["Data cleanup"]
+    B --> C["SciENcv drafts"]
+    C --> D{"Named individual certifies?"}
+    D -- "Yes" --> E["Download certified PDFs"]
+    D -- "No" --> F["Hold submission package"]
+    E --> G["Submit unmodified SciENcv PDFs"]
+    F --> D
+```
 
 ## What’s inside
 

@@ -30,4 +30,17 @@ nav_order: 2
 - Send the PI your “ready to certify” note
 - PI logs in, **certifies**, downloads PDFs (or lets you download after)
 
+```mermaid
+flowchart LR
+    accTitle: Admin delegate quickstart workflow
+    accDescr: The admin workflow audits access, drafts documents, performs preview checks, and hands off to the PI for certification.
+    A["Audit each person's setup"] --> B["Confirm delegate access"]
+    B --> C["Create or update SciENcv documents"]
+    C --> D["Curate Products and paste narratives"]
+    D --> E["Preview PDFs and check formatting"]
+    E --> F["Send ready-to-certify note"]
+    F --> G["PI certifies in own account"]
+    G --> H["Collect certified PDFs"]
+```
+
 Next: [Delegates (how to collaborate)]({{ site.baseurl }}{% link getting-ready/delegates.md %})

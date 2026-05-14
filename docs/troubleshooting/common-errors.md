@@ -25,3 +25,18 @@ nav_order: 1
 
 - Cause: hidden formatting from Word
 - Fix: paste as plain text; re-check counts in SciENcv
+
+```mermaid
+flowchart TD
+    accTitle: Common error remediation loop
+    accDescr: Common errors are remediated by replacing edited PDFs, fixing identifier links, completing certification, or removing hidden formatting.
+    A["Error message or warning"] --> B{"Category"}
+    B -- "Invalid form format" --> C["Re-download original certified PDF"]
+    B -- "Missing persistent identifier" --> D["Link ORCID in eRA and verify SciENcv PID"]
+    B -- "Certification required" --> E["Named individual certifies"]
+    B -- "Character limit exceeded" --> F["Paste plain text and shorten"]
+    C --> G["Recheck submission package"]
+    D --> G
+    E --> G
+    F --> G
+```

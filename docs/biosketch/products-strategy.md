@@ -25,3 +25,16 @@ A good default pattern:
 
 Worksheet:
 - [Product selection worksheet (10 slots)]({{ site.baseurl }}{% link templates/product-selection-worksheet.md %})
+
+```mermaid
+flowchart LR
+    accTitle: Product selection strategy
+    accDescr: Products are selected as evidence for claims, split between closely related products and other significant products.
+    A["Claims in biosketch narratives"] --> B{"What does the claim need?"}
+    B -- "Project-specific evidence" --> C["Closely Related bucket"]
+    B -- "Contribution portfolio evidence" --> D["Other Significant bucket"]
+    C --> E["Up to 5 products"]
+    D --> F["Up to 5 products"]
+    E --> G["Reorder strongest evidence first"]
+    F --> G
+```

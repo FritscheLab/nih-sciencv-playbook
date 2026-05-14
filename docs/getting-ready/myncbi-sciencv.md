@@ -15,5 +15,19 @@ SciENcv is accessed through **MyNCBI**.
 - **My Bibliography**: your citation library used to populate “Products”
 - **Delegates**: where a PI grants editing access to an admin
 
-![SciENcv dashboard placeholder]({{ "/assets/images/placeholder-sciencv-dashboard.svg" | relative_url }})
+```mermaid
+flowchart LR
+    accTitle: MyNCBI and SciENcv workspace map
+    accDescr: MyNCBI contains SciENcv, My Bibliography, and delegate settings that together support Common Form preparation.
+    A["MyNCBI account"] --> B["SciENcv"]
+    A --> C["My Bibliography"]
+    A --> D["Delegates"]
+    B --> E["Biosketch and CPOS documents"]
+    C --> F["Products for biosketch"]
+    D --> G["Admin drafting access"]
+    E --> H["Certified PDFs"]
+    F --> E
+    G --> E
+```
 
+![SciENcv dashboard placeholder]({{ "/assets/images/placeholder-sciencv-dashboard.svg" | relative_url }})

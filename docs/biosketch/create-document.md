@@ -18,5 +18,20 @@ nav_order: 2
 {: .note }
 > ORCID import saves time but can import duplicates or outdated entries—always review and edit.
 
-Next: [Common Form sections (step-by-step)]({{ site.baseurl }}{% link biosketch/common-form-sections.md %})
+```mermaid
+flowchart TD
+    accTitle: Biosketch starting point choice
+    accDescr: A decision path for choosing whether to start the SciENcv biosketch from ORCID, an existing SciENcv document, or a blank document.
+    A["Create New Document"] --> B["NIH Biosketch format"]
+    B --> C{"Best starting point?"}
+    C -- "Clean ORCID data" --> D["External source: ORCID"]
+    C -- "Useful prior SciENcv document" --> E["Existing SciENcv document"]
+    C -- "Need maximum control" --> F["Blank document"]
+    D --> G["Review imported entries"]
+    E --> G
+    F --> H["Enter sections manually"]
+    G --> I["Complete Common Form sections"]
+    H --> I
+```
 
+Next: [Common Form sections (step-by-step)]({{ site.baseurl }}{% link biosketch/common-form-sections.md %})

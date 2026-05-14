@@ -43,3 +43,18 @@ Admin intake template:
 
 If you are converting legacy Other Support documents at scale, see: 
 - [XML Upload & Automation]({{ site.baseurl }}{% link other-support/xml-upload.md %})
+
+```mermaid
+flowchart TD
+    accTitle: CPOS include or exclude check
+    accDescr: A practical CPOS disclosure check routes projects, consulting, in-kind contributions, foreign appointments, and common exclusions.
+    A["Potential item"] --> B{"Proposal or active project?"}
+    B -- "Yes" --> C["Include as separate project entry"]
+    B -- "No" --> D{"Reportable consulting trigger?"}
+    D -- "Yes" --> C
+    D -- "No" --> E{"In-kind value 5000 or more and time commitment?"}
+    E -- "Yes" --> F["Include as in-kind entry"]
+    E -- "No" --> G{"Foreign appointment or employment with support or commitment?"}
+    G -- "Yes" --> H["Include and handle supporting documents separately if required"]
+    G -- "No" --> I["Usually exclude or confirm with institution"]
+```

@@ -19,3 +19,17 @@ Key points:
 - Create a **separate CPOS submission for each proposal/active project and each in-kind contribution**
 - For proposals/active projects, status values are **current** or **pending**
 - In-kind contributions are reportable when they are **$5,000 or more** **and** require a commitment of the individual’s time
+
+```mermaid
+flowchart TD
+    accTitle: CPOS timing and requirement check
+    accDescr: A decision path for whether CPOS is needed now, based on role, submission stage, NOFO, Application Guide, and specific exceptions.
+    A["NIH submission involving this person"] --> B{"Is CPOS requested for this role and stage?"}
+    B -- "Yes" --> C["Prepare CPOS in SciENcv"]
+    B -- "No" --> D["Do not attach CPOS now"]
+    C --> E["Include current and pending projects"]
+    C --> F["Include reportable in-kind contributions"]
+    D --> G["Track for JIT, RPPR, or Prior Approval"]
+    E --> H["Named individual certifies"]
+    F --> H
+```

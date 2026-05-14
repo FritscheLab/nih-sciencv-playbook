@@ -34,3 +34,15 @@ Some institutions generate SciENcv-ready CPOS XML directly from internal researc
 - Maintain a clear cutoff date for when updates are accepted before submission.
 - Use an intake form for items that are hard to infer (consulting, in-kind, foreign appointments).
 - Keep a copy of the exact XML uploaded, and the final certified PDF that was submitted.
+
+```mermaid
+flowchart LR
+    accTitle: Admin-owned data and PI-owned certification
+    accDescr: Institutional XML workflows can centralize data preparation while keeping review and certification with the PI or named individual.
+    A["Structured CPOS inventory"] --> B["Per-person XML export"]
+    B --> C["Upload or seed SciENcv CPOS"]
+    C --> D["PI reviews and completes entries"]
+    D --> E["PI certifies"]
+    E --> F["Admin collects certified PDF"]
+    F --> G["Archive XML and submitted PDF"]
+```

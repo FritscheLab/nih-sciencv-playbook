@@ -12,6 +12,23 @@ nav_order: 3
 - **No formal citations/reference lists inside narratives:** Personal Statement and Contributions use informal product references; citable items live in **Products** (10 total).
 - **Digital certification:** PDFs must be generated and certified in SciENcv.
 
+```mermaid
+mindmap
+  root((Old to new))
+    Authors
+      Biosketch has two parts
+      Products hold citable evidence
+      Narratives have no formal reference lists
+    Admins
+      Named individual certifies
+      Print to PDF can break metadata
+      Submission package uses SciENcv PDFs
+    Outputs
+      Biosketch Common Form
+      NIH Biosketch Supplement
+      CPOS Common Form
+```
+
 **Key differences for admins:**
 
 - You can help write and curate—but the **named individual must certify**.

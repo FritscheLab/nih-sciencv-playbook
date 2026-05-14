@@ -42,3 +42,14 @@
   color: #1f5c2e;
   min-height: 1em;
 }
+
+.language-mermaid,
+.mermaid {
+  margin: 1rem 0 1.5rem;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

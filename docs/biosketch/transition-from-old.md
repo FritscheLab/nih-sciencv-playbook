@@ -21,3 +21,15 @@ nav_order: 7
   - Reduce citations to the new 10-product limit
   - Remove citation markers in Personal Statement and Contributions
 
+```mermaid
+flowchart TD
+    accTitle: Old biosketch transition path
+    accDescr: Legacy Word and older SciENcv biosketch content moves into upstream data sources and the new Common Form document.
+    A{"Old biosketch source"} -- "Word template" --> B["Move education and positions to ORCID or manual entry"]
+    A -- "Old SciENcv format" --> C["Copy from existing SciENcv document"]
+    B --> D["Move citations and products to My Bibliography"]
+    C --> D
+    D --> E["Create new NIH Biosketch Common Form"]
+    E --> F["Apply 10-product limit"]
+    F --> G["Remove formal citation markers from narratives"]
+```

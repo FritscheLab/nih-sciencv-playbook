@@ -24,3 +24,17 @@ SciENcv’s **Products** selector pulls citations primarily from **My Bibliograp
 {: .note }
 > If an item isn’t in My Bibliography (or ORCID), it can’t be selected as a “Product” in SciENcv.
 
+```mermaid
+flowchart LR
+    accTitle: Product source cleanup flow
+    accDescr: A flow from publication and product sources into My Bibliography, then into SciENcv product buckets and final narrative support.
+    A["PubMed records"] --> C["My Bibliography"]
+    B["Manual products<br/>software, data, patents"] --> C
+    D["ORCID records"] --> E{"Already in My Bibliography?"}
+    E -- "Yes" --> C
+    E -- "No" --> F["Add or reconcile first"]
+    F --> C
+    C --> G["SciENcv Products selector"]
+    G --> H["Closely Related products"]
+    G --> I["Other Significant products"]
+```

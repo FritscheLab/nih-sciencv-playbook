@@ -17,6 +17,10 @@ color_scheme: light
 custom_css:
   - custom
 
+# Mermaid diagrams
+mermaid:
+  version: "10.9.3"
+
 # Footer
 footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. <a href="/nih-sciencv-playbook/disclaimer">Disclaimer</a>.'
 

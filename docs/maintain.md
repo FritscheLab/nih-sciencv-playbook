@@ -40,3 +40,14 @@ After content changes:
 ## Screenshot policy
 
 This repo includes **safe SVG placeholders**. Replace with screenshots that your institution is allowed to publish.
+
+```mermaid
+flowchart LR
+    accTitle: Maintainer update workflow
+    accDescr: Maintainers verify official sources, edit focused pages, record the changelog, build locally when possible, and spot-check the published site.
+    A["Official source review"] --> B["Focused content edits"]
+    B --> C["Changelog entry"]
+    C --> D["Local build or available checks"]
+    D --> E["Publish"]
+    E --> F["Live spot-check"]
+```
