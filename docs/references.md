@@ -17,8 +17,7 @@ Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-05-14**.
 ## NIH official pages (policy + enforcement)
 
 - [Common Forms hub (current NIH source-of-truth page)](https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch)
-- [NOT-OD-26-079 (end of leniency period / May 8, 2026 system enforcement)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html)
-- [NOT-OD-26-033 (adjusted timeline / leniency period)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-033.html)
+- [NOT-OD-26-079 (May 8, 2026 system enforcement)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html)
 - [NOT-OD-26-018 (implementation notice)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html)
 - [NOT-OD-26-017 (Research Security Training requirements)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html)
 - [NOT-OD-25-133 (other support disclosure training policy; effective October 1, 2025)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html)

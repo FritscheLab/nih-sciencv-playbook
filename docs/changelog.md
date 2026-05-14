@@ -11,7 +11,7 @@ nav_order: 13
 
 ## v1.6 (May 2026)
 
-- Refreshed enforcement wording after the **May 7, 2026** leniency period ended; current pages now lead with active **May 8, 2026** submission-stopping error behavior.
+- Refreshed enforcement wording so current pages lead with active **May 8, 2026** submission-stopping error behavior and omit leniency-period history from operational guidance.
 - Updated official-source review dates to **2026-05-14**.
 
 ## v1.5 (May 2026)

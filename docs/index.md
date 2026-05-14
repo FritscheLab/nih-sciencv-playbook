@@ -14,7 +14,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 {: .warning }
 > **Effective date:** NIH requires Common Forms for **applications, JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
-> **Current enforcement status:** NIH's leniency period ended **May 7, 2026**. As of **May 8, 2026**, system validations stop submissions that do not use compliant Common Forms. See **Policy & Timeline**.
+> **Current enforcement status:** For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions that do not use compliant Common Forms. See **Policy & Timeline**.
 
 ## Start here (role-based)
 

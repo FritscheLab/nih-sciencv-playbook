@@ -12,13 +12,13 @@ This appendix keeps a long-form companion to the playbook for readers who want o
 > This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-05-14.
 
 {: .warning }
-> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. NIH's warning-only leniency period ended **May 7, 2026**. As of **May 8, 2026**, eRA system validations stop submissions not using compliant Common Forms.
+> **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions not using compliant Common Forms.
 
 # The Comprehensive Implementation Guide to the 2026 NIH Common Forms
 
 ## Executive summary
 
-The NIH Common Forms transition is now a live operational requirement. The practical reality in May 2026 is that the warning-only leniency period has ended and eRA system validations now stop submissions that do not use compliant Common Forms.
+The NIH Common Forms transition is now a live operational requirement. For current NIH workflows, eRA system validations stop submissions that do not use compliant Common Forms.
 
 The current NIH model has three core pieces:
 
@@ -47,7 +47,7 @@ The most important operational points are:
 
 ## Part I: Policy landscape and implementation status
 
-NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. NIH's implementation details are collected on the NIH Common Forms hub and in **NOT-OD-26-018**. The later timing adjustment is in **NOT-OD-26-033**, and NIH's current enforcement date is in **NOT-OD-26-079**.
+NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. NIH's implementation details are collected on the NIH Common Forms hub and in **NOT-OD-26-018**. NIH's current enforcement date is in **NOT-OD-26-079**.
 
 ### 1.1 What changed structurally
 
@@ -61,20 +61,18 @@ This matters because NIH now expects the documents to be produced through a syst
 
 ### 1.2 Effective dates and current operational reality
 
-The formal implementation date remains **January 25, 2026**.
+The formal implementation date remains **January 25, 2026**. Active eRA enforcement applies to application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**.
 
 | Submission scenario | On or before Jan. 24, 2026 | On or after Jan. 25, 2026 | Current operational note |
 | --- | --- | --- | --- |
-| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
-| JIT | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
-| RPPR | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
-| Prior Approval | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms on/after May 8, 2026 |
-
-The major correction to the earlier draft is the enforcement timeline. NIH no longer states that warnings became hard-stop errors on **February 6, 2026**. NIH extended the warning-only leniency period through **May 7, 2026**. Beginning **May 8, 2026**, warnings became errors that stop submissions not using compliant Common Forms.
+| Application due date | Legacy NIH biosketch / other support pages | Common Forms + NIH supplement, when those attachments are required for that application scenario | Submission-stopping errors for non-compliant forms |
+| JIT | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms |
+| RPPR | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms |
+| Prior Approval | Legacy pages | Common Forms + NIH supplement | Submission-stopping errors for non-compliant forms |
 
 ### 1.3 Research Security Training and Common Forms timing
 
-NIH explained that the leniency-period extension allows better alignment between Common Form certifications and the separate **Research Security Training (RST)** requirement for covered individuals. NIH added RST certification text back into SciENcv Common Forms on **April 22, 2026**. For applications with due dates on or after **May 25, 2026**, Common Forms certified before April 22 and not yet submitted should be regenerated before submission so the updated certification text is included.
+NIH added Research Security Training (RST) certification text back into SciENcv Common Forms on **April 22, 2026**. For applications with due dates on or after **May 25, 2026**, Common Forms certified before April 22 and not yet submitted should be regenerated before submission so the updated certification text is included.
 
 NIH also explicitly notes that, based on NIH's **Just-in-Time** policy, NIH **does not collect Current and Pending (Other) Support at the time of application** in the ordinary case.
 
@@ -391,15 +389,11 @@ NIH's Common Forms workflow depends on machine-readable data created by SciENcv.
 
 ## Part VII: Common mistakes and edge cases
 
-### 7.1 Treating the old February 6, 2026 date as current policy
-
-This is no longer correct. NIH's warning-level validation period ran through **May 7, 2026**; the current enforcement phase is submission-stopping errors for non-compliant forms on/after **May 8, 2026**.
-
-### 7.2 Assuming CPOS always belongs in the initial application package
+### 7.1 Assuming CPOS always belongs in the initial application package
 
 This is one of the most common workflow mistakes. NIH's Application Guide says not to include current and pending support at the application stage unless the NOFO says otherwise. Many NIH users will first need CPOS during **JIT** rather than initial submission.
 
-### 7.3 Overstating the ORCID requirement
+### 7.2 Overstating the ORCID requirement
 
 The official NIH/eRA identity checks that can be verified directly are:
 
@@ -439,7 +433,6 @@ In multi-site applications, the lead institution cannot rely on locally editing 
 - NIH. *NOT-OD-26-079: Announcement of Upcoming System Enforcement of Common Forms and End of NIH's Leniency Period*. Released April 21, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html
 - NIH. *NOT-OD-26-017: Research Security Training Requirements for NIH*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html
 - NIH. *NOT-OD-26-018: NIH's Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support for Due Dates on or after January 25, 2026*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html
-- NIH. *NOT-OD-26-033: Adjusted Timeline for NIH's Implementation of Common Forms*. Released February 4, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-033.html
 - NIH. *Biographical Sketch Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form
 - NIH. *NIH Biographical Sketch Supplement*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/nih-biographical-sketch-supplement
 - NIH. *Current and Pending (Other) Support (CPOS) Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form

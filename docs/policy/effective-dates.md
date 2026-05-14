@@ -11,14 +11,13 @@ NIH implemented the **Common Forms** framework for:
 - **Application due dates** on/after **Jan 25, 2026**
 - **JIT, RPPR, Prior Approval submissions** on/after **Jan 25, 2026**
 
-NIH's warning-only leniency period ended **May 7, 2026**. For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions that do not use compliant Common Forms.
+For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions that do not use compliant Common Forms.
 
 ```mermaid
-timeline
-    title NIH Common Forms effective dates
-    Jan 25, 2026 : Common Forms apply to applications, JIT, RPPR, and Prior Approval
-    Through May 7, 2026 : Warning-only leniency period
-    May 8, 2026 and after : Non-compliant forms trigger submission-stopping errors
+flowchart LR
+    accTitle: NIH Common Forms effective date timeline
+    accDescr: A timeline showing the January 25, 2026 Common Forms start date and the May 8, 2026 active enforcement phase.
+    A["Jan 25, 2026<br/>Common Forms apply"] --> B["May 8, 2026 and after<br/>Non-compliant forms trigger submission-stopping eRA errors"]
 ```
 
 See the NIH Common Forms hub and the Guide Notice for the full matrix of scenarios:
