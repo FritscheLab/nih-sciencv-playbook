@@ -6,10 +6,10 @@ nav_order: 1
 
 # Long-form guide (current reference)
 
-This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-05-14**.
+This appendix keeps a long-form companion to the playbook for readers who want one continuous explanation of the NIH Common Forms transition. It was refreshed against official NIH and eRA Commons sources on **2026-07-07**.
 
 {: .note }
-> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-05-14.
+> This file originally preserved an early draft. It now reflects the current official NIH/eRA guidance that could be verified as of 2026-07-07.
 
 {: .warning }
 > **Current enforcement status:** NIH implemented the Common Forms framework for application due dates and for JIT, RPPR, and Prior Approval submissions on or after **January 25, 2026**. For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions not using compliant Common Forms.
@@ -403,6 +403,10 @@ The official NIH/eRA identity checks that can be verified directly are:
 
 NIH says the SciENcv PID can be populated through MyNCBI/SciENcv account linking, signing in with ORCID, or manual entry in the Common Form PID field. The key validation risk is mismatch between the Common Form PID and the ORCID linked to the eRA Commons credential used in the submission.
 
+### 7.3 Conflating CPOS with foreign-component reporting
+
+CPOS disclosure and foreign-component reporting overlap, but they are not the same workflow. NIH's May 27, 2026 reminder says NIH has not expanded the longstanding foreign-component definition. Possible foreign components, including foreign-site work, foreign resources, and foreign co-authorship on NIH-supported work, should be routed through institutional review and the funding NIH Institute or Center in addition to any CPOS reporting that applies.
+
 ### 7.4 Writing formal citations inside the supplement narrative boxes
 
 The supplement instructions are explicit: **do not provide citations in the NIH Biographical Sketch Supplement**. Instead, use plain-language references to the products listed in the Common Form.
@@ -431,15 +435,16 @@ In multi-site applications, the lead institution cannot rely on locally editing 
 
 - NIH. *Common Forms for Biographical Sketch and Current and Pending (Other) Support*. Last updated April 22, 2026. https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch
 - NIH. *NOT-OD-26-079: Announcement of Upcoming System Enforcement of Common Forms and End of NIH's Leniency Period*. Released April 21, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html
+- NIH. *NOT-OD-26-084: Reminder - Definition of Foreign Components*. Released May 27, 2026. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html
 - NIH. *NOT-OD-26-017: Research Security Training Requirements for NIH*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html
 - NIH. *NOT-OD-26-018: NIH's Implementation of Common Forms for Biographical Sketch and Current and Pending (Other) Support for Due Dates on or after January 25, 2026*. Released December 2, 2025. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html
-- NIH. *Biographical Sketch Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form
-- NIH. *NIH Biographical Sketch Supplement*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/nih-biographical-sketch-supplement
-- NIH. *Current and Pending (Other) Support (CPOS) Common Form*. Last updated January 12, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form
-- NIH. *Advice on Application Sections*. Accessed 2026-05-05. https://grants.nih.gov/grants-process/write-application/advice-on-application-sections
-- NIH. *R&R Senior/Key Person Profile (Expanded) Form*. Accessed 2026-05-05. https://grants.nih.gov/grants/how-to-apply-application-guide/forms-i/general/g.240-r%26r-seniorkey-person-profile-%28expanded%29-form.htm
+- NIH. *Biographical Sketch Common Form*. Last updated May 1, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form
+- NIH. *NIH Biographical Sketch Supplement*. Last updated May 1, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/nih-biographical-sketch-supplement
+- NIH. *Current and Pending (Other) Support (CPOS) Common Form*. Last updated May 1, 2026. https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form
+- NIH. *Advice on Application Sections*. Accessed 2026-07-07. https://grants.nih.gov/grants-process/write-application/advice-on-application-sections
+- NIH. *R&R Senior/Key Person Profile (Expanded) Form*. Accessed 2026-07-07. https://grants.nih.gov/grants/how-to-apply-application-guide/forms-i/general/g.240-r%26r-seniorkey-person-profile-%28expanded%29-form.htm
 - NIH. *Other Support*. Last updated July 30, 2025. https://grants.nih.gov/grants-process/write-application/forms-directory/other-support
-- eRA Commons. *The ORCID iD*. Revised April 29, 2026. https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm
+- eRA Commons. *The ORCID iD*. Revised June 17, 2026. https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm
 - eRA. *Changes to Prior Approval, Just-in-Time, and RPPR to Align with New Common Forms Requirements*. Last updated January 14, 2026. https://www.era.nih.gov/news/era-enhancements-changes-prior-approval-just-time-and-rppr-be-released-monday-january-26-align
 - NIH. *Common Form for Biographical Sketch* (PDF instructions). Accessed 2026-05-05. https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Biographical%20Sketch_FINAL.pdf
 - NIH. *NIH Biographical Sketch Supplement* (PDF instructions). Accessed 2026-05-05. https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement_FINAL.pdf

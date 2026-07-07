@@ -12,6 +12,7 @@ nav_order: 1
 
 {: .note }
 > Missing the **eRA Commons** link can create NIH/eRA compliance problems. Missing the SciENcv PID can also fail Common Form validation if the ORCID in the PDF does not match the ORCID linked to the eRA Commons credential used in the submission.
+> eRA also documents ORCID validation requirements for fellowship applicants, individual career development candidates, and trainees. If ORCID linking fails, contact the eRA Service Desk; one common cause is that the ORCID iD is already linked to another Commons account.
 
 ## Steps (PI does this)
 

@@ -9,6 +9,12 @@ nav_order: 13
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
 
+## v1.7 (Jul 2026)
+
+- Refreshed official-source review dates to **2026-07-07**.
+- Added **NOT-OD-26-084** as a related foreign-component source and clarified that CPOS disclosure and foreign-component reporting are overlapping but separate workflows.
+- Updated eRA ORCID help references for the **June 17, 2026** revision and added a short account-linking caveat for fellowship, career development, and trainee validation contexts.
+
 ## v1.6 (May 2026)
 
 - Refreshed enforcement wording so current pages lead with active **May 8, 2026** submission-stopping error behavior and omit leniency-period history from operational guidance.

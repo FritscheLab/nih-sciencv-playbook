@@ -30,6 +30,9 @@ Report in-kind contributions that are **$5,000+** and require a commitment of th
 
 Include foreign appointments/employment/affiliations that imply commitment or support under NIH rules. If a foreign appointment and/or employment is reportable in CPOS, remember that **supporting documentation** (copies of contracts specific to those foreign appointments/employment arrangements) is **not appended inside SciENcv**. NIH says to attach that documentation **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module, with **translations** if the contract is not in English.
 
+{: .note }
+> Related but separate: NIH's May 27, 2026 foreign-component reminder did not change the CPOS categories. Possible foreign components, including foreign-site work, foreign resources, and foreign co-authorship on NIH-supported work, should be routed through institutional review and the funding NIH Institute or Center in addition to any CPOS reporting that applies.
+
 ## Usually exclude these categories
 
 - Broadly available institutional core facilities or shared equipment

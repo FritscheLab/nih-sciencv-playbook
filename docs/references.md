@@ -5,7 +5,7 @@ nav_order: 11
 
 # References
 
-Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-05-14**.
+Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-07-07**.
 
 {: .warning }
 > For enforcement timing, check the **NIH Common Forms hub** and the newest NIH Guide Notice first. Some form-directory pages may lag the hub after NIH issues a new notice; treat them as form/instruction pages unless their timing text matches the hub.
@@ -21,6 +21,7 @@ Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-05-14**.
 - [NOT-OD-26-018 (implementation notice)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html)
 - [NOT-OD-26-017 (Research Security Training requirements)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html)
 - [NOT-OD-25-133 (other support disclosure training policy; effective October 1, 2025)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html)
+- [NOT-OD-26-084 (foreign component definition reminder)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html)
 - [NOT-OD-25-152 (SciENcv preview / XML ingest background)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-152.html)
 - [NIH Grants Policy Statement (March 2026)](https://grants.nih.gov/policy-and-compliance/nihgps)
 - [NIH Common Forms FAQ page](https://grants.nih.gov/faqs)
@@ -38,7 +39,7 @@ Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-05-14**.
 ## eRA / SciENcv / NCBI
 
 - [SciENcv (NCBI)](https://www.ncbi.nlm.nih.gov/sciencv/)
-- [eRA: ORCID iD help (revised April 29, 2026)](https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm)
+- [eRA: ORCID iD help (revised June 17, 2026)](https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm)
 - [eRA: Common Forms changes for Prior Approval, JIT, and RPPR](https://www.era.nih.gov/news/era-enhancements-changes-prior-approval-just-time-and-rppr-be-released-monday-january-26-align)
 - [NCBI Insights: Linking an ORCID account to My NCBI/SciENcv (workflow how-to; not an enforcement source)](https://ncbiinsights.ncbi.nlm.nih.gov/linking-an-orcid-account-to-sciencv/)
 - [NCBI Insights: Fixing an incorrect PID/ORCID in a SciENcv document](https://ncbiinsights.ncbi.nlm.nih.gov/correcting-a-pid-orcid-in-a-sciencv-document/)
