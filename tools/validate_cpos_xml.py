@@ -32,7 +32,6 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 YEAR_RE = re.compile(r"^\d{4}$")
 INT_RE = re.compile(r"^\d+$")
 PERSONMONTH_RE = re.compile(r"^-?(?:\d+(?:\.\d+)?|\.\d+)$")
-SUSPICIOUS_RE = re.compile(r"[\u201C\u201D\u2018\u2019\u2013\u2014\u2022\u00A0]")
 
 LIMITS = {
     "awardamount_digits": 13,
@@ -339,9 +338,6 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
                             warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth is negative ({val}). Fix: use 0 or a positive value."))
                         if fval > 12:
                             warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth > 12 ({val}). Fix: verify (calendar months/year is usually <= 12)."))
-
-    if SUSPICIOUS_RE.search(xml_text):
-        warns.append(Finding("WARN", "Found smart quotes, en/em dashes, bullets, or non-breaking spaces. Fix: normalize special characters before upload."))
 
     return errors, warns
 

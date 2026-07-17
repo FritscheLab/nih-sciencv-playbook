@@ -5,7 +5,7 @@ A docs-first, GitHub Pages–ready site to help **PIs, Co-Is, staff, and researc
 - **Biographical Sketch Common Form + NIH Biographical Sketch Supplement**
 - **Current and Pending (Other) Support (CPOS) Common Form**
 
-> **Compliance note:** NIH requires *digitally certified* PDFs generated from SciENcv. Do **not** “Print to PDF” / flatten the SciENcv output.
+> **Compliance note:** NIH requires *digitally certified* PDFs generated from SciENcv. Keep each Common Form unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment; foreign contracts and annual MFTRP statements are separate attachments.
 
 ## Publish on GitHub Pages (recommended)
 

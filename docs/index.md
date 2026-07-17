@@ -13,8 +13,9 @@ This site is a **PI + admin team** guide to preparing NIH’s required **Common 
 Independent guide, not official NIH/NCBI guidance. Verify details in [References]({{ site.baseurl }}{% link references.md %}).
 
 {: .warning }
-> **Effective date:** NIH requires Common Forms for **applications, JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
+> **Effective date:** NIH requires applicable Common Forms for **application due dates on/after Jan 25, 2026** and for **JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
 > **Current enforcement status:** For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions that do not use compliant Common Forms. See **Policy & Timeline**.
+> **Application RST requirement:** For due dates on/after **May 25, 2026**, every senior/key person must have completed qualifying Research Security Training within the prior 12 months and must certify through the biosketch; the AOR provides the institutional certification for covered individuals employed by the applicant organization.
 
 ## Start here (role-based)
 
@@ -25,7 +26,7 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 ## The two biggest success factors
 
 1. **Identity + data plumbing is correct** (ORCID linked to eRA Commons; ORCID appears as the SciENcv PID; My Bibliography clean).
-2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify).
+2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify), application RST checks, and annual RPPR MFTRP statements.
 
 ```mermaid
 flowchart LR
@@ -36,7 +37,7 @@ flowchart LR
     C --> D{"Named individual certifies?"}
     D -- "Yes" --> E["Download certified PDFs"]
     D -- "No" --> F["Hold submission package"]
-    E --> G["Submit unmodified SciENcv PDFs"]
+    E --> G["Keep Common Forms unmodified unless NIH expressly instructs otherwise"]
     F --> D
 ```
 
@@ -47,3 +48,5 @@ flowchart LR
 - Templates (Personal Statement, Contributions, intake forms, email nudges)
 - Troubleshooting and common eRA validation failures
 - Curated references (NIH + institutional guides)
+
+Start policy checks with [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) and [Submission lifecycle]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).

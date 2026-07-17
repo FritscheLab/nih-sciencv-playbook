@@ -76,7 +76,7 @@ flow = Table(
         Paragraph("<b>4) Save as .xml</b><br/><font color='#555555'>Copy code only</font>", styles["Body"]),
     ],
      [
-        Paragraph("<b>5) Validate + clean</b><br/><font color='#555555'>Normalize + format</font>", styles["Body"]),
+        Paragraph("<b>5) Validate + format</b><br/><font color='#555555'>Check structure + limits</font>", styles["Body"]),
         Paragraph("<b>6) Upload + review</b><br/><font color='#555555'>Fix missing fields</font>", styles["Body"]),
         Paragraph("<b>7) Final human check</b><br/><font color='#555555'>Line-by-line</font>", styles["Body"]),
         Paragraph("<b>8) Save XML snapshot + final PDF</b><br/><font color='#555555'>XML may diverge after SciENcv edits</font>", styles["Body"]),
@@ -224,7 +224,7 @@ story.append(Paragraph("Quick sanity checks (before validation):", styles["H3"])
 sanity = ListFlowable(
     [
         ListItem(Paragraph("File opens as readable text and starts with &lt;?xml or an opening XML tag.", styles["Body"]), leftIndent=12),
-        ListItem(Paragraph("No \"smart quotes\" pasted into tags; avoid rich-text editors like Word.", styles["Body"]), leftIndent=12),
+        ListItem(Paragraph("Use straight ASCII quotes as XML attribute delimiters; Unicode punctuation is valid in element text.", styles["Body"]), leftIndent=12),
         ListItem(Paragraph("Dates are consistent and complete (month/day/year where required).", styles["Body"]), leftIndent=12),
     ],
     bulletType="bullet", leftIndent=18, bulletFontName="Helvetica", bulletFontSize=10
@@ -236,7 +236,7 @@ story.append(PageBreak())
 
 story.append(Paragraph("4) Validate, Upload, and Review (Mandatory)", styles["H2"]))
 story.append(Paragraph(
-    "Treat validation as a required gate before upload. The validator will catch structural errors and non-standard characters that SciENcv may reject.",
+    "Treat validation as a required gate before upload. The validator catches malformed XML, structural errors, invalid field values, and length-limit violations.",
     styles["BodyMuted"]
 ))
 
@@ -246,10 +246,10 @@ story.append(Paragraph("Validator URL: https://fritschelab.github.io/nih-sciencv
 validator_steps = ListFlowable(
     [
         ListItem(Paragraph("<b>Paste</b> the XML into the validator.", styles["Body"]), leftIndent=12),
-        ListItem(Paragraph("Run <b>Normalize special characters</b> (fixes long dashes and other non-standard characters).", styles["Body"]), leftIndent=12),
+        ListItem(Paragraph("Run <b>Validate</b> and address reported errors; valid Unicode punctuation can remain unchanged.", styles["Body"]), leftIndent=12),
         ListItem(Paragraph("Run <b>Format XML</b> (makes debugging easier).", styles["Body"]), leftIndent=12),
         ListItem(Paragraph("If you see a red error (example: <i>Line 45: Invalid Date</i>), paste the error back to the model and ask it to fix only that issue.", styles["Body"]), leftIndent=12),
-        ListItem(Paragraph("<b>Download</b> the cleaned XML and use that file for upload.", styles["Body"]), leftIndent=12),
+        ListItem(Paragraph("<b>Save</b> the validated XML and use that file for upload.", styles["Body"]), leftIndent=12),
     ],
     bulletType="1", start="1", leftIndent=18, bulletFontName="Helvetica", bulletFontSize=10
 )

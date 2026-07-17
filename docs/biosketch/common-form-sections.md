@@ -26,14 +26,19 @@ nav_order: 3
 - Include outside appointments/positions for up to **3 years** from the application submission date
 - Keep it consistent with what your institution discloses elsewhere
 
-## Products (10 total)
+## Products (up to 10 total)
 
 Two buckets:
 
 1. **Closely Related to the Proposed Project** (up to 5)  
-   *Use these to support what you say in the Personal Statement.*
+   Products closely related to the work proposed in the application.
 2. **Other Significant Products** (up to 5)  
-   *Use these to support what you say in Contributions to Science.*
+   Other significant products that highlight your Contributions to Science.
+
+You do not need to fill all 10 slots. Either the Personal Statement or Contributions to Science may reference **any selected product**, regardless of which bucket contains it.
+
+{: .note }
+> **Practical strategy, not an NIH requirement:** closely related products often provide project-specific evidence for the Personal Statement, while other significant products often illustrate broader contributions. Use the bucket definitions above, but do not force a product-to-narrative mapping.
 
 Acceptable products are broader than papers. Depending on what is **citable and accessible**, products can include:
 - Journal articles, books/chapters, conference papers, and presentations
@@ -51,14 +56,15 @@ Acceptable products are broader than papers. Depending on what is **citable and 
 ```mermaid
 flowchart LR
     accTitle: Biosketch Common Form sections
-    accDescr: The Common Form moves from identity and preparation data to appointments and two product buckets that support the supplement narratives.
+    accDescr: The Common Form moves from identity and preparation data to appointments and two product buckets, and either supplement narrative may reference any selected product.
     A["Identifying information<br/>PID check"] --> B["Professional Preparation"]
     B --> C["Appointments and Positions"]
     C --> D["Products"]
     D --> E["Up to 5 Closely Related"]
     D --> F["Up to 5 Other Significant"]
-    E --> G["Supports Personal Statement"]
-    F --> H["Supports Contributions"]
+    E --> G["Any selected product"]
+    F --> G
+    G --> H["May support either narrative"]
 ```
 
 Next: [NIH Supplement sections (step-by-step)]({{ site.baseurl }}{% link biosketch/supplement-sections.md %})

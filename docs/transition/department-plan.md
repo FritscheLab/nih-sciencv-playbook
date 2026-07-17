@@ -8,12 +8,12 @@ nav_order: 1
 
 ## Recommended milestones (per deadline)
 
-**T-8 weeks:** ORCID + eRA + SciENcv PID + MyNCBI access audit
-**T-6 weeks:** Delegates added; My Bibliography cleanup begins  
-**T-4 weeks:** First draft narratives + product selection  
-**T-2 weeks:** SciENcv preview PDFs; compliance check  
-**T-3 days:** Individual certification window  
-**T-0:** Submit
+- **T-8 weeks:** ORCID + eRA + SciENcv PID + MyNCBI access audit
+- **T-6 weeks:** Delegates added; My Bibliography cleanup begins
+- **T-4 weeks:** First draft narratives + product selection
+- **T-2 weeks:** SciENcv preview PDFs; role/stage, RST, and compliance check
+- **T-3 days:** Individual certification window
+- **T-0:** Submit
 
 ```mermaid
 flowchart LR
@@ -33,4 +33,8 @@ flowchart LR
 - Delegate accepted? (Y/N)
 - Products selected? (Y/N)
 - Biosketch certified? (Y/N)
-- CPOS certified? (Y/N)
+- CPOS required for this person/stage? If yes, certified? (Y/N)
+- Application RST completed within the prior 12 months? (Y/N/N/A)
+- Annual RPPR MFTRP Section G.1 statement collected? (Y/N/N/A)
+
+Use the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) before assigning documents.

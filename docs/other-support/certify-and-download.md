@@ -6,23 +6,23 @@ nav_order: 4
 
 # Certify + download CPOS (individual-only)
 
-Same pattern as the biosketch:
+When CPOS is required for the person and submission stage, use the same individual-certification pattern as the biosketch:
 
 1. Download PDF
 2. The individual named on the CPOS certifies (delegate cannot)
 3. Submit SciENcv-generated PDF without modification
 
 {: .warning }
-> Don’t print/flatten the PDF after download—submit the certified file as generated.
+> Keep the certified CPOS PDF unmodified unless the NIH Application Guide or NOFO expressly requires otherwise. Do not print/flatten it merely to combine it with another person’s form or with supporting documentation.
 
 {: .note }
 > You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.
 
-{: .warning }
-> NIH added Research Security Training (RST) certification text back into SciENcv Common Forms on **April 22, 2026**. For applications with due dates on/after **May 25, 2026**, if a Common Form was certified before April 22 and has not yet been submitted, regenerate and re-certify the PDF before submission.
+{: .note }
+> If NIH requires **supporting documentation** for foreign appointments/employment reported in CPOS, flatten the contract copies and attach them **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module. Do **not** append them to the SciENcv CPOS PDF.
 
 {: .note }
-> If NIH requires **supporting documentation** for foreign appointments/employment reported in CPOS, attach those contract copies **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module. Do **not** append them to the SciENcv CPOS PDF.
+> The current CPOS certification text includes RST and MFTRP attestations. For NIH applications due on/after May 25, 2026, NIH collects the individual RST certification through the biosketch because CPOS is ordinarily not collected at application. The annual RPPR MFTRP statement is an additional **separate attachment**, not part of CPOS. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
 
 ```mermaid
 sequenceDiagram

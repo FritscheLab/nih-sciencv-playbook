@@ -9,6 +9,18 @@ nav_order: 13
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
 
+## v1.8 (Jul 2026)
+
+- Corrected final NIH Biosketch instructions: select **up to 5 + up to 5 Products**; either narrative may refer parenthetically to any selected product; use lead author/year or PMID/PMCID rather than full bibliographic citations or hyperlinks.
+- Added an active research-security guide covering the **May 25, 2026** RST requirement, the **Jan 25, 2026** MFTRP prohibition and application certifications, and the separate annual RPPR Section G.1 MFTRP statements.
+- Added a person- and stage-specific application/JIT/RPPR/Prior Approval matrix, including the narrow Training RPPR rule for new training faculty and the Change of PD/PI workflow.
+- Distinguished NIH’s **Oct 1, 2025** institutional Other Support disclosure-training requirement from application RST, and strengthened foreign-coauthorship routing under **NOT-OD-26-084**.
+- Added the eRA account-consolidation workflow and post-consolidation ORCID/role checks.
+- Added a mechanism-specific note for the 2026 Extramural Loan Repayment Program application cycle, which requires digitally certified applicant and applicable mentor biosketches through ASSIST.
+- Clarified that certified SciENcv Common Forms stay unmodified by default while participating-faculty compilations, foreign contracts, and annual MFTRP statements follow their own explicit flattening rules.
+- Removed the CPOS XML validator’s false warning for valid Unicode punctuation, synchronized the browser validator, tests, and generated cheat sheet, and preserved XML-reserved-character validation.
+- Refreshed the official source catalog and maintenance checklist through **2026-07-17**.
+
 ## v1.7 (Jul 2026)
 
 - Refreshed official-source review dates to **2026-07-07**.

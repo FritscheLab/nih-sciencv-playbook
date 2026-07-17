@@ -19,7 +19,7 @@ flowchart LR
     accDescr: The browser validator checks CPOS XML locally, reports common issues, and sends corrected XML back to SciENcv upload review.
     A["Load or paste XML"] --> B["Run browser validation"]
     B --> C{"Issues found?"}
-    C -- "Yes" --> D["Fix XML or normalize"]
+    C -- "Yes" --> D["Fix the reported XML issue"]
     D --> B
     C -- "No" --> E["Upload to SciENcv"]
     E --> F["Review entries in SciENcv UI"]

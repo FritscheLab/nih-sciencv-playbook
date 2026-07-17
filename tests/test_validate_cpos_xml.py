@@ -87,6 +87,38 @@ class CposXmlValidatorTests(unittest.TestCase):
 
         self.assertTrue(any("personmonth value '1abc' is not numeric" in finding.message for finding in warns))
 
+    def test_valid_unicode_punctuation_is_accepted(self):
+        xml = """<?xml version="1.0" encoding="utf-8"?>
+<profile>
+    <funding>
+        <support>
+            <contributiontype>award</contributiontype>
+            <overallobjectives>Smart \u201cquotes\u201d, \u2018apostrophes\u2019, en\u2013dash, em\u2014dash, bullet \u2022, and non-breaking\u00a0space.</overallobjectives>
+            <commitment/>
+        </support>
+    </funding>
+</profile>"""
+
+        errors, warns = validate_text(xml)
+
+        self.assertEqual([], errors)
+        self.assertFalse(any("special character" in finding.message.lower() for finding in warns))
+
+    def test_unescaped_reserved_character_remains_parse_error(self):
+        xml = """<profile>
+    <funding>
+        <support>
+            <contributiontype>award</contributiontype>
+            <overallobjectives>Research & Development</overallobjectives>
+            <commitment/>
+        </support>
+    </funding>
+</profile>"""
+
+        errors, _warns = validate_text(xml)
+
+        self.assertTrue(any("XML not well-formed" in finding.message for finding in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -7,7 +7,7 @@ nav_order: 1
 # Personal Statement template (copy/paste)
 
 {: .note }
-> **No formal citation list in the text.** You may still refer to relevant products in plain language. NIH does **not** require a special format; mentioning the **title**, **author’s last name**, **publication/source**, and/or **year** is usually safest.
+> You may use brief parenthetical references to **any product selected in the Common Form**, regardless of bucket. NIH recommends lead author/year or a PMID/PMCID. Do not include full bibliographic citations or hyperlinked references.
 
 ## Fill-in template
 
@@ -18,9 +18,10 @@ nav_order: 1
 - Technical expertise aligned to aims: [2–3 sentences]  
 - Leadership/management capability: [1–2 sentences]  
 
-**Evidence via products (no formal citations):**  
-- “My work developing [method/result] is reflected in *[Product title]* ([Author], [Year]).”  
-- “My preliminary findings relevant to Aim 2 appear in *[Product title]* ([Author], [Year]).”
+**Evidence via brief product references:**
+
+- “My work developing [method/result] established [relevant capability] ([Lead author] et al., [Year]).”
+- “My preliminary findings relevant to Aim 2 demonstrate [finding] (PMID: [number]).”
 
 **Team/environment fit (optional):** [1–2 sentences]
 

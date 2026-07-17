@@ -19,7 +19,10 @@ SciENcv’s **Products** selector pulls citations primarily from **My Bibliograp
 
 - Prefer selecting from **My Bibliography** for consistency (and because it’s the NIH ecosystem of record).
 - If you see an **ORCID** tab, it can help surface items not yet in My Bibliography—add them to My Bibliography when possible to keep one authoritative library.
+- Select up to 5 products most closely related to the proposed project and up to 5 other significant products; you may use fewer than 10.
 - After selecting, **re-order** within each bucket so the strongest evidence is first.
+
+Either NIH Supplement narrative may refer briefly to any selected product, regardless of bucket. Use lead author/year or PMID/PMCID rather than a full bibliographic citation or hyperlink.
 
 {: .note }
 > If an item isn’t in My Bibliography (or ORCID), it can’t be selected as a “Product” in SciENcv.

@@ -1,40 +1,44 @@
 ---
-title: Products strategy (how to pick the 10)
+title: Products strategy (how to pick up to 10)
 parent: NIH Biosketch (Common Form + Supplement)
 nav_order: 5
 ---
 
-# Products strategy (how to pick the 10)
+# Products strategy (how to pick up to 10)
 
-Because you only get **10 total** products, selection is strategic:
+NIH permits **up to 5** products in each of two buckets, for **up to 10 total**. You do not need to fill every slot.
 
 {: .note }
-> Products can include more than journal papers (for example: software, datasets, patents, technologies, and educational materials). Choose the strongest evidence for your specific claims **and make sure each item is citable/accessibly described in SciENcv**.
+> Products can include more than journal papers (for example: software, datasets, patents, technologies, and educational materials). Each selected product must be citable and accessible.
 
-## Bucket A (Closely Related): “evidence for your personal statement”
+## NIH bucket definitions
 
-Pick items that directly prove claims you make about:
-- Techniques you will use
-- Prior results that de-risk the approach
-- Domain expertise for the aims
+- **Closely Related to the Proposed Project:** up to 5 products closely related to the proposed work.
+- **Other Significant Products:** up to 5 other significant products that highlight your Contributions to Science.
 
-## Bucket B (Other Significant): “portfolio for your contributions”
+Both the Personal Statement and Contributions to Science may use brief parenthetical references to **any selected product**, regardless of bucket.
 
-A good default pattern:
-- 1 “anchor” product per contribution (up to 5)
+## Practical selection strategy
+
+This is writing strategy, not an NIH rule:
+
+- Start with the strongest claims in both narratives, then identify the products that substantiate them.
+- Place each product in the bucket that best matches the official definition above.
+- Project-specific evidence will often fit the Closely Related bucket; broader field impact will often fit Other Significant Products.
+- Do not force a one-product-per-contribution pattern or a rigid product-to-narrative mapping.
+- Leave slots unused when a product would not strengthen the case.
 
 Worksheet:
-- [Product selection worksheet (10 slots)]({{ site.baseurl }}{% link templates/product-selection-worksheet.md %})
+- [Product selection worksheet (up to 10 slots)]({{ site.baseurl }}{% link templates/product-selection-worksheet.md %})
 
 ```mermaid
 flowchart LR
     accTitle: Product selection strategy
-    accDescr: Products are selected as evidence for claims, split between closely related products and other significant products.
-    A["Claims in biosketch narratives"] --> B{"What does the claim need?"}
-    B -- "Project-specific evidence" --> C["Closely Related bucket"]
-    B -- "Contribution portfolio evidence" --> D["Other Significant bucket"]
-    C --> E["Up to 5 products"]
-    D --> F["Up to 5 products"]
-    E --> G["Reorder strongest evidence first"]
-    F --> G
+    accDescr: Select the strongest products, place them in the bucket that matches the official definition, and reference any selected product from either narrative.
+    A["Strong narrative claims"] --> B["Select citable, accessible evidence"]
+    B --> C["Closely Related<br/>up to 5"]
+    B --> D["Other Significant<br/>up to 5"]
+    C --> E["Any selected product"]
+    D --> E
+    E --> F["May support either narrative"]
 ```

@@ -14,6 +14,13 @@ nav_order: 1
 > Missing the **eRA Commons** link can create NIH/eRA compliance problems. Missing the SciENcv PID can also fail Common Form validation if the ORCID in the PDF does not match the ORCID linked to the eRA Commons credential used in the submission.
 > eRA also documents ORCID validation requirements for fellowship applicants, individual career development candidates, and trainees. If ORCID linking fails, contact the eRA Service Desk; one common cause is that the ORCID iD is already linked to another Commons account.
 
+## If you have multiple eRA Commons accounts
+
+eRA Commons provides a [**Consolidate Accounts** workflow](https://www.era.nih.gov/register-accounts/consolidate-multiple-accounts.htm) for users with multiple Commons accounts; its public guidance was last updated **May 18, 2026**. The request is available from the account-consolidation prompt or the person menu in Commons. You select a primary login; eRA states that the associated organizations and roles are preserved, and the eRA Service Desk reviews and completes the request.
+
+{: .note }
+> **Practical post-merge check:** after eRA confirms consolidation, log in with the retained credentials and review the **Personal Profile**, affiliations, roles, and ORCID link. Then confirm that the same ORCID appears as the SciENcv Common Form PID. Contact the eRA Service Desk if the ORCID remains linked incorrectly or any profile data is missing.
+
 ## Steps (PI does this)
 
 1. Create ORCID: <https://orcid.org/register>

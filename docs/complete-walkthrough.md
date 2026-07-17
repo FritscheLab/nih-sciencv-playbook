@@ -19,7 +19,7 @@ flowchart LR
     E -- "No" --> G["Track future CPOS stage"]
     F --> H["Individual certification"]
     G --> H
-    H --> I["Unmodified SciENcv PDFs"]
+    H --> I["Keep Common Forms unmodified by default"]
 ```
 
 ## 0) Prep (do once per person)
@@ -48,16 +48,16 @@ flowchart LR
 - Products:
   - Select from **My Bibliography** (preferred)
   - Use ORCID tab only if needed and reconcile back into My Bibliography later
+  - Select up to 5 products most closely related to the proposed project and up to 5 other significant products; fewer than 10 is allowed
   - Re-order products so your strongest evidence appears first
 
 ### Fill the NIH Supplement
 
-- Personal Statement (3,500 chars, **no citations**)
-- Contributions (≤5, 2,000 chars each, **no citations**)
+- Personal Statement (3,500 chars)
+- Contributions (≤5, 2,000 chars each)
 - Honors (≤15)
 
-**How to refer to evidence without citations:**  
-Use language that points to the product by **title / author / year**, for example: “see *Title of Product* (Smith, 2024)” or “see dataset released in 2023 by Jones et al.”
+**How to refer to evidence:** either narrative may point parenthetically to any product selected in the Common Form. NIH suggests lead author/year or PMID/PMCID. Do not insert full bibliographic citations or hyperlinks in the narrative fields.
 
 ## 2) Create CPOS in SciENcv (when NIH requests it)
 
@@ -69,8 +69,14 @@ Use language that points to the product by **title / author / year**, for exampl
 {: .note }
 > Important application-stage exception: **mentored career development** applications require CPOS for **mentor/co-mentor(s)**, not for the candidate.
 
+For JIT, RPPR, and Prior Approval person-level rules, see [Submission lifecycle]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).
+
 ## 3) Certification (individual-only)
 
-- Each named individual: Download PDF → Certify → Download
-- Repeat for biosketch and CPOS
-- Do not edit the PDF after download (no printing/flattening)
+- For an application due on/after **May 25, 2026**, verify that each senior/key person completed qualifying RST within the 12 months before submission.
+- Each named individual certifies and downloads **each document required for that person and stage**; a delegate cannot certify.
+- The biosketch certification includes individual RST and MFTRP attestations as applicable. For RST, the AOR certifies institutional compliance for covered individuals employed by the applicant organization. For MFTRP, the AOR certifies that all identified senior/key personnel were informed of and complied with the individual-certification responsibility.
+- Keep each certified SciENcv PDF unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment.
+- For an RPPR, collect the annual MFTRP Section G.1 statement separately from the SciENcv forms.
+
+See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the application and annual RPPR checkpoints.

@@ -18,13 +18,23 @@ nav_order: 6
 > The certification includes a legal attestation (including malign foreign talent program language).
 
 {: .warning }
-> Do **not** Print to PDF / “Optimize” / flatten this file. Submit the SciENcv-generated PDF as-is.
+> Do **not** Print to PDF / “Optimize” / flatten this file by default. Submit the SciENcv-generated PDF as-is unless the NIH Application Guide or NOFO expressly requires a special compiled/flattened attachment, such as participating-faculty biosketches.
 
 {: .note }
 > You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.
 
-{: .warning }
-> NIH added Research Security Training (RST) certification text back into SciENcv Common Forms on **April 22, 2026**. For applications with due dates on/after **May 25, 2026**, if a Common Form was certified before April 22 and has not yet been submitted, regenerate and re-certify the PDF before submission.
+## Application research-security check
+
+For applications due on/after **May 25, 2026**:
+
+- each senior/key person must have completed qualifying Research Security Training (RST) within the **12 months before application submission**;
+- the person certifies completion through the SciENcv biosketch; and
+- the AOR provides a separate institutional certification through the application signature for each covered individual employed by the applicant organization.
+
+The biosketch certification also includes the individual MFTRP attestation. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the application and annual RPPR requirements.
+
+{: .note }
+> **Historical transition:** SciENcv restored RST certification text on **April 22, 2026**. If you encounter an unsubmitted Common Form certified before that date for a due date on/after May 25, regenerate and re-certify it.
 
 ```mermaid
 sequenceDiagram
@@ -36,5 +46,5 @@ sequenceDiagram
     Person->>SciENcv: Certify
     SciENcv-->>Person: Certified PDF
     Person-->>Admin: Provide PDF or confirm delegate can collect it
-    Admin->>Admin: Submit without editing, printing, or flattening
+    Admin->>Admin: Keep unmodified unless NIH expressly instructs otherwise
 ```

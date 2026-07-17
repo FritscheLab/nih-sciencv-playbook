@@ -10,7 +10,9 @@ nav_order: 4
 
 - **3,500 characters**
 - Tailor to your role on *this* project
-- **No formal citations/reference list inside the text**
+- You may use brief **in-text, parenthetical references** to any product selected in the Common Form
+- NIH recommends a lead-author/year reference (for example, `(Collins et al., 2026)`) or a PMID/PMCID
+- Do **not** include full bibliographic citations or hyperlinked references
 - You may discuss training, previous work, technical expertise, collaborators/scientific environment, and past performance on ongoing or completed projects from the past **3 years**
 - You may briefly explain factors that affected past productivity (for example family care responsibilities, illness, disability, or military service)
 - If you published or created products under another name, you may say so here
@@ -22,12 +24,12 @@ nav_order: 4
 - **All senior/key persons should complete this section**; if you truly have nothing to include, enter **N/A**
 - Up to **5 contributions**
 - **2,000 characters each**
-- **No formal citations/reference list inside the text**
 - **No figures, tables, or graphics**
 - Graduate students and postdocs may decide to emphasize **2–3** contributions rather than forcing all 5
 - A good contribution entry usually covers: historical background/problem, central finding(s), influence on the field, and your specific role
-- Each contribution can reference **up to 5** relevant items from **Other Significant Products**
-- NIH does **not** require a special reference format here; the safest pattern is to mention the **title**, **author’s last name**, **publication/source**, and/or **year** of the product you are pointing to
+- You may use brief **in-text, parenthetical references** to any product selected in the Common Form; the reference is not restricted by product bucket
+- Use the same lead-author/year or PMID/PMCID style described for the Personal Statement
+- Do **not** include full bibliographic citations or hyperlinked references
 - You may mention relevant work that is still under development and not yet published
 
 ## Honors
@@ -42,12 +44,12 @@ Templates:
 ```mermaid
 flowchart LR
     accTitle: NIH Supplement narrative structure
-    accDescr: The supplement contains a personal statement, up to five contributions, and honors, with evidence pointing back to selected products.
+    accDescr: The supplement contains a personal statement, up to five contributions, and honors; both narratives may use brief parenthetical references to any selected product.
     A["NIH Biosketch Supplement"] --> B["Personal Statement<br/>3500 characters"]
     A --> C["Contributions to Science<br/>up to 5"]
     A --> D["Honors<br/>up to 15"]
-    B --> E["Points to Closely Related Products"]
-    C --> F["Points to Other Significant Products"]
-    E --> G["No formal citations in narrative boxes"]
-    F --> G
+    B --> E["Any selected product"]
+    C --> E
+    E --> F["Brief parenthetical reference"]
+    F --> G["No full citation or hyperlink"]
 ```

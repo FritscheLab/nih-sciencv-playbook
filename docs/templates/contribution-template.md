@@ -7,7 +7,7 @@ nav_order: 2
 # Contribution to Science template (copy/paste)
 
 {: .note }
-> No formal citation list, figures, tables, or graphics. NIH does **not** require a special reference format here; mention supporting products from **Other Significant Products** by **title**, **author**, **source**, and/or **year**.
+> No full bibliographic citations, hyperlinked references, figures, tables, or graphics. You may use brief parenthetical references to **any product selected in the Common Form**, regardless of bucket. NIH recommends lead author/year or a PMID/PMCID.
 
 ## Structure (recommended)
 
@@ -22,5 +22,6 @@ nav_order: 2
 **Impact:**  
 [2–4 sentences on why it mattered; downstream adoption, clinical impact, etc.]
 
-**Products that evidence this contribution:**  
-“See *[Product title]* ([Author], [Year]) [and second product if needed].”
+**Brief product reference(s), if useful:**
+
+“[Finding or impact statement] ([Lead author] et al., [Year]; PMID [number]).”

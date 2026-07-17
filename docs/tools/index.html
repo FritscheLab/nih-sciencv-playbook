@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SciENcv CPOS XML Validator + Normalizer (Upload Template)</title>
+    <title>SciENcv CPOS XML Validator + Formatter (Upload Template)</title>
     <style>
         :root {
             --bg-color: #f8f9fa;
@@ -446,17 +446,19 @@
     <div class="container">
         <header class="app-header">
             <div class="header-row">
-                <h1>SciENcv CPOS XML Validator + Normalizer <span class="pill">Upload Template</span></h1>
+                <h1>SciENcv CPOS XML Validator + Formatter <span class="pill">Upload Template</span></h1>
             </div>
             <p>
-                This tool validates and optionally normalizes SciENcv CPOS XML files using the <strong>simple upload
-                    template</strong>
+                This tool validates SciENcv CPOS XML files and provides optional formatting and targeted cleanup
+                actions using the <strong>simple upload template</strong>
                 (bare <span class="tag">&lt;profile&gt;</span>, no namespaces). It runs checks that commonly explain why
                 XML that "looks fine"
                 still fails SciENcv upload: element order, missing required fields, invalid dates/years, invalid
                 integers, and
                 <strong>character-length limits</strong>.
             </p>
+            <p class="muted small">Valid Unicode punctuation is preserved. XML-reserved characters still need to be
+                escaped, such as <span class="tag">&amp;amp;</span> for an ampersand in element text.</p>
             <p class="muted"><em>Your data is processed entirely in your browser. No files are uploaded to any
                     server.</em></p>
         </header>
@@ -503,7 +505,6 @@
 
                 <div class="btn-row" aria-label="Tool actions">
                     <button class="btn" type="button" id="validate-btn">Validate</button>
-                    <button class="btn secondary" type="button" id="normalize-btn">Normalize Special Characters</button>
                     <button class="btn secondary" type="button" id="format-btn">Format XML (clean)</button>
                     <button class="btn secondary" type="button" id="strip-btn">Strip &lt;profile&gt; Attributes</button>
                     <button class="btn secondary" type="button" id="truncate-btn">Auto-Shorten to Limits</button>
@@ -689,17 +690,6 @@
                 return { xmlDoc: null, error: "XML is not well-formed or could not be parsed." };
             }
             return { xmlDoc, error: null };
-        }
-
-        // Replace common problematic characters without changing structure.
-        function normalizeSpecialChars(text) {
-            return text
-                .replace(/\u00A0/g, " ")                // NBSP
-                .replace(/[\u201C\u201D]/g, '"')        // smart double quotes
-                .replace(/[\u2018\u2019]/g, "'")        // smart single quotes
-                .replace(/[\u2013\u2014]/g, "-")        // en/em dash
-                .replace(/\u2022/g, "-")                // bullet
-                .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, ""); // control chars (keep \t\n\r)
         }
 
         function smartShorten(text, maxLen) {
@@ -999,12 +989,6 @@
                     });
                 }
             });
-
-            // Scan for characters we commonly normalize
-            const suspicious = /[\u201C\u201D\u2018\u2019\u2013\u2014\u2022\u00A0]/;
-            if (suspicious.test(xmlText)) {
-                addIssue(issues, "warn", "Found smart quotes, en/em dashes, bullets, or non-breaking spaces. Fix: click 'Normalize Special Characters' and re-validate.");
-            }
 
             return issues;
         }
@@ -1330,14 +1314,6 @@
         document.getElementById("validate-btn").addEventListener("click", () => {
             const issues = validateXmlAgainstUploadTemplate(currentXml());
             displayResults(issues, "Current editor content");
-        });
-
-        document.getElementById("normalize-btn").addEventListener("click", () => {
-            const before = currentXml();
-            const after = normalizeSpecialChars(before);
-            setXml(after);
-            const issues = validateXmlAgainstUploadTemplate(after);
-            displayResults(issues, "Normalized (special chars)");
         });
 
         document.getElementById("format-btn").addEventListener("click", () => {
