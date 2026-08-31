@@ -23,6 +23,8 @@ NIH requires the applicable **Common Forms** for applications and for JIT, RPPR,
 - A person who is currently party to a malign foreign talent recruitment program (MFTRP) is ineligible to serve as senior/key personnel on an NIH grant or cooperative agreement.
 - Individual MFTRP certification is part of the SciENcv biosketch. Annual RPPRs also require the prescribed person-level MFTRP statements in Section G.1.
 
+**Timeline summary:** Common Forms and MFTRP rules have applied since **January 25, 2026**; submission-stopping eRA validation began **May 8, 2026**; and the application RST completion and certification requirements apply to due dates on or after **May 25, 2026**.
+
 ```mermaid
 timeline TD
     accTitle: NIH Common Forms and research-security dates

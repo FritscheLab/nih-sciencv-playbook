@@ -37,5 +37,6 @@ block-beta
         common["Biographical Sketch Common Form<br/>Structured data and selected products"]
         supplement["NIH Biosketch Supplement<br/>Narratives and honors"]
     end
-    certification["One SciENcv certification covers both parts"]:2
+    certification["One SciENcv certification"]
+    coverage["Covers the combined PDF"]
 ```

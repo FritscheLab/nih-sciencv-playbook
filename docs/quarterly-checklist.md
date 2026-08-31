@@ -46,5 +46,6 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 
 - Update `docs/changelog.md`
 - Run `git diff --check`, the XML validator tests, mirror comparison, and a Jekyll build when dependencies are available
+- After changing the pinned Mermaid version, render-check the timeline, swimlane, block, state, and TreeView examples; beta diagram syntax may evolve
 - Rebuild/redeploy GitHub Pages
 - Spot-check key live pages for correctness and formatting

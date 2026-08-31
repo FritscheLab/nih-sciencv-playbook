@@ -15,7 +15,8 @@ plugins:
 search_enabled: true
 color_scheme: light
 
-# Mermaid diagrams
+# Mermaid 11.16+ is required for swimlane-beta; TreeView and vertical timeline
+# direction require Mermaid 11.14+.
 mermaid:
   version: "11.17.2"
 

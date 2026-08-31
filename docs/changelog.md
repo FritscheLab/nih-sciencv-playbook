@@ -11,6 +11,7 @@ nav_order: 13
 
 ## v1.9 (Aug 2026)
 
+- Reworked site diagrams around their actual purpose: vertical timelines for dates, swimlanes for ownership handoffs, state diagrams for lifecycles and validation loops, structural diagrams for document/XML composition, and tables or checklists where a flowchart was redundant; also upgraded Mermaid and activated the supported Just the Docs Sass hooks for a wider, more readable desktop layout.
 - Added NIH's current RST topic clarification covering malign foreign talent recruitment program risks and the prohibition on NIH senior/key personnel participating.
 - Clarified that every individual listed on the application R&R Senior/Key Person Profile, including Other Significant Contributors, needs the combined NIH biosketch; retained the current RPPR matrix for new OSCs.
 - Added the FY2027 Extramural LRP guide, including the optional additional combined biosketch for one mentoring-team member, co-mentor, or key recommender.

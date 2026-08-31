@@ -8,10 +8,10 @@ has_children: true
 
 This section walks through producing the NIH Biographical Sketch in SciENcv: the **Biographical Sketch Common Form** plus the **NIH Biographical Sketch Supplement**, certified and downloaded as a single PDF.
 
+**Diagram summary:** The combined biosketch contains Common Form data, NIH Supplement narratives and honors, and one certification by the named individual.
+
 ```mermaid
 mindmap
-  accTitle: NIH biosketch contents and certification
-  accDescr: The combined NIH biosketch contains Common Form data, NIH Supplement narratives and honors, and one certification by the named individual.
   root((NIH Biosketch))
     Common Form
       Identifying information

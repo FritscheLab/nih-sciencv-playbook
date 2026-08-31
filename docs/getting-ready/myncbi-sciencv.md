@@ -25,9 +25,9 @@ block-beta
         dashboard["MyNCBI account dashboard"]:2
         bibliography["My Bibliography<br/>Product citation library"]
         delegates["Delegate settings<br/>Admin editing access"]
-        sciencv["SciENcv<br/>Biosketch and CPOS documents"]:2
+        sciencv["SciENcv<br/>Biosketch and CPOS documents"]
+        output["Certified PDFs"]
     end
-    output["SciENcv-generated certified PDFs"]:2
     bibliography --> sciencv
     delegates --> sciencv
     sciencv --> output

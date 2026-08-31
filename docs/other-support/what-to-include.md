@@ -58,9 +58,9 @@ flowchart TD
     B -- "Yes" --> C["Include as separate project entry"]
     B -- "No" --> D{"Reportable consulting trigger?"}
     D -- "Yes" --> C
-    D -- "No" --> E{"External in-kind support not for this project, value 5000 or more, and time commitment?"}
+    D -- "No" --> E{"External in-kind support?<br/>Not for this project;<br/>USD 5,000+ and time commitment"}
     E -- "Yes" --> F["Include as in-kind entry"]
-    E -- "No" --> G{"Foreign appointment or employment with support or commitment?"}
-    G -- "Yes" --> H["Include and handle supporting documents separately if required"]
+    E -- "No" --> G{"Foreign appointment or employment?<br/>Support or commitment involved"}
+    G -- "Yes" --> H["Include; handle required supporting<br/>documents separately"]
     G -- "No" --> I["Usually exclude or confirm with institution"]
 ```

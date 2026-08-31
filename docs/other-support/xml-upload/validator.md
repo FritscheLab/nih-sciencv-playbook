@@ -26,7 +26,7 @@ stateDiagram-v2
     [*] --> Loaded
     Loaded --> Checked: Run browser validation
     Checked --> Result
-    Result --> Loaded: Issues found; fix XML
+    Result --> Loaded: Issues found - fix XML
     Result --> UploadReady: No issues found
     UploadReady --> Review: Upload to SciENcv
     Review --> [*]
