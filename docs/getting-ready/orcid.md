@@ -16,7 +16,7 @@ nav_order: 1
 
 ## If you have multiple eRA Commons accounts
 
-eRA Commons provides a [**Consolidate Accounts** workflow](https://www.era.nih.gov/register-accounts/consolidate-multiple-accounts.htm) for users with multiple Commons accounts; its public guidance was last updated **May 18, 2026**. The request is available from the account-consolidation prompt or the person menu in Commons. You select a primary login; eRA states that the associated organizations and roles are preserved, and the eRA Service Desk reviews and completes the request.
+eRA Commons provides a [**Consolidate Accounts** workflow](https://www.era.nih.gov/register-accounts/consolidate-multiple-accounts.htm) for users with multiple Commons accounts. The request is available from the account-consolidation prompt or the person menu in Commons. You select a primary login; eRA states that the associated organizations and roles are preserved, and the eRA Service Desk reviews and completes the request.
 
 {: .note }
 > **Practical post-merge check:** after eRA confirms consolidation, log in with the retained credentials and review the **Personal Profile**, affiliations, roles, and ORCID link. Then confirm that the same ORCID appears as the SciENcv Common Form PID. Contact the eRA Service Desk if the ORCID remains linked incorrectly or any profile data is missing.

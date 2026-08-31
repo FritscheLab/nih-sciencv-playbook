@@ -1,5 +1,5 @@
 title: "NIH Common Forms Playbook"
-description: "Practical workflows, templates, and troubleshooting for NIH Common Forms (effective Jan 25, 2026)."
+description: "Practical workflows, templates, and troubleshooting for NIH Common Forms in SciENcv."
 remote_theme: just-the-docs/just-the-docs
 
 # Site URL for GitHub Pages
@@ -14,12 +14,10 @@ plugins:
 
 search_enabled: true
 color_scheme: light
-custom_css:
-  - custom
 
 # Mermaid diagrams
 mermaid:
-  version: "10.9.3"
+  version: "11.17.2"
 
 # Footer
 footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. <a href="/nih-sciencv-playbook/disclaimer">Disclaimer</a>.'
@@ -28,10 +26,10 @@ footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. 
 aux_links:
   "NIH Common Forms hub":
     - "https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch"
-  "NOT-OD-26-079":
-    - "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html"
-  "NOT-OD-26-018":
-    - "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html"
+  "NIH Biosketch instructions":
+    - "https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form"
+  "NIH CPOS instructions":
+    - "https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form"
   "SciENcv":
     - "https://www.ncbi.nlm.nih.gov/sciencv/"
 

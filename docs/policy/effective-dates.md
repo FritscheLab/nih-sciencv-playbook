@@ -1,32 +1,39 @@
 ---
-title: Effective dates (NIH)
-parent: Policy & Timeline
+title: Current NIH requirements
+parent: Policy & Current Requirements
 nav_order: 1
 ---
 
-# Effective dates (NIH)
+# Current NIH requirements
 
-NIH implemented the **Common Forms** framework for:
+NIH requires the applicable **Common Forms** for applications and for JIT, RPPR, and Prior Approval workflows. When a biosketch is required, it consists of the Biographical Sketch Common Form and NIH Biosketch Supplement. Use the current NIH instructions and submission-stage rules to determine which documents are required for each person.
 
-- **Application due dates** on/after **Jan 25, 2026**
-- **JIT, RPPR, Prior Approval submissions** on/after **Jan 25, 2026**
+## Requirements at a glance
 
-NIH allowed a transition period through **May 7, 2026**. For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions that do not use compliant Common Forms.
+- Create each required Biosketch or CPOS document in **SciENcv**.
+- Use an **ORCID iD** as the form's PID and ensure it matches the ORCID linked to the individual's eRA Commons profile.
+- Have the **named individual** review and digitally certify each form. Delegates may help prepare a document but cannot certify it.
+- Keep certified SciENcv PDFs unmodified unless NIH expressly requires a special compiled or flattened attachment.
+- Expect eRA system validations to stop a submission that uses a non-SciENcv, uncertified, or otherwise noncompliant form.
+- Request CPOS only when the NOFO or applicable application, JIT, RPPR, or Prior Approval instructions require it for that person's role and submission stage.
 
-Two related research-security dates also affect the workflow:
+## Current research-security requirements
 
-- Effective **Jan 25, 2026**, a person who is currently party to a malign foreign talent recruitment program (MFTRP) is ineligible to serve as senior/key personnel on an NIH grant or cooperative agreement. Application and annual RPPR certification requirements also apply.
-- For application due dates on/after **May 25, 2026**, each senior/key person must have completed research security training (RST) within the **12 months before application submission** and must certify completion through the SciENcv biosketch. Through the AOR, the applicant organization provides a separate institutional certification for covered individuals it employs.
+- Each senior/key person must complete qualifying research security training within the **12 months before application submission** and certify completion through the SciENcv biosketch. Through its AOR, the applicant organization separately certifies compliance for covered individuals it employs.
+- A person who is currently party to a malign foreign talent recruitment program (MFTRP) is ineligible to serve as senior/key personnel on an NIH grant or cooperative agreement.
+- Individual MFTRP certification is part of the SciENcv biosketch. Annual RPPRs also require the prescribed person-level MFTRP statements in Section G.1.
 
 ```mermaid
-flowchart LR
-    accTitle: NIH Common Forms effective date timeline
-    accDescr: A timeline showing the January 25 Common Forms and MFTRP start, May 8 system enforcement, and May 25 research security training requirements.
-    A["Jan 25, 2026<br/>Common Forms and MFTRP rules apply"] --> B["May 8, 2026<br/>Submission-stopping eRA validation begins"]
-    B --> C["May 25, 2026 due dates<br/>RST completion and certifications required"]
+timeline TD
+    accTitle: NIH Common Forms and research-security dates
+    accDescr: Three milestones: Common Forms and MFTRP rules apply January 25, submission-stopping eRA validation begins May 8, and RST completion and certifications are required for May 25 due dates.
+    Jan 25, 2026 : Common Forms and MFTRP rules apply
+    May 8, 2026 : Submission-stopping eRA validation begins
+    May 25, 2026 due dates : RST completion and certifications required
 ```
 
-See the NIH Common Forms hub and the Guide Notice for the full matrix of scenarios:
+Use these official NIH sources for the controlling requirements:
+
 - [NIH Common Forms hub](https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch)
 - [NOT-OD-26-018](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html)
 - [NOT-OD-26-079](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html)

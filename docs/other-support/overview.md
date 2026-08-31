@@ -20,10 +20,10 @@ Key points:
 - Disclose **all proposals and active projects** plus **all reportable in-kind contributions**
 - Provide a **separate CPOS record for each proposal/active project and each in-kind contribution** (the Common Form instructions call each a separate submission)
 - For proposals/active projects, status values are **current** or **pending**
-- In-kind contributions are reportable when they are **$5,000 or more** **and** require a commitment of the individual’s time
+- In-kind contributions are reportable when they are **non-cash contributions from an external entity**, are **not intended for use on the project or proposal for which the disclosure is being submitted**, are valued at **$5,000 or more**, and require a commitment of the individual’s time
 
 {: .note }
-> **Separate recipient obligation:** effective **October 1, 2025**, [NIH recipients must provide Other Support disclosure training](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html) to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. This institutional training requirement is distinct from the individual **Research Security Training (RST)** requirement.
+> **Separate recipient obligation:** [NIH recipients must provide Other Support disclosure training](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html) to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. This institutional training requirement is distinct from the individual **Research Security Training (RST)** requirement.
 
 Use the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) for JIT authority, RPPR participant changes, annual MFTRP statements, and Change of PD/PI requirements.
 

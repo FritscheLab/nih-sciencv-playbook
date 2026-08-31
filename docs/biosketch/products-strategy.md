@@ -30,15 +30,3 @@ This is writing strategy, not an NIH rule:
 
 Worksheet:
 - [Product selection worksheet (up to 10 slots)]({{ site.baseurl }}{% link templates/product-selection-worksheet.md %})
-
-```mermaid
-flowchart LR
-    accTitle: Product selection strategy
-    accDescr: Select the strongest products, place them in the bucket that matches the official definition, and reference any selected product from either narrative.
-    A["Strong narrative claims"] --> B["Select citable, accessible evidence"]
-    B --> C["Closely Related<br/>up to 5"]
-    B --> D["Other Significant<br/>up to 5"]
-    C --> E["Any selected product"]
-    D --> E
-    E --> F["May support either narrative"]
-```

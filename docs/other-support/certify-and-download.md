@@ -22,19 +22,21 @@ When CPOS is required for the person and submission stage, use the same individu
 > If NIH requires **supporting documentation** for foreign appointments/employment reported in CPOS, flatten the contract copies and attach them **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module. Do **not** append them to the SciENcv CPOS PDF.
 
 {: .note }
-> The current CPOS certification text includes RST and MFTRP attestations. For NIH applications due on/after May 25, 2026, NIH collects the individual RST certification through the biosketch because CPOS is ordinarily not collected at application. The annual RPPR MFTRP statement is an additional **separate attachment**, not part of CPOS. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+> The current CPOS certification text includes RST and MFTRP attestations. For NIH applications, NIH collects the individual RST certification through the biosketch because CPOS is ordinarily not collected at application. The annual RPPR MFTRP statement is an additional **separate attachment**, not part of CPOS. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
 
 ```mermaid
 sequenceDiagram
+    accTitle: CPOS certification and submission handoff
+    accDescr: The named individual reviews and certifies CPOS in SciENcv, then provides the certified PDF and any separate foreign appointment documentation to the institutional submission owner or administrator.
     actor Person as Named individual
     participant SciENcv
-    participant eRA
+    participant Owner as Submission owner / administrator
     Person->>SciENcv: Review complete CPOS
     Person->>SciENcv: Certify
     SciENcv-->>Person: Certified CPOS PDF
-    alt Foreign appointment documentation required
-        Person->>eRA: Attach contracts separately
-    else No separate documentation required
-        Person->>eRA: Submit CPOS PDF only
+    Person-->>Owner: Provide certified CPOS PDF
+    opt Foreign appointment documentation required
+        Person-->>Owner: Provide contract copies as separate files
     end
+    Owner->>Owner: Package materials for the applicable submission stage
 ```

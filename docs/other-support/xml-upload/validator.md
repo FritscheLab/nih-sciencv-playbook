@@ -14,13 +14,20 @@ It runs entirely in your browser; files are not uploaded anywhere.
 If you prefer a command-line check, see the script in `tools/validate_cpos_xml.py`.
 
 ```mermaid
-flowchart LR
+stateDiagram-v2
+    direction TB
     accTitle: Browser validator workflow
-    accDescr: The browser validator checks CPOS XML locally, reports common issues, and sends corrected XML back to SciENcv upload review.
-    A["Load or paste XML"] --> B["Run browser validation"]
-    B --> C{"Issues found?"}
-    C -- "Yes" --> D["Fix the reported XML issue"]
-    D --> B
-    C -- "No" --> E["Upload to SciENcv"]
-    E --> F["Review entries in SciENcv UI"]
+    accDescr: XML is checked locally in the browser. Reported issues return the file for correction and another check; a clean result proceeds to upload and review in SciENcv.
+    state "XML loaded or pasted" as Loaded
+    state "Browser validation complete" as Checked
+    state Result <<choice>>
+    state "Ready to upload" as UploadReady
+    state "SciENcv UI review" as Review
+    [*] --> Loaded
+    Loaded --> Checked: Run browser validation
+    Checked --> Result
+    Result --> Loaded: Issues found; fix XML
+    Result --> UploadReady: No issues found
+    UploadReady --> Review: Upload to SciENcv
+    Review --> [*]
 ```

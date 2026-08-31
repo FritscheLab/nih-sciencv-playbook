@@ -9,6 +9,18 @@ nav_order: 13
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
 
+## v1.9 (Aug 2026)
+
+- Added NIH's current RST topic clarification covering malign foreign talent recruitment program risks and the prohibition on NIH senior/key personnel participating.
+- Clarified that every individual listed on the application R&R Senior/Key Person Profile, including Other Significant Contributors, needs the combined NIH biosketch; retained the current RPPR matrix for new OSCs.
+- Added the FY2027 Extramural LRP guide, including the optional additional combined biosketch for one mentoring-team member, co-mentor, or key recommender.
+- Recast high-traffic policy, enforcement, migration, and department pages as current operational guidance and removed completed rollout-period commentary while preserving historical changelog entries.
+- Hardened the CLI and browser CPOS XML validators for real calendar dates, ASCII-only numeric fields, and person-month values from 0–12 with no more than two decimal places, with synchronized mirrors and regression tests.
+- Corrected the CPOS XML prompt and intake guidance for external in-kind contributions, Facilities/Equipment routing, project-versus-subproject amounts, indirect costs, currency conversion, defensible estimates, composite de-duplication, date handling, and pre-certification completion.
+- Added the NIH-required Honors fallback for individuals with nothing to report and the SciENcv delegate notification workflow.
+- Added the active OMB `3145-0279` renewal notice as a maintainer-only monitoring item, replaced stale or redirected official links, and refreshed the official source review through **2026-08-31**.
+- Removed tracked generated Python bytecode and ignored future Python cache files.
+
 ## v1.8 (Jul 2026)
 
 - Corrected final NIH Biosketch instructions: select **up to 5 + up to 5 Products**; either narrative may refer parenthetically to any selected product; use lead author/year or PMID/PMCID rather than full bibliographic citations or hyperlinks.

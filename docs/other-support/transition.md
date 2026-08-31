@@ -1,25 +1,31 @@
 ---
-title: Transition from “Other Support” (old format)
+title: Reusing prior support records
 parent: Current & Pending (Other) Support (CPOS)
 nav_order: 6
 ---
 
-# Transition from the old Other Support format
+# Reusing prior support records
 
-- When NIH requests Other Support for the person's role and stage, the legacy NIH Other Support format applies to **application due dates** on/before **Jan 24, 2026** and to **JIT, RPPR, or Prior Approval submissions** made on/before that date.
-- Use the SciENcv CPOS Common Form for **application due dates** on/after **Jan 25, 2026** and for **JIT, RPPR, or Prior Approval submissions** made on/after that date.
+Prior Other Support documents, spreadsheets, and institutional disclosure records can help populate a CPOS, but they are source material rather than submission-ready forms.
 
-Do not attach CPOS solely because the transition date has passed. First confirm that NIH requests it for the person's role, mechanism, and lifecycle stage under the NOFO and applicable Application Guide, JIT, RPPR, or Prior Approval instructions. When it is requested, use your prior Other Support document as a source, rebuild it in SciENcv, and have the named individual certify it.
+When NIH requests CPOS for the person's role and submission stage:
+
+1. Compare prior records with the current CPOS disclosure categories and instructions.
+2. Reconcile projects, in-kind contributions, effort, dates, amounts, and required supporting documentation.
+3. Create or update the CPOS in SciENcv and resolve any missing fields.
+4. Have the named individual review and certify the final form.
+
+Do not attach CPOS solely because prior support records exist. First confirm the document requirement through the NOFO and applicable application, JIT, RPPR, or Prior Approval instructions. Use the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) for the person-and-stage decision.
 
 ```mermaid
-flowchart LR
-    accTitle: Legacy Other Support transition
-    accDescr: When NIH requests Other Support for a role and stage, application due dates and lifecycle submission dates determine whether the legacy format or SciENcv CPOS applies.
+flowchart TD
+    accTitle: Reusing prior support records for CPOS
+    accDescr: When NIH requests CPOS for a person and stage, prior records become source material for a current SciENcv form that the named individual reviews and certifies.
     A["NIH submission involving this person"] --> B{"Is CPOS requested for this role and stage?"}
     B -- "No" --> C["Do not attach CPOS now"]
-    B -- "Yes" --> D["Use legacy Other Support as a source"]
-    D --> E["Rebuild in SciENcv CPOS"]
+    B -- "Yes" --> D["Use prior support records as source material"]
+    D --> E["Create or update CPOS in SciENcv"]
     E --> F["Resolve missing fields"]
-    F --> G["Named individual certifies"]
+    F --> G["Named individual reviews and certifies"]
     G --> H["Certified CPOS PDF"]
 ```

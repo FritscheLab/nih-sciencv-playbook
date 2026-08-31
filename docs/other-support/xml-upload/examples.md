@@ -6,23 +6,6 @@ nav_order: 5
 
 # Examples + edge cases
 
-```mermaid
-flowchart TD
-    accTitle: CPOS XML edge case router
-    accDescr: Common CPOS XML edge cases route to specific handling patterns for dates, in-kind items, updates, duplicates, and effort.
-    A["Messy source item"] --> B{"Which edge case?"}
-    B -- "Multi-year award" --> C["Generate inclusive person-month years"]
-    B -- "In-kind resource" --> D["Use inkind contribution type"]
-    B -- "Existing award update" --> E["Match by award number"]
-    B -- "Duplicate sources" --> F["De-duplicate before upload"]
-    B -- "Missing effort" --> G["Keep year attribute; blank or zero value"]
-    C --> H["Validate before upload"]
-    D --> H
-    E --> H
-    F --> H
-    G --> H
-```
-
 ## Example 1: Multi-year award with a single annual effort value
 
 **Input (messy):**
@@ -40,32 +23,37 @@ flowchart TD
 
 **Input:**
 
-> Current in-kind: HPC cluster access (est. $30,000/year), received 10/2025, effort not known yet.
+> Current in-kind: HPC cluster access provided as a non-cash contribution by an external entity, not intended for use on the project or proposal for which this disclosure is being submitted (est. $30,000/year), received 10/2025. The contribution requires the individual's time, but the person-month amount is not yet quantified.
 
 **Expected XML pattern:**
 - `contributiontype` = `inkind`
 - `supporttype` = `current`
+- Confirm it is not a broadly available institutional core or shared resource
 - `projecttitle` and `awardnumber` can be empty
 - `inkinddescription` describes the resource
+- If the resource were intended for that project or proposal, it would be routed to Facilities & Other Resources or Equipment instead of CPOS in-kind
 - Emit `<personmonth year="2025"></personmonth>` even if effort is blank
 
-## Example 3: Updating an existing entry by award number
+## Example 3: Updating a uniquely identified existing entry
 
 **Update instruction:**
 
-> Change award number R01 AA123456 title to "Revised Title" and note that the project ended before the CPOS snapshot date.
+> For the University A / NIH entry with award number R01 AA123456, start date 2024-07-01, and current title "Original Title," change the title to "Revised Title" and note that the project ended before the CPOS snapshot date.
 
 **Expected behavior:**
-- Find the entry with matching `<awardnumber>`
+- Find the single entry matching the award number, source, start date, and prior title
 - Overwrite the `<projecttitle>`
 - Do **not** invent a `completed` status (valid values are only `current` or `pending`)
 - If the project is no longer current or pending as of the CPOS reporting date, **remove it from the CPOS upload** rather than changing `supporttype`
 
 ## Example 4: Duplicate entries from merged sources
 
-If both the PI and admin provide the same support item in PART 1, de-duplication should collapse them into one entry using:
-- `awardnumber` (preferred)
-- else `projecttitle + supportsource + startdate`
+If both the PI and admin provide the same support item in PART 1, collapse it only when a composite identity matches:
+
+- with an award number: `awardnumber + projecttitle + supportsource + startdate`
+- without an award number: `projecttitle + supportsource + location + startdate`
+
+Do not merge on award number alone. Consortium subprojects and multi-project components can share the overall award number; preserve distinct entries and review collisions.
 
 ## Example 5: Missing effort
 
@@ -89,14 +77,14 @@ This is a complete, valid file using the simple upload template with one award e
   <identification>
     <id idtype="orcid">0000-0002-1825-0097</id>
     <account accounttype="eRA-Commons">JDOE1</account>
-    <name current="yes">
+    <name>
       <firstname>Jane</firstname>
       <middlename>Marie</middlename>
       <lastname>Doe</lastname>
     </name>
   </identification>
   <employment>
-    <position featured="true" current="yes">
+    <position>
       <positiontitle>Senior Researcher</positiontitle>
       <organization>
         <orgname>Science &amp; Technology Inst</orgname>
@@ -110,7 +98,7 @@ This is a complete, valid file using the simple upload template with one award e
   <funding>
     <support>
       <projecttitle>Advanced Study of Polymer Dynamics</projecttitle>
-      <awardnumber>NSF-2024-5589</awardnumber>
+      <awardnumber>NSF-2026-5589</awardnumber>
       <supportsource>National Science Foundation</supportsource>
       <location>University of Michigan</location>
       <contributiontype>award</contributiontype>
@@ -118,12 +106,12 @@ This is a complete, valid file using the simple upload template with one award e
       <inkinddescription>None</inkinddescription>
       <overallobjectives>To investigate the long-term stability of biodegradable plastics.</overallobjectives>
       <potentialoverlap>None.</potentialoverlap>
-      <startdate>2024-01-01</startdate>
-      <enddate>2025-12-31</enddate>
+      <startdate>2026-01-01</startdate>
+      <enddate>2027-12-31</enddate>
       <supporttype>current</supporttype>
       <commitment>
-        <personmonth year="2024">3.5</personmonth>
-        <personmonth year="2025">3.5</personmonth>
+        <personmonth year="2026">3.5</personmonth>
+        <personmonth year="2027">3.5</personmonth>
       </commitment>
     </support>
   </funding>

@@ -9,7 +9,7 @@ nav_order: 3
 Treat CPOS as a **complete disclosure record** for resources and commitments that NIH says must be reported. Institution policies vary; always confirm with your sponsored programs office.
 
 {: .note }
-> Effective **October 1, 2025**, NIH recipients must provide Other Support disclosure training to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. Follow your institution's training and disclosure process. This requirement is separate from **Research Security Training (RST)**.
+> NIH recipients must provide Other Support disclosure training to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. Follow your institution's training and disclosure process. This requirement is separate from **Research Security Training (RST)**.
 
 ## Include these categories
 
@@ -27,7 +27,7 @@ Include consulting under the **proposals / active projects** section when **any*
 
 ### 3) In-kind contributions
 
-Report in-kind contributions that are **$5,000+** and require a commitment of the individual's time.
+Report non-cash contributions provided by an **external entity** that are **not intended for use on the project or proposal for which the disclosure is being submitted**, are valued at **$5,000 or more**, and require a commitment of the individual's time. Put resources intended for that project or proposal in **Facilities & Other Resources** or **Equipment**, as applicable. Do not treat broadly available institutional core facilities or shared equipment as CPOS in-kind support.
 
 ### 4) Foreign activities / appointments / employment
 
@@ -41,13 +41,13 @@ Include foreign appointments/employment/affiliations that imply commitment or su
 - Broadly available institutional core facilities or shared equipment
 - **Training awards**
 - **Prizes**
-- **Gifts**
+- **True gifts** for which nothing is expected in return
 - Personal information such as home address, personal phone, personal email, marital status, hobbies, or similar non-research data
 
 Admin intake template:
 - [Other Support (CPOS) intake form (admin worksheet)]({{ site.baseurl }}{% link templates/other-support-intake.md %})
 
-If you are converting legacy Other Support documents at scale, see: 
+If you are reusing prior Other Support records at scale, see:
 - [XML Upload & Automation]({{ site.baseurl }}{% link other-support/xml-upload.md %})
 
 ```mermaid
@@ -58,7 +58,7 @@ flowchart TD
     B -- "Yes" --> C["Include as separate project entry"]
     B -- "No" --> D{"Reportable consulting trigger?"}
     D -- "Yes" --> C
-    D -- "No" --> E{"In-kind value 5000 or more and time commitment?"}
+    D -- "No" --> E{"External in-kind support not for this project, value 5000 or more, and time commitment?"}
     E -- "Yes" --> F["Include as in-kind entry"]
     E -- "No" --> G{"Foreign appointment or employment with support or commitment?"}
     G -- "Yes" --> H["Include and handle supporting documents separately if required"]

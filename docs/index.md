@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 ---
 
-# NIH Common Forms (SciENcv) Playbook (2026)
+# NIH Common Forms (SciENcv) Playbook
 
 This site is a **PI + admin team** guide to preparing NIH’s required **Common Forms** in **SciENcv**:
 
@@ -13,9 +13,7 @@ This site is a **PI + admin team** guide to preparing NIH’s required **Common 
 Independent guide, not official NIH/NCBI guidance. Verify details in [References]({{ site.baseurl }}{% link references.md %}).
 
 {: .warning }
-> **Effective date:** NIH requires applicable Common Forms for **application due dates on/after Jan 25, 2026** and for **JIT, RPPR, and Prior Approval submissions on/after Jan 25, 2026**.
-> **Current enforcement status:** For application due dates and JIT, RPPR, and Prior Approval submissions on/after **May 8, 2026**, eRA system validations stop submissions that do not use compliant Common Forms. See **Policy & Timeline**.
-> **Application RST requirement:** For due dates on/after **May 25, 2026**, every senior/key person must have completed qualifying Research Security Training within the prior 12 months and must certify through the biosketch; the AOR provides the institutional certification for covered individuals employed by the applicant organization.
+> **Current NIH requirements:** Use the applicable SciENcv-generated, digitally certified Common Forms and NIH Biosketch Supplement. eRA system validations stop submissions that do not use compliant forms. Each senior/key person must also meet the current research-security training and MFTRP certification requirements; the applicant organization provides the required institutional certifications through its AOR. See [Policy & Current Requirements]({{ site.baseurl }}{% link policy.md %}).
 
 ## Start here (role-based)
 
@@ -29,16 +27,23 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify), application RST checks, and annual RPPR MFTRP statements.
 
 ```mermaid
-flowchart LR
-    accTitle: Common Forms success path
-    accDescr: A high-level path from identity setup through SciENcv drafting, individual certification, and submission-ready PDFs.
-    A["Identity setup"] --> B["Data cleanup"]
-    B --> C["SciENcv drafts"]
-    C --> D{"Named individual certifies?"}
-    D -- "Yes" --> E["Download certified PDFs"]
-    D -- "No" --> F["Hold submission package"]
-    E --> G["Keep Common Forms unmodified unless NIH expressly instructs otherwise"]
-    F --> D
+stateDiagram-v2
+    direction TB
+    accTitle: Common Forms readiness lifecycle
+    accDescr: Readiness progresses from identity and data preparation through drafting, named-individual certification, and delivery of an unmodified submission-ready package.
+    state "Identity and access ready" as Identity
+    state "Reusable data ready" as Data
+    state "SciENcv drafts complete" as Drafts
+    state "Awaiting named-individual certification" as Awaiting
+    state "Certified PDFs" as Certified
+    state "Submission-ready package" as Ready
+    [*] --> Identity
+    Identity --> Data: identifiers linked and matched
+    Data --> Drafts: records cleaned
+    Drafts --> Awaiting: content and scope checked
+    Awaiting --> Certified: individual certifies
+    Certified --> Ready: preserve Common Forms
+    Ready --> [*]
 ```
 
 ## What’s inside

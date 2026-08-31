@@ -1,6 +1,6 @@
 ---
 title: Research-security certifications
-parent: Policy & Timeline
+parent: Policy & Current Requirements
 nav_order: 3
 ---
 
@@ -10,27 +10,24 @@ Three related requirements use different evidence and submission points. Track t
 
 | Requirement | When it applies | Individual action | Institutional action |
 |---|---|---|---|
-| Research security training (RST) | NIH application due dates on/after **May 25, 2026** | Each senior/key person completes qualifying RST within the **12 months before application submission** and certifies through the SciENcv biosketch | The AOR certifies compliance for each covered individual employed by the applicant organization through the application signature |
-| MFTRP certification at application | Application due dates on/after **Jan 25, 2026** | Each senior/key person certifies through the SciENcv biosketch that they are not currently party to an MFTRP | The AOR certifies that senior/key personnel were informed of and complied with the individual certification requirement |
-| Annual MFTRP certification | NIH RPPRs submitted on/after **Jan 25, 2026** | Each senior/key person provides a statement using NIH’s required language for upload in RPPR Section G.1 | The recipient collects and submits the statements with the RPPR |
+| Research security training (RST) | NIH applications | Each senior/key person completes qualifying RST within the **12 months before application submission** and certifies through the SciENcv biosketch | The AOR certifies compliance for each covered individual employed by the applicant organization through the application signature |
+| MFTRP certification at application | NIH applications | Each senior/key person certifies through the SciENcv biosketch that they are not currently party to an MFTRP | The AOR certifies that senior/key personnel were informed of and complied with the individual certification requirement |
+| Annual MFTRP certification | NIH annual RPPRs | Each senior/key person provides a statement using NIH’s required language for upload in RPPR Section G.1 | The recipient collects and submits the statements with the RPPR |
 
 ## Research security training (RST)
 
-NIH defines the covered individuals for this requirement as **senior/key personnel listed on the application**. A qualifying training must address cybersecurity, international collaboration, foreign interference, proper use of funds, disclosure, conflict of commitment, and conflict of interest. NIH recognizes the government-wide modules and the [SECURE Center’s condensed module](https://www.secure-center.org/training), but institutions may use another training that covers the required topics.
+NIH defines the covered individuals for this requirement as **senior/key personnel listed on the application**. A qualifying training must address cybersecurity, international collaboration, foreign interference, proper use of funds, disclosure, conflict of commitment, conflict of interest, and the risks of malign foreign talent recruitment programs, including the NIH prohibition on senior/key personnel participating in one. NIH recognizes the government-wide modules and the [SECURE Center’s condensed module](https://www.secure-center.org/training), but institutions may use another training that covers every required topic. See [NIH Common Forms FAQ 57984](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57984).
 
-For an application due on/after **May 25, 2026**:
+For each covered application:
 
 1. Confirm the completion date for every senior/key person is within 12 months before the planned application submission date.
 2. Have each person certify the biosketch from their own SciENcv account; a delegate cannot certify.
 3. Preserve completion records under the institution’s process.
 4. Confirm the AOR workflow covers the separate institutional certification.
 
-{: .note }
-> **Historical transition:** SciENcv restored the RST certification text on **April 22, 2026**. An unsubmitted application for a due date on/after May 25 that used a Common Form certified before April 22 needed a regenerated form. That conversion issue is now mainly relevant when reviewing an older saved PDF.
-
 ## MFTRP prohibition and certifications
 
-Effective **Jan 25, 2026**, an individual who is currently party to a malign foreign talent recruitment program is not eligible to serve as senior/key personnel on an NIH grant or cooperative agreement.
+An individual who is currently party to a malign foreign talent recruitment program is not eligible to serve as senior/key personnel on an NIH grant or cooperative agreement.
 
 At application, the individual and institutional MFTRP certifications are carried through the biosketch and application-signature workflows described above. At annual RPPR:
 
@@ -45,7 +42,7 @@ At application, the individual and institutional MFTRP certifications are carrie
 
 ## Do not combine this with disclosure training
 
-NIH’s institutional training requirement on Other Support disclosure policies became effective **Oct 1, 2025**. That continuing institutional-control requirement is distinct from the application-specific RST completion/certification and the MFTRP certifications.
+NIH’s institutional training requirement on Other Support disclosure policies is distinct from the application-specific RST completion/certification and the MFTRP certifications.
 
 {: .note }
 > **Practical institutional guidance:** track the obligations separately. If an institution chooses to use one course toward both training requirements, document that its content covers each requirement; NIH does not state a general equivalency rule in these notices.

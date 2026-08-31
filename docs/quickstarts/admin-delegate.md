@@ -19,18 +19,18 @@ nav_order: 2
 
 ## Build the docs (delegate tasks)
 
-- Create or update the SciENcv biosketch for applicable senior/key personnel and, **when NIH requests it for the person's role, mechanism, and submission stage**, the CPOS document
+- Create or update the combined SciENcv biosketch for **every person listed on the R&R Senior/Key Person Profile (Expanded)**, including every **Other Significant Contributor (OSC)** ([NIH Common Forms FAQ 57968](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57968) and [FAQ 57969](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57969)); create CPOS **when NIH requests it for the person's role, mechanism, and submission stage**
 - Import from ORCID (when clean) to reduce manual entry
 - Curate products (**up to 10 total**) and verify they align to narratives
-- Paste narratives in **plain text**, re-check character counts
+- Paste narratives using only SciENcv's supported **Markdown** formatting; re-check character counts and the rendered preview
 - Do a **PDF preview** for formatting/typos
 
 For CPOS, check the NOFO and the applicable NIH Application Guide, JIT, RPPR, or Prior Approval instructions before requesting a document. A narrow exception matters for training grants: the NIH RPPR instructions treat **new training faculty** as new senior/key personnel and require their biosketch Common Form, NIH Supplement, CPOS, and any applicable supplemental documentation.
 
 {: .note }
-> **Recipient compliance check:** effective **October 1, 2025**, NIH recipients must provide Other Support disclosure training to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. This institutional training obligation is separate from the individual **Research Security Training (RST)** requirement.
+> **Recipient compliance check:** NIH recipients must provide Other Support disclosure training to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. This institutional training obligation is separate from the individual **Research Security Training (RST)** requirement.
 
-Before an application due on/after **May 25, 2026**, verify under your institution’s process that each senior/key person’s RST completion date falls within the 12 months before submission. Also preserve time for the named person’s biosketch certification and the AOR’s separate institutional certification for covered individuals employed by the applicant organization.
+For each application, verify under your institution’s process that every senior/key person’s RST completion date falls within the 12 months before submission. Also preserve time for the named person’s biosketch certification and the AOR’s separate institutional certification for covered individuals employed by the applicant organization.
 
 ## Hand-off to the named individual (required)
 
@@ -41,16 +41,26 @@ Before an application due on/after **May 25, 2026**, verify under your instituti
 See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) and the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).
 
 ```mermaid
-flowchart LR
+swimlane-beta TB
     accTitle: Admin delegate quickstart workflow
-    accDescr: The admin workflow audits access, drafts documents, performs preview checks, and hands off to the PI for certification.
-    A["Audit each person's setup"] --> B["Confirm delegate access"]
-    B --> C["Create the documents NIH requests for this role and stage"]
-    C --> D["Curate Products and paste narratives"]
-    D --> E["Check RST and stage-specific requirements"]
-    E --> F["Preview PDFs and send ready-to-certify note"]
-    F --> G["Named individual certifies in own account"]
-    G --> H["Collect certified PDFs"]
+    accDescr: The admin or delegate prepares and checks the documents, then hands them to the named individual for review and certification before collecting the certified PDFs.
+
+    subgraph admin [Admin or delegate]
+        setup["Audit setup and confirm delegate access"]
+        draft["Create the documents NIH requests for this role and stage"]
+        prepare["Curate Products and narratives"]
+        check["Check RST, stage requirements, and PDF previews"]
+        notify["Send ready-to-certify notice"]
+        collect["Collect certified PDFs"]
+    end
+
+    subgraph person [Named individual]
+        certify["Review and certify in own account"]
+    end
+
+    setup --> draft --> prepare --> check --> notify
+    notify -->|Ready for review| certify
+    certify -->|Certified PDFs| collect
 ```
 
 Next: [Delegates (how to collaborate)]({{ site.baseurl }}{% link getting-ready/delegates.md %})

@@ -6,6 +6,8 @@ nav_order: 4
 
 # NIH Supplement sections (step-by-step)
 
+[SciENcv supports limited **Markdown** formatting](https://www.ncbi.nlm.nih.gov/books/NBK154494/) in narrative fields. Markdown syntax does not count toward the field limit, but always verify the rendered PDF rather than relying on the editor view alone.
+
 ## Personal Statement
 
 - **3,500 characters**
@@ -36,20 +38,8 @@ nav_order: 4
 
 - Up to **15** honors/awards
 - Prioritize meaningful external recognitions
+- If you have no honors, enter **Nothing to Report** in both the **Honor** and **Name of Organization** fields, enter the current year in the required **Year** field, and leave **End Year** blank
 
 Templates:
 - [Personal Statement template (3,500 chars)]({{ site.baseurl }}{% link templates/personal-statement-template.md %})
 - [Contribution to Science template (2,000 chars)]({{ site.baseurl }}{% link templates/contribution-template.md %})
-
-```mermaid
-flowchart LR
-    accTitle: NIH Supplement narrative structure
-    accDescr: The supplement contains a personal statement, up to five contributions, and honors; both narratives may use brief parenthetical references to any selected product.
-    A["NIH Biosketch Supplement"] --> B["Personal Statement<br/>3500 characters"]
-    A --> C["Contributions to Science<br/>up to 5"]
-    A --> D["Honors<br/>up to 15"]
-    B --> E["Any selected product"]
-    C --> E
-    E --> F["Brief parenthetical reference"]
-    F --> G["No full citation or hyperlink"]
-```

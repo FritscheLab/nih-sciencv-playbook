@@ -1,37 +1,28 @@
 ---
-title: What changed (old → new)
-parent: Policy & Timeline
+title: Current form structure & PDF handling
+parent: Policy & Current Requirements
 nav_order: 4
 ---
 
-# What changed (old → new) — minimal but practical
+# Current form structure & PDF handling
 
-**Key differences for authors:**
+## For authors
 
-- **Biosketch becomes two parts:** Common Form + NIH Supplement
+- **The NIH biosketch has two parts:** Biographical Sketch Common Form + NIH Biographical Sketch Supplement.
 - **Products are selected in two groups:** up to 5 products most closely related to the proposed project and up to 5 other significant products. Fewer than 10 may be selected.
 - **Narratives use brief product references, not full citations:** the Personal Statement and Contributions may refer parenthetically to any selected product, preferably by lead author/year or PMID/PMCID. Do not insert full bibliographic citations or hyperlinks.
-- **Digital certification:** PDFs must be generated and certified in SciENcv.
+- **CPOS is a separate Common Form:** prepare it only when NIH requests it for the person's role and submission stage.
+- **Digital certification is required:** PDFs must be generated and certified in SciENcv by the named individual.
 
-```mermaid
-mindmap
-  root((Old to new))
-    Authors
-      Biosketch has two parts
-      Products selected in two groups
-      Narratives may point to any selected product
-      No full citations or hyperlinks
-    Admins
-      Named individual certifies
-      Print to PDF can break metadata
-      Submission package uses SciENcv PDFs
-    Outputs
-      Biosketch Common Form
-      NIH Biosketch Supplement
-      CPOS Common Form
-```
+| Topic | Current form structure | Operational handling |
+|---|---|---|
+| Biosketch | Biographical Sketch Common Form + NIH Biographical Sketch Supplement | Generate and certify the PDF in SciENcv. |
+| Products | Up to 5 products most closely related to the proposed project + up to 5 other significant products | Fewer than 10 may be selected. |
+| Narrative references | The Personal Statement and Contributions may refer to any selected product. | Use lead author/year or PMID/PMCID; do not insert full citations or hyperlinks. |
+| CPOS | Separate Common Form | Prepare only when NIH requests it for the person's role and submission stage. |
+| Certification and PDF | The named individual certifies. | Keep the certified SciENcv PDF unmodified; do not use “Print to PDF.” |
 
-**Key differences for admins:**
+## For administrators and delegates
 
 - You can help write and curate—but the **named individual must certify**.
 - “Print to PDF” breaks machine-readable metadata and can trigger submission rejection. Keep certified SciENcv PDFs unmodified except where NIH instructions expressly require a special compiled/flattened attachment.

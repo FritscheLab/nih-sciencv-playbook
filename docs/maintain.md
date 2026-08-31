@@ -16,7 +16,7 @@ nav_order: 16
 - Add your local SOP links under:
   - `References`
   - Role-based quickstarts
-  - Transition plan
+  - Department workflows
 
 ## Quarterly review checklist
 
@@ -25,11 +25,13 @@ At least once per quarter, verify these source-of-truth pages and notices:
 - Use the short checklist page: [Quarterly Checklist (Maintainers)]({{ site.baseurl }}{% link quarterly-checklist.md %})
 
 - NIH **Common Forms** hub
-- **NOT-OD-26-018** and any newer implementation/FAQ notices
+- **NOT-OD-26-018**, the current Common Forms FAQs, and any newer notices
 - NIH forms-directory pages for **Biographical Sketch Common Form**, **NIH Biographical Sketch Supplement**, and **CPOS Common Form**
 - eRA Commons help for **ORCID**
 - NLM Support Center articles for **CPOS XML upload** and **upload errors**
+- My NCBI **SciENcv Help** and **SciENcv News & Updates**
 - NIH Application Guide pages that affect **when CPOS is attached at application stage**
+- OMB/NSF activity affecting the Common Forms information collection, including renewal or replacement instructions
 
 After content changes:
 
@@ -40,14 +42,3 @@ After content changes:
 ## Screenshot policy
 
 This repo includes **safe SVG placeholders**. Replace with screenshots that your institution is allowed to publish.
-
-```mermaid
-flowchart LR
-    accTitle: Maintainer update workflow
-    accDescr: Maintainers verify official sources, edit focused pages, record the changelog, build locally when possible, and spot-check the published site.
-    A["Official source review"] --> B["Focused content edits"]
-    B --> C["Changelog entry"]
-    C --> D["Local build or available checks"]
-    D --> E["Publish"]
-    E --> F["Live spot-check"]
-```

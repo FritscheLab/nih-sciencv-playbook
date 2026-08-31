@@ -6,10 +6,12 @@ has_children: true
 
 # Current & Pending (Other) Support (CPOS)
 
-This section covers the NIH **Current and Pending (Other) Support (CPOS) Common Form** in SciENcv, including when it is required, what to report, how to certify, and how to transition from legacy “Other Support” practices.
+This section covers the NIH **Current and Pending (Other) Support (CPOS) Common Form** in SciENcv, including when it is required, what to report, how to prepare and certify it, and how to reuse prior support records.
 
 ```mermaid
 mindmap
+  accTitle: CPOS timing, entries, and workflow
+  accDescr: CPOS preparation depends on the person and submission stage, covers current and pending projects and reportable in-kind support, and ends with SciENcv review and individual certification.
   root((CPOS))
     Timing
       Application

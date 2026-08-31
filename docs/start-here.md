@@ -7,7 +7,7 @@ nav_order: 2
 
 ## Why this exists
 
-NIH’s 2026 implementation moves the biosketch + other support workflow from **static Word templates** to a **data-driven system** centered on SciENcv. The output must be a **digitally certified PDF generated in SciENcv**.
+NIH's biosketch and Current and Pending (Other) Support workflows use a **data-driven system** centered on SciENcv. Each required Common Form must be a **digitally certified PDF generated in SciENcv**.
 
 ## The “minimum viable compliance” path
 
@@ -39,4 +39,4 @@ flowchart TD
 
 - If you’re a PI: [PI / faculty quickstart]({{ site.baseurl }}{% link quickstarts/pi.md %})
 - If you’re a delegate/admin: [Administrator / delegate quickstart]({{ site.baseurl }}{% link quickstarts/admin-delegate.md %})
-- If you’re building department-wide support: [Department rollout plan]({{ site.baseurl }}{% link transition/department-plan.md %})
+- If you’re building department-wide support: [Submission planning & tracker]({{ site.baseurl }}{% link transition/department-plan.md %})

@@ -24,11 +24,11 @@ Do **not** add a full bibliographic references list or hyperlinks in the NIH Sup
 
 ## Is Research Security Training the same as NIH’s Other Support disclosure training?
 
-No. For applications due on/after **May 25, 2026**, each senior/key person must complete qualifying RST within the 12 months before submission and certify through the biosketch; the AOR provides the institutional certification for covered individuals employed by the applicant organization. NIH’s separate recipient requirement to train senior/key personnel on institutional Other Support disclosure policies became effective **Oct 1, 2025**.
+No. Each senior/key person must complete qualifying RST within the 12 months before application submission and certify through the biosketch; the AOR provides the institutional certification for covered individuals employed by the applicant organization. NIH also requires recipients to train senior/key personnel on institutional Other Support disclosure policies.
 
 ## Where does the annual MFTRP certification go?
 
-For RPPRs submitted on/after **Jan 25, 2026**, upload a separate flattened statement for each senior/key person in RPPR Section G.1, named `MFTRPcert_[Name].pdf`. Do not append it to the biosketch or CPOS PDF. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+For an annual RPPR, upload a separate flattened statement for each senior/key person in RPPR Section G.1, named `MFTRPcert_[Name].pdf`. Do not append it to the biosketch or CPOS PDF. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
 
 ## Can I reuse an older certified PDF?
 
@@ -41,17 +41,3 @@ Usually **no**. Broadly available institutional core facilities and shared equip
 ## Do I report an in-kind contribution if there is no associated time commitment?
 
 No. NIH says an in-kind contribution does **not** need to be reported when there is **no associated commitment of the individual’s time**.
-
-```mermaid
-flowchart TD
-    accTitle: FAQ decision shortcuts
-    accDescr: FAQ shortcuts distinguish certification authority, PDF handling, CPOS timing, product references, research-security requirements, reuse of PDFs, and in-kind reporting.
-    A["Question"] --> B{"Topic"}
-    B -- "Certification" --> C["Named individual only"]
-    B -- "Downloaded PDF" --> D["Preserve Common Form unless NIH expressly requires otherwise"]
-    B -- "CPOS timing" --> E["Follow role, stage, NOFO, and guide"]
-    B -- "Narrative references" --> F["Briefly point to selected Products"]
-    B -- "RST or MFTRP" --> I["Use the correct application or RPPR certification"]
-    B -- "Reuse old PDF" --> G["Only if current and within 12 months"]
-    B -- "In-kind support" --> H["Report only when threshold and time commitment apply"]
-```

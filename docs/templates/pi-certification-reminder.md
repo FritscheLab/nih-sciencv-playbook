@@ -12,7 +12,7 @@ Hi [PI Name],
 
 The following SciENcv draft(s) requested for this submission are ready: [**NIH Biosketch** / **CPOS** / both].
 
-[For an application due on/after May 25, 2026: our records show your qualifying Research Security Training was completed on **[date]**, within the 12 months before submission. Please contact us before certifying if that date is incorrect.]
+[For an application: our records show your qualifying Research Security Training was completed on **[date]**, within the 12 months before submission. Please contact us before certifying if that date is incorrect.]
 
 Please log into SciENcv and complete the **individual certification** step for each listed document:
 

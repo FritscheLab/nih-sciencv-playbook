@@ -25,7 +25,7 @@ nav_order: 6
 
 ## Application research-security check
 
-For applications due on/after **May 25, 2026**:
+For NIH applications:
 
 - each senior/key person must have completed qualifying Research Security Training (RST) within the **12 months before application submission**;
 - the person certifies completion through the SciENcv biosketch; and
@@ -34,10 +34,12 @@ For applications due on/after **May 25, 2026**:
 The biosketch certification also includes the individual MFTRP attestation. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the application and annual RPPR requirements.
 
 {: .note }
-> **Historical transition:** SciENcv restored RST certification text on **April 22, 2026**. If you encounter an unsubmitted Common Form certified before that date for a due date on/after May 25, regenerate and re-certify it.
+> If a saved form does not include the required RST and MFTRP certifications, regenerate and re-certify it in the current SciENcv interface.
 
 ```mermaid
 sequenceDiagram
+    accTitle: Biosketch certification and PDF handoff
+    accDescr: The named individual reviews the biosketch certification statement and certifies in SciENcv, then provides the certified PDF for unmodified handling by the admin or delegate.
     actor Person as Named individual
     participant SciENcv
     participant Admin as Admin or delegate

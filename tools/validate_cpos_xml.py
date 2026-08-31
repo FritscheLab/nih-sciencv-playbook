@@ -24,14 +24,16 @@ from __future__ import annotations
 import re
 import sys
 from dataclasses import dataclass
+from datetime import date
+from decimal import Decimal
 from pathlib import Path
 from typing import Iterable, Optional, Tuple
 import xml.etree.ElementTree as ET
 
-DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-YEAR_RE = re.compile(r"^\d{4}$")
-INT_RE = re.compile(r"^\d+$")
-PERSONMONTH_RE = re.compile(r"^-?(?:\d+(?:\.\d+)?|\.\d+)$")
+DATE_RE = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$")
+YEAR_RE = re.compile(r"^[0-9]{4}$")
+INT_RE = re.compile(r"^[0-9]+$")
+PERSONMONTH_RE = re.compile(r"^-?(?:[0-9]+(?:\.[0-9]+)?|\.[0-9]+)$")
 
 LIMITS = {
     "awardamount_digits": 13,
@@ -87,6 +89,17 @@ def _get_text(el: Optional[ET.Element]) -> str:
     if el is None or el.text is None:
         return ""
     return el.text.strip()
+
+
+def _is_valid_calendar_date(value: str) -> bool:
+    """Return whether value is a real proleptic-Gregorian YYYY-MM-DD date."""
+    if not DATE_RE.fullmatch(value):
+        return False
+    try:
+        date.fromisoformat(value)
+    except ValueError:
+        return False
+    return True
 
 
 def _attr_name(attr: str) -> str:
@@ -162,7 +175,7 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
         return errors, warns
 
     if idx_id == -1:
-        warns.append(Finding("WARN", "Missing <identification> block. Fix: include <identification> with <id>, <account>, and <name current=\"yes\">."))
+        warns.append(Finding("WARN", "Missing <identification> block. Fix: include <identification> with <id>, <account>, and <name>."))
 
     if idx_emp == -1:
         warns.append(Finding("WARN", "Missing <employment> block. Fix: include <employment> with at least one <position>."))
@@ -197,12 +210,8 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
                 warns.append(Finding("WARN", "<account> is missing accounttype attribute. Fix: <account accounttype=\"eRA-Commons\">...</account>."))
 
         if name_el is None:
-            warns.append(Finding("WARN", "Missing <name> in <identification>. Upload may still succeed, but SciENcv will require name details before certification. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>."))
+            warns.append(Finding("WARN", "Missing <name> in <identification>. Upload may still succeed, but SciENcv will require name details before certification. Fix: add <name> with <firstname>, <middlename/>, <lastname>."))
         else:
-            cur = (name_el.attrib.get("current") or "").strip()
-            if cur != "yes":
-                warns.append(Finding("WARN", "<name> should include current=\"yes\" (recommended). Fix: <name current=\"yes\">..."))
-
             fn = _find(name_el, ns, "firstname")
             ln = _find(name_el, ns, "lastname")
             if fn is None or not _get_text(fn):
@@ -215,7 +224,7 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
     if employment is not None:
         positions = list(_findall(employment, ns, "position"))
         if not positions:
-            warns.append(Finding("WARN", "No <position> found under <employment>. Fix: add <position featured=\"true\" current=\"no\">..."))
+            warns.append(Finding("WARN", "No <position> found under <employment>. Fix: add <position>..."))
         else:
             for p_idx, pos in enumerate(positions, start=1):
                 for tag in ("startdate", "enddate"):
@@ -269,14 +278,14 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
         if st_el is not None and st and st not in {"current", "pending"}:
             errors.append(Finding("ERROR", f"support[{idx}]: <supporttype> must be 'current' or 'pending'. Found '{st}'. Fix: change to 'current' or 'pending'."))
 
-        # Dates: startdate/enddate format
+        # Dates: startdate/enddate format and calendar validity
         for tag in ("startdate", "enddate"):
             d_el = _find(sup, ns, tag)
             if d_el is None:
                 continue
             d = _get_text(d_el)
-            if d and not DATE_RE.match(d):
-                errors.append(Finding("ERROR", f"support[{idx}]: <{tag}> must be YYYY-MM-DD. Found '{d}'. Fix: convert to YYYY-MM-DD or omit <{tag}> if unknown."))
+            if d and not _is_valid_calendar_date(d):
+                errors.append(Finding("ERROR", f"support[{idx}]: <{tag}> must be a valid calendar date in YYYY-MM-DD format. Found '{d}'. Fix: use a real date in YYYY-MM-DD format or omit <{tag}> if unknown."))
 
         # awardamount digits-only + <=13 digits
         aa_el = _find(sup, ns, "awardamount")
@@ -319,11 +328,11 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
         # commitment required
         commitment = _find(sup, ns, "commitment")
         if commitment is None:
-            errors.append(Finding("ERROR", f"support[{idx}]: Missing <commitment>. Fix: add <commitment> with one or more <personmonth year=\"YYYY\">...</personmonth>."))
+            errors.append(Finding("ERROR", f"support[{idx}]: Missing <commitment>. Fix: add <commitment/>; add <personmonth year=\"YYYY\">...</personmonth> entries when effort years are known."))
         else:
             pms = list(_findall(commitment, ns, "personmonth"))
             if not pms:
-                warns.append(Finding("WARN", f"support[{idx}]: <commitment> has no <personmonth> entries. Upload may still succeed, but SciENcv may require effort years before certification. Fix: add <personmonth year=\"YYYY\">...</personmonth> when effort years are known."))
+                warns.append(Finding("WARN", f"support[{idx}]: <commitment> has no <personmonth> entries. A blank <commitment/> is allowed for upload triage, but effort years may be required before certification. Fix: add <personmonth year=\"YYYY\">...</personmonth> when effort years are known."))
             for pm in pms:
                 year = (pm.attrib.get("year") or "").strip()
                 if not YEAR_RE.match(year):
@@ -331,13 +340,13 @@ def validate(xml_path: Path) -> Tuple[list[Finding], list[Finding]]:
                 val = (pm.text or "").strip()
                 if val:
                     if not PERSONMONTH_RE.match(val):
-                        warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth value '{val}' is not numeric. Fix: use a number (e.g., 0.5, 1, 12)."))
+                        errors.append(Finding("ERROR", f"support[{idx}] year {year}: personmonth value '{val}' must be numeric. Fix: use a number from 0 through 12 with no more than 2 decimal places (e.g., 0, 0.5, 12)."))
                     else:
-                        fval = float(val)
-                        if fval < 0:
-                            warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth is negative ({val}). Fix: use 0 or a positive value."))
-                        if fval > 12:
-                            warns.append(Finding("WARN", f"support[{idx}] year {year}: personmonth > 12 ({val}). Fix: verify (calendar months/year is usually <= 12)."))
+                        decimal_places = len(val.rsplit(".", 1)[1]) if "." in val else 0
+                        if decimal_places > 2:
+                            errors.append(Finding("ERROR", f"support[{idx}] year {year}: personmonth value '{val}' has more than 2 decimal places. Fix: use 0 through 12 with no more than 2 decimal places."))
+                        elif not Decimal("0") <= Decimal(val) <= Decimal("12"):
+                            errors.append(Finding("ERROR", f"support[{idx}] year {year}: personmonth value '{val}' is outside the allowed range. Fix: use 0 through 12 inclusive."))
 
     return errors, warns
 

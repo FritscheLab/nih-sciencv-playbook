@@ -95,10 +95,12 @@ Every `<support>` MUST include:
 - `<contributiontype>inkind</contributiontype>`
 
 ### E) commitment is REQUIRED
-Every `<support>` MUST include `<commitment>` with at least one:
-`<personmonth year="YYYY">...</personmonth>`
+Every `<support>` MUST include `<commitment>`.
+- When effort years are known, include one or more `<personmonth year="YYYY">...</personmonth>` entries.
 - `year` must be a 4-digit year.
-- The personmonth value may be blank, but the year must not be blank.
+- A person-month value may be blank for upload triage, but the year must not be blank.
+- A populated value must be from `0` through `12`, with no more than two decimal places.
+- `<commitment/>` may upload, but any missing values that SciENcv flags must be resolved before certification.
 
 ### F) No empty employment years
 - Never output `<year/>` or `<year></year>`.
@@ -114,7 +116,11 @@ Do not output `completed`.
 
 ### H) awardamount must be an integer
 - `<awardamount>` must be digits only (no $ signs, no commas, no decimals).
-- If unknown, you may use `<awardamount/>`.
+- For a proposal or active project, use the total anticipated amount for the entire performance period, including indirect costs, rounded to the nearest US dollar.
+- For a consortium/contractual arrangement or multi-project award, use the overall project's award number and support source, but use the subproject's title, amount, person-months, and other details. Do not use the overall project's full amount for a subproject entry.
+- Convert foreign currency to US dollars at the time of submission.
+- If an exact amount is not readily ascertainable, use a reasonable estimate only when the source material or user supplies a defensible basis for that estimate. Otherwise leave the value blank for upload triage and human resolution.
+- You may use `<awardamount/>` for upload triage only; resolve the value in SciENcv before certification.
 
 ---
 
@@ -146,34 +152,36 @@ When a field exceeds its max length:
 
 ---
 
-## IN‑KIND SPECIAL RULES
+## IN-KIND SPECIAL RULES
 For any support with `<contributiontype>inkind</contributiontype>`:
-1) `<projecttitle/>` must be empty (no text).
-2) `<location/>` must be empty (no text).
-3) Put the descriptive narrative in `<inkinddescription>`.
-4) Omit `<enddate>` (do not include an in-kind end date tag).
+1) Include the contribution only when it is a **non-cash contribution provided by an external entity**, is **not intended for use on the project or proposal for which the disclosure is being submitted**, has an estimated value of at least $5,000, and requires a commitment of the individual's time. Do not treat broadly available institutional cores or shared equipment as CPOS in-kind support.
+2) If the resource is intended for use on that project or proposal, do not create a CPOS in-kind entry; route it to **Facilities & Other Resources** or **Equipment**, as applicable.
+3) Use the estimated US dollar value, rounded to the nearest dollar; convert foreign currency at the time of submission.
+4) `<projecttitle/>` must be empty (no text).
+5) `<location/>` must be empty (no text).
+6) Put the descriptive narrative in `<inkinddescription>`.
+7) Omit `<enddate>` (do not include an in-kind end date tag).
 
 ---
 
 ## DATES
-- `startdate` and `enddate` must be `YYYY-MM-DD`.
+- `startdate` and `enddate` must be real calendar dates in `YYYY-MM-DD` format.
 - If only `MM/YYYY` is provided, convert to `YYYY-MM-01`.
-- If only `YYYY` is provided:
-  - startdate → `YYYY-01-01`
-  - enddate   → `YYYY-12-31`
+- If only `YYYY` is provided, do not invent a month or day. Omit the unresolved date element and complete it in SciENcv after checking the source.
 
 ---
 
 ## PROCESSING RULES
 ### 1) Normalize and merge
 1. Parse PART 1 into a list of support entries.
-2. Apply PART 2 updates on top (PART 2 overrides PART 1 on conflicts).
-3. De-duplicate entries using this key priority:
-   - awardnumber (preferred, if non-empty)
-   - else: projecttitle + supportsource + startdate
+2. Apply a PART 2 update only when its identifiers resolve to exactly one PART 1 entry. Do not assume an award number is unique.
+3. De-duplicate only when a composite identity matches:
+   - when `awardnumber` is populated: `awardnumber + projecttitle + supportsource + startdate`
+   - when `awardnumber` is blank: `projecttitle + supportsource + location + startdate`
+4. If entries share an award number but differ on other identity fields, preserve them as separate entries unless PART 2 explicitly identifies them as duplicates. Consortium subprojects and multi-project components may legitimately share the overall award number.
 
 ### 2) Sorting (stable diffs)
-If SORT_SUPPORTS is YES, sort supports:
+Sort supports:
 1) contributiontype: award first, inkind second
 2) supporttype: current first, pending second
 3) startdate ascending (missing last)
@@ -181,7 +189,7 @@ If SORT_SUPPORTS is YES, sort supports:
 5) projecttitle ascending
 
 ### 3) Output hygiene
-- Do not invent facts (award numbers, sources, dates, amounts, institutions).
+- Do not invent facts (award numbers, sources, dates, amounts, institutions). An estimated amount requires a source- or user-provided basis; otherwise leave it blank for upload triage and human resolution.
 - Keep empty tags empty; do not fill placeholders unless the source provides values.
 - Use self-closing tags for empty elements when convenient (`<tag/>`).
 
@@ -194,14 +202,14 @@ If SORT_SUPPORTS is YES, sort supports:
   <identification>
     <id idtype="orcid"></id>
     <account accounttype="eRA-Commons"></account>
-    <name current="yes">
+    <name>
       <firstname></firstname>
       <middlename/>
       <lastname></lastname>
     </name>
   </identification>
   <employment>
-    <position featured="true" current="no">
+    <position>
       <positiontitle></positiontitle>
       <organization>
         <orgname></orgname>
@@ -261,8 +269,8 @@ If SORT_SUPPORTS is YES, sort supports:
   <startdate>2024-01-01</startdate>
   <supporttype>current</supporttype>
   <commitment>
-    <personmonth year="2024">...</personmonth>
-    <personmonth year="2025">...</personmonth>
+    <personmonth year="2024">1.20</personmonth>
+    <personmonth year="2025">1.00</personmonth>
   </commitment>
 </support>
 
@@ -273,7 +281,7 @@ If SORT_SUPPORTS is YES, sort supports:
   <supportsource>...</supportsource>
   <location>...</location>
   <contributiontype>award</contributiontype>
-  <awardamount>...</awardamount>
+  <awardamount>250000</awardamount>
   <inkinddescription>None</inkinddescription>
   <overallobjectives>...</overallobjectives>
   <potentialoverlap>...</potentialoverlap>
@@ -286,22 +294,22 @@ If SORT_SUPPORTS is YES, sort supports:
   </commitment>
 </support>
 
-### E) Support — inkind (strict)
+### E) Support — reportable in-kind contribution (strict)
 <support>
   <projecttitle/>
   <awardnumber/>
   <supportsource>...</supportsource>
   <location/>
   <contributiontype>inkind</contributiontype>
-  <awardamount>0</awardamount>
+  <awardamount>5000</awardamount>
   <inkinddescription>...</inkinddescription>
   <overallobjectives>...</overallobjectives>
   <potentialoverlap>None.</potentialoverlap>
   <startdate>2024-01-01</startdate>
   <supporttype>current</supporttype>
   <commitment>
-    <personmonth year="2024">0</personmonth>
-    <personmonth year="2025">0</personmonth>
+    <personmonth year="2024">0.25</personmonth>
+    <personmonth year="2025">0.25</personmonth>
   </commitment>
 </support>
 
@@ -314,7 +322,7 @@ PART 1: SOURCE DATA
 
 PART 2: REQUESTED UPDATES
 [PASTE HERE OR SEE ATTACHMENT]
-```
+````
 
 </div>
 

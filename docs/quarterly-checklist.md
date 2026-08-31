@@ -12,15 +12,16 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 
 - Check the NIH **Common Forms hub** and all Guide Notices newer than **NOT-OD-26-079** for effective-date or validation changes.
 - Compare the forms-directory pages with the **direct final Biosketch, Supplement, and CPOS PDFs**. Confirm the up-to-5 + up-to-5 Product limits and the parenthetical narrative-reference rule have not changed.
-- Check the OMB lines on the two Common Forms and the NIH Supplement. The two Common Forms presently display **3145-0279 / Oct 31, 2026**; the Supplement displays **0925-0001 / Dec 31, 2027** and **0925-0002 / Nov 30, 2027**. Treat an approaching date as a prompt to look for replacement instructions, not as an automatic form-invalidity date.
-- Recheck **NOT-OD-26-017** for the May 25, 2026 RST trigger, 12-month completion window, individual biosketch certification, AOR certification population, and recognized training resources.
+- Check the OMB lines on the two Common Forms and the NIH Supplement. The two Common Forms presently display **3145-0279 / Oct 31, 2026**; the Supplement displays **0925-0001 / Dec 31, 2027** and **0925-0002 / Nov 30, 2027**. NSF's [August 26, 2026 renewal notice](https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17415.pdf) is an active renewal process, not a replacement form. Watch for completed OMB clearance and agency replacement instructions; do not infer automatic invalidity from the displayed expiration date.
+- Recheck **NOT-OD-26-017** and the current Common Forms RST FAQ for the 12-month completion window, individual biosketch certification, AOR certification population, recognized training resources, and all required topics, including MFTRP risks and the NIH senior/key-person prohibition.
 - Recheck **NOT-OD-26-018** and the current RPPR guide for the MFTRP prohibition, application certifications, annual Section G.1 statement text, flattening instruction, and `MFTRPcert_[Name].pdf` filename.
-- Keep the **Oct 1, 2025 Other Support disclosure-training requirement** separate from RST.
+- Keep the recipient **Other Support disclosure-training requirement** separate from application RST.
 - Check **NOT-OD-26-084** and any newer foreign-component notices for the foreign-coauthorship reporting rule.
-- Review the NIH Application Guide, current RPPR guide/transcript, eRA JIT help, and Prior Approval help for person-, role-, and stage-specific attachment changes, including training faculty and Other Significant Contributors.
-- Review the current LRP hub/notices before each annual LRP cycle; do not generalize program-specific ASSIST materials to other mechanisms.
+- Review the NIH Application Guide and current FAQs for the application biosketch population, including all people listed on the R&R Senior/Key Person Profile and Other Significant Contributors.
+- Review the current RPPR guide/transcript, eRA JIT help, and Prior Approval help for person-, role-, and stage-specific attachment changes. Track any FAQ/RPPR conflict internally until NIH reconciles it.
+- Review the current LRP hub, notices, and application guide before each annual LRP cycle; confirm required and optional mentor-team biosketches without generalizing program-specific ASSIST materials to other mechanisms.
 - Check eRA ORCID help and account-consolidation guidance, including post-consolidation role/affiliation behavior.
-- Compare NLM CPOS XML guidance and both official XML samples with the CLI/browser validator rules.
+- Compare NLM CPOS XML guidance and both official XML samples with the CLI/browser validator rules, including real calendar dates and person-month values from 0–12 with at most two decimals.
 
 ## 2) Review high-impact playbook pages
 
@@ -47,14 +48,3 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 - Run `git diff --check`, the XML validator tests, mirror comparison, and a Jekyll build when dependencies are available
 - Rebuild/redeploy GitHub Pages
 - Spot-check key live pages for correctness and formatting
-
-```mermaid
-flowchart LR
-    accTitle: Quarterly maintenance loop
-    accDescr: Quarterly maintenance checks official sources, reviews high-impact pages, updates docs and templates, and spot-checks the published site.
-    A["Verify official sources"] --> B["Review high-impact pages"]
-    B --> C["Update docs and templates"]
-    C --> D["Update changelog"]
-    D --> E["Build and publish"]
-    E --> F["Spot-check live pages"]
-```

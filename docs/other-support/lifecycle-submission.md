@@ -10,14 +10,14 @@ Do not turn “Common Forms apply” into “attach both forms for everyone.” 
 
 | Stage | Operational rule |
 |---|---|
-| Application | Attach the combined Biosketch Common Form + NIH Supplement for each person required by the Application Guide/NOFO. NIH generally does not collect CPOS with the initial application under its JIT policy; follow any mechanism-specific exception. |
+| Application | Attach the combined Biosketch Common Form + NIH Supplement for every individual listed on the R&R Senior/Key Person Profile (Expanded), including OSCs. NIH generally does not collect CPOS with the initial application under its JIT policy; follow any mechanism-specific exception. |
 | JIT | Submit only when NIH specifically requests JIT information. Use the person-level fields for the applicable biosketch, CPOS, and foreign supporting documentation. |
 | RPPR | Use Section D person-level fields when a participant’s role or support status triggers an attachment. Handle the annual MFTRP statement separately in Section G.1. |
 | Prior Approval | Use the eRA Commons Prior Approval Module and follow the specific request type. A Change of PD/PI request has defined person-level biosketch and CPOS requirements. |
 
 ## Application
 
-- The combined, individually certified biosketch PDF is the normal application-stage Common Form attachment for senior/key personnel and anyone else for whom NIH instructions require a biosketch.
+- Attach a combined, individually certified biosketch PDF for **every individual listed on the R&R Senior/Key Person Profile (Expanded)**, including every **Other Significant Contributor (OSC)**. See [NIH Common Forms FAQ 57968](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57968) and [FAQ 57969](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57969).
 - CPOS is usually collected later, often at JIT, rather than for every person at initial submission.
 - Follow the NOFO and Application Guide for exceptions. For example, mentored career development applications require CPOS for mentor/co-mentor(s), not for the candidate.
 - Participating-faculty biosketches for the PHS 398 Research Training Program Plan are individually completed and certified in SciENcv, then combined and flattened for that specific attachment.
@@ -46,11 +46,11 @@ Use this decision matrix with the current RPPR instructions:
 
 The last row is a narrow Training RPPR reporting rule. It does not convert all program directors, training faculty, or people involved in training-grant oversight into routine CPOS submitters.
 
-Separately, for RPPRs submitted on/after **Jan 25, 2026**, collect the annual MFTRP certification for every senior/key person and upload each statement in **Section G.1** using the required `MFTRPcert_[Name].pdf` filename. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+Separately, collect the annual MFTRP certification for every senior/key person and upload each statement in **Section G.1** using the required `MFTRPcert_[Name].pdf` filename. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
 
 ## Prior Approval
 
-Effective **Feb 20, 2026** (30 days after NIH issued [NOT-OD-26-026](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-026.html)), all Prior Approval requests for NIH grants and cooperative agreements must be made through the **eRA Commons Prior Approval Module**. A Signing Official (SO) must initiate and submit every request. The module includes named request types and an **Other Request** route; use the documentation appropriate to the action and upload PDFs as instructed.
+All Prior Approval requests for NIH grants and cooperative agreements must be made through the **eRA Commons Prior Approval Module**. A Signing Official (SO) must initiate and submit every request. The module includes named request types and an **Other Request** route; use the documentation appropriate to the action and upload PDFs as instructed.
 
 ### Change of PD/PI
 

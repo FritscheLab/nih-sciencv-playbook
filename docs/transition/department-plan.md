@@ -1,12 +1,12 @@
 ---
-title: Department rollout plan (admins)
-parent: Transition & implementation
+title: Submission planning & tracker (admins)
+parent: Department workflows
 nav_order: 1
 ---
 
-# Department rollout plan (admins)
+# Submission planning & tracker (admins)
 
-## Recommended milestones (per deadline)
+## Recommended milestones
 
 - **T-8 weeks:** ORCID + eRA + SciENcv PID + MyNCBI access audit
 - **T-6 weeks:** Delegates added; My Bibliography cleanup begins
@@ -16,14 +16,15 @@ nav_order: 1
 - **T-0:** Submit
 
 ```mermaid
-flowchart LR
-    accTitle: Department rollout milestone timeline
-    accDescr: A countdown timeline for department rollout from access audit at T minus 8 weeks through certification and submission.
-    A["T-8 weeks<br/>Access audit"] --> B["T-6 weeks<br/>Delegates and bibliography cleanup"]
-    B --> C["T-4 weeks<br/>Narratives and products"]
-    C --> D["T-2 weeks<br/>Preview and compliance check"]
-    D --> E["T-3 days<br/>Certification window"]
-    E --> F["T-0<br/>Submit"]
+timeline TD
+    accTitle: Submission preparation milestone timeline
+    accDescr: A countdown timeline for submission preparation from access audit at T minus 8 weeks through certification and submission.
+    T-8 weeks : ORCID, eRA, SciENcv PID, and My NCBI access audit
+    T-6 weeks : Add delegates and begin My Bibliography cleanup
+    T-4 weeks : Draft narratives and select products
+    T-2 weeks : Preview PDFs and complete compliance check
+    T-3 days : Individual certification window
+    T-0 : Submit
 ```
 
 ## Trackers to keep

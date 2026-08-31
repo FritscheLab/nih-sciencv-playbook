@@ -602,10 +602,10 @@
 
     <script>
         // ---------- Constants ----------
-        const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-        const YEAR_RE = /^\d{4}$/;
-        const INT_RE = /^\d+$/;
-        const PERSONMONTH_RE = /^-?(?:\d+(?:\.\d+)?|\.\d+)$/;
+        const DATE_RE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+        const YEAR_RE = /^[0-9]{4}$/;
+        const INT_RE = /^[0-9]+$/;
+        const PERSONMONTH_RE = /^-?(?:[0-9]+(?:\.[0-9]+)?|\.[0-9]+)$/;
 
         const LIMITS = {
             awardamount_digits: 13,
@@ -655,6 +655,15 @@
         function getText(el) {
             if (!el) return "";
             return (el.textContent || "").trim();
+        }
+
+        function isValidCalendarDate(value) {
+            if (!DATE_RE.test(value)) return false;
+            const [year, month, day] = value.split("-").map(Number);
+            if (year < 1 || month < 1 || month > 12 || day < 1) return false;
+            const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+            const daysInMonth = [31, leapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            return day <= daysInMonth[month - 1];
         }
 
         function appendHighlightedMessage(parent, msg) {
@@ -772,7 +781,7 @@
             }
 
             if (idxId === -1) {
-                addIssue(issues, "warn", "Missing <identification> block. Fix: include <identification> with <id>, <account>, and <name current=\"yes\">.");
+                addIssue(issues, "warn", "Missing <identification> block. Fix: include <identification> with <id>, <account>, and <name>.");
             }
 
             if (idxEmp === -1) {
@@ -809,12 +818,8 @@
                 }
 
                 if (!nameEl) {
-                    addIssue(issues, "warn", "Missing <name> in <identification>. Upload may still succeed, but SciENcv will require name details before certification. Fix: add <name current=\"yes\"> with <firstname>, <middlename/>, <lastname>.");
+                    addIssue(issues, "warn", "Missing <name> in <identification>. Upload may still succeed, but SciENcv will require name details before certification. Fix: add <name> with <firstname>, <middlename/>, <lastname>.");
                 } else {
-                    const cur = (nameEl.getAttribute("current") || "").trim();
-                    if (cur !== "yes") {
-                        addIssue(issues, "warn", "<name> should include current=\"yes\" (recommended). Fix: <name current=\"yes\">...");
-                    }
                     const fn = findChild(nameEl, "firstname");
                     const ln = findChild(nameEl, "lastname");
                     if (!fn || !getText(fn)) addIssue(issues, "warn", "<firstname> is missing or blank. Fix: provide a first name (or leave blank if intentionally omitted).");
@@ -827,7 +832,7 @@
             if (employment) {
                 const positions = findChildren(employment, "position");
                 if (positions.length === 0) {
-                    addIssue(issues, "warn", "No <position> found under <employment>. Fix: add <position featured=\"true\" current=\"no\">...");
+                    addIssue(issues, "warn", "No <position> found under <employment>. Fix: add <position>...");
                 } else {
                     positions.forEach((pos, pIdx) => {
                         const pNum = pIdx + 1;
@@ -902,13 +907,13 @@
                     addIssue(issues, "error", `support[${idx}]: <supporttype> must be 'current' or 'pending'. Found '${st}'. Fix: change to 'current' or 'pending'.`);
                 }
 
-                // Dates: startdate/enddate format
+                // Dates: startdate/enddate format and calendar validity
                 ["startdate", "enddate"].forEach((tag) => {
                     const dEl = findChild(sup, tag);
                     if (!dEl) return;
                     const d = getText(dEl);
-                    if (d && !DATE_RE.test(d)) {
-                        addIssue(issues, "error", `support[${idx}]: <${tag}> must be YYYY-MM-DD. Found '${d}'. Fix: convert to YYYY-MM-DD or omit <${tag}> if unknown.`);
+                    if (d && !isValidCalendarDate(d)) {
+                        addIssue(issues, "error", `support[${idx}]: <${tag}> must be a valid calendar date in YYYY-MM-DD format. Found '${d}'. Fix: use a real date in YYYY-MM-DD format or omit <${tag}> if unknown.`);
                     }
                 });
 
@@ -965,11 +970,11 @@
                 // commitment required
                 const commitment = findChild(sup, "commitment");
                 if (!commitment) {
-                    addIssue(issues, "error", `support[${idx}]: Missing <commitment>. Fix: add <commitment> with one or more <personmonth year="YYYY">...</personmonth>.`);
+                    addIssue(issues, "error", `support[${idx}]: Missing <commitment>. Fix: add <commitment/>; add <personmonth year="YYYY">...</personmonth> entries when effort years are known.`);
                 } else {
                     const pms = findChildren(commitment, "personmonth");
                     if (pms.length === 0) {
-                        addIssue(issues, "warn", `support[${idx}]: <commitment> has no <personmonth> entries. Upload may still succeed, but SciENcv may require effort years before certification. Fix: add <personmonth year="YYYY">...</personmonth> when effort years are known.`);
+                        addIssue(issues, "warn", `support[${idx}]: <commitment> has no <personmonth> entries. A blank <commitment/> is allowed for upload triage, but effort years may be required before certification. Fix: add <personmonth year="YYYY">...</personmonth> when effort years are known.`);
                     }
                     pms.forEach((pm) => {
                         const year = (pm.getAttribute("year") || "").trim();
@@ -979,11 +984,15 @@
                         const val = getText(pm);
                         if (val) {
                             if (!PERSONMONTH_RE.test(val)) {
-                                addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth value '${val}' is not numeric. Fix: use a number (e.g., 0.5, 1, 12).`);
+                                addIssue(issues, "error", `support[${idx}] year ${year}: personmonth value '${val}' must be numeric. Fix: use a number from 0 through 12 with no more than 2 decimal places (e.g., 0, 0.5, 12).`);
                             } else {
                                 const f = Number(val);
-                                if (f < 0) addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth is negative (${val}). Fix: use 0 or a positive value.`);
-                                if (f > 12) addIssue(issues, "warn", `support[${idx}] year ${year}: personmonth > 12 (${val}). Fix: verify (calendar months/year is usually <= 12).`);
+                                const decimalPlaces = val.includes(".") ? val.split(".").pop().length : 0;
+                                if (decimalPlaces > 2) {
+                                    addIssue(issues, "error", `support[${idx}] year ${year}: personmonth value '${val}' has more than 2 decimal places. Fix: use 0 through 12 with no more than 2 decimal places.`);
+                                } else if (f < 0 || f > 12) {
+                                    addIssue(issues, "error", `support[${idx}] year ${year}: personmonth value '${val}' is outside the allowed range. Fix: use 0 through 12 inclusive.`);
+                                }
                             }
                         }
                     });

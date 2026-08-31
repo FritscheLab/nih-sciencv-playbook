@@ -10,6 +10,8 @@ This section walks through producing the NIH Biographical Sketch in SciENcv: the
 
 ```mermaid
 mindmap
+  accTitle: NIH biosketch contents and certification
+  accDescr: The combined NIH biosketch contains Common Form data, NIH Supplement narratives and honors, and one certification by the named individual.
   root((NIH Biosketch))
     Common Form
       Identifying information

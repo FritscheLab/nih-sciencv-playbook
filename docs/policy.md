@@ -1,21 +1,18 @@
 ---
-title: Policy & Timeline
+title: Policy & Current Requirements
 nav_order: 4
 has_children: true
 ---
 
-# Policy & Timeline
+# Policy & Current Requirements
 
-This section summarizes NIH’s implementation dates, eRA validation behavior, research-security certifications, and the high-level differences between the legacy NIH biosketch/other support formats and the 2026 Common Forms.
+This section summarizes NIH's current Common Forms requirements, eRA validation behavior, research-security certifications, and form-handling rules.
 
-```mermaid
-flowchart LR
-    accTitle: Policy section map
-    accDescr: The policy section moves from effective dates to enforcement behavior, research-security certifications, and practical changes from old formats to Common Forms.
-    A["Effective dates"] --> B["eRA enforcement"]
-    B --> C["RST and MFTRP certifications"]
-    C --> D["Old formats to Common Forms"]
-    D --> E["Operational workflow changes"]
-```
+| Question | Use this page |
+|---|---|
+| What is required now, and on which dates? | [Current NIH requirements]({{ site.baseurl }}{% link policy/effective-dates.md %}) |
+| What does eRA reject or require users to correct? | [eRA enforcement]({{ site.baseurl }}{% link policy/enforcement.md %}) |
+| Which RST and MFTRP certifications apply? | [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) |
+| How do the current forms differ from older formats? | [What changed]({{ site.baseurl }}{% link policy/what-changed.md %}) |
 
-Start with the [effective-date timeline]({{ site.baseurl }}{% link policy/effective-dates.md %}), then use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to distinguish application and annual RPPR requirements.
+Start with [Current NIH requirements]({{ site.baseurl }}{% link policy/effective-dates.md %}), then use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to distinguish application and annual RPPR requirements.

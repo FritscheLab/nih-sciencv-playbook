@@ -25,7 +25,7 @@ This page outlines practical ways departments and central offices are using XML 
 
 Some institutions generate SciENcv-ready CPOS XML directly from internal research administration systems (e.g., effort reporting, award management, disclosure tooling). If you do this:
 
-- Treat **awardnumber** as the primary identifier for de-duplication and updates.
+- Use a **composite identifier** for de-duplication and updates; never merge on `awardnumber` alone because consortium subprojects and multi-project components may share an overall award number. Flag collisions for human review.
 - Generate person-month rows deterministically (inclusive year range).
 - Build a validation step (see validator script in this repo) before handing files to PIs.
 
@@ -36,13 +36,26 @@ Some institutions generate SciENcv-ready CPOS XML directly from internal researc
 - Keep a copy of the exact XML uploaded, and the final certified PDF that was submitted.
 
 ```mermaid
-flowchart LR
+swimlane-beta TB
     accTitle: Admin-owned data and PI-owned certification
-    accDescr: Institutional XML workflows can centralize data preparation while keeping review and certification with the PI or named individual.
-    A["Structured CPOS inventory"] --> B["Per-person XML export"]
-    B --> C["Upload or seed SciENcv CPOS"]
-    C --> D["PI reviews and completes entries"]
-    D --> E["PI certifies"]
-    E --> F["Admin collects certified PDF"]
-    F --> G["Archive XML and submitted PDF"]
+    accDescr: The admin or institutional system prepares and validates a per-person XML file, the named individual uploads and reviews it in SciENcv and certifies the CPOS, and the admin collects and archives the final materials.
+
+    subgraph admin [Admin or institutional system]
+        inventory["Maintain structured CPOS inventory"]
+        export["Create per-person XML export"]
+        validate["Validate XML"]
+        collect["Collect certified PDF for submission packaging"]
+        archive["Archive XML and submitted PDF"]
+    end
+
+    subgraph person [Named individual]
+        upload["Upload XML to SciENcv CPOS"]
+        review["Review and complete entries"]
+        certify["Certify CPOS"]
+    end
+
+    inventory --> export --> validate
+    validate -->|Per-person XML| upload
+    upload --> review --> certify
+    certify -->|Certified PDF| collect --> archive
 ```

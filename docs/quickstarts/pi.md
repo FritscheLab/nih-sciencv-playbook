@@ -22,7 +22,7 @@ nav_order: 1
    - **Up to 5 Contributions** (2,000 characters each)
    - **Honors** (up to 15)
    - In either narrative, use brief parenthetical references to selected Products when useful (lead author/year or PMID/PMCID); do not paste full citations or hyperlinks.
-9. For an application due on/after **May 25, 2026**, confirm that your **Research Security Training** was completed within the 12 months before submission.
+9. Confirm that your qualifying **Research Security Training** was completed within the 12 months before application submission.
 10. **Certify + download each required PDF** in SciENcv (the biosketch when required; **CPOS only when NIH requests it** for your role and submission type).
 11. Keep the certified SciENcv PDF **unmodified** unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment.
 

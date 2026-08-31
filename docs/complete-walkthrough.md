@@ -8,7 +8,7 @@ nav_order: 15
 This page consolidates the end-to-end steps (PI + admin) for both documents.
 
 ```mermaid
-flowchart LR
+flowchart TD
     accTitle: End-to-end Common Forms walkthrough
     accDescr: The complete workflow starts with one-time preparation, creates the biosketch, creates CPOS when requested, and ends with individual certification.
     A["Prep once per person"] --> B["Create NIH Biosketch"]
@@ -32,6 +32,8 @@ flowchart LR
 - Add **delegate** (optional)
 
 ## 1) Create the NIH Biosketch in SciENcv
+
+Provide a combined biosketch for **every individual listed on the R&R Senior/Key Person Profile (Expanded)**, including every **Other Significant Contributor (OSC)**. See [NIH Common Forms FAQ 57968](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57968) and [FAQ 57969](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57969).
 
 1. MyNCBI → SciENcv → Create New Document
 2. Format: NIH Biosketch (Common Form + Supplement)
@@ -73,7 +75,7 @@ For JIT, RPPR, and Prior Approval person-level rules, see [Submission lifecycle]
 
 ## 3) Certification (individual-only)
 
-- For an application due on/after **May 25, 2026**, verify that each senior/key person completed qualifying RST within the 12 months before submission.
+- Verify that each senior/key person completed qualifying RST within the 12 months before application submission.
 - Each named individual certifies and downloads **each document required for that person and stage**; a delegate cannot certify.
 - The biosketch certification includes individual RST and MFTRP attestations as applicable. For RST, the AOR certifies institutional compliance for covered individuals employed by the applicant organization. For MFTRP, the AOR certifies that all identified senior/key personnel were informed of and complied with the individual-certification responsibility.
 - Keep each certified SciENcv PDF unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment.

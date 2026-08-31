@@ -28,7 +28,7 @@ Either NIH Supplement narrative may refer briefly to any selected product, regar
 > If an item isn’t in My Bibliography (or ORCID), it can’t be selected as a “Product” in SciENcv.
 
 ```mermaid
-flowchart LR
+flowchart TD
     accTitle: Product source cleanup flow
     accDescr: A flow from publication and product sources into My Bibliography, then into SciENcv product buckets and final narrative support.
     A["PubMed records"] --> C["My Bibliography"]
