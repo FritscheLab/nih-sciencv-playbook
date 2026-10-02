@@ -6,7 +6,7 @@ nav_order: 1
 
 # Long-form guide (current reference)
 
-This appendix is a continuous companion to the task-focused playbook. **Last reviewed against official NIH, eRA Commons, and NCBI/NLM sources: 2026-08-31.**
+This appendix is a continuous companion to the task-focused playbook. **Core policy review: 2026-10-02.** See [References]({{ site.baseurl }}{% link references.md %}) for the review scope and unresolved source checks; unchanged My NCBI UI guidance retains its prior review date of 2026-08-31.
 
 {: .warning }
 > **Current enforcement status:** NIH requires applicable Common Forms for applications and for JIT, RPPR, and Prior Approval submissions. eRA system validations stop submissions that do not use compliant, digitally certified SciENcv forms.
@@ -45,7 +45,7 @@ The most important operational points are:
 
 ## Part I: Current policy and system requirements
 
-NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. Current NIH requirements are collected on the NIH Common Forms hub, in the applicable Guide Notices, and in the final form instructions.
+NIH adopted the Common Forms as part of the federal disclosure-standardization effort associated with **NSPM-33** and the OSTP memorandum on use of common disclosure forms. Use the applicable current Guide Notices and final form instructions; the former Common Forms hub redirects to a general Forms Directory as of this review.
 
 ### 1.1 Current form structure
 
@@ -88,7 +88,7 @@ At application:
 - each senior/key person certifies through the SciENcv biosketch that they are not currently party to an MFTRP; and
 - the AOR certifies through the application signature that senior/key personnel were informed of and complied with the individual certification requirement.
 
-For NIH RPPRs, the recipient must collect a separate annual MFTRP statement from each senior/key person using NIH's required language: “I [insert name] certify that, at the time of submission, I am not a party to a malign foreign talent recruitment program.” Upload it in **RPPR Section G.1**, flatten the separate statement PDF, and name it `MFTRPcert_[Name].pdf`. Do not append that statement to, or use it to flatten, the biosketch or CPOS Common Form.
+The notice/RPPR-guide workflow uses a separate annual MFTRP statement from each senior/key person with NIH's required language: “I [insert name] certify that, at the time of submission, I am not a party to a malign foreign talent recruitment program.” Upload it in **RPPR Section G.1**, flatten the separate statement PDF, and name it `MFTRPcert_[Name].pdf`. Do not append that statement to, or use it to flatten, the biosketch or CPOS Common Form. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for signatures, dates, final/interim scope, and the current FAQ/guide conflict.
 
 ### 1.5 Other Support disclosure training is a separate recipient obligation
 
@@ -312,7 +312,7 @@ For **Just-in-Time (JIT)**:
 - the PD/PI may upload and save JIT information, but JIT authority cannot be delegated; and
 - only a Signing Official (SO) can submit JIT information to NIH.
 
-For **RPPR Section D**, use the person's role and support status to determine the attachments:
+For **annual RPPR Section D**, use the person's role and support status to determine the attachments:
 
 | Participant condition | Biosketch Common Form + NIH Supplement | CPOS | Foreign supporting documentation |
 | --- | --- | --- | --- |
@@ -322,6 +322,8 @@ For **RPPR Section D**, use the person's role and support status to determine th
 | New training faculty member reported in a Training RPPR | Required | Required | If applicable |
 
 The last row is a narrow Training RPPR rule: the current RPPR instructions treat **new training faculty** as new senior/key personnel and require their biosketch, Supplement, CPOS, and applicable supplemental documentation. It does not make all Program Directors, training faculty, or training-grant oversight personnel routine CPOS submitters. Annual MFTRP statements are handled separately in **RPPR Section G.1**, not in Section D or inside a Common Form.
+
+For final/interim reports and effort thresholds, use the [submission lifecycle guidance]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}); do not apply the annual participant-change matrix to every RPPR type.
 
 For **Prior Approval**, distinguish the general submission rule from request-specific attachments. Under [NOT-OD-26-026](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-026.html), all Prior Approval requests for NIH grant and cooperative-agreement awards use the **eRA Commons Prior Approval Module** and must be initiated and submitted by a recipient Signing Official. The evidence depends on the request type. For a **Change of PD/PI**, the proposed PD/PI's effort may not be zero; each proposed PD/PI needs one certified biosketch and one certified CPOS; and applicable foreign supporting documentation is uploaded separately.
 
@@ -438,6 +440,8 @@ For both the Biographical Sketch Common Form and the CPOS Common Form:
 
 If anything changes in the document, or if the certification becomes too old, the correct fix is to go back into SciENcv, update the data, and **re-certify**.
 
+Before reusing a saved PDF, also check the [September 2026 signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}), replace affected attachments with fresh downloads, and re-run submission validations.
+
 Keep the attachment types distinct:
 
 | Attachment | Required handling |
@@ -477,6 +481,8 @@ CPOS disclosure and foreign-component reporting overlap, but they are not the sa
 
 As a practical workflow, route the matter through institutional review and the funding IC even when no CPOS entry is required. Separately disclose any support, resource, appointment, affiliation, or commitment that NIH requires in CPOS.
 
+NIH's September 29, 2026 clarification distinguishes manuscript editing after moving abroad from significant new research abroad. See the [foreign-activity guidance and official scenarios]({{ site.baseurl }}{% link other-support/what-to-include.md %}).
+
 ### 7.4 Using the wrong kind of product reference in the supplement
 
 Either the Personal Statement or Contributions to Science may use a brief parenthetical reference to any selected Common Form product. Use lead-author/year or PMID/PMCID. Do not insert full bibliographic citations, a references list, or hyperlinked references in the supplement narrative boxes.
@@ -499,13 +505,12 @@ In multi-site applications, the lead institution cannot rely on locally editing 
 4. **Schedule certification windows close to submission.** Certification cannot be delegated.
 5. **Track RST, MFTRP, and Other Support disclosure training as separate controls.** They have different populations, evidence, timing, and submission points.
 6. **Use an attachment-by-person lifecycle checklist.** Confirm the role, mechanism, stage, and current instructions before requesting a biosketch, CPOS, foreign contract, or MFTRP statement.
-7. **Re-check the official NIH, eRA, and NCBI/NLM pages quarterly.** Form-directory and help pages can change, and the NIH Common Forms hub remains the primary source for current policy status.
+7. **Re-check the official NIH, eRA, and NCBI/NLM pages quarterly.** Use current notices for policy status, direct instructions for form content, and verify that source links resolve to relevant content.
 
 ---
 
 ## Selected official references used for this refresh
 
-- NIH. [*Common Forms for Biographical Sketch and Current and Pending (Other) Support*](https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch).
 - NIH. [*Common Forms FAQs*](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm), including the current [application biosketch population](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57968) and [RST topics](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57984).
 - NIH Guide Notices [NOT-OD-26-079](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html), [NOT-OD-26-018](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html), [NOT-OD-26-017](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html), [NOT-OD-26-026](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-026.html), [NOT-OD-25-133](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html), and [NOT-OD-26-084](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html).
 - NIH. [*Biographical Sketch Common Form*](https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form), [*NIH Biographical Sketch Supplement*](https://grants.nih.gov/grants-process/write-application/forms-directory/nih-biographical-sketch-supplement), and [*Current and Pending (Other) Support Common Form*](https://grants.nih.gov/grants-process/write-application/forms-directory/cpos-common-form).

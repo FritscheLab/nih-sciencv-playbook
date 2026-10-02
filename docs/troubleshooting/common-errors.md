@@ -25,3 +25,9 @@ nav_order: 1
 
 - Cause: hidden formatting from Word
 - Fix: paste as plain text; re-check counts in SciENcv
+
+## Signing-certificate or signature validation error
+
+- Review the [September 2026 certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) for older SciENcv PDFs.
+- Have the named individual re-certify in SciENcv, download a fresh PDF, replace the attached file, and re-run submission validations.
+- Distinguish an Acrobat viewer warning from an actual submission-system error; retain the exact error when requesting help.

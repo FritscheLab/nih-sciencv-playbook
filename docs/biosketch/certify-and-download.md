@@ -6,6 +6,9 @@ nav_order: 6
 
 # Certify + download (individual-only step)
 
+{: .warning }
+> **September 2026 certificate alert:** Before reusing an older PDF, check the [signing-certificate alert and re-certification steps]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}). A certification less than 12 months old can still be affected.
+
 1. Click **Download PDF**
 2. Read the certification statement carefully
 3. Click **Certify**
@@ -21,7 +24,7 @@ nav_order: 6
 > Do **not** Print to PDF / “Optimize” / flatten this file by default. Submit the SciENcv-generated PDF as-is unless the NIH Application Guide or NOFO expressly requires a special compiled/flattened attachment, such as participating-faculty biosketches.
 
 {: .note }
-> You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.
+> You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, update it in SciENcv, **re-certify**, and download a fresh PDF.
 
 ## Application research-security check
 

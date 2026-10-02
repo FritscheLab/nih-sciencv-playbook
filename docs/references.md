@@ -5,10 +5,10 @@ nav_order: 11
 
 # References
 
-Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-08-31**.
+Core NIH Common Forms notices, final form instructions, Common Forms FAQs, RPPR/JIT/Prior Approval instructions, FY2027 LRP guide, eRA ORCID help, NLM XML upload guidance and samples, and OMB status reviewed on **2026-10-02**. Broader NSF/NSPM-33 context retains its **2026-08-31** review date.
 
 {: .warning }
-> For enforcement timing, check the **NIH Common Forms hub** and the newest NIH Guide Notice first. Some form-directory pages may lag the hub after NIH issues a new notice; treat them as form/instruction pages unless their timing text matches the hub.
+> For enforcement timing, use the **newest relevant NIH Guide Notice**. The former Common Forms hub URL redirects to a general Forms Directory as of this review; that destination does not replace the policy notice. Use the form pages and direct instructions below for form content.
 >
 > For field-level form instructions, use the direct final PDFs. In particular, the final Biosketch Common Form and NIH Supplement PDFs control the current **up-to-5 + up-to-5** Product limits and narrative-reference rules even where an older implementation summary is less precise.
 
@@ -18,12 +18,12 @@ Reviewed against official NIH/eRA/NCBI/NLM/NSF sources on **2026-08-31**.
 
 ## NIH official pages (policy + enforcement)
 
-- [Common Forms hub (current NIH source-of-truth page)](https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch)
 - [NOT-OD-26-079 (active system-enforcement authority)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html)
 - [NOT-OD-26-018 (implementation notice)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html)
 - [NOT-OD-26-017 (Research Security Training requirements)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html)
 - [NOT-OD-25-133 (other support disclosure training policy; effective October 1, 2025)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html)
 - [NOT-OD-26-084 (foreign component definition reminder)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html)
+- [NIH co-authorship and foreign-component scenarios (updated September 29, 2026)](https://grants.nih.gov/sites/default/files/co-authorship-and-foreign-components-faqs-from-fdp-discussion-with-nih-extramural-leadership-sep.pdf)
 - [NOT-OD-26-026 (all NIH Prior Approval requests through the eRA Commons module)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-026.html)
 - [NIH Grants Policy Statement (March 2026)](https://grants.nih.gov/policy-and-compliance/nihgps)
 - [NIH Common Forms FAQs](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm)
@@ -83,8 +83,22 @@ The FY2027 LRP workflow requires a digitally certified combined biosketch for th
 - [NSF NSPM-33 definitions](https://www.nsf.gov/policies/nspm-33/definitions)
 - [OSTP policy regarding use of common disclosure forms (archived official PDF)](https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/02/OSTP-Common-Disclosure-Form-Policy.pdf)
 - [Federal Register notice: proposed renewal of OMB 3145-0279 (official-edition PDF)](https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17415.pdf)
+- [OIRA: NIH Common Forms usage, active through October 31, 2026](https://www.reginfo.gov/public/do/PRAViewRCF?ref_nbr=202507-0925-001CF)
 
 The August 26, 2026 Federal Register notice begins the renewal process for the Common Forms information collection. It does not replace the current forms; maintainers should watch for OMB clearance and agency replacement instructions.
+
+## Review gaps and source conflicts (October 2, 2026)
+
+- The [MFTRP certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) records a conflict between the current Common Forms FAQ and the implementation notice/RPPR guide about separate Section G.1 statements.
+- The [September signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) is sourced to institutional notices. A public NIH/eRA/NCBI notice confirming its dates was not located in this review.
+- My NCBI Help returned a browser-verification page. Its existing UI guidance was not reverified; the accessible SciENcv news page and NLM upload instructions were checked separately.
+
+## Institutional operational alerts
+
+These alerts support practical submission checks; they do not establish NIH policy requirements.
+
+- [UCLA OCGA: SciENcv signing-certificate change (September 25, 2026)](https://ocga.research.ucla.edu/announcement/ocga-announcement/update-sciencv-documents-for-federal-proposals-submitted-on-or-after-september-26-2026/)
+- [WashU: recertification for applications and RPPRs (September 24, 2026)](https://research.washu.edu/announcements/urgent-biosketch-other-support-notice/)
 
 ## Examples of institutional guides
 

@@ -12,7 +12,8 @@ Do not turn “Common Forms apply” into “attach both forms for everyone.” 
 |---|---|
 | Application | Attach the combined Biosketch Common Form + NIH Supplement for every individual listed on the R&R Senior/Key Person Profile (Expanded), including OSCs. NIH generally does not collect CPOS with the initial application under its JIT policy; follow any mechanism-specific exception. |
 | JIT | Submit only when NIH specifically requests JIT information. Use the person-level fields for the applicable biosketch, CPOS, and foreign supporting documentation. |
-| RPPR | Use Section D person-level fields when a participant’s role or support status triggers an attachment. Handle the annual MFTRP statement separately in Section G.1. |
+| Annual RPPR | Use Section D person-level fields when a participant’s role or support status triggers an attachment. Check the MFTRP evidence rules below. |
+| Final / Interim RPPR | Follow the final/interim instructions below; the annual participant-change attachment matrix does not apply. |
 | Prior Approval | Use the eRA Commons Prior Approval Module and follow the specific request type. A Change of PD/PI request has defined person-level biosketch and CPOS requirements. |
 
 ## Application
@@ -33,7 +34,7 @@ Submit JIT information **only when NIH specifically requests it**. In eRA Common
 
 Keep each SciENcv Common Form unmodified. When required for a reported foreign appointment or employment, flatten the contract copy and attach it separately in the supporting-documentation field.
 
-## RPPR Section D: participant changes
+## Annual RPPR Section D: participant changes
 
 Use this decision matrix with the current RPPR instructions:
 
@@ -46,7 +47,13 @@ Use this decision matrix with the current RPPR instructions:
 
 The last row is a narrow Training RPPR reporting rule. It does not convert all program directors, training faculty, or people involved in training-grant oversight into routine CPOS submitters.
 
-Separately, collect the annual MFTRP certification for every senior/key person and upload each statement in **Section G.1** using the required `MFTRPcert_[Name].pdf` filename. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+For changed active support, the CPOS requirement applies to senior/key personnel **regardless of effort**, including less than 1.0 person-month ([FAQ 57908](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57908)).
+
+Use [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the separate MFTRP statement workflow, electronic signatures/dates, and the current FAQ/guide conflict about using a Common Form certification instead.
+
+## Final and Interim RPPRs
+
+[NIH FAQ 57904](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57904) directs recipients to answer **No** to the D.1 questions about changed CPOS, new senior/key personnel, and new OSCs in final/interim reports. Those reports do not require updated Common Forms for those changes. MFTRP certification still applies; follow the [certification guidance]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
 
 ## Prior Approval
 

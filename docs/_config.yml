@@ -25,8 +25,8 @@ footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. 
 
 # Top-right links
 aux_links:
-  "NIH Common Forms hub":
-    - "https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch"
+  "NIH Common Forms enforcement":
+    - "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html"
   "NIH Biosketch instructions":
     - "https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form"
   "NIH CPOS instructions":

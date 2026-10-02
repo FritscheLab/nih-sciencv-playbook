@@ -36,7 +36,7 @@ timeline TD
 
 Use these official NIH sources for the controlling requirements:
 
-- [NIH Common Forms hub](https://grants.nih.gov/policy-and-compliance/implementation-of-new-initiatives-and-policies/common-forms-for-biosketch)
+- [NIH Common Forms instructions](https://grants.nih.gov/grants-process/write-application/forms-directory/biographical-sketch-common-form)
 - [NOT-OD-26-018](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html)
 - [NOT-OD-26-079](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html)
 - [NOT-OD-26-017](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html)

@@ -36,7 +36,7 @@ For each application, verify under your institution’s process that every senio
 
 - Send each named individual your “ready to certify” note
 - The named individual logs in, **certifies**, and downloads the requested PDFs (or lets you download after certification)
-- For an RPPR, collect the separate annual MFTRP Section G.1 statement for every senior/key person; do not append it to a Common Form
+- For an RPPR, follow the [MFTRP certification workflow and current FAQ/guide conflict]({{ site.baseurl }}{% link policy/research-security-certifications.md %}); keep any separate Section G.1 statements apart from Common Forms
 
 See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) and the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).
 

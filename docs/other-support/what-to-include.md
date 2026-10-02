@@ -36,6 +36,8 @@ Include foreign appointments/employment/affiliations that imply commitment or su
 {: .note }
 > **Related but separate:** NIH's [May 27, 2026 reminder](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html) did not change the CPOS categories or expand the foreign-component definition. NIH says **most instances of foreign co-authorship represent a foreign component**, although minor or indirect contributions may not. In **all cases**, recipients should report foreign co-authorship to the funding NIH Institute or Center **as soon as they become aware of it** so NIH can determine what steps, if any, are needed. As a practical workflow, route the matter through institutional review and the funding IC even when no CPOS entry is required; separately disclose any support, resource, appointment, affiliation, or commitment that NIH requires in CPOS.
 
+NIH's [September 29, 2026 clarification](https://grants.nih.gov/sites/default/files/co-authorship-and-foreign-components-faqs-from-fdp-discussion-with-nih-extramural-leadership-sep.pdf) gives concrete boundaries: a former U.S. postdoc who only edits an existing manuscript after moving abroad does not create a foreign component; new experiments or data analysis abroad on the NIH project do. Obtain NIH approval before that significant foreign work begins, and check that the award permits it. Foreign co-authorship on a review of published work does not by itself establish a foreign component. These distinctions do not remove separate CPOS disclosure or IC reporting obligations.
+
 ## Usually exclude these categories
 
 - Broadly available institutional core facilities or shared equipment

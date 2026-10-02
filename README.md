@@ -7,6 +7,8 @@ A docs-first, GitHub Pages–ready site to help **PIs, Co-Is, staff, and researc
 
 > **Compliance note:** NIH requires *digitally certified* PDFs generated from SciENcv. Keep each Common Form unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment; foreign contracts and annual MFTRP statements are separate attachments.
 
+> **September 2026 operational alert:** Institutional notices advise re-certifying affected older SciENcv PDFs and replacing submission attachments. See the [signing-certificate alert and steps](docs/troubleshooting/september-2026-certificates.md) for the dates, sources, and validation checks.
+
 ## Publish on GitHub Pages (recommended)
 
 1. Create a new GitHub repo and upload the contents of this ZIP.

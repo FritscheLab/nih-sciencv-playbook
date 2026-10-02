@@ -17,6 +17,9 @@ Independent guide, not official NIH/NCBI guidance. Verify details in [References
 
 ## Start here (role-based)
 
+{: .warning }
+> **Reusing a saved SciENcv PDF?** Read the [September 2026 signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) before submission and replace affected attachments with newly certified PDFs.
+
 - [PI / faculty (15-minute checklist)]({{ site.baseurl }}{% link quickstarts/pi.md %})
 - [Administrator / delegate (fast checklist)]({{ site.baseurl }}{% link quickstarts/admin-delegate.md %})
 - [Co-I / key personnel (fast checklist)]({{ site.baseurl }}{% link quickstarts/key-personnel.md %})

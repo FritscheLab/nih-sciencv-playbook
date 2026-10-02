@@ -10,17 +10,18 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 
 ## 1) Verify source-of-truth pages
 
-- Check the NIH **Common Forms hub** and all Guide Notices newer than **NOT-OD-26-079** for effective-date or validation changes.
+- Check all relevant Guide Notices newer than **NOT-OD-26-079** for effective-date or validation changes. Verify former hub links actually resolve to relevant policy content; the old hub redirects to a general Forms Directory as of October 2, 2026.
 - Compare the forms-directory pages with the **direct final Biosketch, Supplement, and CPOS PDFs**. Confirm the up-to-5 + up-to-5 Product limits and the parenthetical narrative-reference rule have not changed.
 - Check the OMB lines on the two Common Forms and the NIH Supplement. The two Common Forms presently display **3145-0279 / Oct 31, 2026**; the Supplement displays **0925-0001 / Dec 31, 2027** and **0925-0002 / Nov 30, 2027**. NSF's [August 26, 2026 renewal notice](https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17415.pdf) is an active renewal process, not a replacement form. Watch for completed OMB clearance and agency replacement instructions; do not infer automatic invalidity from the displayed expiration date.
 - Recheck **NOT-OD-26-017** and the current Common Forms RST FAQ for the 12-month completion window, individual biosketch certification, AOR certification population, recognized training resources, and all required topics, including MFTRP risks and the NIH senior/key-person prohibition.
-- Recheck **NOT-OD-26-018** and the current RPPR guide for the MFTRP prohibition, application certifications, annual Section G.1 statement text, flattening instruction, and `MFTRPcert_[Name].pdf` filename.
+- Recheck **NOT-OD-26-018**, the RPPR guide, and current FAQs for MFTRP statement text, electronic signatures/dates, reuse, final/interim scope, flattening, and `MFTRPcert_[Name].pdf` filenames. Track the [FAQ/guide conflict about separate statements]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) until NIH reconciles it.
 - Keep the recipient **Other Support disclosure-training requirement** separate from application RST.
-- Check **NOT-OD-26-084** and any newer foreign-component notices for the foreign-coauthorship reporting rule.
+- Check **NOT-OD-26-084**, NIH's September 29, 2026 co-authorship scenarios, and any newer foreign-component guidance for reporting and prior-approval rules.
 - Review the NIH Application Guide and current FAQs for the application biosketch population, including all people listed on the R&R Senior/Key Person Profile and Other Significant Contributors.
 - Review the current RPPR guide/transcript, eRA JIT help, and Prior Approval help for person-, role-, and stage-specific attachment changes. Track any FAQ/RPPR conflict internally until NIH reconciles it.
 - Review the current LRP hub, notices, and application guide before each annual LRP cycle; confirm required and optional mentor-team biosketches without generalizing program-specific ASSIST materials to other mechanisms.
 - Check eRA ORCID help and account-consolidation guidance, including post-consolidation role/affiliation behavior.
+- Check for SciENcv signing-certificate changes independently of the individual's 12-month certification window. Follow up on official confirmation of the [September 2026 institutional alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}).
 - Compare NLM CPOS XML guidance and both official XML samples with the CLI/browser validator rules, including real calendar dates and person-month values from 0–12 with at most two decimals.
 
 ## 2) Review high-impact playbook pages

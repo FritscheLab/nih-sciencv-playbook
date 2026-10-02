@@ -14,6 +14,8 @@ The following SciENcv draft(s) requested for this submission are ready: [**NIH B
 
 [For an application: our records show your qualifying Research Security Training was completed on **[date]**, within the 12 months before submission. Please contact us before certifying if that date is incorrect.]
 
+[If replacing an older PDF: please re-certify in SciENcv and provide a fresh download so we can replace the existing attachment and re-run submission validations. See the [September 2026 certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}).]
+
 Please log into SciENcv and complete the **individual certification** step for each listed document:
 
 1) Open each document  

@@ -6,23 +6,26 @@ nav_order: 4
 
 # Certify + download CPOS (individual-only)
 
+{: .warning }
+> **September 2026 certificate alert:** Before reusing an older PDF, check the [signing-certificate alert and re-certification steps]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}). A certification less than 12 months old can still be affected.
+
 When CPOS is required for the person and submission stage, use the same individual-certification pattern as the biosketch:
 
-1. Download PDF
-2. The individual named on the CPOS certifies (delegate cannot)
-3. Submit SciENcv-generated PDF without modification
+1. The individual named on the CPOS clicks **Download PDF** in SciENcv.
+2. The individual reviews the statement and clicks **Certify** (a delegate cannot).
+3. Download the newly certified PDF and submit it without modification.
 
 {: .warning }
 > Keep the certified CPOS PDF unmodified unless the NIH Application Guide or NOFO expressly requires otherwise. Do not print/flatten it merely to combine it with another person’s form or with supporting documentation.
 
 {: .note }
-> You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, download and **re-certify**.
+> You **may rename the downloaded PDF file** to match NIH filename guidance, but do **not** alter the PDF content. If the document changes, or if the certification/signature date is more than **12 months** old at submission time, update it in SciENcv, **re-certify**, and download a fresh PDF.
 
 {: .note }
 > If NIH requires **supporting documentation** for foreign appointments/employment reported in CPOS, flatten the contract copies and attach them **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module. Do **not** append them to the SciENcv CPOS PDF.
 
 {: .note }
-> The current CPOS certification text includes RST and MFTRP attestations. For NIH applications, NIH collects the individual RST certification through the biosketch because CPOS is ordinarily not collected at application. The annual RPPR MFTRP statement is an additional **separate attachment**, not part of CPOS. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+> The current CPOS certification text includes RST and MFTRP attestations. For NIH applications, NIH collects the individual RST certification through the biosketch because CPOS is ordinarily not collected at application. When a separate RPPR MFTRP statement is required, it is a **separate attachment**, not part of CPOS. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the current FAQ/guide conflict.
 
 ```mermaid
 sequenceDiagram

@@ -24,7 +24,7 @@ At least once per quarter, verify these source-of-truth pages and notices:
 
 - Use the short checklist page: [Quarterly Checklist (Maintainers)]({{ site.baseurl }}{% link quarterly-checklist.md %})
 
-- NIH **Common Forms** hub
+- Newest relevant NIH **Common Forms Guide Notices** and direct form instructions; verify the destination of any former hub link before relying on it
 - **NOT-OD-26-018**, the current Common Forms FAQs, and any newer notices
 - NIH forms-directory pages for **Biographical Sketch Common Form**, **NIH Biographical Sketch Supplement**, and **CPOS Common Form**
 - eRA Commons help for **ORCID**
@@ -32,6 +32,7 @@ At least once per quarter, verify these source-of-truth pages and notices:
 - My NCBI **SciENcv Help** and **SciENcv News & Updates**
 - NIH Application Guide pages that affect **when CPOS is attached at application stage**
 - OMB/NSF activity affecting the Common Forms information collection, including renewal or replacement instructions
+- Institutional submission alerts, including the September 2026 signing-certificate rollover; seek official confirmation and keep these distinct from NIH policy
 
 After content changes:
 

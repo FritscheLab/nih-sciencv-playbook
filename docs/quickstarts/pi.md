@@ -30,7 +30,7 @@ nav_order: 1
 > For many NIH applications, CPOS is requested later (often during **JIT**) rather than attached at initial submission. Important exception: **mentored career development** applications require CPOS for **mentor/co-mentor(s)**, not for the candidate.
 
 {: .note }
-> For an annual RPPR, the separate MFTRP statement in Section G.1 is an additional requirement for every senior/key person. It is not part of the SciENcv PDF. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+> For an RPPR, check the [MFTRP certification workflow and current FAQ/guide conflict]({{ site.baseurl }}{% link policy/research-security-certifications.md %}). When required, the separate Section G.1 statement is not part of the SciENcv PDF.
 
 ```mermaid
 flowchart TD

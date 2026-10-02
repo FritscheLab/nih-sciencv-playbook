@@ -28,11 +28,11 @@ No. Each senior/key person must complete qualifying RST within the 12 months bef
 
 ## Where does the annual MFTRP certification go?
 
-For an annual RPPR, upload a separate flattened statement for each senior/key person in RPPR Section G.1, named `MFTRPcert_[Name].pdf`. Do not append it to the biosketch or CPOS PDF. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+The notice/RPPR-guide workflow uses a separate statement in Section G.1, named `MFTRPcert_[Name].pdf`. Do not append it to the biosketch or CPOS PDF. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for signature/date requirements, final/interim scope, and the current FAQ exception that conflicts with the guide.
 
 ## Can I reuse an older certified PDF?
 
-Only if the content is still current **and** the certification/signature date is still within **12 months** of submission. If anything changes, or the certification is too old, generate a fresh PDF from SciENcv and re-certify it. Renaming the file is fine; editing the PDF content is not.
+Check that the content is current, the certification/signature date is within **12 months** of submission, and the PDF passes submission validation. The [September 2026 signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) can affect PDFs even within that window. If an update is needed, re-certify in SciENcv, download a fresh PDF, and replace the attachment. Renaming the file is fine; editing the PDF content is not.
 
 ## Do I report institutional core facilities or shared equipment in CPOS?
 

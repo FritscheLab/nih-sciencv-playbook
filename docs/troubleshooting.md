@@ -10,3 +10,4 @@ Use these pages to diagnose common SciENcv + eRA validation issues and to answer
 
 - Use [Common errors and fixes]({{ site.baseurl }}{% link troubleshooting/common-errors.md %}) when you have an eRA validation message or a SciENcv workflow failure.
 - Use the [FAQ]({{ site.baseurl }}{% link troubleshooting/faq.md %}) for policy and process questions that do not start with a specific error.
+- Before reusing an older PDF, check the [September 2026 signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}).

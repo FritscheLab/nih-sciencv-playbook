@@ -8,6 +8,11 @@ nav_order: 13
 ## Unreleased
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
+- Added a sourced institutional alert for SciENcv's reported **September 19, 2026** signing-certificate rollover and older PDFs in submissions **on or after September 26, 2026**, with re-certification, attachment-replacement, and validation steps.
+- Corrected re-certification/download order and linked certificate checks from the home page, README, certification pages, troubleshooting, and reminder template.
+- Added NIH's **September 29, 2026** foreign-component scenarios and clarified manuscript editing versus significant research performed abroad.
+- Added RPPR MFTRP signature/date and final/interim guidance, and documented the FAQ/notice/guide conflict over separate Section G.1 statements.
+- Replaced active links to the redirected Common Forms hub with current official notices/instructions and recorded the **October 2, 2026** review scope and unresolved source checks.
 
 ## v1.9 (Aug 2026)
 
