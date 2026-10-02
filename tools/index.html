@@ -156,7 +156,7 @@
 
         .upload-text {
             flex: 1 1 360px;
-            min-width: 260px;
+            min-width: 0;
         }
 
         .upload-text p {
@@ -178,9 +178,13 @@
         .app-main {
             margin-top: var(--gap);
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
             gap: var(--gap);
             align-items: start;
+        }
+
+        .app-main > * {
+            min-width: 0;
         }
 
         @media (min-width: 1100px) {
@@ -233,7 +237,13 @@
             margin: 0;
         }
 
+        .controls .control-label {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
         .controls input[type="checkbox"] {
+            flex: none;
             margin-top: 3px;
             transform: translateY(1px);
         }
@@ -489,17 +499,17 @@
                     <span class="hint">Validate while you edit; results update on demand.</span>
                 </div>
 
-                <textarea id="xml-input" spellcheck="false" placeholder="Paste SciENcv CPOS XML here..."></textarea>
+                <textarea id="xml-input" aria-labelledby="edit-heading" spellcheck="false" placeholder="Paste SciENcv CPOS XML here..."></textarea>
 
                 <div class="controls" aria-label="Validation options">
                     <label>
                         <input type="checkbox" id="upload-mode" checked />
-                        Upload mode: strip any <span class="tag">&lt;profile ...&gt;</span> attributes (no
-                        xmlns/doctype/accession)
+                        <span class="control-label">Upload mode: strip any <span class="tag">&lt;profile ...&gt;</span> attributes (no
+                            xmlns/doctype/accession)</span>
                     </label>
                     <label>
                         <input type="checkbox" id="strict-length" checked />
-                        Enforce max-length limits as <strong>ERROR</strong> (recommended)
+                        <span class="control-label">Enforce max-length limits as <strong>ERROR</strong> (recommended)</span>
                     </label>
                 </div>
 

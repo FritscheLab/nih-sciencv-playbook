@@ -21,7 +21,7 @@ mermaid:
   version: "11.17.2"
 
 # Footer
-footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. <a href="/nih-sciencv-playbook/disclaimer">Disclaimer</a>.'
+footer_content: 'Independent, non-official guide. Verify with NIH/NCBI sources. <a href="/nih-sciencv-playbook/disclaimer.html">Disclaimer</a>.'
 
 # Top-right links
 aux_links:

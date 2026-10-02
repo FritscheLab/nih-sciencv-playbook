@@ -5,22 +5,25 @@ A docs-first, GitHub Pages–ready site to help **PIs, Co-Is, staff, and researc
 - **Biographical Sketch Common Form + NIH Biographical Sketch Supplement**
 - **Current and Pending (Other) Support (CPOS) Common Form**
 
+Read the [published playbook](https://fritschelab.github.io/nih-sciencv-playbook/) or the [v1.10 release notes](docs/changelog.md#v110-october-2-2026).
+
 > **Compliance note:** NIH requires *digitally certified* PDFs generated from SciENcv. Keep each Common Form unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment; foreign contracts and annual MFTRP statements are separate attachments.
 
 > **September 2026 operational alert:** Institutional notices advise re-certifying affected older SciENcv PDFs and replacing submission attachments. See the [signing-certificate alert and steps](docs/troubleshooting/september-2026-certificates.md) for the dates, sources, and validation checks.
 
 ## Publish on GitHub Pages (recommended)
 
-1. Create a new GitHub repo and upload the contents of this ZIP.
-2. In GitHub: **Settings → Pages**
-3. **Source:** Deploy from a branch  
-   **Branch:** `main` (or your default branch)  
-   **Folder:** `/docs`
-4. Save. Your site will build automatically.
+The existing repository is configured for `https://fritschelab.github.io/nih-sciencv-playbook/` in `docs/_config.yml`.
+
+1. Complete the publication checks below and commit the release changes.
+2. In the repository's **Settings → Pages**, select **Deploy from a branch**, branch **main**, folder **/docs**, and save if needed.
+3. Push the reviewed commits to `main`. Check the **Pages build and deployment** run in **Actions**, then verify the published home page, release notes, diagrams, and XML validator.
+
+GitHub documents this [branch-based publishing setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). For a fork or custom domain, update `url`, `baseurl`, the footer link, and `gh_edit_repository` in `docs/_config.yml` before publishing.
 
 The site uses the **Just the Docs** Jekyll theme (remote theme), which is easy to host on GitHub Pages and includes built-in search.
 
-Mermaid diagrams are enabled through the Just the Docs `mermaid` configuration in `docs/_config.yml`, using a pinned Mermaid release loaded by the theme.
+Mermaid diagrams use the pinned release in `docs/_config.yml`. The local theme-component override supplies readable scrolling and SVG accessibility metadata after rendering.
 
 ## Local preview (optional)
 
@@ -41,6 +44,19 @@ bundle exec jekyll serve
 ```
 
 For a build without a preview server, use `bundle exec jekyll build --destination /tmp/nih-sciencv-playbook-site` from `docs/`.
+
+## Publication checks
+
+Run from the repository root after setting up the local dependencies:
+
+```bash
+git diff --check
+python3 -m unittest discover -s tests -p 'test_validate_cpos_xml.py'
+cmp tools/index.html docs/tools/index.html
+(cd docs && bundle exec jekyll build --destination /tmp/nih-sciencv-playbook-site)
+```
+
+After diagram or rendering changes, also run the Mermaid visual QA below. Keep `Unreleased` as a placeholder and move completed changes into a dated release entry in `docs/changelog.md`. Review the source gaps and conflicts in `docs/references.md` before changing policy guidance.
 
 ## Mermaid visual QA
 
