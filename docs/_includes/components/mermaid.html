@@ -1,0 +1,15 @@
+<script type="module">
+  {% if site.mermaid.path %}
+  import mermaid from '{{ site.mermaid.path | relative_url }}';
+  {% else %}
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.esm.min.mjs';
+  {% endif %}
+  import { enhanceDiagram } from '{{ "/assets/js/mermaid-diagrams.js" | relative_url }}';
+
+  const diagrams = [...document.querySelectorAll('.language-mermaid')];
+  const sources = diagrams.map(element => element.textContent);
+  mermaid.initialize({ ...{% include mermaid_config.js %}, startOnLoad: false });
+  await document.fonts.ready;
+  await mermaid.run({ nodes: diagrams });
+  diagrams.forEach((element, index) => enhanceDiagram(element, sources[index]));
+</script>

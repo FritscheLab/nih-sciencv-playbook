@@ -8,6 +8,7 @@ nav_order: 13
 ## Unreleased
 
 - Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
+- Repaired Mermaid mobile readability with keyboard-accessible scrolling, added SVG titles/descriptions for diagram types with renderer limitations, improved mindmap/timeline label contrast, and separated crowded XML-review labels and block connectors.
 - Added a sourced institutional alert for SciENcv's reported **September 19, 2026** signing-certificate rollover and older PDFs in submissions **on or after September 26, 2026**, with re-certification, attachment-replacement, and validation steps.
 - Corrected re-certification/download order and linked certificate checks from the home page, README, certification pages, troubleshooting, and reminder template.
 - Added NIH's **September 29, 2026** foreign-component scenarios and clarified manuscript editing versus significant research performed abroad.

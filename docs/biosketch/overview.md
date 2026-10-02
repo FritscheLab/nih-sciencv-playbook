@@ -30,6 +30,8 @@ For NIH, the SciENcv output is effectively:
 
 ```mermaid
 block-beta
+    %% accTitle: Combined NIH biosketch PDF
+    %% accDescr: The combined PDF contains the Biographical Sketch Common Form with structured data and selected products and the NIH Biosketch Supplement with narratives and honors. One SciENcv certification covers the combined PDF.
     columns 2
     block:pdf:2
         columns 2

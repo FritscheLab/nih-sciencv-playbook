@@ -12,6 +12,8 @@ This section walks through producing the NIH Biographical Sketch in SciENcv: the
 
 ```mermaid
 mindmap
+  %% accTitle: NIH biosketch composition
+  %% accDescr: The Common Form contains identifying information, professional preparation, appointments and positions, and products. The NIH Supplement contains the personal statement, contributions to science, and honors. The named individual certifies one combined PDF.
   root((NIH Biosketch))
     Common Form
       Identifying information

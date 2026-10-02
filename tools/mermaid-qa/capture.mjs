@@ -106,7 +106,7 @@ try {
       await page.evaluate(() => document.fonts.ready);
       await page.waitForFunction(count => {
         const diagrams = [...document.querySelectorAll('.language-mermaid')];
-        return diagrams.length === count && diagrams.every(element => element.dataset.processed === 'true' && element.querySelector('svg'));
+        return diagrams.length === count && diagrams.every(element => element.dataset.mermaidEnhanced === 'true' && element.querySelector('svg'));
       }, { timeout: 10000 }, entries.length).catch(error => errors.push(error.message));
       const metrics = await page.evaluate(() => {
         const bounds = node => {
@@ -118,6 +118,7 @@ try {
           content: bounds(document.querySelector('.main-content')),
           diagrams: [...document.querySelectorAll('.language-mermaid')].map((element, index) => {
             const svg = element.querySelector('svg');
+            const container = element.closest('.mermaid-scroll') || element;
             if (!svg) return { ordinal: index + 1, missingSVG: true };
             const viewBox = svg.viewBox.baseVal;
             const displayed = bounds(svg);
@@ -128,9 +129,14 @@ try {
                 effectiveFont: parseFloat(getComputedStyle(node).fontSize) * scale,
               }));
             return {
-              ordinal: index + 1, wrapper: bounds(element), displayed,
+              ordinal: index + 1, wrapper: bounds(container), displayed,
               viewBox: { x: viewBox.x, y: viewBox.y, width: viewBox.width, height: viewBox.height }, scale,
-              wrapperScrollWidth: element.scrollWidth, minFont: Math.min(...labels.map(label => label.effectiveFont)), labels,
+              wrapperScrollWidth: container.scrollWidth, scrollLeft: container.scrollLeft,
+              scrollable: container.scrollWidth > container.clientWidth + 1,
+              tabIndex: container.getAttribute('tabindex'), scrollRole: container.getAttribute('role'),
+              scrollLabel: container.getAttribute('aria-label'),
+              scrollHint: container.closest('figure')?.querySelector('figcaption:not([hidden])')?.textContent || '',
+              minFont: Math.min(...labels.map(label => label.effectiveFont)), labels,
               title: svg.querySelector('title')?.textContent || '', description: svg.querySelector('desc')?.textContent || '',
               labelledBy: svg.getAttribute('aria-labelledby'), describedBy: svg.getAttribute('aria-describedby'), role: svg.getAttribute('role'),
               errorDiagram: !!svg.querySelector('.error-icon, .error-text'),
@@ -143,11 +149,27 @@ try {
       const elements = await page.$$('.language-mermaid');
       for (let i = 0; i < elements.length; i++) {
         const diagramImage = `screenshots/${slug}-${width}-d${i + 1}.png`;
-        await elements[i].screenshot({ path: path.join(output, diagramImage) });
+        const container = await elements[i].evaluateHandle(element => element.closest('.mermaid-scroll') || element);
+        await container.screenshot({ path: path.join(output, diagramImage) });
         const svg = await elements[i].evaluate(element => element.querySelector('svg')?.outerHTML || '');
         await fs.writeFile(path.join(output, diagramImage.replace(/\.png$/, '.svg')), svg);
         metrics.diagrams[i].screenshot = diagramImage;
         metrics.diagrams[i].source = entries[i];
+        // Capture the entire SVG separately from the intentional viewport crop.
+        const saved = await container.evaluate(element => {
+          const saved = { overflow: element.style.overflow, borderColor: element.style.borderColor, scrollLeft: element.scrollLeft };
+          element.style.overflow = 'visible'; element.style.borderColor = 'transparent'; element.scrollLeft = 0;
+          return saved;
+        });
+        const fullImage = diagramImage.replace(/\.png$/, '-full.png');
+        const svgElement = await elements[i].$('svg');
+        if (svgElement) {
+          await svgElement.screenshot({ path: path.join(output, fullImage) });
+          metrics.diagrams[i].fullScreenshot = fullImage;
+        }
+        await container.evaluate((element, saved) => {
+          element.style.overflow = saved.overflow; element.style.borderColor = saved.borderColor; element.scrollLeft = saved.scrollLeft;
+        }, saved);
       }
       report.pages.push({ path: sourcePath, width, errors: [...errors], screenshot: pageImage, ...metrics });
       await fs.writeFile(path.join(output, 'results.json'), JSON.stringify(report, null, 2));

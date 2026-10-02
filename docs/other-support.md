@@ -12,6 +12,8 @@ This section covers the NIH **Current and Pending (Other) Support (CPOS) Common 
 
 ```mermaid
 mindmap
+  %% accTitle: CPOS timing, entries, and workflow
+  %% accDescr: CPOS timing depends on the person and submission stage: application, JIT, RPPR, or Prior Approval. Entries include current and pending projects and reportable in-kind support. The workflow uses direct entry or XML upload, SciENcv UI review, and individual certification.
   root((CPOS))
     Timing
       Application

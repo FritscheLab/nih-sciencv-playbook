@@ -39,8 +39,8 @@ stateDiagram-v2
     [*] --> UploadReady
     UploadReady --> Imported: Upload through Data Ingest
     Imported --> Review
-    Review --> Incomplete: Required values are missing
-    Incomplete --> Review: Complete flagged fields
+    Review --> Incomplete: Missing required values
+    Incomplete --> Review: Complete fields
     Review --> Ready: Entries are complete
     Ready --> [*]
 ```

@@ -19,14 +19,20 @@ SciENcv is accessed through **MyNCBI**.
 
 ```mermaid
 block-beta
-    columns 2
-    block:account:2
-        columns 2
-        dashboard["MyNCBI account dashboard"]:2
+    %% accTitle: MyNCBI account and SciENcv document map
+    %% accDescr: Within the MyNCBI account, My Bibliography supplies product citations and delegate settings provide admin editing access to SciENcv. SciENcv contains biosketch and CPOS documents and produces certified PDFs.
+    columns 3
+    block:account:3
+        columns 3
+        dashboard["MyNCBI account dashboard"]:3
+        space:3
         bibliography["My Bibliography<br/>Product citation library"]
+        space
         delegates["Delegate settings<br/>Admin editing access"]
-        sciencv["SciENcv<br/>Biosketch and CPOS documents"]
-        output["Certified PDFs"]
+        space:3
+        sciencv["SciENcv<br/>Biosketch and CPOS documents"]:3
+        space:3
+        output["Certified PDFs"]:3
     end
     bibliography --> sciencv
     delegates --> sciencv
