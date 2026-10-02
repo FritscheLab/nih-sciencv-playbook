@@ -22,15 +22,31 @@ The site uses the **Just the Docs** Jekyll theme (remote theme), which is easy t
 
 Mermaid diagrams are enabled through the Just the Docs `mermaid` configuration in `docs/_config.yml`, using a pinned Mermaid release loaded by the theme.
 
-## Local preview (optional) 
+## Local preview (optional)
 
-If you want to preview locally:
+Use Ruby 3.3 and Bundler. On macOS with Homebrew, install Ruby and put it on the current shell's path:
+
+```bash
+brew install ruby@3.3
+export PATH="$(brew --prefix ruby@3.3)/bin:$PATH"
+```
+
+From the repository root, install the locked dependencies into the ignored local vendor directory, then start the preview:
 
 ```bash
 cd docs
+bundle config set --local path ../.vendor/bundle
 bundle install
 bundle exec jekyll serve
 ```
+
+For a build without a preview server, use `bundle exec jekyll build --destination /tmp/nih-sciencv-playbook-site` from `docs/`.
+
+## Mermaid visual QA
+
+The [browser capture tool](tools/mermaid-qa/README.md) uses the site's pinned Mermaid version and the built Jekyll pages. It captures every diagram at desktop and mobile widths and records rendering errors, displayed label sizes, and SVG accessibility metadata. Install its dependencies with `npm ci --prefix tools/mermaid-qa`; it requires Node.js 22.12 or newer and an installed Chrome or Chromium browser.
+
+Inspect the captured images to assess overlap, connector routing, contrast, and readability. A successful render alone does not establish a visual pass.
 
 ## Maintainers
 
