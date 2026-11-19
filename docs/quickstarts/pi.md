@@ -11,7 +11,7 @@ nav_order: 1
 1. **Create ORCID iD** (if you don’t have one).
 2. **Link ORCID to eRA Commons** (Personal Profile → ORCID section).
 3. **Confirm SciENcv access** (MyNCBI dashboard → SciENcv).
-4. **Confirm ORCID appears as the SciENcv PID** and matches eRA Commons (link ORCID in MyNCBI/SciENcv, sign in with ORCID, or manually enter it in the PID field).
+4. **Confirm the SciENcv Persistent Identifier (PID)** matches the ORCID iD linked in eRA Commons. If the PID is missing, link ORCID in My NCBI or SciENcv, sign in with ORCID, or enter it manually.
 5. **Add a delegate** (optional but recommended) (MyNCBI Account Settings → Delegates).
 6. **Clean up My Bibliography** (missing papers, wrong authorship, PMCID status).
 7. Select **up to 10 Products**:
@@ -50,6 +50,6 @@ flowchart TD
 
 ## When an admin helps
 
-Your delegate can do almost everything **except certification**. Plan a “certify window” into the submission timeline.
+Give staff access through [SciENcv delegation]({{ site.baseurl }}{% link getting-ready/delegates.md %}) so they can draft and review the forms using their own accounts. Keep your password, verification codes, and signed-in session private. Set aside time to sign in and personally certify every form that names you.
 
 Next: [Create the biosketch document in SciENcv]({{ site.baseurl }}{% link biosketch/create-document.md %})

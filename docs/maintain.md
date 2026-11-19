@@ -20,9 +20,7 @@ nav_order: 16
 
 ## Quarterly review checklist
 
-At least once per quarter, verify these source-of-truth pages and notices:
-
-- Use the short checklist page: [Quarterly Checklist (Maintainers)]({{ site.baseurl }}{% link quarterly-checklist.md %})
+Use the [quarterly checklist]({{ site.baseurl }}{% link quarterly-checklist.md %}) to verify official sources at least once a quarter.
 
 - Newest relevant NIH **Common Forms Guide Notices** and direct form instructions; verify the destination of any former hub link before relying on it
 - **NOT-OD-26-018**, the current Common Forms FAQs, and any newer notices
@@ -42,4 +40,4 @@ After content changes:
 
 ## Screenshot policy
 
-This repo includes **safe SVG placeholders**. Replace with screenshots that your institution is allowed to publish.
+Use screenshots your institution is allowed to publish. Crop out names, account identifiers, and other personal details. Label workflow diagrams as illustrations, and link to official help for current interface examples.

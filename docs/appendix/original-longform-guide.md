@@ -6,12 +6,10 @@ nav_order: 1
 
 # Long-form guide (current reference)
 
-This appendix is a continuous companion to the task-focused playbook. **Core policy review: 2026-10-02.** See [References]({{ site.baseurl }}{% link references.md %}) for the review scope and unresolved source checks; unchanged My NCBI UI guidance retains its prior review date of 2026-08-31.
+This appendix collects background and detailed instructions for the playbook. See [References]({{ site.baseurl }}{% link references.md %}) for the scope and dates of source checks.
 
 {: .warning }
 > **Current enforcement status:** NIH requires applicable Common Forms for applications and for JIT, RPPR, and Prior Approval submissions. eRA system validations stop submissions that do not use compliant, digitally certified SciENcv forms.
-
-# Comprehensive Guide to NIH Common Forms
 
 ## Executive summary
 
@@ -39,7 +37,7 @@ The most important operational points are:
 - The Common Form allows **up to 5 closely related products and up to 5 other significant products**; users do not need to fill all 10 slots. Either supplement narrative may use brief parenthetical references to any selected product.
 - **Current and Pending (Other) Support is not automatically part of every initial application package.** For many NIH applications, it is requested later in the lifecycle, often during **Just-in-Time (JIT)**.
 - Each individual must **personally certify** their own Common Form output in SciENcv. Delegates can prepare records, but they cannot certify them.
-- A downloaded SciENcv Common Form may be **renamed**, but the default is to keep it unmodified. Explicit exceptions use separate NIH-directed handling, including a compiled/flattened participating-faculty attachment, flattened foreign-contract copies uploaded separately, and flattened annual MFTRP statements. The Common Form signature date must be **within 12 months** of submission.
+- Keep the signed SciENcv PDF intact. You may rename it. See [Attachment handling](#62-what-certification-means-operationally) for NIH's separate instructions for participating-faculty biosketch compilations, foreign-contract copies, and MFTRP statements. The Common Form signature date must be **within 12 months** of submission.
 
 ---
 
@@ -63,7 +61,7 @@ NIH expects these documents to be produced through the SciENcv workflow rather t
 | --- | --- |
 | Application | Attach the combined Biosketch Common Form and NIH Supplement for every individual listed on the R&R Senior/Key Person Profile, including senior/key personnel and Other Significant Contributors. Attach CPOS only when the NOFO or Application Guide requires it for that person and mechanism. |
 | JIT | Submit information only when NIH requests it. Use the separate person-level fields for each applicable biosketch, CPOS, and foreign supporting document. The PD/PI may upload and save; only a Signing Official submits JIT. |
-| RPPR | Use Section D person-level fields when a participant's role or support status triggers an attachment. Handle annual MFTRP statements separately in Section G.1. |
+| RPPR | Use the [submission lifecycle guidance]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) for Section D attachments by report type. For MFTRP, check the [certification guidance]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for when to provide a separate Section G.1 statement. |
 | Prior Approval | Use the eRA Commons Prior Approval Module and follow the selected request type. A Change of PD/PI requires a biosketch and CPOS for each proposed PD/PI. |
 
 NIH's current Common Forms FAQs explicitly confirm the application biosketch population, including Other Significant Contributors.
@@ -88,7 +86,7 @@ At application:
 - each senior/key person certifies through the SciENcv biosketch that they are not currently party to an MFTRP; and
 - the AOR certifies through the application signature that senior/key personnel were informed of and complied with the individual certification requirement.
 
-The notice/RPPR-guide workflow uses a separate annual MFTRP statement from each senior/key person with NIH's required language: “I [insert name] certify that, at the time of submission, I am not a party to a malign foreign talent recruitment program.” Upload it in **RPPR Section G.1**, flatten the separate statement PDF, and name it `MFTRPcert_[Name].pdf`. Do not append that statement to, or use it to flatten, the biosketch or CPOS Common Form. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for signatures, dates, final/interim scope, and the current FAQ/guide conflict.
+For an RPPR, use [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to check whether to provide a separate Section G.1 statement, which language to use, and how to sign and submit it.
 
 ### 1.5 Other Support disclosure training is a separate recipient obligation
 
@@ -316,12 +314,12 @@ For **annual RPPR Section D**, use the person's role and support status to deter
 
 | Participant condition | Biosketch Common Form + NIH Supplement | CPOS | Foreign supporting documentation |
 | --- | --- | --- | --- |
-| New senior/key person | Required | Required | If applicable |
+| New senior/key person | Required. If a combined biosketch was already submitted, see the [submission lifecycle guidance]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}). | Required | If applicable |
 | Existing senior/key person with new or changed active support | No, unless otherwise requested | Required | If applicable |
 | New Other Significant Contributor | Required | Not required | Not required |
 | New training faculty member reported in a Training RPPR | Required | Required | If applicable |
 
-The last row is a narrow Training RPPR rule: the current RPPR instructions treat **new training faculty** as new senior/key personnel and require their biosketch, Supplement, CPOS, and applicable supplemental documentation. It does not make all Program Directors, training faculty, or training-grant oversight personnel routine CPOS submitters. Annual MFTRP statements are handled separately in **RPPR Section G.1**, not in Section D or inside a Common Form.
+The last row applies to **new training faculty** in a Training RPPR. The RPPR instructions treat them as new senior/key personnel and require their biosketch, Supplement, CPOS, and applicable supplemental documentation.
 
 For final/interim reports and effort thresholds, use the [submission lifecycle guidance]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}); do not apply the annual participant-change matrix to every RPPR type.
 
@@ -360,6 +358,8 @@ The same page also states that Other Support does **not** include:
 - training awards;
 - prizes; or
 - true gifts where there is no expectation of time, services, specific research activities, money, or other return commitment.
+
+See the [CPOS disclosure guidance]({{ site.baseurl }}{% link other-support/what-to-include.md %}) for NIH's instructions on monetary donations with donor restrictions.
 
 ### 5.6 Consulting: the current NIH trigger list
 
@@ -449,7 +449,7 @@ Keep the attachment types distinct:
 | SciENcv biosketch or CPOS Common Form | Rename if needed, but otherwise keep the certified PDF unmodified unless NIH instructions expressly say otherwise |
 | Participating-faculty biosketch attachment | Combine the individually certified forms and flatten the compiled attachment as NIH instructs |
 | Foreign appointment/employment contract copy | Flatten and upload separately in the designated supporting-documentation field; do not append it to CPOS |
-| Annual MFTRP RPPR statement | Flatten the separate statement and upload it in Section G.1 as `MFTRPcert_[Name].pdf`; do not append it to a Common Form |
+| Separate RPPR MFTRP statement, when required | Flatten the statement and upload it in Section G.1 as `MFTRPcert_[Name].pdf`. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}). |
 
 ### 6.3 Why flattening is a real submission risk
 
@@ -481,7 +481,7 @@ CPOS disclosure and foreign-component reporting overlap, but they are not the sa
 
 As a practical workflow, route the matter through institutional review and the funding IC even when no CPOS entry is required. Separately disclose any support, resource, appointment, affiliation, or commitment that NIH requires in CPOS.
 
-NIH's September 29, 2026 clarification distinguishes manuscript editing after moving abroad from significant new research abroad. See the [foreign-activity guidance and official scenarios]({{ site.baseurl }}{% link other-support/what-to-include.md %}).
+See the [foreign-activity guidance and official NIH examples]({{ site.baseurl }}{% link other-support/what-to-include.md %}) for when co-authorship or work abroad requires approval.
 
 ### 7.4 Using the wrong kind of product reference in the supplement
 
@@ -518,4 +518,4 @@ In multi-site applications, the lead institution cannot rely on locally editing 
 - NIH. [*R&R Senior/Key Person Profile (Expanded) Form*](https://grants.nih.gov/grants/how-to-apply-application-guide/forms-i/general/g.240-r%26r-seniorkey-person-profile-%28expanded%29-form.htm), [*NIH GPS §2.5.1 Just-in-Time Procedures*](https://grants.nih.gov/grants/policy/nihgps/HTML5/section_2/2.5.1_just-in-time_procedures.htm), and [*NIH RPPR Instruction Guide*](https://grants.nih.gov/sites/default/files/rppr_instruction_guide.pdf).
 - NIH. [*FY2027 Extramural LRP Application Instruction Guide*](https://grants.nih.gov/sites/default/files/Extramural-LRP-Application-Instruction-Guide.pdf).
 - eRA Commons. [*Just-in-Time Screen*](https://www.era.nih.gov/erahelp/commons/commons/status/jit.htm), [*Change of PD/PI Prior Approval*](https://www.era.nih.gov/erahelp/commons/commons/prior_approval%20module/Change_of_PI.htm), [*The ORCID iD*](https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm), and [*Consolidate Multiple eRA Commons Accounts*](https://www.era.nih.gov/register-accounts/consolidate-multiple-accounts.htm).
-- NCBI. [*My NCBI Help: SciENcv*](https://www.ncbi.nlm.nih.gov/books/NBK154494/) and [*SciENcv News & Updates*](https://www.ncbi.nlm.nih.gov/sciencv/newsupdates/).
+- NCBI. [*My NCBI Help: SciENcv*](https://www.ncbi.nlm.nih.gov/sites/books/NBK154494/) and [*SciENcv News & Updates*](https://www.ncbi.nlm.nih.gov/sciencv/newsupdates/).

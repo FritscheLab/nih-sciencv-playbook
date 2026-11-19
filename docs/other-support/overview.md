@@ -25,7 +25,7 @@ Key points:
 {: .note }
 > **Separate recipient obligation:** [NIH recipients must provide Other Support disclosure training](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html) to all faculty and researchers identified as senior/key personnel, in addition to maintaining a written and enforced disclosure policy. This institutional training requirement is distinct from the individual **Research Security Training (RST)** requirement.
 
-Use the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) for JIT authority, RPPR participant changes, annual MFTRP statements, and Change of PD/PI requirements.
+Use the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) to check who submits Just-in-Time materials and which attachments to prepare for progress reports and Change of PD/PI requests.
 
 ```mermaid
 flowchart TD

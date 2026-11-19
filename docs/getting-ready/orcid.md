@@ -21,23 +21,13 @@ eRA Commons provides a [**Consolidate Accounts** workflow](https://www.era.nih.g
 {: .note }
 > **Practical post-merge check:** after eRA confirms consolidation, log in with the retained credentials and review the **Personal Profile**, affiliations, roles, and ORCID link. Then confirm that the same ORCID appears as the SciENcv Common Form PID. Contact the eRA Service Desk if the ORCID remains linked incorrectly or any profile data is missing.
 
-## Steps (PI does this)
+## Steps for the person named on the form
 
-1. Create ORCID: <https://orcid.org/register>
-2. In **eRA Commons**: **Personal Profile → ORCID ID** → connect (**required**)
-3. In **MyNCBI/SciENcv**: either link ORCID in **Account Settings → Linked Accounts**, sign in using ORCID, or manually enter the ORCID iD in the Common Form PID field
-4. In **SciENcv**, confirm the ORCID shown as the **Persistent Identifier (PID)** matches the ORCID linked in **eRA Commons**.
+1. [Register for an ORCID iD](https://orcid.org/register) if you need one.
+2. Open **Personal Profile** in **eRA Commons** and select **Create or Connect Your ORCID iD**.
+3. In **SciENcv**, populate the PID by linking ORCID in your account settings, signing in with ORCID, or entering it manually in **Identifying Information, Organization and Location** on the Common Form.
+4. Compare the **Persistent Identifier (PID)** on the form with the ORCID iD linked to the **eRA Commons username used in the submission**.
 
-```mermaid
-flowchart TD
-    accTitle: ORCID linking and PID check
-    accDescr: The ORCID path connects one ORCID iD to eRA Commons and then confirms the same identifier appears in the SciENcv Common Form PID field.
-    A["Create or use existing ORCID iD"] --> B["Connect ORCID in eRA Commons Personal Profile"]
-    B --> C["Open MyNCBI / SciENcv"]
-    C --> D{"ORCID appears as SciENcv PID?"}
-    D -- "Yes, and it matches eRA" --> E["Ready for Common Forms"]
-    D -- "No" --> F["Link ORCID in MyNCBI, sign in with ORCID, or enter PID manually"]
-    F --> D
-```
+![The ORCID iD in your eRA Commons Personal Profile must match the Persistent Identifier on your SciENcv Common Form.]({{ "/assets/images/orcid-match.svg" | relative_url }})
 
-![ORCID linking placeholder]({{ "/assets/images/placeholder-orcid-linking.svg" | relative_url }})
+See the [NIH validation instructions](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-079.html). If the form shows the wrong identifier, follow [NCBI's steps to correct the PID](https://ncbiinsights.ncbi.nlm.nih.gov/correcting-a-pid-orcid-in-a-sciencv-document/).

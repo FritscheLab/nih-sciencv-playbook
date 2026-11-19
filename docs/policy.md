@@ -15,4 +15,4 @@ This section summarizes NIH's current Common Forms requirements, eRA validation 
 | Which RST and MFTRP certifications apply? | [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) |
 | How do the current forms differ from older formats? | [What changed]({{ site.baseurl }}{% link policy/what-changed.md %}) |
 
-Start with [Current NIH requirements]({{ site.baseurl }}{% link policy/effective-dates.md %}), then use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to distinguish application and annual RPPR requirements.
+Start with [Current NIH requirements]({{ site.baseurl }}{% link policy/effective-dates.md %}), then use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to check the requirements for applications and progress reports.

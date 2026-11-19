@@ -17,6 +17,12 @@ Treat CPOS as a **complete disclosure record** for resources and commitments tha
 
 Disclose all current and pending proposals/projects that NIH expects in CPOS, including support from domestic and foreign entities. Prepare a **separate entry** for each proposal/active project and for each reportable in-kind contribution.
 
+### Monetary donations for a named investigator’s research
+
+Disclose a monetary donation received within the **past year** when it funds a named senior/key person’s ongoing research and the donor directs how the funds should be used and requests scientific or financial updates. NIH also gives a reportable example where the donor verbally directed funds to specific research and the example omits any update request. Ask your sponsored programs office about directed donations with unclear terms. A gift for a research area that the institution allocates on its own is generally excluded. [NIH examples](https://grants.nih.gov/sites/default/files/monetary-donations-requiring-disclosure-example-scenarios.pdf), [FAQs on monetary donations](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=12040).
+
+Enter reportable donations as **Current** in **Proposals and Active Projects**. Use the donor’s primary location, the receipt month, the estimated end month of the supported activities, the amount received to date, and **0 person-months**. Describe the donor’s expectations and any overlap with active or pending NIH-funded projects. [NIH field instructions](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=58060).
+
 ### 2) Reportable consulting activities
 
 Include consulting under the **proposals / active projects** section when **any** of these NIH triggers apply:
@@ -33,10 +39,11 @@ Report non-cash contributions provided by an **external entity** that are **not 
 
 Include foreign appointments/employment/affiliations that imply commitment or support under NIH rules. If a foreign appointment and/or employment is reportable in CPOS, remember that **supporting documentation** (copies of contracts specific to those foreign appointments/employment arrangements) is **not appended inside SciENcv**. NIH says to attach that documentation **separately** in the relevant **eRA JIT, RPPR, or Prior Approval** module, with **translations** if the contract is not in English. The supporting-documentation requirement excludes **personal service contracts** and **employment contracts for fellows supported by foreign entities**; that exclusion does not by itself remove an otherwise reportable relationship from CPOS.
 
-{: .note }
-> **Related but separate:** NIH's [May 27, 2026 reminder](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html) did not change the CPOS categories or expand the foreign-component definition. NIH says **most instances of foreign co-authorship represent a foreign component**, although minor or indirect contributions may not. In **all cases**, recipients should report foreign co-authorship to the funding NIH Institute or Center **as soon as they become aware of it** so NIH can determine what steps, if any, are needed. As a practical workflow, route the matter through institutional review and the funding IC even when no CPOS entry is required; separately disclose any support, resource, appointment, affiliation, or commitment that NIH requires in CPOS.
+#### Foreign-component reporting and prior approval
 
-NIH's [September 29, 2026 clarification](https://grants.nih.gov/sites/default/files/co-authorship-and-foreign-components-faqs-from-fdp-discussion-with-nih-extramural-leadership-sep.pdf) gives concrete boundaries: a former U.S. postdoc who only edits an existing manuscript after moving abroad does not create a foreign component; new experiments or data analysis abroad on the NIH project do. Obtain NIH approval before that significant foreign work begins, and check that the award permits it. Foreign co-authorship on a review of published work does not by itself establish a foreign component. These distinctions do not remove separate CPOS disclosure or IC reporting obligations.
+Report foreign co-authorship on NIH-supported work to the funding NIH Institute or Center as soon as you become aware of it. If you expect a foreign collaboration to result in co-authorship, work with your institution to seek approval for the foreign component. Report any support, resources, appointments, or time commitments that meet the CPOS rules through the applicable CPOS workflow. [NIH Guide Notice NOT-OD-26-084](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html), [NIH co-authorship FAQ](https://grants.nih.gov/faqs#/Foreign-Collaborations-and-Components.htm?anchor=58032).
+
+For an active award, check that the award permits foreign components and obtain NIH approval before significant project work such as new experiments or data analysis takes place abroad. NIH gives examples that do not require prior approval on their own, including minor edits to an existing draft after a move abroad and a review article limited to published work. If you already published with an undisclosed foreign collaborator, contact your NIH Program Officer and institutional research administration office promptly. [NIH scenarios](https://grants.nih.gov/sites/default/files/co-authorship-and-foreign-components-faqs-from-fdp-discussion-with-nih-extramural-leadership-sep.pdf), [NIH FAQ on review articles](https://grants.nih.gov/faqs#/Foreign-Collaborations-and-Components.htm?anchor=58045), [NIH FAQ on already-published work](https://grants.nih.gov/faqs#/Foreign-Collaborations-and-Components.htm?anchor=58048).
 
 ## Usually exclude these categories
 
@@ -55,9 +62,9 @@ If you are reusing prior Other Support records at scale, see:
 ```mermaid
 flowchart TD
     accTitle: CPOS include or exclude check
-    accDescr: A practical CPOS disclosure check routes projects, consulting, in-kind contributions, foreign appointments, and common exclusions.
-    A["Potential item"] --> B{"Proposal or active project?"}
-    B -- "Yes" --> C["Include as separate project entry"]
+    accDescr: A practical CPOS disclosure check routes projects, reportable monetary donations, consulting, in-kind contributions, foreign appointments, and common exclusions.
+    A["Potential item"] --> B{"Proposal, active project, or<br/>reportable monetary donation?"}
+    B -- "Yes" --> C["Enter under Proposals and Active Projects"]
     B -- "No" --> D{"Reportable consulting trigger?"}
     D -- "Yes" --> C
     D -- "No" --> E{"External in-kind support?<br/>Not for this project;<br/>USD 5,000+ and time commitment"}

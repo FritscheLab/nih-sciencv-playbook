@@ -6,12 +6,12 @@ nav_order: 2
 
 # Administrator / Delegate quickstart
 
-## Before you touch SciENcv
+## Confirm access before drafting
 
 1. Ensure each PI/key person has:
    - eRA Commons ID
    - ORCID iD linked to **eRA Commons** (**required**)
-   - MyNCBI/SciENcv access working; ORCID appears as the SciENcv **PID** and matches eRA Commons
+   - My NCBI and SciENcv access, with a **Persistent Identifier (PID)** in SciENcv that matches the ORCID iD linked in eRA Commons
 2. Ask each PI to **add you as a delegate** in MyNCBI.
 3. Confirm you have access to:
    - **SciENcv** delegation
@@ -23,7 +23,7 @@ nav_order: 2
 - Import from ORCID (when clean) to reduce manual entry
 - Curate products (**up to 10 total**) and verify they align to narratives
 - Paste narratives using only SciENcv's supported **Markdown** formatting; re-check character counts and the rendered preview
-- Do a **PDF preview** for formatting/typos
+- Select **View Draft** to check the layout and proofread the draft PDF.
 
 For CPOS, check the NOFO and the applicable NIH Application Guide, JIT, RPPR, or Prior Approval instructions before requesting a document. A narrow exception matters for training grants: the NIH RPPR instructions treat **new training faculty** as new senior/key personnel and require their biosketch Common Form, NIH Supplement, CPOS, and any applicable supplemental documentation.
 
@@ -32,13 +32,16 @@ For CPOS, check the NOFO and the applicable NIH Application Guide, JIT, RPPR, or
 
 For each application, verify under your institution’s process that every senior/key person’s RST completion date falls within the 12 months before submission. Also preserve time for the named person’s biosketch certification and the AOR’s separate institutional certification for covered individuals employed by the applicant organization.
 
-## Hand-off to the named individual (required)
+## Hand off to the named individual
 
-- Send each named individual your “ready to certify” note
-- The named individual logs in, **certifies**, and downloads the requested PDFs (or lets you download after certification)
-- For an RPPR, follow the [MFTRP certification workflow and current FAQ/guide conflict]({{ site.baseurl }}{% link policy/research-security-certifications.md %}); keep any separate Section G.1 statements apart from Common Forms
+- Tell each named individual which documents are ready for certification.
+- Each person signs in to SciENcv and **certifies** the requested documents. Coordinate who downloads the certified PDFs.
+- For a Research Performance Progress Report (RPPR), use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to check whether a separate Section G.1 statement is needed.
 
-See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) and the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).
+{: .warning }
+> **Use your own account.** Do not ask for the investigator's password or verification code, use their signed-in session, or certify on their behalf. Use [SciENcv delegation]({{ site.baseurl }}{% link getting-ready/delegates.md %}) for drafting and review.
+
+Confirm the required attachments for each person and stage in the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).
 
 ```mermaid
 swimlane-beta TB

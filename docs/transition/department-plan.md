@@ -36,6 +36,6 @@ timeline TD
 - Biosketch certified? (Y/N)
 - CPOS required for this person/stage? If yes, certified? (Y/N)
 - Application RST completed within the prior 12 months? (Y/N/N/A)
-- Annual RPPR MFTRP Section G.1 statement collected? (Y/N/N/A)
+- RPPR MFTRP certification evidence collected, including a separate Section G.1 statement if required? (Y/N/N/A)
 
 Use the [submission-lifecycle matrix]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) before assigning documents.

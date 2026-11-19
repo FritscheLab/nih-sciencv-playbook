@@ -11,9 +11,12 @@ nav_order: 4
 
 When CPOS is required for the person and submission stage, use the same individual-certification pattern as the biosketch:
 
-1. The individual named on the CPOS clicks **Download PDF** in SciENcv.
-2. The individual reviews the statement and clicks **Certify** (a delegate cannot).
-3. Download the newly certified PDF and submit it without modification.
+1. Sign in to your own SciENcv account and open the completed CPOS form.
+2. Select **Download PDF** to open the certification statement.
+3. Review the statement and select **Certify** to download the certified PDF.
+
+{: .warning }
+> **The named individual must certify.** Keep your password, verification codes, and signed-in session private. Give staff drafting access through [SciENcv delegation]({{ site.baseurl }}{% link getting-ready/delegates.md %}).
 
 {: .warning }
 > Keep the certified CPOS PDF unmodified unless the NIH Application Guide or NOFO expressly requires otherwise. Do not print/flatten it merely to combine it with another person’s form or with supporting documentation.

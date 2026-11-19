@@ -8,11 +8,11 @@ nav_order: 2
 
 ## Can my admin certify for me?
 
-No. Certification must be completed by the individual from their own SciENcv account.
+The person named on the form must personally certify from their own SciENcv account. Keep your password, verification codes, and signed-in session private. Staff can help prepare the form through [SciENcv delegation]({{ site.baseurl }}{% link getting-ready/delegates.md %}).
 
 ## Can I edit the PDF after I download it?
 
-Not by default. Any edit risks breaking the machine-readable metadata. Preserve each certified SciENcv Common Form unless the NIH Application Guide or NOFO expressly requires a special attachment, such as compiled/flattened participating-faculty biosketches. Flatten required foreign contracts and annual MFTRP statements as **separate** attachments; do not append them to a Common Form.
+Keep each certified SciENcv PDF intact to preserve its machine-readable metadata. Follow the NIH Application Guide or notice of funding opportunity (NOFO) if it expressly requires a special attachment such as a flattened compilation of participating-faculty biosketches. When NIH requests foreign contracts or separate MFTRP statements, upload those as separate flattened attachments.
 
 ## Do I always submit CPOS with an NIH application?
 
@@ -28,7 +28,7 @@ No. Each senior/key person must complete qualifying RST within the 12 months bef
 
 ## Where does the annual MFTRP certification go?
 
-The notice/RPPR-guide workflow uses a separate statement in Section G.1, named `MFTRPcert_[Name].pdf`. Do not append it to the biosketch or CPOS PDF. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for signature/date requirements, final/interim scope, and the current FAQ exception that conflicts with the guide.
+When you need a separate malign foreign talent recruitment program (MFTRP) statement, upload it in Section G.1 of the Research Performance Progress Report (RPPR) as `MFTRPcert_[Name].pdf`. Check [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to determine when to provide that statement and how to sign and submit it.
 
 ## Can I reuse an older certified PDF?
 

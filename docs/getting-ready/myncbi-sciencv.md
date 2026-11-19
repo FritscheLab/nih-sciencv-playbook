@@ -39,4 +39,4 @@ block-beta
     sciencv --> output
 ```
 
-![SciENcv dashboard placeholder]({{ "/assets/images/placeholder-sciencv-dashboard.svg" | relative_url }})
+See the [illustrated My NCBI Help guide to SciENcv](https://www.ncbi.nlm.nih.gov/sites/books/NBK154494/).

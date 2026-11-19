@@ -5,7 +5,7 @@ nav_order: 15
 
 # Complete walkthrough (Biosketch + CPOS)
 
-This page consolidates the end-to-end steps (PI + admin) for both documents.
+Use this walkthrough to prepare the NIH biosketch and, when required, the Current and Pending (Other) Support (CPOS) Common Form.
 
 ```mermaid
 flowchart TD
@@ -22,12 +22,12 @@ flowchart TD
     H --> I["Keep Common Forms unmodified by default"]
 ```
 
-## 0) Prep (do once per person)
+## 0) Confirm account access and reusable records
 
 - Confirm **eRA Commons ID**
 - Create **ORCID iD**
 - Link ORCID in **eRA Commons** (**required**)
-- Confirm the same ORCID appears as the **SciENcv PID** (link ORCID in MyNCBI/SciENcv, sign in with ORCID, or manually enter it)
+- Confirm the same ORCID iD appears as the **Persistent Identifier (PID)** in SciENcv. If it is missing, link ORCID in My NCBI or SciENcv, sign in with ORCID, or enter it manually.
 - Clean **My Bibliography** (publications + non-traditional products)
 - Add **delegate** (optional)
 
@@ -75,10 +75,8 @@ For JIT, RPPR, and Prior Approval person-level rules, see [Submission lifecycle]
 
 ## 3) Certification (individual-only)
 
-- Verify that each senior/key person completed qualifying RST within the 12 months before application submission.
-- Each named individual certifies and downloads **each document required for that person and stage**; a delegate cannot certify.
-- The biosketch certification includes individual RST and MFTRP attestations as applicable. For RST, the AOR certifies institutional compliance for covered individuals employed by the applicant organization. For MFTRP, the AOR certifies that all identified senior/key personnel were informed of and complied with the individual-certification responsibility.
+- Verify that each senior/key person completed qualifying **Research Security Training (RST)** within the 12 months before application submission.
+- Each named individual signs in to SciENcv to certify and download **each document required for that person and stage**.
+- The biosketch certification includes individual RST and **malign foreign talent recruitment program (MFTRP)** attestations as applicable. The Authorized Organization Representative (AOR) certifies RST compliance for covered individuals employed by the applicant organization. For MFTRP, the AOR certifies that senior/key personnel were informed of and complied with the individual certification requirement.
 - Keep each certified SciENcv PDF unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment.
-- For an RPPR, collect the annual MFTRP Section G.1 statement separately from the SciENcv forms.
-
-See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the application and annual RPPR checkpoints.
+- For a Research Performance Progress Report (RPPR), use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to check whether to provide a separate Section G.1 statement.

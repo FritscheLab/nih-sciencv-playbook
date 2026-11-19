@@ -13,16 +13,16 @@ Every person listed on the application’s **R&R Senior/Key Person Profile (Expa
 
 ## Quick steps
 
-1. ORCID iD: create (if needed)
-2. Link ORCID to **eRA Commons** (**required**) and confirm the same ORCID appears as the SciENcv **PID**
-3. Ensure your **My Bibliography** is correct
-4. Create the SciENcv documents (or work with your delegate)
-5. Complete qualifying **Research Security Training** within the 12 months before application submission
-6. **Certify + download each requested PDF** from your own SciENcv account
+1. Create an ORCID iD if you need one.
+2. Link your ORCID iD to **eRA Commons** and confirm the same iD appears as the **Persistent Identifier (PID)** in SciENcv.
+3. Review your **My Bibliography** entries for missing or incorrect citations.
+4. Create the SciENcv documents yourself or work with your delegate.
+5. If you are listed as senior/key personnel, complete qualifying **Research Security Training (RST)** within the 12 months before application submission. See [NIH's RST notice](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-017.html).
+6. **Certify and download each required PDF** from your own SciENcv account.
 
-If your institution is an NIH recipient, complete its required **Other Support disclosure training**. Recipients must train faculty and researchers identified as senior/key personnel on Other Support disclosure responsibilities. This recipient-provided training is separate from **Research Security Training (RST)**.
+If you are faculty or a researcher identified as senior/key personnel at an NIH recipient institution, follow your institution's **Other Support disclosure training** process. This training is separate from RST.
 
-For an annual RPPR, provide the separate MFTRP statement requested for Section G.1. See [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+For a Research Performance Progress Report (RPPR), use the [research-security certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to check whether to provide a separate Section G.1 statement.
 
 ```mermaid
 flowchart TD

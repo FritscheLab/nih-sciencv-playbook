@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="352" height="208" viewBox="0 0 352 208"
+     role="img" aria-labelledby="title" aria-describedby="description">
+  <title id="title">Match your ORCID iD in eRA Commons and SciENcv</title>
+  <desc id="description">Compare the ORCID iD linked in your eRA Commons Personal Profile with the Persistent Identifier (PID) on your SciENcv Common Form. The two identifiers must match.</desc>
+  <path d="M176 66v76" stroke="#35625d" stroke-width="2"/>
+  <g fill="#f5f8fb" stroke="#708094" stroke-width="1.5">
+    <rect x="1" y="1" width="350" height="66" rx="9"/>
+    <rect x="1" y="141" width="350" height="66" rx="9"/>
+  </g>
+  <rect x="87" y="84" width="178" height="40" rx="20" fill="#19534a"/>
+  <g text-anchor="middle" font-family="system-ui, sans-serif" fill="#172d43">
+    <g font-size="19" font-weight="700">
+      <text x="176" y="28">eRA Commons</text>
+      <text x="176" y="168">SciENcv Common Form</text>
+      <text x="176" y="111" fill="#fff">Same ORCID iD</text>
+    </g>
+    <g font-size="18">
+      <text x="176" y="52">Personal Profile</text>
+      <text x="176" y="192">Persistent Identifier (PID)</text>
+    </g>
+  </g>
+</svg>

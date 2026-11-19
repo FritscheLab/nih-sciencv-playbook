@@ -12,7 +12,7 @@ Three related requirements use different evidence and submission points. Track t
 |---|---|---|---|
 | Research security training (RST) | NIH applications | Each senior/key person completes qualifying RST within the **12 months before application submission** and certifies through the SciENcv biosketch | The AOR certifies compliance for each covered individual employed by the applicant organization through the application signature |
 | MFTRP certification at application | NIH applications | Each senior/key person certifies through the SciENcv biosketch that they are not currently party to an MFTRP | The AOR certifies that senior/key personnel were informed of and complied with the individual certification requirement |
-| Annual MFTRP certification | NIH RPPRs, including final and interim | Each senior/key person follows the MFTRP certification workflow below; see the FAQ/guide conflict | The recipient confirms and submits the required evidence with the RPPR |
+| MFTRP certification at RPPR | NIH RPPRs, including final and interim | Each senior/key person certifies. Check the instructions below for the evidence to provide. | The recipient confirms and submits the required evidence with the RPPR |
 
 ## Research security training (RST)
 
@@ -29,22 +29,19 @@ For each covered application:
 
 An individual who is currently party to a malign foreign talent recruitment program is not eligible to serve as senior/key personnel on an NIH grant or cooperative agreement.
 
-At application, the individual and institutional MFTRP certifications are carried through the biosketch and application-signature workflows described above. The implementation notice and January 2026 RPPR guide prescribe this separate-statement workflow:
+### RPPR certification evidence
 
-- collect a separate certification from **each senior/key person**;
-- use NIH’s required statement: “I [insert name] certify that, at the time of submission, I am not a party to a malign foreign talent recruitment program.”
-- have the individual **electronically sign and date** the statement before flattening; a typed name alone is insufficient ([FAQ 57900](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57900));
-- upload it in **Section G.1, Special Notice of Award and Funding Opportunity Announcement Reporting Requirements**;
-- flatten that statement PDF as required; and
-- name each file `MFTRPcert_[Name].pdf`, replacing `[Name]` with the senior/key person’s name.
+**Final and interim RPPRs also require MFTRP certification.** The implementation notice and January 2026 RPPR guide direct recipients to collect a separate statement from each senior/key person. [NIH Guide Notice NOT-OD-26-018](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html), [NIH RPPR Instruction Guide](https://grants.nih.gov/sites/default/files/rppr_instruction_guide.pdf), [FAQ 57902](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57902).
 
 {: .warning }
-> The annual MFTRP statement is a **separate RPPR attachment**. It does not replace the Common Form certification, and it is not appended to or used to flatten the SciENcv biosketch or CPOS PDF.
+> **Official instructions differ.** NIH’s May 11, 2026 FAQ says a required RPPR biosketch or CPOS Common Form already carries a digital certification that fulfills the individual MFTRP requirement. The guide and notice specify a separate Section G.1 statement. Follow the separate-statement workflow below unless your Signing Official (SO) confirms the FAQ exception with the funding Institute or Center. [FAQ 57890](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57890).
 
-NIH permits reuse of a signed statement for **12 months**, with an upload in each applicable RPPR ([FAQ 57901](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57901)). **Final and interim RPPRs also require MFTRP certification** ([FAQ 57902](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57902)).
+1. Have each senior/key person use NIH’s required statement. “I [insert name] certify that, at the time of submission, I am not a party to a malign foreign talent recruitment program.”
+2. Have the individual **electronically sign and date** the statement. NIH requires an electronic signature. [FAQ 57900](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57900).
+3. Flatten the signed statement PDF and save it as `MFTRPcert_[Name].pdf`, replacing `[Name]` with the senior/key person’s name.
+4. Upload the statement separately in **RPPR Section G.1**. Keep any SciENcv biosketch or CPOS Common Form PDF intact.
 
-{: .warning }
-> **Official-source conflict, checked October 2, 2026:** [FAQ 57890, updated May 11, 2026](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57890), says an RPPR-required biosketch or CPOS certification fulfills MFTRP certification without a separate G.1 statement. NOT-OD-26-018 and the RPPR guide still prescribe separate statements. This playbook retains their workflow; have the SO confirm any FAQ-based exception with the funding IC.
+NIH permits reuse of a signed statement for **12 months**. Upload it in each applicable RPPR. [FAQ 57901](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57901).
 
 ## Do not combine this with disclosure training
 

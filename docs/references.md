@@ -5,7 +5,7 @@ nav_order: 11
 
 # References
 
-Core NIH Common Forms notices, final form instructions, Common Forms FAQs, RPPR/JIT/Prior Approval instructions, FY2027 LRP guide, eRA ORCID help, NLM XML upload guidance and samples, and OMB status reviewed on **2026-10-02**. Broader NSF/NSPM-33 context retains its **2026-08-31** review date.
+On **November 19, 2026**, we checked the core enforcement and certification notices, final form instructions, selected Common Forms FAQs, the new foreign-collaboration FAQs, RPPR/JIT/Prior Approval instructions, My NCBI Help, NLM's XML structure article and samples, and OMB status. The FY2027 LRP guide was last checked on **October 2, 2026**. The broader NSF/NSPM-33 review dates to **August 31, 2026**.
 
 {: .warning }
 > For enforcement timing, use the **newest relevant NIH Guide Notice**. The former Common Forms hub URL redirects to a general Forms Directory as of this review; that destination does not replace the policy notice. Use the form pages and direct instructions below for form content.
@@ -24,6 +24,7 @@ Core NIH Common Forms notices, final form instructions, Common Forms FAQs, RPPR/
 - [NOT-OD-25-133 (other support disclosure training policy; effective October 1, 2025)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-133.html)
 - [NOT-OD-26-084 (foreign component definition reminder)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-084.html)
 - [NIH co-authorship and foreign-component scenarios (updated September 29, 2026)](https://grants.nih.gov/sites/default/files/co-authorship-and-foreign-components-faqs-from-fdp-discussion-with-nih-extramural-leadership-sep.pdf)
+- [NIH Foreign Collaborations and Components FAQs (announced November 18, 2026)](https://grants.nih.gov/faqs#/Foreign-Collaborations-and-Components.htm)
 - [NOT-OD-26-026 (all NIH Prior Approval requests through the eRA Commons module)](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-026.html)
 - [NIH Grants Policy Statement (March 2026)](https://grants.nih.gov/policy-and-compliance/nihgps)
 - [NIH Common Forms FAQs](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm)
@@ -39,6 +40,8 @@ Core NIH Common Forms notices, final form instructions, Common Forms FAQs, RPPR/
 - [Final Biosketch Common Form PDF instructions](https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Biographical%20Sketch_FINAL.pdf)
 - [Final NIH Biosketch Supplement PDF instructions](https://grants.nih.gov/sites/default/files/NIH%20Biographical%20Sketch%20Supplement_FINAL.pdf)
 - [Final CPOS Common Form PDF instructions](https://grants.nih.gov/sites/default/files/Common%20Form%20NIH%20Current%20and%20Pending%20%28Other%29%20Support_FINAL.pdf)
+- [NIH examples of monetary donations that require disclosure](https://grants.nih.gov/sites/default/files/monetary-donations-requiring-disclosure-example-scenarios.pdf)
+- [NIH Common Forms FAQs: disclosing monetary donations](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=12040)
 - [NIH Advice on Application Sections](https://grants.nih.gov/grants-process/write-application/advice-on-application-sections)
 - [NIH GPS §2.5.1: Just-in-Time Procedures / Other Support](https://grants.nih.gov/grants/policy/nihgps/HTML5/section_2/2.5.1_just-in-time_procedures.htm)
 - [NIH Requirements for Disclosure of Other Support, Foreign Components, and Conflicts of Interest](https://www.grants.nih.gov/policy-and-compliance/policy-topics/foreign-interference/requirements-for-disclosure)
@@ -60,7 +63,7 @@ The FY2027 LRP workflow requires a digitally certified combined biosketch for th
 ## eRA / SciENcv / NCBI
 
 - [SciENcv (NCBI)](https://www.ncbi.nlm.nih.gov/sciencv/)
-- [My NCBI Help: SciENcv](https://www.ncbi.nlm.nih.gov/books/NBK154494/)
+- [My NCBI Help: SciENcv](https://www.ncbi.nlm.nih.gov/sites/books/NBK154494/)
 - [SciENcv News & Updates](https://www.ncbi.nlm.nih.gov/sciencv/newsupdates/)
 - [eRA: ORCID iD help](https://www.era.nih.gov/erahelp/commons/PPF_Help/8_2_orcid.htm)
 - [eRA: Consolidate Multiple eRA Commons Accounts](https://www.era.nih.gov/register-accounts/consolidate-multiple-accounts.htm)
@@ -69,6 +72,7 @@ The FY2027 LRP workflow requires a digitally certified combined biosketch for th
 - [eRA: RPPR Section D Common Form transcript (PDF)](https://www.era.nih.gov/files/RPPR-D-Common-Form-Transcript.pdf)
 - [NCBI Insights: Linking an ORCID account to My NCBI/SciENcv (workflow how-to; not an enforcement source)](https://ncbiinsights.ncbi.nlm.nih.gov/linking-an-orcid-account-to-sciencv/)
 - [NCBI Insights: Fixing an incorrect PID/ORCID in a SciENcv document](https://ncbiinsights.ncbi.nlm.nih.gov/correcting-a-pid-orcid-in-a-sciencv-document/)
+- [NCBI Insights: account logins and delegation](https://ncbiinsights.ncbi.nlm.nih.gov/my-ncbi-login-transition-tips/)
 - [NIH Nexus: Step-by-step guidance to link ORCID to eRA Commons](https://grants.nih.gov/news-events/nih-extramural-nexus-news/2026/07/step-by-step-guidance-available-to-link-your-orcid-id-to-your-era-commons-profile)
 - [NLM Support: CPOS XML file upload structure (KA-05499)](https://support.nlm.nih.gov/kbArticle/?pn=KA-05499)
 - [NLM Support: Troubleshooting CPOS XML upload errors (KA-05498)](https://support.nlm.nih.gov/kbArticle/?pn=KA-05498)
@@ -83,15 +87,16 @@ The FY2027 LRP workflow requires a digitally certified combined biosketch for th
 - [NSF NSPM-33 definitions](https://www.nsf.gov/policies/nspm-33/definitions)
 - [OSTP policy regarding use of common disclosure forms (archived official PDF)](https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/02/OSTP-Common-Disclosure-Form-Policy.pdf)
 - [Federal Register notice: proposed renewal of OMB 3145-0279 (official-edition PDF)](https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17415.pdf)
-- [OIRA: NIH Common Forms usage, active through October 31, 2026](https://www.reginfo.gov/public/do/PRAViewRCF?ref_nbr=202507-0925-001CF)
+- [OIRA: NIH Common Forms usage, active through April 30, 2027](https://www.reginfo.gov/public/do/PRAViewRCF?ref_nbr=202507-0925-001CF)
 
-The August 26, 2026 Federal Register notice begins the renewal process for the Common Forms information collection. It does not replace the current forms; maintainers should watch for OMB clearance and agency replacement instructions.
+The August 26, 2026 Federal Register notice invited comment on renewing the information collection. The currently posted Biosketch and CPOS instructions both show **April 30, 2027**, matching the active expiration date in OIRA’s NIH record.
 
-## Review gaps and source conflicts (October 2, 2026)
+## Review gaps and source conflicts (November 19, 2026)
 
 - The [MFTRP certification guide]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) records a conflict between the current Common Forms FAQ and the implementation notice/RPPR guide about separate Section G.1 statements.
+- The [submission lifecycle guide]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}#annual-rppr-section-d-participant-changes) notes how the RPPR guide and Common Forms FAQ differ on biosketch uploads for new senior/key personnel whose biosketch was already supplied.
 - The [September signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) is sourced to institutional notices. A public NIH/eRA/NCBI notice confirming its dates was not located in this review.
-- My NCBI Help returned a browser-verification page. Its existing UI guidance was not reverified; the accessible SciENcv news page and NLM upload instructions were checked separately.
+- NLM's XML troubleshooting article (KA-05498) was unavailable during this review. The [XML structure article (KA-05499)](https://support.nlm.nih.gov/kbArticle/?pn=KA-05499) and sample files were accessible.
 
 ## Institutional operational alerts
 

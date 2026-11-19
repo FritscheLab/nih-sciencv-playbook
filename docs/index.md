@@ -5,29 +5,28 @@ nav_order: 1
 
 # NIH Common Forms (SciENcv) Playbook
 
-This site is a **PI + admin team** guide to preparing NIH’s required **Common Forms** in **SciENcv**:
+Use this playbook to prepare NIH forms in SciENcv, whether you are an investigator, another person named on a form, or the staff member helping prepare it.
 
-- **NIH Biosketch** = *Biographical Sketch Common Form* + *NIH Biographical Sketch Supplement*
-- **Current and Pending (Other) Support** = *CPOS Common Form*
+- **NIH biosketch:** Biographical Sketch Common Form and NIH Biographical Sketch Supplement
+- **Current and Pending (Other) Support (CPOS):** a separate Common Form
 
-Independent guide, not official NIH/NCBI guidance. Verify details in [References]({{ site.baseurl }}{% link references.md %}).
-
-{: .warning }
-> **Current NIH requirements:** Use the applicable SciENcv-generated, digitally certified Common Forms and NIH Biosketch Supplement. eRA system validations stop submissions that do not use compliant forms. Each senior/key person must also meet the current research-security training and MFTRP certification requirements; the applicant organization provides the required institutional certifications through its AOR. See [Policy & Current Requirements]({{ site.baseurl }}{% link policy.md %}).
-
-## Start here (role-based)
+This independent guide links to the official instructions in [References]({{ site.baseurl }}{% link references.md %}).
 
 {: .warning }
-> **Reusing a saved SciENcv PDF?** Read the [September 2026 signing-certificate alert]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) before submission and replace affected attachments with newly certified PDFs.
+> **Use certified SciENcv PDFs.** eRA validation stops submissions that lack compliant forms. Check [which forms to attach at each submission stage]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}) and [who must complete the research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
+
+## Choose your quickstart
 
 - [PI / faculty (15-minute checklist)]({{ site.baseurl }}{% link quickstarts/pi.md %})
 - [Administrator / delegate (fast checklist)]({{ site.baseurl }}{% link quickstarts/admin-delegate.md %})
 - [Co-I / key personnel (fast checklist)]({{ site.baseurl }}{% link quickstarts/key-personnel.md %})
 
-## The two biggest success factors
+{: .warning }
+> **Reusing a saved SciENcv PDF?** Check whether the [September 2026 signing-certificate rollover]({{ site.baseurl }}{% link troubleshooting/september-2026-certificates.md %}) affects your attachment.
 
-1. **Identity + data plumbing is correct** (ORCID linked to eRA Commons; ORCID appears as the SciENcv PID; My Bibliography clean).
-2. **Workflow timing** accounts for **individual certification** in SciENcv (delegates cannot certify), application RST checks, and annual RPPR MFTRP statements.
+## Prepare and certify your forms
+
+Check that the ORCID iD linked in eRA Commons matches the persistent identifier on the SciENcv form. Allow time for each person named on a form to review and certify it in their own account.
 
 ```mermaid
 stateDiagram-v2
@@ -49,12 +48,4 @@ stateDiagram-v2
     Ready --> [*]
 ```
 
-## What’s inside
-
-- A fast checklist for each role
-- Step-by-step “how-to” pages for SciENcv biosketch and CPOS
-- Templates (Personal Statement, Contributions, intake forms, email nudges)
-- Troubleshooting and common eRA validation failures
-- Curated references (NIH + institutional guides)
-
-Start policy checks with [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) and [Submission lifecycle]({{ site.baseurl }}{% link other-support/lifecycle-submission.md %}).
+See the [complete walkthrough]({{ site.baseurl }}{% link complete-walkthrough.md %}) for the steps from account setup through submission.

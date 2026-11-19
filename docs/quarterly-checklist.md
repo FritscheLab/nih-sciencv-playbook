@@ -12,7 +12,7 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 
 - Check all relevant Guide Notices newer than **NOT-OD-26-079** for effective-date or validation changes. Verify former hub links actually resolve to relevant policy content; the old hub redirects to a general Forms Directory as of October 2, 2026.
 - Compare the forms-directory pages with the **direct final Biosketch, Supplement, and CPOS PDFs**. Confirm the up-to-5 + up-to-5 Product limits and the parenthetical narrative-reference rule have not changed.
-- Check the OMB lines on the two Common Forms and the NIH Supplement. The two Common Forms presently display **3145-0279 / Oct 31, 2026**; the Supplement displays **0925-0001 / Dec 31, 2027** and **0925-0002 / Nov 30, 2027**. NSF's [August 26, 2026 renewal notice](https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17415.pdf) is an active renewal process, not a replacement form. Watch for completed OMB clearance and agency replacement instructions; do not infer automatic invalidity from the displayed expiration date.
+- Compare the OMB control numbers and dates on the current form PDFs and in the [OIRA record for NIH's use of the Common Forms](https://www.reginfo.gov/public/do/PRAViewRCF?ref_nbr=202507-0925-001CF). On November 19, 2026, the two Common Forms displayed **3145-0279 / April 30, 2027**, matching the active OIRA record. The Supplement displayed **0925-0001 / December 31, 2027** and **0925-0002 / November 30, 2027**. Follow NIH's current preparation and submission instructions.
 - Recheck **NOT-OD-26-017** and the current Common Forms RST FAQ for the 12-month completion window, individual biosketch certification, AOR certification population, recognized training resources, and all required topics, including MFTRP risks and the NIH senior/key-person prohibition.
 - Recheck **NOT-OD-26-018**, the RPPR guide, and current FAQs for MFTRP statement text, electronic signatures/dates, reuse, final/interim scope, flattening, and `MFTRPcert_[Name].pdf` filenames. Track the [FAQ/guide conflict about separate statements]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) until NIH reconciles it.
 - Keep the recipient **Other Support disclosure-training requirement** separate from application RST.
@@ -47,6 +47,6 @@ Use this once per quarter to keep the playbook aligned with current NIH/eRA guid
 
 - Update `docs/changelog.md`
 - Run `git diff --check`, the XML validator tests, mirror comparison, and a Jekyll build when dependencies are available
-- After changing the pinned Mermaid version, render-check the timeline, swimlane, block, state, and TreeView examples; beta diagram syntax may evolve
+- After changing diagrams or shared rendering code, run the repository's Mermaid visual QA and inspect desktop and mobile captures.
 - Rebuild/redeploy GitHub Pages
 - Spot-check key live pages for correctness and formatting

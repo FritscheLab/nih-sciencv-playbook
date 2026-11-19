@@ -421,7 +421,7 @@
         th,
         td {
             border-bottom: 1px solid var(--border-color);
-            padding: 8px 10px;
+            padding: 8px 6px;
             text-align: left;
             vertical-align: top;
         }
@@ -431,6 +431,15 @@
             position: sticky;
             top: 0;
             z-index: 1;
+        }
+
+        th:first-child {
+            width: 46%;
+        }
+
+        td:first-child,
+        td:last-child {
+            overflow-wrap: anywhere;
         }
 
         tr:last-child td {
@@ -504,8 +513,8 @@
                 <div class="controls" aria-label="Validation options">
                     <label>
                         <input type="checkbox" id="upload-mode" checked />
-                        <span class="control-label">Upload mode: strip any <span class="tag">&lt;profile ...&gt;</span> attributes (no
-                            xmlns/doctype/accession)</span>
+                        <span class="control-label">Strip <span class="tag">&lt;profile&gt;</span> attributes when formatting,
+                            shortening, or saving XML</span>
                     </label>
                     <label>
                         <input type="checkbox" id="strict-length" checked />
@@ -557,7 +566,7 @@
                             <thead>
                                 <tr>
                                     <th>Element</th>
-                                    <th>Max length</th>
+                                    <th>Limit</th>
                                     <th>Notes</th>
                                 </tr>
                             </thead>
@@ -768,7 +777,7 @@
             // Root attributes / namespaces (UPLOAD template expects none)
             if (root.attributes && root.attributes.length > 0) {
                 const attrs = Array.from(root.attributes).map(a => a.name).join(", ");
-                addIssue(issues, "error", `Root <profile> must NOT have any attributes in upload mode (no xmlns, doctype, schemaLocation, accession). Found attributes: ${attrs}. Fix: use a bare <profile> tag with no attributes.`);
+                addIssue(issues, "error", `The <profile> root has attributes (${attrs}). Use a bare <profile> tag for SciENcv XML upload.`);
             }
 
             // Basic child order under profile

@@ -5,28 +5,23 @@ nav_order: 2
 
 # Start Here
 
-## Why this exists
+NIH uses SciENcv to generate digitally certified PDFs for the biosketch and Current and Pending (Other) Support (CPOS).
 
-NIH's biosketch and Current and Pending (Other) Support workflows use a **data-driven system** centered on SciENcv. Each required Common Form must be a **digitally certified PDF generated in SciENcv**.
+## From account setup to certified PDFs
 
-## The “minimum viable compliance” path
-
-1. Everyone who needs a biosketch gets:
-   - **eRA Commons ID**
-   - **ORCID iD**, linked to **eRA Commons** (**required**)
-   - **MyNCBI/SciENcv** access working; ORCID appears as the SciENcv **PID** and matches eRA Commons
-2. Publications are curated in **My Bibliography**
-3. A delegate (admin) is assigned where helpful
-4. PI logs in to **certify** the final PDFs
+1. Confirm you can sign in to eRA Commons and SciENcv. [Link your ORCID iD to eRA Commons and check the match in SciENcv]({{ site.baseurl }}{% link getting-ready/orcid.md %}).
+2. Organize the citations you plan to use in the biosketch. [My Bibliography]({{ site.baseurl }}{% link getting-ready/mybibliography.md %}) is one source.
+3. Prepare the required forms yourself or [give staff delegated access]({{ site.baseurl }}{% link getting-ready/delegates.md %}).
+4. The person named on each form signs in and certifies it personally. Keep passwords and verification codes private and have staff use their own delegated accounts.
 
 ```mermaid
 flowchart TD
-    accTitle: Minimum viable compliance path
-    accDescr: The minimum path links ORCID and eRA Commons, checks the SciENcv PID, cleans My Bibliography, drafts documents, and ends with individual certification.
+    accTitle: Account setup through individual certification
+    accDescr: Link ORCID and eRA Commons, check the SciENcv PID, prepare citations, and draft the forms individually or with delegated help. The named person signs in and certifies.
     A["eRA Commons ID"] --> B["ORCID iD"]
     B --> C["Link ORCID in eRA Commons"]
     C --> D["Confirm matching SciENcv PID"]
-    D --> E["Clean My Bibliography"]
+    D --> E["Prepare biosketch citations"]
     E --> F{"Delegate helping?"}
     F -- "Yes" --> G["Delegate drafts and checks"]
     F -- "No" --> H["Individual drafts"]

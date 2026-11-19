@@ -38,7 +38,7 @@ export function enhanceDiagram(element, source) {
   hint.className = 'mermaid-scroll-hint';
   hint.id = `${svg.id}-scroll-hint`;
   hint.textContent = 'Scroll sideways to view the full diagram. With a keyboard, focus the diagram and use the left and right arrow keys.';
-  figure.append(hint);
+  figure.prepend(hint);
 
   const title = svg.querySelector(':scope > title')?.textContent || 'Diagram';
   function updateScrolling() {

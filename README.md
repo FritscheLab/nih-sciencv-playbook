@@ -1,13 +1,13 @@
 # NIH Common Forms (SciENcv) Playbook (2026)
 
-A docs-first, GitHub Pages–ready site to help **PIs, Co-Is, staff, and research administrators** complete NIH’s **Common Forms** requirements in **SciENcv**:
+A GitHub Pages guide for **PIs, co-investigators, staff, and research administrators** preparing NIH’s **Common Forms** in **SciENcv**.
 
 - **Biographical Sketch Common Form + NIH Biographical Sketch Supplement**
 - **Current and Pending (Other) Support (CPOS) Common Form**
 
-Read the [published playbook](https://fritschelab.github.io/nih-sciencv-playbook/) or the [v1.10 release notes](docs/changelog.md#v110-october-2-2026).
+Read the [published playbook](https://fritschelab.github.io/nih-sciencv-playbook/) or the [v1.11 release notes](docs/changelog.md#v111-november-19-2026).
 
-> **Compliance note:** NIH requires *digitally certified* PDFs generated from SciENcv. Keep each Common Form unmodified unless the Application Guide or NOFO expressly requires a special compiled/flattened attachment; foreign contracts and annual MFTRP statements are separate attachments.
+> **Certification:** The person named on each form must sign in and certify their own SciENcv PDF. Staff can use delegated access to prepare forms. See the [submission lifecycle](docs/other-support/lifecycle-submission.md) for attachment requirements.
 
 > **September 2026 operational alert:** Institutional notices advise re-certifying affected older SciENcv PDFs and replacing submission attachments. See the [signing-certificate alert and steps](docs/troubleshooting/september-2026-certificates.md) for the dates, sources, and validation checks.
 
@@ -21,7 +21,7 @@ The existing repository is configured for `https://fritschelab.github.io/nih-sci
 
 GitHub documents this [branch-based publishing setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). For a fork or custom domain, update `url`, `baseurl`, the footer link, and `gh_edit_repository` in `docs/_config.yml` before publishing.
 
-The site uses the **Just the Docs** Jekyll theme (remote theme), which is easy to host on GitHub Pages and includes built-in search.
+The site uses the **Just the Docs** remote theme for Jekyll, including its built-in search.
 
 Mermaid diagrams use the pinned release in `docs/_config.yml`. The local theme-component override supplies readable scrolling and SVG accessibility metadata after rendering.
 

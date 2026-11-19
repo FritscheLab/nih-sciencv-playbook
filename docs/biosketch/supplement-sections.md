@@ -6,7 +6,7 @@ nav_order: 4
 
 # NIH Supplement sections (step-by-step)
 
-[SciENcv supports limited **Markdown** formatting](https://www.ncbi.nlm.nih.gov/books/NBK154494/) in narrative fields. Markdown syntax does not count toward the field limit, but always verify the rendered PDF rather than relying on the editor view alone.
+SciENcv supports limited **Markdown** formatting in narrative fields. Markdown syntax does not count toward the character limit. Select **View Draft** to check the formatted PDF before certification. See [My NCBI Help for SciENcv](https://www.ncbi.nlm.nih.gov/sites/books/NBK154494/).
 
 ## Personal Statement
 

@@ -21,15 +21,15 @@ NIH requires the applicable **Common Forms** for applications and for JIT, RPPR,
 
 - Each senior/key person must complete qualifying research security training within the **12 months before application submission** and certify completion through the SciENcv biosketch. Through its AOR, the applicant organization separately certifies compliance for covered individuals it employs.
 - A person who is currently party to a malign foreign talent recruitment program (MFTRP) is ineligible to serve as senior/key personnel on an NIH grant or cooperative agreement.
-- Individual MFTRP certification is part of the SciENcv biosketch. Annual RPPRs also require the prescribed person-level MFTRP statements in Section G.1.
+- Individual MFTRP certification is part of the SciENcv biosketch. For RPPRs, check which [MFTRP certification evidence]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) to provide.
 
-**Timeline summary:** Common Forms and MFTRP rules have applied since **January 25, 2026**; submission-stopping eRA validation began **May 8, 2026**; and the application RST completion and certification requirements apply to due dates on or after **May 25, 2026**.
+NIH began the Common Forms transition and implemented the MFTRP requirements on **January 25, 2026**. Mandatory Common Forms use and submission-stopping eRA validation began **May 8, 2026** for application due dates and for JIT, RPPR, and Prior Approval submissions on or after that date. The application RST completion and certification requirements apply to due dates on or after **May 25, 2026**.
 
 ```mermaid
 timeline TD
     accTitle: NIH Common Forms and research-security dates
-    accDescr: Three milestones: Common Forms and MFTRP rules apply January 25, submission-stopping eRA validation begins May 8, and RST completion and certifications are required for May 25 due dates.
-    Jan 25, 2026 : Common Forms and MFTRP rules apply
+    accDescr: NIH began the Common Forms transition and implemented MFTRP requirements January 25. Mandatory Common Forms use and submission-stopping validation began May 8. RST applies to application due dates on or after May 25.
+    Jan 25, 2026 : Common Forms transition and MFTRP start
     May 8, 2026 : Submission-stopping eRA validation begins
     May 25, 2026 due dates : RST completion and certifications required
 ```

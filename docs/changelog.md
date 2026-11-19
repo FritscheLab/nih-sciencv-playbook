@@ -7,7 +7,15 @@ nav_order: 13
 
 ## Unreleased
 
-- Reserve this section for the next round of policy/FAQ refreshes so maintainers have a visible place to record changes before publishing a tagged update.
+- Upcoming changes will be listed here.
+
+## v1.11 (November 19, 2026)
+
+- Clarified that named individuals must certify their own forms and that staff must use delegated access without sharing login credentials.
+- Updated CPOS guidance for reportable monetary donations and NIH’s foreign-collaboration FAQs, clarified RPPR certification evidence, and verified current form expiration dates.
+- Replaced the ORCID screenshot placeholder with a diagram showing which two fields must match. Linked to official illustrated instructions and moved scroll cues above wide Mermaid diagrams.
+- Clarified the XML validator’s upload-mode behavior, improved its mobile layout, and revised the XML cheat sheet to cover approved tool use and the optional validator.
+- Declared the Jekyll theme’s Rake dependency for local builds.
 
 ## v1.10 (October 2, 2026)
 

@@ -32,7 +32,7 @@ Submit JIT information **only when NIH specifically requests it**. In eRA Common
 - Only a Signing Official (SO) can submit it to NIH.
 - Common Forms and foreign supporting documents use separate person-level fields.
 
-Keep each SciENcv Common Form unmodified. When required for a reported foreign appointment or employment, flatten the contract copy and attach it separately in the supporting-documentation field.
+Keep each SciENcv Common Form unmodified. When required for a reported foreign appointment or employment, flatten the contract copy and attach it separately in **Foreign Contract CPS**. Each JIT upload field accepts one PDF up to **6 MB**. [eRA JIT help](https://www.era.nih.gov/erahelp/commons/commons/status/jit.htm).
 
 ## Annual RPPR Section D: participant changes
 
@@ -47,9 +47,11 @@ Use this decision matrix with the current RPPR instructions:
 
 The last row is a narrow Training RPPR reporting rule. It does not convert all program directors, training faculty, or people involved in training-grant oversight into routine CPOS submitters.
 
+For a new senior/key person whose biosketch was already provided, check with your Signing Official before reusing or omitting the attachment. The RPPR guide shows a required upload for new senior/key personnel, while NIH’s FAQ limits that requirement to people for whom a biosketch has yet to be provided. The guide also specifies a biosketch for new OSCs. [NIH RPPR Instruction Guide, Section D.1](https://grants.nih.gov/sites/default/files/rppr_instruction_guide.pdf), [FAQ 57968](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57968).
+
 For changed active support, the CPOS requirement applies to senior/key personnel **regardless of effort**, including less than 1.0 person-month ([FAQ 57908](https://grants.nih.gov/faqs#/common-forms-biographical-sketch-current-pending-support.htm?anchor=57908)).
 
-Use [Research-security certifications]({{ site.baseurl }}{% link policy/research-security-certifications.md %}) for the separate MFTRP statement workflow, electronic signatures/dates, and the current FAQ/guide conflict about using a Common Form certification instead.
+Check what evidence to provide for [RPPR MFTRP certification]({{ site.baseurl }}{% link policy/research-security-certifications.md %}#rppr-certification-evidence).
 
 ## Final and Interim RPPRs
 
@@ -77,6 +79,6 @@ Other Prior Approval request types can have different fields and evidence. Follo
 | SciENcv biosketch or CPOS Common Form | Rename if needed, but otherwise keep the certified PDF unmodified unless NIH instructions expressly say otherwise |
 | Foreign appointment/employment contract copy | Flatten and upload separately in the designated supporting-documentation field |
 | Participating-faculty biosketch attachment | Combine individually certified forms and flatten the compiled attachment as NIH instructs |
-| Annual MFTRP RPPR statement | Flatten the separate statement PDF; do not append it to a Common Form |
+| Separate MFTRP RPPR statement, when needed | Flatten the signed statement PDF and upload it in Section G.1 |
 
 Official workflow sources: [NIH Common Forms implementation notice](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-018.html), [eRA JIT help](https://www.era.nih.gov/erahelp/commons/commons/status/jit.htm), [RPPR Section D Common Form transcript](https://www.era.nih.gov/files/RPPR-D-Common-Form-Transcript.pdf), [NIH RPPR Instruction Guide](https://grants.nih.gov/sites/default/files/rppr_instruction_guide.pdf), [NOT-OD-26-026](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-026.html), and [eRA Change of PD/PI help](https://www.era.nih.gov/erahelp/commons/commons/prior_approval%20module/Change_of_PI.htm).

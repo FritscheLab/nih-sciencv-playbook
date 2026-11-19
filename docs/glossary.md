@@ -13,7 +13,9 @@ nav_order: 12
 - **CPOS**: Current and Pending (Other) Support Common Form.
 - **PID**: Persistent Identifier (ORCID iD for NIH).
 - **RST**: Research Security Training. Senior/key personnel must complete qualifying training within the 12 months before NIH application submission and certify through the biosketch.
-- **MFTRP**: Malign Foreign Talent Recruitment Program. Current participation makes a person ineligible to serve as NIH senior/key personnel; application and annual RPPR certifications apply.
+- **MFTRP**: Malign Foreign Talent Recruitment Program. Current participation makes a person ineligible to serve as NIH senior/key personnel. See the [application and RPPR certification requirements]({{ site.baseurl }}{% link policy/research-security-certifications.md %}).
 - **JIT**: Just-in-Time information requested by NIH after peer review for applications under possible funding consideration.
-- **RPPR**: Research Performance Progress Report for an active award.
+- **NOFO**: Notice of Funding Opportunity.
+- **OSC**: Other Significant Contributor.
+- **RPPR**: Research Performance Progress Report. NIH uses annual, interim, and final reports to track grant progress.
 - **AOR / SO**: Authorized Organization Representative / Signing Official. The institutional official who signs or submits designated application and eRA actions.
